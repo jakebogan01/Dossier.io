@@ -5,7 +5,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.sass', 'public/css');
 
 if (mix.inProduction()) {
     mix.version();
