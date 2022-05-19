@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                lato: ['Lato', ...defaultTheme.fontFamily.sans],
             },
             maxWidth: {
                 '2560': '160rem',
