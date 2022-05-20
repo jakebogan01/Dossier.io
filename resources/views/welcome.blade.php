@@ -35,9 +35,9 @@
 {{--            </div>--}}
 {{--        @endif--}}
 
-        <main class="main_container max-w-2560 border border-red-600 mx-auto">
+        <main class="main_container max-w-2560 mx-auto">
 
-            <div class="flex border border-blue-500 py-[3.125rem] px-[1.5625rem] font-lato">
+            <div class="flex py-[3.125rem] px-[1.5625rem] font-lato">
                 <div class="flex-1 space-y-[3.125rem]">
                     <div class="flex relative bg-[#1C1F2D] px-[5.3125rem] pt-[2.1875rem] pb-[7.375rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-top bg-auto" style="background-image: url('/images/svg/background-pattern.svg')">
                         <div class="flex-1">
@@ -486,9 +486,8 @@
                         </div>
 
                     </div>
-                </div
-                >
-                <div class="flex-1">
+                </div>
+                <div class="flex-1 space-y-[3.125rem]">
 
                     <div class="flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden">
                         <div
@@ -563,7 +562,7 @@
                                     tabindex="0"
                                     role="listbox"
                                     aria-labelledby="carousel-content-label"
-                                    class="flex w-full overflow-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
+                                    class="flex w-full overflow-hidden hover:overflow-x-auto snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
 
                                     <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://www.liveabout.com/thmb/FeWbkEye5kn7wmE96gVodlbFsig=/2121x1193/smart/filters:no_upscale()/GettyImages-638316888-58bd8bc93df78c353c5b8631.jpg')">
                                         <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 pl-16" style="background-color: rgba(0,0,0,0.5)">
@@ -799,8 +798,8 @@
                                             <span class="sr-only">Skip to previous slide page</span>
                                         </button>
 
-                                        <span class="ml-5 text-[#656A84] text-[15px] font-black group-hover:text-[#B1B7D6]">
-                                            PREVIOUS PROJECT
+                                        <span class="ml-16 text-[#656A84] text-[15px] font-black group-hover:text-[#B1B7D6]">
+                                            PREVIOUS
                                         </span>
                                     </div>
 
@@ -811,8 +810,8 @@
                                         :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
                                         class="flex-1 flex justify-end items-center bg-[#272C41] py-[35px] pr-[82px] group cursor-pointer">
                                     <!-- Next Button -->
-                                        <span class="mr-5 text-[#656A84] text-[15px] font-black group-hover:text-[#B1B7D6]">
-                                            NEXT PROJECT
+                                        <span class="mr-16 text-[#656A84] text-[15px] font-black group-hover:text-[#B1B7D6]">
+                                            NEXT
                                         </span>
                                         <button class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
                                             <span aria-hidden="true">
@@ -828,7 +827,387 @@
                         </div>
                     </div>
 
-{{--                    <div class="bg-blue-500 h-24 m-[1.5625rem]"></div>--}}
+                    <div class="flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-bottom bg-auto" style="background-image: url('/images/svg/background-pattern-2.svg')">
+
+                        <div
+                            x-data="{
+                                skip: 1,
+                                atBeginning: false,
+                                atEnd: false,
+                                next() {
+                                    this.to((current, offset) => current + (offset * this.skip))
+                                },
+                                prev() {
+                                    this.to((current, offset) => current - (offset * this.skip))
+                                },
+                                to(strategy) {
+                                    let slider = this.$refs.slider
+                                    let current = slider.scrollLeft
+                                    let offset = slider.firstElementChild.getBoundingClientRect().width
+                                    slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
+                                },
+                                focusableWhenVisible: {
+                                    'x-intersect:enter'() {
+                                        this.$el.removeAttribute('tabindex')
+                                    },
+                                    'x-intersect:leave'() {
+                                        this.$el.setAttribute('tabindex', '-1')
+                                    },
+                                },
+                                disableNextAndPreviousButtons: {
+                                    'x-intersect:enter.threshold.05'() {
+                                        let slideEls = this.$el.parentElement.children
+
+                                        // If this is the first slide.
+                                        if (slideEls[0] === this.$el) {
+                                            this.atBeginning = true
+                                        // If this is the last slide.
+                                        } else if (slideEls[slideEls.length-1] === this.$el) {
+                                            this.atEnd = true
+                                        }
+                                    },
+                                    'x-intersect:leave.threshold.05'() {
+                                        let slideEls = this.$el.parentElement.children
+
+                                        // If this is the first slide.
+                                        if (slideEls[0] === this.$el) {
+                                            this.atBeginning = false
+                                        // If this is the last slide.
+                                        } else if (slideEls[slideEls.length-1] === this.$el) {
+                                            this.atEnd = false
+                                        }
+                                    },
+                                },
+                            }"
+                            class="flex flex-col w-full">
+
+                            <div
+                                x-on:keydown.right="next"
+                                x-on:keydown.left="prev"
+                                tabindex="0"
+                                role="region"
+                                aria-labelledby="carousel-label"
+                                class="flex space-x-6">
+
+                                <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+                                <div class="flex items-center pl-[82px]">
+                                    <button
+                                        x-on:click="prev"
+                                        class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
+                                        type="button"
+                                        :aria-disabled="atBeginning"
+                                        :tabindex="atEnd ? -1 : 0"
+                                        :class="{ 'opacity-50 cursor-not-allowed': atBeginning }">
+                                                <span aria-hidden="true">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                                                    </svg>
+                                                </span>
+                                        <span class="sr-only">Skip to previous slide page</span>
+                                    </button>
+                                </div>
+
+                                <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+                                <ul
+                                    x-ref="slider"
+                                    tabindex="0"
+                                    role="listbox"
+                                    aria-labelledby="carousel-content-label"
+                                    class="flex w-full overflow-hidden hover:overflow-x-auto snap-x snap-mandatory">
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
+                                        <div class="flex">
+                                            <div class="relative flex justify-center items-center">
+                                                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
+                                                <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+                                            </div>
+                                            <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                                                <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
+                                                    <blockquote>
+                                                        <div>
+                                                            <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                                            </svg>
+                                                            <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+                                                        </div>
+                                                        <footer class="mt-6">
+                                                            <p class="text-[22px] font-bold text-white">Judith Black</p>
+                                                            <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="flex items-center pr-[82px]">
+                                    <button
+                                        x-on:click="next"
+                                        class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
+                                        type="button"
+                                        :aria-disabled="atEnd"
+                                        :tabindex="atEnd ? -1 : 0"
+                                        :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
+                                        <span aria-hidden="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="h-8 w-8 text-white"
+                                                 fill="none" viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 stroke-width="2">
+                                                <path stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      d="M9 5l7 7-7 7"/>
+                                            </svg>
+                                        </span>
+                                        <span class="sr-only">Skip to next slide page</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex relative bg-[#1C1F2D] px-[5.3125rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-left-bottom bg-auto" style="background-image: url('/images/svg/background-pattern-2.svg')">
+                        <div class="relative">
+                            <div class="absolute inset-0">
+                                <div class="absolute inset-y-0 left-0 w-1/2"></div>
+                            </div>
+                            <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
+                                <div class="py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+                                    <div class="max-w-lg mx-auto">
+                                        <h2 class="text-[48px] font-black text-white">
+                                            LET'S TALK
+                                        </h2>
+                                        <p class="mt-3 text-[15px] font-bold leading-loose text-[#B1B7D6]">
+                                            Reach to me for any UI & UX, branding, campaigns, advertising and any creative works. Let’s discuss and make an awesome experience together.
+                                        </p>
+                                        <dl class="mt-16">
+                                            <div class="mt-6">
+                                                <dt class="sr-only">Phone number</dt>
+                                                <dd class="flex text-[18px] font-bold text-[#6F7490]">
+                                                    Ring me: +1 (555) 123-4567
+                                                </dd>
+                                            </div>
+                                            <div class="mt-3">
+                                                <dt class="sr-only">Email</dt>
+                                                <dd class="flex text-[18px] font-bold text-[#6F7490]">
+                                                    Email me: support@example.com
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                        <div class="flex mt-10 space-x-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38"><g transform="translate(-1443 -1982)"><circle cx="18" cy="18" r="18" transform="translate(1443 1983)" fill="#e2e7ff"/><text transform="translate(1456 2013)" fill="#1c1f2d" font-size="31" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">f</tspan></text></g></svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1496 -1983)"><circle cx="18" cy="18" r="18" transform="translate(1496 1983)" fill="#e2e7ff"/><text transform="translate(1504 2011)" fill="#1c1f2d" font-size="25" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">in</tspan></text></g></svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1543 -1984)"><circle cx="18" cy="18" r="18" transform="translate(1543 1984)" fill="#e2e7ff"/><path d="M9.537,18.294c-4.669,1.4-4.669-2.335-6.537-2.8m13.074,5.6V17.482a3.147,3.147,0,0,0-.878-2.437c2.932-.327,6.014-1.438,6.014-6.537a5.08,5.08,0,0,0-1.4-3.5,4.735,4.735,0,0,0-.085-3.521s-1.1-.327-3.651,1.382a12.5,12.5,0,0,0-6.537,0C6.988,1.158,5.886,1.485,5.886,1.485A4.735,4.735,0,0,0,5.8,5.005a5.08,5.08,0,0,0-1.4,3.53c0,5.061,3.082,6.173,6.014,6.537a3.147,3.147,0,0,0-.878,2.409V21.1" transform="translate(1548.895 1990.722)" fill="none" stroke="#1d202e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1590 -1990)"><circle cx="18" cy="18" r="18" transform="translate(1590 1990)" fill="#e2e7ff"/><path d="M12.35.563A11.787,11.787,0,1,0,24.137,12.35,11.8,11.8,0,0,0,12.35.563ZM20.143,6a10.02,10.02,0,0,1,2.274,6.272,23.528,23.528,0,0,0-7.011-.324c-.273-.667-.531-1.254-.885-1.978A13.411,13.411,0,0,0,20.143,6ZM19.024,4.834a11.368,11.368,0,0,1-5.277,3.637A53.741,53.741,0,0,0,9.99,2.577a10.042,10.042,0,0,1,9.033,2.257ZM8.069,3.254A64.241,64.241,0,0,1,11.8,9.076,37.554,37.554,0,0,1,2.494,10.3,10.1,10.1,0,0,1,8.069,3.254ZM2.282,12.365c0-.1,0-.205.005-.308a37.139,37.139,0,0,0,10.347-1.433c.288.564.564,1.137.816,1.709A15.6,15.6,0,0,0,4.87,19.1,10.028,10.028,0,0,1,2.282,12.365ZM6.17,20.308c1.052-2.15,3.906-4.925,7.965-6.31a41.85,41.85,0,0,1,2.148,7.635A10.048,10.048,0,0,1,6.17,20.308Zm11.805.4a43.455,43.455,0,0,0-1.956-7.178,14.778,14.778,0,0,1,6.271.43,10.086,10.086,0,0,1-4.315,6.748Z" transform="translate(1595.65 1995.65)" fill="#1d1f2d"/></g></svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1664 -1990)"><circle cx="18" cy="18" r="18" transform="translate(1664 1990)" fill="#e2e7ff"/><path d="M11.239,7.714A5.763,5.763,0,1,0,17,13.477,5.754,5.754,0,0,0,11.239,7.714Zm0,9.51a3.747,3.747,0,1,1,3.747-3.747,3.754,3.754,0,0,1-3.747,3.747Zm7.343-9.746a1.344,1.344,0,1,1-1.344-1.344A1.341,1.341,0,0,1,18.582,7.478ZM22.4,8.842a6.652,6.652,0,0,0-1.816-4.71,6.7,6.7,0,0,0-4.71-1.816c-1.856-.105-7.418-.105-9.274,0a6.686,6.686,0,0,0-4.71,1.811A6.674,6.674,0,0,0,.074,8.837c-.105,1.856-.105,7.418,0,9.274a6.652,6.652,0,0,0,1.816,4.71A6.7,6.7,0,0,0,6.6,24.637c1.856.105,7.418.105,9.274,0a6.652,6.652,0,0,0,4.71-1.816,6.7,6.7,0,0,0,1.816-4.71c.105-1.856.105-7.413,0-9.269ZM20,20.1a3.793,3.793,0,0,1-2.137,2.137c-1.48.587-4.991.451-6.626.451s-5.151.13-6.626-.451A3.793,3.793,0,0,1,2.476,20.1c-.587-1.48-.451-4.991-.451-6.626s-.13-5.151.451-6.626A3.793,3.793,0,0,1,4.613,4.714c1.48-.587,4.991-.451,6.626-.451s5.151-.13,6.626.451A3.793,3.793,0,0,1,20,6.851c.587,1.48.451,4.991.451,6.626S20.588,18.628,20,20.1Z" transform="translate(1670.764 1994.523)" fill="#1c1f2d"/></g></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12 ml-[70px]">
+                                    <div class="max-w-lg mx-auto lg:max-w-none">
+                                        <form class="mt-12 space-y-5" action="" method="POST">
+                                            @csrf
+                                            <div>
+                                                <div class="relative">
+                                                    <input id="email" name="email" type="email" class="peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="john@doe.com" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" required />
+                                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <label for="email" class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                                        </svg>
+                                                    </label>
+                                                </div>
+{{--                                                <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>--}}
+                                            </div>
+
+                                            <div>
+                                                <div class="relative">
+                                                    <input id="phone" name="phone" type="tel" class="peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="8008881234" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" />
+                                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                                        <!-- Heroicon name: solid/exclamation-circle -->
+                                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <label for="phone" class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                                        </svg>
+                                                    </label>
+                                                </div>
+{{--                                                <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>--}}
+                                            </div>
+
+                                            <div>
+                                                <div class="relative">
+                                                    <textarea rows="4" name="message" id="message" class="peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
+                                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                                        <!-- Heroicon name: solid/exclamation-circle -->
+                                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <label for="message" class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </label>
+                                                </div>
+{{--                                                <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>--}}
+                                            </div>
+                                            <div class="flex justify-end pt-12">
+                                                <button type="submit" class="inline-flex justify-between items-center px-6 py-3 border border-transparent shadow-sm text-[0.8125rem] font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[11.25rem] w-full">
+                                                    LETS TALK
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
