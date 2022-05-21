@@ -60,13 +60,13 @@
 {{-- menu --}}
                                 <div class="w-[2.8125rem] space-y-1.5 cursor-pointer" @click="test = !test">
                                     <div class="bg-white h-[0.1875rem]"></div>
-                                    <div class="bg-white h-[0.1875rem] w-9 transition-transform duration-300 delay-200" :class="{ 'translate-x-[9px]': test }"></div>
-                                    <div class="bg-white h-[0.1875rem] w-[1.6875rem] transition-transform  duration-300 delay-100" :class="{ 'translate-x-[18px]': test }"></div>
-                                    <div class="bg-white h-[0.1875rem] w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': test }"></div>
+                                    <div class="bg-white h-[0.1875rem] w-9 transition-transform duration-300" :class="{ 'translate-x-[9px] delay-200': test, 'delay-800': !test }"></div>
+                                    <div class="bg-white h-[0.1875rem] w-[1.6875rem] transition-transform  duration-300" :class="{ 'translate-x-[18px] delay-100': test, 'delay-700': !test }"></div>
+                                    <div class="bg-white h-[0.1875rem] w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': test, 'delay-600': !test }"></div>
                                 </div>
                             </div>
                             <div class="text-[3.375rem] font-black text-white">
-                                <h1 class="leading-[1.1]">HELLO, I’M<br>
+                                <h1 class="leading-[1.1] tracking-wider">HELLO, I’M<br>
                                     FOO<br>
                                     THIS…<br>
                                     IS MY LEGACY
@@ -74,21 +74,21 @@
                             </div>
                             <div class="flex font-black my-[3.125rem]">
                                 <div class="flex-1">
-                                    <span class="block text-[#FFCF7B] text-[2.125rem]">24</span>
+                                    <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">24</span>
                                     <span class="block text-[#B1B7D6] text-[0.8125rem]">CLIENTS</span>
                                 </div>
                                 <div class="flex-1">
-                                    <span class="block text-[#FFCF7B] text-[2.125rem]">32</span>
+                                    <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">32</span>
                                     <span class="block text-[#B1B7D6] text-[0.8125rem]">PROJECTS</span>
                                 </div>
                                 <div class="flex-1">
-                                    <span class="block text-[#FFCF7B] text-[2.125rem]">06</span>
+                                    <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">06</span>
                                     <span class="block text-[#B1B7D6] text-[0.8125rem]">TOOLS</span>
                                 </div>
                             </div>
                             <div>
                                 <a href="">
-                                    <button type="button" class="inline-flex justify-between items-center px-6 py-3 border border-transparent shadow-sm text-[0.8125rem] font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[11.25rem] w-full">
+                                    <button type="button" class="inline-flex justify-between items-center px-6 py-3 border border-transparent shadow-sm text-[0.8125rem] font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[11.25rem] w-full tracking-widest">
                                         LETS TALK
                                         <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -107,11 +107,11 @@
                     </div>
 
                     <div class="flex justify-between relative bg-[#1C1F2D] px-[5.3125rem] pt-20 mx-[1.5625rem] overflow-hidden">
-                        <div class="flex-1 pr-12 text-[#B1B7D6] leading-loose">
-                            <h2 class="mb-4 text-white text-[2.75rem] font-black">
+                        <div class="flex-1 pr-12 text-[#B1B7D6] font-bold text-base leading-loose">
+                            <h2 class="mb-12 text-white text-[2.8rem] font-black leading-none -mt-2">
                                 I AM
                             </h2>
-                            <p class="text-[0.9375rem] mb-10">
+                            <p class="leading-loose mb-10">
                                 A junior web developer with a background in UI & UX.
                                 I have a passion for learning new skills while expanding
                                 my existing skill set. I have over 3 years of professional
@@ -144,19 +144,19 @@
 
                         <div class="flex">
                             <div class="mr-12 space-y-12">
-                                <div class="relative w-[15.625rem] bg-[#4046FF] px-7 pb-[1.875rem] pt-3 font-bold leading-loose text-white space-y-7">
+                                <div class="relative w-[15.625rem] bg-[#4046FF] px-7 pb-[1.875rem] pt-3 text-base font-bold leading-loose text-white space-y-7">
                                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[3.375rem] h-[3.375rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="#4046FF">
                                             <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-[1.3125rem]">
+                                    <h3 class="text-2xl">
                                         UI & UX
                                     </h3>
-                                    <p class="text-sm leading-loose">
+                                    <p class="leading-loose">
                                         Expertise in UI & UX design. more focused on visual designs aspects.
                                     </p>
-                                    <a href="#" class="flex items-center text-base">
+                                    <a href="#" class="flex items-center">
                                         View more
                                         <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -164,19 +164,19 @@
                                     </a>
                                 </div>
 
-                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 font-bold leading-loose text-white space-y-7">
+                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 text-base font-bold leading-loose text-white space-y-7">
                                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[3.375rem] h-[3.375rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="#4046FF">
                                             <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-[1.3125rem]">
+                                    <h3 class="text-2xl">
                                         UI & UX
                                     </h3>
-                                    <p class="text-sm leading-loose">
+                                    <p class="leading-loose">
                                         Expertise in UI & UX design. more focused on visual designs aspects.
                                     </p>
-                                    <a href="#" class="flex items-center text-base">
+                                    <a href="#" class="flex items-center font-bold">
                                         View more
                                         <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -186,23 +186,23 @@
                             </div>
 
                             <div class="space-y-12">
-                                <h2 class="text-xl text-white font-bold pb-3">
-                                    MOST SKILL IN
+                                <h2 class="text-xl text-white tracking-widest leading-none -mt-1 font-bold pb-3">
+                                    TOP SKILLS
                                 </h2>
 
-                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 font-bold leading-loose text-white space-y-7">
+                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 text-base font-bold leading-loose text-white space-y-7">
                                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[3.375rem] h-[3.375rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="#4046FF">
                                             <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-[1.3125rem]">
+                                    <h3 class="text-2xl">
                                         UI & UX
                                     </h3>
-                                    <p class="text-sm leading-loose">
+                                    <p class="leading-loose">
                                         Expertise in UI & UX design. more focused on visual designs aspects.
                                     </p>
-                                    <a href="#" class="flex items-center text-base">
+                                    <a href="#" class="flex items-center font-bold">
                                         View more
                                         <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -210,19 +210,19 @@
                                     </a>
                                 </div>
 
-                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 font-bold leading-loose text-white space-y-7">
+                                <div class="relative w-[15.625rem] bg-[#555C7E] px-7 pb-[1.875rem] pt-3 text-base font-bold leading-loose text-white space-y-7">
                                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[3.375rem] h-[3.375rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="#4046FF">
                                             <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-[1.3125rem]">
+                                    <h3 class="text-2xl">
                                         UI & UX
                                     </h3>
-                                    <p class="text-sm leading-loose">
+                                    <p class="leading-loose">
                                         Expertise in UI & UX design. more focused on visual designs aspects.
                                     </p>
-                                    <a href="#" class="flex items-center text-base">
+                                    <a href="#" class="flex items-center font-bold">
                                         View more
                                         <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -233,10 +233,10 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-[#1C1F2D] px-[5.3125rem] py-20 mx-[1.5625rem] text-[#B1B7D6] leading-loose overflow-hidden bg-no-repeat bg-right-bottom bg-auto" style="background-image: url('/images/svg/background-pattern-2.svg')">
+                    <div class="relative bg-[#1C1F2D] px-[5.3125rem] py-20 mx-[1.5625rem] text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-right-bottom bg-auto" style="background-image: url('/images/svg/background-pattern-2.svg')">
 
-                        <h2 class="mb-8 text-white text-[2.75rem] font-black">
-                            EXPERIENCED
+                        <h2 class="mb-8 text-white text-[2.8rem] font-black leading-none mb-16">
+                            EXPERIENCES
                         </h2>
 
                         <div class="absolute left-[49.85%] border-2 border-[#363A4D] h-full mt-12"></div>
@@ -263,7 +263,7 @@
                                 </div>
                                 <div class="flex">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-right">
+                                        <p class="text-[#B1B7D6] font-bold text-right">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -300,7 +300,7 @@
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-left">
+                                        <p class="text-[#B1B7D6] font-bold text-left">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -337,7 +337,7 @@
                                 </div>
                                 <div class="flex">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-right">
+                                        <p class="text-[#B1B7D6] font-bold text-right">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -374,7 +374,7 @@
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-left">
+                                        <p class="text-[#B1B7D6] font-bold text-left">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -411,7 +411,7 @@
                                 </div>
                                 <div class="flex">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-right">
+                                        <p class="text-[#B1B7D6] font-bold text-right">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -448,7 +448,7 @@
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-left">
+                                        <p class="text-[#B1B7D6] font-bold text-left">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -485,7 +485,7 @@
                                 </div>
                                 <div class="flex">
                                     <div class="flex-1 pt-4">
-                                        <p class="text-[0.9375rem] text-[#B1B7D6] font-bold text-right">
+                                        <p class="text-[#B1B7D6] font-bold text-right">
                                             Yes, I was born as a 90’s kid.
                                             Started observing the world.
                                         </p>
@@ -568,8 +568,8 @@
 
                                 <span id="carousel-content-label" class="sr-only" hidden>My Projects</span>
 
-                                <h2 class="absolute pl-16 mb-8 mt-12 text-white text-[46px] font-black tracking-wider z-20">
-                                    PROJECTS
+                                <h2 class="absolute pl-16 mb-8 mt-12 text-white text-[2.8rem] font-black tracking-wider z-20">
+                                    MY WORK
                                 </h2>
 
                                 <ul
@@ -581,6 +581,42 @@
 
                                     <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
                                         <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 pl-16" style="background-color: rgba(0,0,0,0.5)">
+                                            <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-60">
+                                                Art app
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-3 opacity-70 hover:opacity-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                                      <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                                    </svg>
+                                                </span>
+                                            </h3>
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
+                                                App designed for people’s wellness.
+                                                There are many functionalities
+                                                Implemented for better engagement. Food,
+                                                chat, events and leader boards are the
+                                                major functionalities.
+                                            </p>
+                                            <a href="" class="block">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
+                                                    VIEW PROJECT
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                            <a href="" class="block">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
+                                                    VIEW CODE
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://www.liveabout.com/thmb/FeWbkEye5kn7wmE96gVodlbFsig=/2121x1193/smart/filters:no_upscale()/GettyImages-638316888-58bd8bc93df78c353c5b8631.jpg')">
+                                        <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 pl-16" style="background-color: rgba(0,0,0,0.5)">
                                             <h3 class="flex items-center font-bold text-[23px] mb-6">
                                                 Art app
                                                 <span>
@@ -589,7 +625,7 @@
                                                     </svg>
                                                 </span>
                                             </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
                                                 App designed for people’s wellness.
                                                 There are many functionalities
                                                 Implemented for better engagement. Food,
@@ -597,7 +633,7 @@
                                                 major functionalities.
                                             </p>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW PROJECT
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -605,7 +641,7 @@
                                                 </button>
                                             </a>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW CODE
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -625,7 +661,7 @@
                                                     </svg>
                                                 </span>
                                             </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
                                                 App designed for people’s wellness.
                                                 There are many functionalities
                                                 Implemented for better engagement. Food,
@@ -633,7 +669,7 @@
                                                 major functionalities.
                                             </p>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW PROJECT
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -641,7 +677,7 @@
                                                 </button>
                                             </a>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW CODE
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -661,7 +697,7 @@
                                                     </svg>
                                                 </span>
                                             </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
                                                 App designed for people’s wellness.
                                                 There are many functionalities
                                                 Implemented for better engagement. Food,
@@ -669,7 +705,7 @@
                                                 major functionalities.
                                             </p>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW PROJECT
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -677,7 +713,7 @@
                                                 </button>
                                             </a>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW CODE
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -697,7 +733,7 @@
                                                     </svg>
                                                 </span>
                                             </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
                                                 App designed for people’s wellness.
                                                 There are many functionalities
                                                 Implemented for better engagement. Food,
@@ -705,7 +741,7 @@
                                                 major functionalities.
                                             </p>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW PROJECT
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -713,7 +749,7 @@
                                                 </button>
                                             </a>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW CODE
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -733,7 +769,7 @@
                                                     </svg>
                                                 </span>
                                             </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
+                                            <p class="font-bold text-base max-w-[300px] leading-loose mb-6">
                                                 App designed for people’s wellness.
                                                 There are many functionalities
                                                 Implemented for better engagement. Food,
@@ -741,7 +777,7 @@
                                                 major functionalities.
                                             </p>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW PROJECT
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -749,43 +785,7 @@
                                                 </button>
                                             </a>
                                             <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
-                                                    VIEW CODE
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                                                    </svg>
-                                                </button>
-                                            </a>
-                                        </div>
-                                    </li>
-
-                                    <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://www.liveabout.com/thmb/FeWbkEye5kn7wmE96gVodlbFsig=/2121x1193/smart/filters:no_upscale()/GettyImages-638316888-58bd8bc93df78c353c5b8631.jpg')">
-                                        <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 pl-16" style="background-color: rgba(0,0,0,0.5)">
-                                            <h3 class="flex items-center font-bold text-[23px] mb-6">
-                                                Art app
-                                                <span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-3 opacity-50 hover:opacity-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
-                                                      <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
-                                                    </svg>
-                                                </span>
-                                            </h3>
-                                            <p class="font-bold text-sm max-w-[300px] leading-loose mb-6">
-                                                App designed for people’s wellness.
-                                                There are many functionalities
-                                                Implemented for better engagement. Food,
-                                                chat, events and leader boards are the
-                                                major functionalities.
-                                            </p>
-                                            <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
-                                                    VIEW PROJECT
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                                                    </svg>
-                                                </button>
-                                            </a>
-                                            <a href="" class="block">
-                                                <button type="button" class="inline-flex justify-between items-center text-[17px] font-bold text-white">
+                                                <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
                                                     VIEW CODE
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -1115,9 +1115,9 @@
                                 <div class="absolute inset-y-0 left-0 w-1/2"></div>
                             </div>
                             <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
-                                <div class="py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+                                <div class="py-16 pr-4 sm:pr-6 lg:col-span-2 lg:pr-8 lg:py-24 xl:pr-12">
                                     <div class="max-w-lg mx-auto">
-                                        <h2 class="text-[48px] font-black text-white">
+                                        <h2 class="text-[2.8rem] font-black text-white leading-none mb-8">
                                             LET'S TALK
                                         </h2>
                                         <p class="mt-3 text-[15px] font-bold leading-loose text-[#B1B7D6]">
@@ -1151,7 +1151,7 @@
                                     </div>
                                 </div>
 
-                                <div class="py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12 ml-[70px]">
+                                <div class="py-16 pl-4 sm:pl-6 lg:col-span-3 lg:py-24 lg:pl-8 xl:pl-12 ml-[70px]">
                                     <div class="max-w-lg mx-auto lg:max-w-none">
                                         <form class="mt-12 space-y-5" action="" method="POST">
                                             @csrf
@@ -1193,7 +1193,7 @@
 
                                             <div>
                                                 <div class="relative">
-                                                    <textarea rows="4" name="message" id="message" class="peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
+                                                    <textarea rows="1" name="message" id="message" class="pt-3 peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
                                                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                                         <!-- Heroicon name: solid/exclamation-circle -->
                                                         <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -1209,7 +1209,7 @@
 {{--                                                <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>--}}
                                             </div>
                                             <div class="flex justify-end pt-12">
-                                                <button type="submit" class="inline-flex justify-between items-center px-6 py-3 border border-transparent shadow-sm text-[0.8125rem] font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[11.25rem] w-full">
+                                                <button type="submit" class="inline-flex justify-between items-center px-6 py-3 border border-transparent shadow-sm text-[0.8125rem] font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[11.25rem] w-full tracking-widest">
                                                     LETS TALK
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />

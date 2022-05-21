@@ -20,6 +20,7 @@ module.exports = {
             transitionDelay: {
                 '50': '50ms',
                 '250': '250ms',
+                '600': '600ms',
                 '800': '800ms',
                 '900': '900ms',
                 '1100': '1100ms',
