@@ -14,9 +14,8 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 lato: ['Lato', ...defaultTheme.fontFamily.sans],
             },
-            maxWidth: {
-                '2440': '152.5rem',
-                '2560': '160rem',
+            screens: {
+                '2300': '2300px',
             },
             transitionDelay: {
                 '50': '50ms',

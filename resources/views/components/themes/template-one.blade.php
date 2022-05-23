@@ -1,30 +1,45 @@
 <div class="flex py-[3.125rem] px-[1.5625rem] font-lato" x-data="{ test: false }">
 
-    <nav class="mt-10 space-y-12 transition-all duration-300 delay-500 overflow-hidden" :class="{ 'w-[58px]': test, 'w-0': !test }" x-cloak="test">
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-700': test, 'translate-y-10 opacity-0 delay-250': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0Zm0,12.585L40.643,22.948V42.032H31.469V30.513h-8.32V42.034H13.974V22.948Z" fill="#fff"/></svg>
+    <nav class="mt-10 transition-all duration-300 delay-500 overflow-hidden" :class="{ 'w-[58px]': test, 'w-0': !test }" x-cloak="test">
+        <div class="space-y-12">
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity" aria-current="page">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-700': test, 'translate-y-10 opacity-0 delay-250': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0Zm0,12.585L40.643,22.948V42.032H31.469V30.513h-8.32V42.034H13.974V22.948Z" fill="#fff"/></svg>
+            </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-800': test, 'translate-y-10 opacity-0 delay-200': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M33.039,22.116H27.578V16.654h5.462m0,27.309H27.578V27.578h5.462M30.309,3A27.309,27.309,0,1,0,57.617,30.309,27.309,27.309,0,0,0,30.309,3Z" transform="translate(-3 -3)" fill="#fff"/></svg>
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-800': test, 'translate-y-10 opacity-0 delay-200': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M33.039,22.116H27.578V16.654h5.462m0,27.309H27.578V27.578h5.462M30.309,3A27.309,27.309,0,1,0,57.617,30.309,27.309,27.309,0,0,0,30.309,3Z" transform="translate(-3 -3)" fill="#fff"/></svg>
+            </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-900': test, 'translate-y-10 opacity-0 delay-150': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M22.96,42.1a17.569,17.569,0,0,1-12.385-5.067L22.96,24.8V7.5a17.3,17.3,0,1,1,0,34.6Z" transform="translate(4.305 2.508)" fill="#fff"/><path d="M56.117,28.809A27.309,27.309,0,1,1,28.809,1.5,27.308,27.308,0,0,1,56.117,28.809Zm-4.965,0A22.343,22.343,0,1,1,28.809,6.465,22.343,22.343,0,0,1,51.152,28.809Z" transform="translate(-1.5 -1.5)" fill="#fff" fill-rule="evenodd"/></svg>
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-900': test, 'translate-y-10 opacity-0 delay-150': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M22.96,42.1a17.569,17.569,0,0,1-12.385-5.067L22.96,24.8V7.5a17.3,17.3,0,1,1,0,34.6Z" transform="translate(4.305 2.508)" fill="#fff"/><path d="M56.117,28.809A27.309,27.309,0,1,1,28.809,1.5,27.308,27.308,0,0,1,56.117,28.809Zm-4.965,0A22.343,22.343,0,1,1,28.809,6.465,22.343,22.343,0,0,1,51.152,28.809Z" transform="translate(-1.5 -1.5)" fill="#fff" fill-rule="evenodd"/></svg>
+            </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1000': test, 'translate-y-10 opacity-0 delay-100': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0ZM36.5,8.531a3.067,3.067,0,0,1,2.165.889l4.544,4.542a3.357,3.357,0,0,1-.188,4.735,3.356,3.356,0,0,1-4.735.19L33.74,14.345a3.357,3.357,0,0,1,.19-4.735,3.6,3.6,0,0,1,2.565-1.079Zm-7.489,6L38.1,23.619,23.328,38.384,14.24,29.3,29.008,14.533ZM11.882,31.016,21.468,40.6,9.482,43l2.4-11.985Z" fill="#fff"/></svg>
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1000': test, 'translate-y-10 opacity-0 delay-100': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0ZM36.5,8.531a3.067,3.067,0,0,1,2.165.889l4.544,4.542a3.357,3.357,0,0,1-.188,4.735,3.356,3.356,0,0,1-4.735.19L33.74,14.345a3.357,3.357,0,0,1,.19-4.735,3.6,3.6,0,0,1,2.565-1.079Zm-7.489,6L38.1,23.619,23.328,38.384,14.24,29.3,29.008,14.533ZM11.882,31.016,21.468,40.6,9.482,43l2.4-11.985Z" fill="#fff"/></svg>
+            </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1100': test, 'translate-y-10 opacity-0 delay-50': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0ZM25.218,12.855l1.173,5.4c-3.438.762-6.6,1.751-6.343,5.591h4.04V38.231H11.917V24.789c0-10.682,7.847-11.552,13.3-11.934Zm16.3,0,1.177,5.4c-3.438.762-6.6,1.751-6.343,5.591H40.4V38.231H28.225V24.789c0-10.682,7.844-11.552,13.3-11.934Z" fill="#fff"/></svg>
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1100': test, 'translate-y-10 opacity-0 delay-50': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M27.309,0A27.309,27.309,0,1,0,54.617,27.309,27.309,27.309,0,0,0,27.309,0ZM25.218,12.855l1.173,5.4c-3.438.762-6.6,1.751-6.343,5.591h4.04V38.231H11.917V24.789c0-10.682,7.847-11.552,13.3-11.934Zm16.3,0,1.177,5.4c-3.438.762-6.6,1.751-6.343,5.591H40.4V38.231H28.225V24.789c0-10.682,7.844-11.552,13.3-11.934Z" fill="#fff"/></svg>
+            </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1200': test, 'translate-y-10 opacity-0': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M30.684,3.375A27.309,27.309,0,1,0,57.992,30.684,27.388,27.388,0,0,0,30.684,3.375Zm0,8.194a8.194,8.194,0,1,1-8.194,8.194,8.221,8.221,0,0,1,8.194-8.194Zm0,39.44A19.891,19.891,0,0,1,14.3,42.264C14.429,36.8,25.222,33.8,30.684,33.8S46.938,36.8,47.069,42.264A19.929,19.929,0,0,1,30.684,51.009Z" transform="translate(-3.375 -3.375)" fill="#fff"/></svg>
+            <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1200': test, 'translate-y-10 opacity-0': !test }" width="54.617" height="54.617" viewBox="0 0 54.617 54.617"><path d="M30.684,3.375A27.309,27.309,0,1,0,57.992,30.684,27.388,27.388,0,0,0,30.684,3.375Zm0,8.194a8.194,8.194,0,1,1-8.194,8.194,8.221,8.221,0,0,1,8.194-8.194Zm0,39.44A19.891,19.891,0,0,1,14.3,42.264C14.429,36.8,25.222,33.8,30.684,33.8S46.938,36.8,47.069,42.264A19.929,19.929,0,0,1,30.684,51.009Z" transform="translate(-3.375 -3.375)" fill="#fff"/></svg>
+            </a>
+        </div>
     </nav>
 
     <div class="flex-1 space-y-[3.125rem]">
-        <div class="flex relative bg-[#1C1F2D] px-[5.3125rem] pt-[2.1875rem] pb-[7.375rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-top bg-auto" style="background-image: url('/images/themes/svg/background-pattern.svg')">
+        <div class="flex flex-col 2300:flex-row relative bg-[#1C1F2D] px-[5.3125rem] pt-[2.1875rem] pb-[7.375rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-top bg-auto" style="background-image: url('/images/themes/svg/background-pattern.svg')">
             <div class="flex-1">
                 <div class="mb-[4.375rem]">
                     {{-- menu --}}
-                    <div class="w-[2.8125rem] space-y-1.5 cursor-pointer" @click="test = !test">
+                    <button type="button" class="w-[2.8125rem] space-y-1.5 cursor-pointer" @click="test = !test">
+                        <span class="sr-only">Open main menu</span>
                         <div class="bg-white h-[0.1875rem]"></div>
                         <div class="bg-white h-[0.1875rem] w-9 transition-transform duration-300" :class="{ 'translate-x-[9px] delay-200': test, 'delay-800': !test }"></div>
                         <div class="bg-white h-[0.1875rem] w-[1.6875rem] transition-transform  duration-300" :class="{ 'translate-x-[18px] delay-100': test, 'delay-700': !test }"></div>
                         <div class="bg-white h-[0.1875rem] w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': test, 'delay-600': !test }"></div>
-                    </div>
+                    </button>
                 </div>
                 <div class="text-[3.375rem] font-black text-white">
                     <h1 class="leading-[1.1] tracking-wider whitespace-nowrap">
@@ -35,18 +50,21 @@
                     </h1>
                 </div>
                 <div class="flex font-black my-[3.125rem]">
-                    <div class="flex-1">
-                        <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">24</span>
-                        <span class="block text-[#B1B7D6] text-[0.8125rem]">CLIENTS</span>
-                    </div>
-                    <div class="flex-1">
-                        <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">32</span>
-                        <span class="block text-[#B1B7D6] text-[0.8125rem]">PROJECTS</span>
-                    </div>
-                    <div class="flex-1">
-                        <span class="block text-[#FFCF7B] text-[2.125rem] tracking-widest">06</span>
-                        <span class="block text-[#B1B7D6] text-[0.8125rem]">TOOLS</span>
-                    </div>
+
+                    <dl class="mt-5 grid grid-cols-1 gap-20 sm:grid-cols-3">
+                        <div>
+                            <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">24</dt>
+                            <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">CLIENTS</dd>
+                        </div>
+                        <div>
+                            <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">32</dt>
+                            <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">PROJECTS</dd>
+                        </div>
+                        <div>
+                            <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">06</dt>
+                            <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">TOOLS</dd>
+                        </div>
+                    </dl>
                 </div>
                 <div>
                     <a href="">
@@ -58,13 +76,13 @@
             {{-- users profile picture --}}
             <div class="flex-1 pt-10 pl-[165px]">
                 <div class="flex items-center justify-center w-[30.0625rem] h-[30.0625rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
-                    <div class="w-[25.125rem] h-[25.125rem] bg-[#1C1F2D] rounded-full bg-no-repeat bg-center bg-cover" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')"></div>
+                    <img class="inline-block w-[25.125rem] h-[25.125rem] rounded-full" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-between relative bg-[#1C1F2D] px-[5.3125rem] pt-20 mx-[1.5625rem] overflow-hidden">
-            <div class="flex-1 pr-12 text-[#B1B7D6] font-bold text-base leading-loose">
+        <div class="flex flex-col 2300:flex-row justify-between relative bg-[#1C1F2D] px-[5.3125rem] pt-20 mx-[1.5625rem] overflow-hidden">
+            <div class="flex-1 pr-20 text-[#B1B7D6] font-bold text-base leading-loose">
                 <h2 class="mb-12 text-white text-[2.8rem] font-black leading-none -mt-2">
                     I AM
                 </h2>
@@ -74,7 +92,7 @@
                     my existing skill set. I have over 3 years of professional
                     experience.
                 </p>
-                <ul class="space-y-7">
+                <ul role="list" class="space-y-7">
                     <x-list-item>
                         learn to design myself. I always create my best.
                     </x-list-item>
@@ -99,7 +117,7 @@
                 </div>
 
                 <div class="space-y-12">
-                    <h2 class="text-xl text-white tracking-widest leading-none -mt-1 font-bold pb-3">
+                    <h2 class="text-xl text-white tracking-widest leading-none -mt-1 font-black pb-3">
                         TOP SKILLS
                     </h2>
 
@@ -323,26 +341,9 @@
                     tabindex="0"
                     role="region"
                     aria-labelledby="carousel-label"
-                    class="flex space-x-6">
+                    class="relative">
 
                     <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
-
-                    <div class="flex items-center pl-[82px]">
-                        <button
-                            x-on:click="prev"
-                            class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
-                            type="button"
-                            :aria-disabled="atBeginning"
-                            :tabindex="atEnd ? -1 : 0"
-                            :class="{ 'opacity-50 cursor-not-allowed': atBeginning }">
-                            <span aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-                                </svg>
-                            </span>
-                            <span class="sr-only">Skip to previous slide page</span>
-                        </button>
-                    </div>
 
                     <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
@@ -362,28 +363,35 @@
 
                     </ul>
 
-                    <div class="flex items-center pr-[82px]">
-                        <button
+                    <div class="flex justify-between">
+                        <div
+                            x-on:click="prev"
+                            :aria-disabled="atBeginning"
+                            :tabindex="atEnd ? -1 : 0"
+                            :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
+                            class="flex-1 flex items-center bg-[#2B3046] py-[35px] pl-[82px] group cursor-pointer">
+                            <!-- Prev Button -->
+                            <x-left-arrow-button></x-left-arrow-button>
+
+                            <span class="ml-16 text-[#656A84] text-base font-black group-hover:text-[#B1B7D6]">
+                                PREVIOUS
+                            </span>
+                        </div>
+
+                        <div
                             x-on:click="next"
-                            class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
-                            type="button"
                             :aria-disabled="atEnd"
                             :tabindex="atEnd ? -1 : 0"
-                            :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
-                            <span aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     class="h-8 w-8 text-white"
-                                     fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor"
-                                     stroke-width="2">
-                                    <path stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          d="M9 5l7 7-7 7"/>
-                                </svg>
+                            :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
+                            class="flex-1 flex justify-end items-center bg-[#272C41] py-[35px] pr-[82px] group cursor-pointer">
+                            <!-- Next Button -->
+                            <span class="mr-16 text-[#656A84] text-base font-black group-hover:text-[#B1B7D6]">
+                                NEXT
                             </span>
-                            <span class="sr-only">Skip to next slide page</span>
-                        </button>
+                            <x-right-arrow-button></x-right-arrow-button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -416,21 +424,21 @@
                                     </dd>
                                 </div>
                             </dl>
-                            <div class="flex mt-10 space-x-8">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38"><g transform="translate(-1443 -1982)"><circle cx="18" cy="18" r="18" transform="translate(1443 1983)" fill="#e2e7ff"/><text transform="translate(1456 2013)" fill="#1c1f2d" font-size="31" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">f</tspan></text></g></svg>
+                            <div class="flex mt-10 space-x-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g transform="translate(-1443 -1983)"><circle cx="12.5" cy="12.5" r="12.5" transform="translate(1443 1983)" fill="#e2e7ff"/><path d="M2.13-7.03V-15.9L1.4-16.052a1.512,1.512,0,0,1-.608-.269.645.645,0,0,1-.231-.538v-1.313H2.13v-.635a4.674,4.674,0,0,1,.307-1.733,3.668,3.668,0,0,1,.883-1.324,3.974,3.974,0,0,1,1.4-.851,5.49,5.49,0,0,1,1.884-.3,5.43,5.43,0,0,1,.754.048,5.338,5.338,0,0,1,.721.156l-.065,1.626a.57.57,0,0,1-.086.285.575.575,0,0,1-.2.183.982.982,0,0,1-.264.1,1.241,1.241,0,0,1-.28.032A3.252,3.252,0,0,0,6.4-20.5a1.259,1.259,0,0,0-.576.307,1.38,1.38,0,0,0-.35.581,2.961,2.961,0,0,0-.118.91v.528H7.976v2.282H5.467v8.86Z" transform="translate(1451.859 2010.867)" fill="#1c1f2d"/></g></svg>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1496 -1983)"><circle cx="18" cy="18" r="18" transform="translate(1496 1983)" fill="#e2e7ff"/><text transform="translate(1504 2011)" fill="#1c1f2d" font-size="25" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">in</tspan></text></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g transform="translate(-1496 -1983)"><circle cx="12.5" cy="12.5" r="12.5" transform="translate(1496 1983)" fill="#e2e7ff"/><path d="M3.969-14.742v9H1.278v-9Zm.278-2.465a1.422,1.422,0,0,1-.13.6,1.588,1.588,0,0,1-.356.495,1.742,1.742,0,0,1-.525.339,1.63,1.63,0,0,1-.638.126,1.515,1.515,0,0,1-.616-.126,1.733,1.733,0,0,1-.508-.339,1.562,1.562,0,0,1-.347-.495,1.464,1.464,0,0,1-.126-.6,1.515,1.515,0,0,1,.126-.616,1.6,1.6,0,0,1,.347-.5,1.626,1.626,0,0,1,.508-.339,1.562,1.562,0,0,1,.616-.122,1.68,1.68,0,0,1,.638.122,1.638,1.638,0,0,1,.525.339,1.625,1.625,0,0,1,.356.5A1.472,1.472,0,0,1,4.247-17.208ZM8.335-13.77a6.538,6.538,0,0,1,.538-.451,3.152,3.152,0,0,1,.595-.352,3.529,3.529,0,0,1,.686-.226,3.68,3.68,0,0,1,.8-.082,3.151,3.151,0,0,1,1.306.256,2.711,2.711,0,0,1,.959.712,3.072,3.072,0,0,1,.59,1.085,4.5,4.5,0,0,1,.2,1.367v5.72H11.321v-5.72a1.574,1.574,0,0,0-.3-1.029,1.091,1.091,0,0,0-.894-.369,1.881,1.881,0,0,0-.829.187,3.336,3.336,0,0,0-.751.508v6.424H5.852v-9H7.519a.633.633,0,0,1,.66.451Z" transform="translate(1501.25 2008.185)" fill="#1c1f2d"/></g></svg>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1543 -1984)"><circle cx="18" cy="18" r="18" transform="translate(1543 1984)" fill="#e2e7ff"/><path d="M9.537,18.294c-4.669,1.4-4.669-2.335-6.537-2.8m13.074,5.6V17.482a3.147,3.147,0,0,0-.878-2.437c2.932-.327,6.014-1.438,6.014-6.537a5.08,5.08,0,0,0-1.4-3.5,4.735,4.735,0,0,0-.085-3.521s-1.1-.327-3.651,1.382a12.5,12.5,0,0,0-6.537,0C6.988,1.158,5.886,1.485,5.886,1.485A4.735,4.735,0,0,0,5.8,5.005a5.08,5.08,0,0,0-1.4,3.53c0,5.061,3.082,6.173,6.014,6.537a3.147,3.147,0,0,0-.878,2.409V21.1" transform="translate(1548.895 1990.722)" fill="none" stroke="#1d202e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g transform="translate(-1543 -1984)"><circle cx="12.5" cy="12.5" r="12.5" transform="translate(1543 1984)" fill="#e2e7ff"/><path d="M7.54,13.15C4.3,14.123,4.3,11.529,3,11.2M12.079,15.1v-2.51a2.185,2.185,0,0,0-.61-1.693c2.036-.227,4.176-1,4.176-4.54a3.527,3.527,0,0,0-.972-2.431,3.288,3.288,0,0,0-.059-2.445s-.765-.227-2.536.96a8.677,8.677,0,0,0-4.54,0C5.769,1.25,5,1.477,5,1.477a3.288,3.288,0,0,0-.058,2.445,3.528,3.528,0,0,0-.973,2.451c0,3.515,2.14,4.287,4.176,4.54a2.185,2.185,0,0,0-.61,1.673V15.1" transform="translate(1546.177 1988.222)" fill="none" stroke="#1d202e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1590 -1990)"><circle cx="18" cy="18" r="18" transform="translate(1590 1990)" fill="#e2e7ff"/><path d="M12.35.563A11.787,11.787,0,1,0,24.137,12.35,11.8,11.8,0,0,0,12.35.563ZM20.143,6a10.02,10.02,0,0,1,2.274,6.272,23.528,23.528,0,0,0-7.011-.324c-.273-.667-.531-1.254-.885-1.978A13.411,13.411,0,0,0,20.143,6ZM19.024,4.834a11.368,11.368,0,0,1-5.277,3.637A53.741,53.741,0,0,0,9.99,2.577a10.042,10.042,0,0,1,9.033,2.257ZM8.069,3.254A64.241,64.241,0,0,1,11.8,9.076,37.554,37.554,0,0,1,2.494,10.3,10.1,10.1,0,0,1,8.069,3.254ZM2.282,12.365c0-.1,0-.205.005-.308a37.139,37.139,0,0,0,10.347-1.433c.288.564.564,1.137.816,1.709A15.6,15.6,0,0,0,4.87,19.1,10.028,10.028,0,0,1,2.282,12.365ZM6.17,20.308c1.052-2.15,3.906-4.925,7.965-6.31a41.85,41.85,0,0,1,2.148,7.635A10.048,10.048,0,0,1,6.17,20.308Zm11.805.4a43.455,43.455,0,0,0-1.956-7.178,14.778,14.778,0,0,1,6.271.43,10.086,10.086,0,0,1-4.315,6.748Z" transform="translate(1595.65 1995.65)" fill="#1d1f2d"/></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g transform="translate(-1590 -1990)"><circle cx="12.5" cy="12.5" r="12.5" transform="translate(1590 1990)" fill="#e2e7ff"/><path d="M8.748.563a8.186,8.186,0,1,0,8.186,8.186A8.195,8.195,0,0,0,8.748.563ZM14.16,4.337a6.958,6.958,0,0,1,1.579,4.355,16.339,16.339,0,0,0-4.869-.225C10.681,8,10.5,7.6,10.256,7.094A9.314,9.314,0,0,0,14.16,4.337Zm-.777-.809A7.894,7.894,0,0,1,9.718,6.054,37.32,37.32,0,0,0,7.11,1.961a6.974,6.974,0,0,1,6.273,1.567Zm-7.607-1.1A44.612,44.612,0,0,1,8.368,6.475,26.079,26.079,0,0,1,1.9,7.327,7.017,7.017,0,0,1,5.776,2.431ZM1.756,8.759c0-.071,0-.143,0-.214a25.791,25.791,0,0,0,7.186-1c.2.392.391.789.567,1.187a10.83,10.83,0,0,0-5.959,4.7A6.964,6.964,0,0,1,1.756,8.759Zm2.7,5.516A9.834,9.834,0,0,1,9.988,9.893a29.063,29.063,0,0,1,1.492,5.3,6.978,6.978,0,0,1-7.023-.92Zm8.2.28A30.177,30.177,0,0,0,11.3,9.57a10.262,10.262,0,0,1,4.355.3,7,7,0,0,1-3,4.686Z" transform="translate(1593.752 1993.752)" fill="#1d1f2d"/></g></svg>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g transform="translate(-1664 -1990)"><circle cx="18" cy="18" r="18" transform="translate(1664 1990)" fill="#e2e7ff"/><path d="M11.239,7.714A5.763,5.763,0,1,0,17,13.477,5.754,5.754,0,0,0,11.239,7.714Zm0,9.51a3.747,3.747,0,1,1,3.747-3.747,3.754,3.754,0,0,1-3.747,3.747Zm7.343-9.746a1.344,1.344,0,1,1-1.344-1.344A1.341,1.341,0,0,1,18.582,7.478ZM22.4,8.842a6.652,6.652,0,0,0-1.816-4.71,6.7,6.7,0,0,0-4.71-1.816c-1.856-.105-7.418-.105-9.274,0a6.686,6.686,0,0,0-4.71,1.811A6.674,6.674,0,0,0,.074,8.837c-.105,1.856-.105,7.418,0,9.274a6.652,6.652,0,0,0,1.816,4.71A6.7,6.7,0,0,0,6.6,24.637c1.856.105,7.418.105,9.274,0a6.652,6.652,0,0,0,4.71-1.816,6.7,6.7,0,0,0,1.816-4.71c.105-1.856.105-7.413,0-9.269ZM20,20.1a3.793,3.793,0,0,1-2.137,2.137c-1.48.587-4.991.451-6.626.451s-5.151.13-6.626-.451A3.793,3.793,0,0,1,2.476,20.1c-.587-1.48-.451-4.991-.451-6.626s-.13-5.151.451-6.626A3.793,3.793,0,0,1,4.613,4.714c1.48-.587,4.991-.451,6.626-.451s5.151-.13,6.626.451A3.793,3.793,0,0,1,20,6.851c.587,1.48.451,4.991.451,6.626S20.588,18.628,20,20.1Z" transform="translate(1670.764 1994.523)" fill="#1c1f2d"/></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><g transform="translate(-1664 -1990)"><circle cx="12.5" cy="12.5" r="12.5" transform="translate(1664 1990)" fill="#e2e7ff"/><path d="M7.8,6.04a4,4,0,1,0,4,4A4,4,0,0,0,7.8,6.04Zm0,6.6a2.6,2.6,0,1,1,2.6-2.6,2.607,2.607,0,0,1-2.6,2.6Zm5.1-6.768a.933.933,0,1,1-.933-.933A.931.931,0,0,1,12.9,5.877Zm2.651.947a4.62,4.62,0,0,0-1.261-3.271,4.65,4.65,0,0,0-3.271-1.261c-1.289-.073-5.152-.073-6.44,0A4.643,4.643,0,0,0,1.31,3.55,4.635,4.635,0,0,0,.05,6.821c-.073,1.289-.073,5.152,0,6.44A4.62,4.62,0,0,0,1.31,16.532a4.656,4.656,0,0,0,3.271,1.261c1.289.073,5.152.073,6.44,0a4.62,4.62,0,0,0,3.271-1.261,4.65,4.65,0,0,0,1.261-3.271c.073-1.289.073-5.148,0-6.437Zm-1.665,7.82A2.634,2.634,0,0,1,12.4,16.128a17.2,17.2,0,0,1-4.6.313,17.337,17.337,0,0,1-4.6-.313,2.634,2.634,0,0,1-1.484-1.484,17.2,17.2,0,0,1-.313-4.6,17.337,17.337,0,0,1,.313-4.6A2.634,2.634,0,0,1,3.2,3.958a17.2,17.2,0,0,1,4.6-.313,17.337,17.337,0,0,1,4.6.313,2.634,2.634,0,0,1,1.484,1.484,17.2,17.2,0,0,1,.313,4.6A17.193,17.193,0,0,1,13.888,14.644Z" transform="translate(1668.699 1992.457)" fill="#1c1f2d"/></g></svg>
                             </div>
                         </div>
                     </div>
 
-                    <div class="py-16 pl-4 sm:pl-6 lg:col-span-3 lg:py-24 lg:pl-8 xl:pl-12 ml-[70px]">
+                    <div class="py-16 pl-4 sm:pl-6 lg:col-span-3 lg:py-24 lg:pl-8 xl:pl-12 2300:ml-[70px]">
                         <div class="max-w-lg mx-auto lg:max-w-none">
                             <form class="mt-12 space-y-5" action="" method="POST">
                                 @csrf

@@ -35,7 +35,7 @@
 {{--            </div>--}}
 {{--        @endif--}}
 
-        <main class="main_container max-w-2560 mx-auto">
+        <main class="main_container max-w-[2560px] mx-auto">
 
             <x-template-one></x-template-one>
 
