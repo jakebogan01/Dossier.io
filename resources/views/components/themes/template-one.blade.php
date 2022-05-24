@@ -7,7 +7,7 @@
 
         <x-themes.blocks.skills></x-themes.blocks.skills>
 
-{{--        <x-themes.blocks.experience></x-themes.blocks.experience>--}}
+        <x-themes.blocks.experience></x-themes.blocks.experience>
 
 {{--        <x-themes.blocks.projects></x-themes.blocks.projects>--}}
 
