@@ -3,7 +3,7 @@
     <x-themes.navigation.nav></x-themes.navigation.nav>
 
     <div class="flex-1">
-{{--        <x-themes.blocks.intro></x-themes.blocks.intro>--}}
+        <x-themes.blocks.intro></x-themes.blocks.intro>
 
         <x-themes.blocks.skills></x-themes.blocks.skills>
 
