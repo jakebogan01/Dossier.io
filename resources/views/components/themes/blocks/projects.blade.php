@@ -1,4 +1,4 @@
-<div class="flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden">
+<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden']) }}>
     <div
         x-data="{
                     skip: 1,

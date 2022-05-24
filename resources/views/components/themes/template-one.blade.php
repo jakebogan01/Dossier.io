@@ -20,9 +20,9 @@
 
     <div class="2300:hidden flex-1 space-y-[3.125rem]">
         <div class="flex">
-            <x-themes.blocks.intro></x-themes.blocks.intro>
+            <x-themes.blocks.intro class="flex-auto"></x-themes.blocks.intro>
 
-            <x-themes.blocks.skills></x-themes.blocks.skills>
+            <x-themes.blocks.skills class="flex-auto"></x-themes.blocks.skills>
         </div>
 
         <x-themes.blocks.projects></x-themes.blocks.projects>

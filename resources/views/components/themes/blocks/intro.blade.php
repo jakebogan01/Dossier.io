@@ -1,4 +1,4 @@
-<div class="relative flex flex-col-reverse 2300:flex-row relative bg-[#1C1F2D] px-[5.3125rem] pt-[2.1875rem] pb-[7.375rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-top 2300:bg-right-top bg-auto" style="background-image: url('/images/themes/svg/background-pattern.svg')">
+<div style="background-image: url('/images/themes/svg/background-pattern.svg')" {{ $attributes->merge(['class' => 'relative flex flex-col-reverse 2300:flex-row relative bg-[#1C1F2D] px-[5.3125rem] pt-[2.1875rem] pb-[7.375rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-top 2300:bg-right-top bg-auto']) }}>
     <div class="flex-1">
         <div class="absolute top-8">
             {{-- menu --}}
@@ -10,7 +10,7 @@
                 <div class="bg-white h-[0.1875rem] w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': test, 'delay-600': !test }"></div>
             </button>
         </div>
-        <div class="text-[3.375rem] font-black text-white mt-[4.375rem]">
+        <div class="text-[3.375rem] font-black text-white mr-[300px] 2300:mr-0 mt-[4.375rem]">
             <h1 class="leading-[1.1] tracking-wider whitespace-nowrap">
                 HELLO, I’M<br>
                 FOO<br>
@@ -48,7 +48,7 @@
     </div>
 
     {{-- users profile picture --}}
-    <div class="flex-1 pt-10 pl-[165px]">
+    <div class="flex-1 pt-[100px] 2300:pt-10 2300:pl-[165px]">
         <div class="flex items-center justify-center w-[351px] h-[351px] 2300:w-[30.0625rem] 2300:h-[30.0625rem] rounded-full" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
             <img class="inline-block w-[293px] h-[293px] 2300:w-[25.125rem] 2300:h-[25.125rem] rounded-full" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="">
         </div>

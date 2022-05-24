@@ -1,4 +1,4 @@
-<div class="flex relative bg-[#1C1F2D] px-[5.3125rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-left-bottom bg-auto" style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
+<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] px-[5.3125rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-left-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
     <div class="relative">
         <div class="absolute inset-0">
             <div class="absolute inset-y-0 left-0 w-1/2"></div>

@@ -1,4 +1,4 @@
-<div class="flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-bottom bg-auto" style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
+<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-right-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
 
     <div
         x-data="{

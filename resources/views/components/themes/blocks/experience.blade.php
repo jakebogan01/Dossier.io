@@ -1,4 +1,4 @@
-<div class="relative bg-[#1C1F2D] px-[5.3125rem] py-20 mx-[1.5625rem] text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-right-bottom bg-auto" style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
+<div {{ $attributes->merge(['class' => 'relative bg-[#1C1F2D] px-[5.3125rem] py-20 mx-[1.5625rem] text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-right-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
 
     <h2 class="mb-8 text-white text-[2.8rem] font-black leading-none mb-16">
         EXPERIENCES
