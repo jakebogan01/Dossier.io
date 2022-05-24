@@ -1,0 +1,11 @@
+.template_one {
+
+    &_intro {
+        background-image: url('/images/themes/svg/background-pattern.svg');
+        .profile_picture {
+            background-image: linear-gradient(to bottom right, #FFD279, #FFF659);
+            box-shadow: 0 0 4.125rem #FFE26B;
+        }
+    }
+
+}

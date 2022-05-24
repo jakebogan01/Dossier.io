@@ -1,10 +1,10 @@
-<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] px-[5.3125rem] mx-[1.5625rem] overflow-hidden bg-no-repeat bg-left-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
+<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] px-[5.3125rem] overflow-hidden bg-no-repeat bg-left-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
     <div class="relative">
         <div class="absolute inset-0">
             <div class="absolute inset-y-0 left-0 w-1/2"></div>
         </div>
         <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
-            <div class="py-16 pr-4 sm:pr-6 lg:col-span-2 lg:pr-8 lg:py-24 xl:pr-12">
+            <div class="py-16 lg:col-span-2 lg:py-24">
                 <div class="max-w-lg mx-auto">
                     <h2 class="text-[2.8rem] font-black text-white leading-none mb-8">
                         LET'S TALK
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="py-16 pl-4 sm:pl-6 lg:col-span-3 lg:py-24 lg:pl-8 xl:pl-12 2300:ml-[70px] transition-[margin]">
+            <div class="py-16 pl-4 sm:pl-6 lg:col-span-3 lg:py-24 lg:pl-8 xl:pl-12 ml-[110px] transition-[margin]">
                 <div class="max-w-lg mx-auto lg:max-w-none">
                     <form class="mt-12 space-y-5" action="" method="POST">
                         @csrf
