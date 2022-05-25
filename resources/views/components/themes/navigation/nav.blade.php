@@ -25,7 +25,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1200': test, 'translate-y-10 opacity-0 delay-50': !test }" width="35" height="35" viewBox="0 0 35 35"><path d="M20.875,3.375a17.5,17.5,0,1,0,17.5,17.5A17.551,17.551,0,0,0,20.875,3.375Zm0,5.251a5.251,5.251,0,1,1-5.251,5.251,5.268,5.268,0,0,1,5.251-5.251Zm0,25.274a12.747,12.747,0,0,1-10.5-5.6c.084-3.5,7-5.426,10.5-5.426S31.291,24.8,31.375,28.3A12.771,12.771,0,0,1,20.875,33.9Z" transform="translate(-3.375 -3.375)" fill="#fff"/></svg>
             </a>
 
-            <span class="block opacity-50 hover:opacity-100 transition-opacity">
+            <span class="block opacity-50 hover:opacity-100 transition-opacity" @click="test = false">
                 <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-1300': test, 'translate-y-10 opacity-0': !test }" width="35" height="35" viewBox="0 0 35 35"><path d="M20.875,3.375a17.5,17.5,0,1,0,17.5,17.5A17.5,17.5,0,0,0,20.875,3.375Zm4.433,23.836-4.433-4.435L16.442,27.21a1.345,1.345,0,1,1-1.9-1.9l4.433-4.433L14.54,16.44a1.345,1.345,0,1,1,1.9-1.9l4.433,4.433,4.433-4.433a1.344,1.344,0,0,1,1.9,1.9l-4.433,4.436,4.433,4.433a1.351,1.351,0,0,1,0,1.9,1.335,1.335,0,0,1-1.9,0Z" transform="translate(-3.375 -3.375)" fill="#fff"/></svg>
             </span>
         </div>

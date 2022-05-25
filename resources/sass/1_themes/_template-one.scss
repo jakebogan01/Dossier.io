@@ -13,4 +13,11 @@
             background-image: linear-gradient(to bottom right, #FFD279, #FFF659);
         }
     }
+
+    &_experiences {
+        background-image: url('/images/themes/svg/background-pattern-2.svg');
+        .card_images {
+            background-image: linear-gradient(to bottom right, #FFD279, #FFF659);
+        }
+    }
 }
