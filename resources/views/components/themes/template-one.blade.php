@@ -1,4 +1,4 @@
-<div class="template_one flex font-lato" x-data="{ test: false }">
+<div class="template_one flex font-lato" x-data="{ menuStatus: false }">
 
     <x-themes.navigation.nav></x-themes.navigation.nav>
 

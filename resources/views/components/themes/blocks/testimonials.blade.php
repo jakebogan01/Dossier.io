@@ -1,17 +1,20 @@
 <section {{ $attributes->merge(['class' => 'template_one_testimonials flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
 
-    <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" alt="">
+{{-- background decoration image --}}
+    <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration">
 
     <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div class="space-y-5 sm:space-y-4">
+
+{{-- tribute description --}}
                 <h2 class="text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all group-hover:text-white">
                     TRIBUTES
                 </h2>
-
                 <p class="text-[#B1B7D6] text-base font-bold leading-loose">
                     Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
                 </p>
+
             </div>
             <div class="lg:col-span-2">
                 <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
@@ -21,7 +24,9 @@
                                 <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
                             </div>
                             <div class="text-white text-base font-bold leading-loose space-y-1">
-                                <h3 class="text-xl">Emma Dorsey</h3>
+                                <h3 class="text-xl">
+                                    Emma Dorsey
+                                </h3>
                                 <p class="text-blue-500">
                                     Senior Front-end Developer
                                 </p>
@@ -33,6 +38,8 @@
                             </div>
 
                             <ul role="list" class="flex space-x-5">
+
+{{-- tribute card --}}
                                 <li>
                                     <a href="#" class="text-gray-400 hover:text-gray-500">
                                         <span class="sr-only">Twitter</span>

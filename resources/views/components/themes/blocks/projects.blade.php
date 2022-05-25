@@ -1,4 +1,5 @@
 <section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
+
     <div
         x-data="{
             skip: 1,
@@ -50,8 +51,7 @@
             },
         }"
         class="flex flex-col w-full">
-        <div
-            x-on:keydown.right="next"
+        <div x-on:keydown.right="next"
             x-on:keydown.left="prev"
             tabindex="0"
             role="region"
@@ -70,13 +70,13 @@
                 MY WORK
             </h2>
 
-            <ul
-                x-ref="slider"
+            <ul x-ref="slider"
                 tabindex="0"
                 role="listbox"
                 aria-labelledby="carousel-content-label"
                 class="flex w-full overflow-x-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
 
+{{-- project --}}
                 <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
                     <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 px-[25px] sm:pl-16" style="background-color: rgba(0,0,0,0.5)">
                         <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-70">
@@ -292,10 +292,9 @@
                         </a>
                     </div>
                 </li>
-
-
             </ul>
 
+{{-- buttons --}}
             <div class="flex justify-between">
                 <div
                     x-on:click="prev"
@@ -304,7 +303,7 @@
                     :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
                     class="flex-1 flex items-center bg-[#2B3046] py-[35px] pl-[82px] group cursor-pointer">
                     <!-- Prev Button -->
-                    <button class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
+                    <button aria-label="back" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
                         <span aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
@@ -326,7 +325,7 @@
                     <span class="hidden md:block mr-16 text-[#656A84] text-base font-black group-hover:text-[#B1B7D6]">
                         NEXT
                     </span>
-                    <button class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
+                    <button aria-label="next" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
                         <span aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
@@ -338,4 +337,5 @@
             </div>
         </div>
     </div>
+
 </section>

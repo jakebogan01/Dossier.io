@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Dossier.io</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
 {{--            </div>--}}
 {{--        @endif--}}
 
-        <main class="main_container max-w-[1280px] mx-auto">
+        <main class="main_container max-w-7xl mx-auto">
 
             <x-template-one></x-template-one>
 

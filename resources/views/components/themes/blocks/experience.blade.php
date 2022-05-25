@@ -4,9 +4,10 @@
         EXPERIENCES
     </h2>
 
+{{-- time line --}}
     <div class="hidden lg:block absolute left-[49.85%] border-2 border-[#363A4D] h-full mt-12"></div>
 
-    <!-- left timeline -->
+{{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -43,7 +44,7 @@
         </div>
     </div>
 
-    <!-- right timeline -->
+{{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -83,7 +84,7 @@
         </div>
     </div>
 
-    <!-- left timeline -->
+{{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -123,7 +124,7 @@
         </div>
     </div>
 
-    <!-- right timeline -->
+{{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -163,7 +164,7 @@
         </div>
     </div>
 
-    <!-- left timeline -->
+{{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -203,7 +204,7 @@
         </div>
     </div>
 
-    <!-- right timeline -->
+{{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -243,7 +244,7 @@
         </div>
     </div>
 
-    <!-- left timeline -->
+{{-- left timeline --}}
     <div class="ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
