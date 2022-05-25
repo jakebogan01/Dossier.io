@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'template_one_experiences relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-20 pt-32 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto transition-all']) }}>
+<div {{ $attributes->merge(['class' => 'template_one_experiences relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-36 pt-32 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto transition-all']) }}>
 
     <h2 class="mb-8 text-white text-[30px] sm:text-[2.8rem] font-black leading-none mb-16 transition-all">
         EXPERIENCES

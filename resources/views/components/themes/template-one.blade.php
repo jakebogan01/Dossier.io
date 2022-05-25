@@ -9,7 +9,7 @@
 
         <x-themes.blocks.experience></x-themes.blocks.experience>
 
-{{--        <x-themes.blocks.projects></x-themes.blocks.projects>--}}
+        <x-themes.blocks.projects></x-themes.blocks.projects>
 
 {{--        <x-themes.blocks.testimonials></x-themes.blocks.testimonials>--}}
 
