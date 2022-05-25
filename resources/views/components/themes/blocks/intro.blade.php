@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-top lg:bg-right-top bg-auto transition-all']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
     <div class="flex-1">
         <div class="absolute top-8">
 {{-- menu --}}
@@ -10,8 +10,8 @@
                 <div class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': test, 'delay-600': !test }"></div>
             </button>
         </div>
-        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white mr-0 mt-[100px] transition-all">
-            <h1 class="leading-[1.1] tracking-wider whitespace-nowrap transition-all">
+        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-gray-400 mr-0 mt-[100px] transition-all">
+            <h1 class="leading-[1.1] tracking-wider whitespace-nowrap group-hover:text-white transition-colors">
                 HELLO, I’M<br>
                 FOO<br>
                 AND THIS…<br>
@@ -53,4 +53,4 @@
             <img class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="Picture of ">
         </div>
     </div>
-</div>
+</section>

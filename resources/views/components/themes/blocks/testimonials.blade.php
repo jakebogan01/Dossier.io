@@ -1,266 +1,173 @@
-<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-right-bottom bg-auto']) }} style="background-image: url('/images/themes/svg/background-pattern-2.svg')">
+<section {{ $attributes->merge(['class' => 'template_one_testimonials flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
 
-    <div
-        x-data="{
-             skip: 1,
-             atBeginning: false,
-             atEnd: false,
-             next() {
-                 this.to((current, offset) => current + (offset * this.skip))
-             },
-             prev() {
-                 this.to((current, offset) => current - (offset * this.skip))
-             },
-             to(strategy) {
-                 let slider = this.$refs.slider
-                 let current = slider.scrollLeft
-                 let offset = slider.firstElementChild.getBoundingClientRect().width
-                 slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
-             },
-             focusableWhenVisible: {
-                 'x-intersect:enter'() {
-                     this.$el.removeAttribute('tabindex')
-                 },
-                 'x-intersect:leave'() {
-                     this.$el.setAttribute('tabindex', '-1')
-                 },
-             },
-             disableNextAndPreviousButtons: {
-                 'x-intersect:enter.threshold.05'() {
-                     let slideEls = this.$el.parentElement.children
+    <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" alt="">
 
-                     // If this is the first slide.
-                     if (slideEls[0] === this.$el) {
-                         this.atBeginning = true
-                     // If this is the last slide.
-                     } else if (slideEls[slideEls.length-1] === this.$el) {
-                         this.atEnd = true
-                     }
-                 },
-                 'x-intersect:leave.threshold.05'() {
-                     let slideEls = this.$el.parentElement.children
+    <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
+        <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+            <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all group-hover:text-white">
+                    TRIBUTES
+                </h2>
 
-                     // If this is the first slide.
-                     if (slideEls[0] === this.$el) {
-                         this.atBeginning = false
-                     // If this is the last slide.
-                     } else if (slideEls[slideEls.length-1] === this.$el) {
-                         this.atEnd = false
-                     }
-                 },
-             },
-         }"
-        class="flex flex-col w-full">
-
-        <div
-            x-on:keydown.right="next"
-            x-on:keydown.left="prev"
-            tabindex="0"
-            role="region"
-            aria-labelledby="carousel-label"
-            class="flex space-x-6">
-
-            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
-
-            <div class="flex items-center pl-[82px]">
-                <button
-                    x-on:click="prev"
-                    class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
-                    type="button"
-                    :aria-disabled="atBeginning"
-                    :tabindex="atEnd ? -1 : 0"
-                    :class="{ 'opacity-50 cursor-not-allowed': atBeginning }">
-                     <span aria-hidden="true">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-                         </svg>
-                     </span>
-                    <span class="sr-only">Skip to previous slide page</span>
-                </button>
+                <p class="text-[#B1B7D6] text-base font-bold leading-loose">
+                    Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
+                </p>
             </div>
-
-            <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
-
-            <ul
-                x-ref="slider"
-                tabindex="0"
-                role="listbox"
-                aria-labelledby="carousel-content-label"
-                class="flex w-full overflow-hidden hover:overflow-x-auto snap-x snap-mandatory">
-
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                                        </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
+            <div class="lg:col-span-2">
+                <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
+                    <li class="card">
+                        <div class="space-y-4">
+                            <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
                             </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                                        </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
+                            <div class="text-white text-base font-bold leading-loose space-y-1">
+                                <h3 class="text-xl">Emma Dorsey</h3>
+                                <p class="text-blue-500">
+                                    Senior Front-end Developer
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                                        </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
+                            <div class="text-[#B1B7D6] text-base font-bold leading-loose">
+                                <p>
+                                    Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                </li>
 
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                            <ul role="list" class="flex space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                                         </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
                                         </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
-                            </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li x-bind="disableNextAndPreviousButtons" class="flex snap-start w-full shrink-0 flex flex-col items-center justify-center" role="option">
-                    <div class="flex">
-                        <div class="relative flex justify-center items-center">
-                            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                            <img class="object-cover max-w-[341px] w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                        </div>
-                        <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                            <div class="mx-auto max-w-md px-4 sm:px-6 lg:px-0 lg:py-20 leading-loose">
-                                <blockquote>
-                                    <div>
-                                        <svg class="h-10 w-10 text-[#71758D] opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    <li class="card mt-12 sm:mt-[100px] transition-all">
+                        <div class="space-y-4">
+                            <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                            </div>
+                            <div class="text-white text-base font-bold leading-loose space-y-1">
+                                <h3 class="text-xl">Emma Dorsey</h3>
+                                <p class="text-blue-500">
+                                    Senior Front-end Developer
+                                </p>
+                            </div>
+                            <div class="text-[#B1B7D6] text-base font-bold leading-loose">
+                                <p>
+                                    Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+                                </p>
+                            </div>
+
+                            <ul role="list" class="flex space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                                         </svg>
-                                        <p class="mt-6 text-sm font-bold text-[#B1B7D6] leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
-                                    </div>
-                                    <footer class="mt-6">
-                                        <p class="text-[22px] font-bold text-white">Judith Black</p>
-                                        <p class="text-[17px] font-bold text-[#B1B7D6]">CEO at PureInsights</p>
-                                    </footer>
-                                </blockquote>
-                            </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
 
-            <div class="flex items-center pr-[82px]">
-                <button
-                    x-on:click="next"
-                    class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] hover:bg-[#575cff]"
-                    type="button"
-                    :aria-disabled="atEnd"
-                    :tabindex="atEnd ? -1 : 0"
-                    :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
-                     <span aria-hidden="true">
-                         <svg xmlns="http://www.w3.org/2000/svg"
-                              class="h-8 w-8 text-white"
-                              fill="none" viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              stroke-width="2">
-                             <path stroke-linecap="round"
-                                   stroke-linejoin="round"
-                                   d="M9 5l7 7-7 7"/>
-                         </svg>
-                     </span>
-                    <span class="sr-only">Skip to next slide page</span>
-                </button>
+                    <li class="card mt-12 sm:mt-0">
+                        <div class="space-y-4">
+                            <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                            </div>
+                            <div class="text-white text-base font-bold leading-loose space-y-1">
+                                <h3 class="text-xl">Emma Dorsey</h3>
+                                <p class="text-blue-500">
+                                    Senior Front-end Developer
+                                </p>
+                            </div>
+                            <div class="text-[#B1B7D6] text-base font-bold leading-loose">
+                                <p>
+                                    Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+                                </p>
+                            </div>
+
+                            <ul role="list" class="flex space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="card mt-12 sm:mt-[100px] transition-all">
+                        <div class="space-y-4">
+                            <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                            </div>
+                            <div class="text-white text-base font-bold leading-loose space-y-1">
+                                <h3 class="text-xl">Emma Dorsey</h3>
+                                <p class="text-blue-500">
+                                    Senior Front-end Developer
+                                </p>
+                            </div>
+                            <div class="text-[#B1B7D6] text-base font-bold leading-loose">
+                                <p>
+                                    Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+                                </p>
+                            </div>
+
+                            <ul role="list" class="flex space-x-5">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</section>

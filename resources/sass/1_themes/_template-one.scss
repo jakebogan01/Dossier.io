@@ -20,4 +20,10 @@
             background-image: linear-gradient(to bottom right, #FFD279, #FFF659);
         }
     }
+
+    &_testimonials {
+        .card:hover .card_image {
+            transform: scale(1.1);
+        }
+    }
 }

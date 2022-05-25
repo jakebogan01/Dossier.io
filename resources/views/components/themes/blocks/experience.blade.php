@@ -1,6 +1,6 @@
-<div {{ $attributes->merge(['class' => 'template_one_experiences relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-36 pt-32 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto transition-all']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_experiences relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto transition-all group']) }}>
 
-    <h2 class="mb-8 text-white text-[30px] sm:text-[2.8rem] font-black leading-none mb-16 transition-all">
+    <h2 class="mb-8 text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none mb-16 transition-all group-hover:text-white">
         EXPERIENCES
     </h2>
 
@@ -55,26 +55,26 @@
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
-            <div class="hidden sm:flex flex-row-reverse lg:flex-row">
+            <div class="hidden sm:flex flex-row-reverse">
                 <div class="flex-1">
-                    <h4 class="mt-2 text-2xl text-white font-bold lg:text-right transition-all">
+                    <h4 class="mt-2 text-2xl text-white font-bold transition-all">
                         A designer born
                     </h4>
                 </div>
                 <div class="min-w-[152px]"></div>
             </div>
-            <div class="flex flex-col-reverse sm:flex-row-reverse lg:flex-row transition-all">
+            <div class="flex flex-col-reverse sm:flex-row-reverse transition-all">
                 <div class="flex-1 pt-4">
-                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold lg:text-right">
+                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold">
                         A designer born
                     </h4>
-                    <p class="text-[#B1B7D6] font-bold lg:text-right transition-all">
+                    <p class="text-[#B1B7D6] font-bold transition-all">
                         Yes, I was born as a 90’s kid.
                         Started observing the world.
                     </p>
                 </div>
                 <div class="flex">
-                    <div class="pr-[3.125rem] lg:pr-0 lg:pl-[3.125rem] -mt-1.5 lg:text-right transition-all">
+                    <div class="pr-[3.125rem] -mt-1.5 transition-all">
                         <span class="block font-black text-[2.75rem] text-[#FFCF7B] leading-none">1990</span>
                         <span class="block text-sm font-bold text-base">JUNE</span>
                     </div>
@@ -124,10 +124,10 @@
     </div>
 
     <!-- right timeline -->
-    <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none">
+    <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
-            <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px]">
+            <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
                     <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
                     <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
@@ -135,26 +135,26 @@
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
-            <div class="hidden sm:flex flex-row-reverse lg:flex-row">
+            <div class="hidden sm:flex flex-row-reverse">
                 <div class="flex-1">
-                    <h4 class="mt-2 text-2xl text-white font-bold lg:text-right">
+                    <h4 class="mt-2 text-2xl text-white font-bold transition-all">
                         A designer born
                     </h4>
                 </div>
                 <div class="min-w-[152px]"></div>
             </div>
-            <div class="flex flex-col-reverse sm:flex-row-reverse lg:flex-row">
+            <div class="flex flex-col-reverse sm:flex-row-reverse transition-all">
                 <div class="flex-1 pt-4">
-                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold lg:text-right">
+                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold">
                         A designer born
                     </h4>
-                    <p class="text-[#B1B7D6] font-bold lg:text-right">
+                    <p class="text-[#B1B7D6] font-bold transition-all">
                         Yes, I was born as a 90’s kid.
                         Started observing the world.
                     </p>
                 </div>
                 <div class="flex">
-                    <div class="pr-[3.125rem] lg:pr-0 lg:pl-[3.125rem] -mt-1.5 lg:text-right">
+                    <div class="pr-[3.125rem] -mt-1.5 transition-all">
                         <span class="block font-black text-[2.75rem] text-[#FFCF7B] leading-none">1990</span>
                         <span class="block text-sm font-bold text-base">JUNE</span>
                     </div>
@@ -204,10 +204,10 @@
     </div>
 
     <!-- right timeline -->
-    <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none">
+    <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
-            <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px]">
+            <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
                     <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
                     <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
@@ -215,26 +215,26 @@
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
-            <div class="hidden sm:flex flex-row-reverse lg:flex-row">
+            <div class="hidden sm:flex flex-row-reverse">
                 <div class="flex-1">
-                    <h4 class="mt-2 text-2xl text-white font-bold lg:text-right">
+                    <h4 class="mt-2 text-2xl text-white font-bold transition-all">
                         A designer born
                     </h4>
                 </div>
                 <div class="min-w-[152px]"></div>
             </div>
-            <div class="flex flex-col-reverse sm:flex-row-reverse lg:flex-row">
+            <div class="flex flex-col-reverse sm:flex-row-reverse transition-all">
                 <div class="flex-1 pt-4">
-                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold lg:text-right">
+                    <h4 class="sm:hidden mt-2 text-2xl text-white font-bold">
                         A designer born
                     </h4>
-                    <p class="text-[#B1B7D6] font-bold lg:text-right">
+                    <p class="text-[#B1B7D6] font-bold transition-all">
                         Yes, I was born as a 90’s kid.
                         Started observing the world.
                     </p>
                 </div>
                 <div class="flex">
-                    <div class="pr-[3.125rem] lg:pr-0 lg:pl-[3.125rem] -mt-1.5 lg:text-right">
+                    <div class="pr-[3.125rem] -mt-1.5 transition-all">
                         <span class="block font-black text-[2.75rem] text-[#FFCF7B] leading-none">1990</span>
                         <span class="block text-sm font-bold text-base">JUNE</span>
                     </div>
@@ -282,4 +282,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

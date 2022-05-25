@@ -1,6 +1,6 @@
 <nav class="mt-10 transition-all duration-300 delay-500 overflow-hidden" :class="{ 'w-[58px]': test, 'w-0': !test }" x-cloak="test">
     <div class="relative flex flex-col items-center justify-center">
-        <div class="fixed top-8 space-y-8">
+        <div class="fixed top-8 space-y-8 invisible" :class="{ 'visible': test, 'invisible': !test }">
             <a href="#" class="block opacity-50 hover:opacity-100 transition-opacity" aria-current="page">
                 <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300" :class="{ 'translate-y-0 opacity-100 delay-700': test, 'translate-y-10 opacity-0 delay-300': !test }" width="35" height="35" viewBox="0 0 35 35"><path d="M17.5,0A17.5,17.5,0,1,0,35,17.5,17.5,17.5,0,0,0,17.5,0Zm0,8.065,8.545,6.641v12.23H20.166V19.553H14.834v7.383H8.955V14.706Z" fill="#fff"/></svg>
             </a>

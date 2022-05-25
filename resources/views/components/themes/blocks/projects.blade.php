@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden']) }}>
+<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
     <div
         x-data="{
             skip: 1,
@@ -58,11 +58,15 @@
             aria-labelledby="carousel-label"
             class="relative">
 
-            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+            <h2 id="carousel-label" class="sr-only" hidden>
+                Projects
+            </h2>
 
-            <span id="carousel-content-label" class="sr-only" hidden>My Projects</span>
+            <span id="carousel-content-label tracking-wider" class="sr-only" hidden>
+                My Projects
+            </span>
 
-            <h2 class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20">
+            <h2 class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 group-hover:text-white transition-all">
                 MY WORK
             </h2>
 
@@ -330,9 +334,8 @@
                         </span>
                         <span class="sr-only">Skip to next slide page</span>
                     </button>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

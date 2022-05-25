@@ -11,9 +11,9 @@
 
         <x-themes.blocks.projects></x-themes.blocks.projects>
 
-{{--        <x-themes.blocks.testimonials></x-themes.blocks.testimonials>--}}
+        <x-themes.blocks.testimonials></x-themes.blocks.testimonials>
 
-{{--        <x-themes.blocks.contact></x-themes.blocks.contact>--}}
+        <x-themes.blocks.contact></x-themes.blocks.contact>
     </div>
 
 </div>

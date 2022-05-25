@@ -1,6 +1,6 @@
-<div {{ $attributes->merge(['class' => 'template_one_skills flex flex-col lg:flex-row justify-between relative bg-[#1C1F2D] md:px-[5.3125rem] pt-20 overflow-hidden']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_skills flex flex-col lg:flex-row justify-between relative bg-[#1C1F2D] md:px-[5.3125rem] pt-32 overflow-hidden group']) }}>
     <div class="flex-1 pb-20 lg:pb-0 px-[25px] sm:px-[85px] md:px-0 lg:pr-[40px] xl:pr-20 text-[#B1B7D6] font-bold text-base leading-loose transition-all">
-        <h2 class="mb-12 text-white text-[30px] sm:text-[2.8rem] font-black leading-none -mt-2 transition-all">
+        <h2 class="mb-12 text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none -mt-2 transition-all group-hover:text-white">
             I AM
         </h2>
         <p class="leading-loose mb-10">
@@ -37,7 +37,7 @@
     </div>
 
     <div class="flex flex-col-reverse sm:flex-row justify-center lg:justify-end mt-0 transition-all">
-        <div class="sm:mr-12 sm:space-y-12 transition-all">
+        <div class="sm:mr-8 sm:space-y-12 transition-all">
             <div class="relative sm:w-[15.625rem] bg-[#4046FF] px-7 pb-[1.875rem] pt-3 text-base font-bold leading-loose text-white text-center sm:text-left space-y-7 transition-all">
                 <div class="flex justify-center items-center">
                     <div class="card_images sm:absolute top-0 left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[3.375rem] h-[3.375rem] rounded-full transition-all">
@@ -133,4 +133,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>
