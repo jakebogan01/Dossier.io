@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'template_one_testimonials flex flex-col relative py-28 bg-[#1C1F2D] sm:hover:bg-[#222636] group transition-colors']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_testimonials flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
 
 {{-- background decoration image --}}
     <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration">

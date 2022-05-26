@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'template_one_skills flex flex-col relative bg-[#1C1F2D]  sm:hover:bg-[#222636] pt-12 group transition-colors']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_skills flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
 
     <div class="relative mx-auto py-12 max-w-7xl sm:px-[85px] lg:pt-40 z-20">
         <div class="space-y-12 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">

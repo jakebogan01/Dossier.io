@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group transition-colors']) }}>
+<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
 
     <div class="relative w-full">
         <div class="absolute inset-0">

@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] sm:hover:bg-[#222636] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
     <div class="flex-1">
 
 {{-- menu --}}
