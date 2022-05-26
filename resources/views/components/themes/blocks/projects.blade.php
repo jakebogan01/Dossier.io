@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_projects flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
 
     <div
         x-data="{
