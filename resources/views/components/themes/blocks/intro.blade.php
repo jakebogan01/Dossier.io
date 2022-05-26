@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
+<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] sm:hover:bg-[#222636] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
     <div class="flex-1">
 
 {{-- menu --}}
@@ -13,8 +13,8 @@
         </div>
 
 {{-- introduction of user --}}
-        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-gray-400 mr-0 mt-[100px] transition-all">
-            <h1 class="leading-[1.1] tracking-wider whitespace-nowrap group-hover:text-white transition-colors">
+        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all">
+            <h1 class="leading-[1.1] tracking-wider whitespace-nowrap sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
                 FOO<br>
                 AND THIS…<br>
@@ -41,7 +41,7 @@
 
         <div>
             <a href="#">
-                <button type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
+                <button type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
                     LETS TALK
                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />

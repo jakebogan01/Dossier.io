@@ -66,7 +66,7 @@
                 My Projects
             </span>
 
-            <h2 class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 group-hover:text-white transition-all">
+            <h2 class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white transition-all">
                 MY WORK
             </h2>
 
@@ -303,7 +303,7 @@
                     :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
                     class="flex-1 flex items-center bg-[#2B3046] py-[35px] pl-[82px] group cursor-pointer">
                     <!-- Prev Button -->
-                    <button aria-label="back" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
+                    <button aria-label="back" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] sm:group-hover:bg-[#575cff]" type="button">
                         <span aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
@@ -311,7 +311,7 @@
                         </span>
                         <span class="sr-only">Skip to previous slide page</span>
                     </button>
-                    <span class="hidden md:block ml-16 text-[#656A84] text-base font-black group-hover:text-[#B1B7D6]">
+                    <span class="hidden md:block ml-16 text-[#656A84] text-base font-black sm:group-hover:text-[#B1B7D6]">
                         PREVIOUS
                     </span>
                 </div>
@@ -322,10 +322,10 @@
                     :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
                     class="flex-1 flex justify-end items-center bg-[#272C41] py-[35px] pr-[82px] group cursor-pointer">
                     <!-- Next Button -->
-                    <span class="hidden md:block mr-16 text-[#656A84] text-base font-black group-hover:text-[#B1B7D6]">
+                    <span class="hidden md:block mr-16 text-[#656A84] text-base font-black sm:group-hover:text-[#B1B7D6]">
                         NEXT
                     </span>
-                    <button aria-label="next" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] group-hover:bg-[#575cff]" type="button">
+                    <button aria-label="next" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] sm:group-hover:bg-[#575cff]" type="button">
                         <span aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>

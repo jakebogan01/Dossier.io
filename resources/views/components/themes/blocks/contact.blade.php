@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
+<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group transition-colors']) }}>
 
     <div class="relative w-full">
         <div class="absolute inset-0">
@@ -7,7 +7,7 @@
         <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5 z-10">
             <div class="bg-[#242839] py-16 px-[25px] lg:col-span-2 lg:px-[85px] lg:py-24 xl:pr-12">
                 <div class="max-w-lg mx-auto text-[#B1B7D6] font-bold text-base leading-loose">
-                    <h2 class="text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all group-hover:text-white">
+                    <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
                         LET'S TALK
                     </h2>
 
@@ -19,7 +19,7 @@
                             <dt class="sr-only">Phone number</dt>
                             <dd class="flex">
                                 <!-- Heroicon name: outline/phone -->
-                                <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
                                 <span class="ml-3"> +1 (555) 123-4567 </span>
@@ -29,7 +29,7 @@
                             <dt class="sr-only">Email</dt>
                             <dd class="flex">
                                 <!-- Heroicon name: outline/mail -->
-                                <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <span class="ml-3"> support@example.com </span>
@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="pt-12">
-                            <button aria-label="send email" type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
+                            <button aria-label="send email" type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
                                 LETS TALK
                                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
