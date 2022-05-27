@@ -16,17 +16,18 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[93px] sm:-translate-y-[28px]"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-delay="100">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="69" viewBox="0 0 21 69">
-                    <g transform="translate(0 48)">
-                        <rect width="10" height="50" transform="translate(5 -48)" class="fill-current text-[#1c1f2d]"/>
-                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b"/>
-                        <circle cx="4.5" cy="4.5" r="4.5" transform="translate(6 6)" fill="#1c1f2d"/>
-                    </g>
-                </svg>
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[88px] sm:-translate-y-[28px] lg:translate-x-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="69" viewBox="0 0 21 69">
+                        <g transform="translate(0 48)">
+                            <rect width="10" height="50" transform="translate(5 -48)" class="fill-current text-[#1c1f2d]"/>
+                            <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b"/>
+                            <circle cx="4.5" cy="4.5" r="4.5" transform="translate(6 6)" fill="#1c1f2d"/>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12 transition-all">
@@ -75,14 +76,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] transition-all"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-delay="150">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px] transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
@@ -131,14 +133,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px]"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                data-aos-delay="400">
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
@@ -187,14 +190,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] transition-all"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="250">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                data-aos-delay="150">
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px] transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
@@ -243,14 +247,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px]"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                data-aos-delay="400">
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
@@ -299,14 +304,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] transition-all"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
-                data-aos-delay="350">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                data-aos-delay="150">
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px] transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">
@@ -355,14 +361,15 @@
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div
-                class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px]"
                 data-aos="zoom-in"
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-delay="400">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                    <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                </svg>
+                <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21">
+                        <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                        <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="order-1 w-full lg:w-5/12">

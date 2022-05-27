@@ -5,10 +5,29 @@
         <div class="absolute top-16" role="menu">
             <button type="button" class="w-[2.8125rem] cursor-pointer" @click="menuStatus = !menuStatus">
                 <span class="sr-only">Open main menu</span>
-                <div class="bg-white h-[0.1875rem]"></div>
-                <div class="bg-white h-[0.1875rem] mt-1.5 w-9 transition-transform duration-300" :class="{ 'translate-x-[9px] delay-200': menuStatus, 'delay-800': !menuStatus }"></div>
-                <div class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem] transition-transform  duration-300" :class="{ 'translate-x-[18px] delay-100': menuStatus, 'delay-700': !menuStatus }"></div>
-                <div class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': menuStatus, 'delay-600': !menuStatus }"></div>
+                <span
+                    class="block"
+                    data-aos="fade-right">
+                    <div class="bg-white h-[0.1875rem]"></div>
+                </span>
+                <span
+                    class="block"
+                    data-aos="fade-right"
+                    data-aos-delay="50">
+                    <div class="bg-white h-[0.1875rem] mt-1.5 w-9 transition-transform duration-300" :class="{ 'translate-x-[9px] delay-200': menuStatus, 'delay-800': !menuStatus }"></div>
+                </span>
+                <span
+                    class="block"
+                    data-aos="fade-right"
+                    data-aos-delay="100">
+                    <div class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem] transition-transform  duration-300" :class="{ 'translate-x-[18px] delay-100': menuStatus, 'delay-700': !menuStatus }"></div>
+                </span>
+                <span
+                    class="block"
+                    data-aos="fade-right"
+                    data-aos-delay="150">
+                    <div class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300" :class="{ 'translate-x-[29px]': menuStatus, 'delay-600': !menuStatus }"></div>
+                </span>
             </button>
         </div>
 
