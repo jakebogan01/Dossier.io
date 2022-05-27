@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'template_one_projects flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
+<section id="projects" {{ $attributes->merge(['class' => 'template_one_projects anchor flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
 
     <div
         x-data="{
@@ -76,7 +76,7 @@
                 aria-labelledby="carousel-content-label"
                 class="flex w-full overflow-x-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
 
-{{-- project --}}
+                {{-- project --}}
                 <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
                     <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 px-[25px] sm:pl-16" style="background-color: rgba(0,0,0,0.5)">
                         <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-70">
@@ -294,7 +294,7 @@
                 </li>
             </ul>
 
-{{-- buttons --}}
+            {{-- buttons --}}
             <div class="flex justify-between">
                 <div
                     x-on:click="prev"

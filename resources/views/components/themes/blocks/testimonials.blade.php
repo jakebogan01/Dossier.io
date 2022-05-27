@@ -1,21 +1,20 @@
-<section {{ $attributes->merge(['class' => 'template_one_testimonials flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
+<section id="testimonials" {{ $attributes->merge(['class' => 'template_one_testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
 
-{{-- background decoration image --}}
+    {{-- background decoration image --}}
     <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration">
 
     <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
-            <div class="space-y-5 sm:space-y-4">
 
-{{-- tribute description --}}
+            <div class="space-y-5 sm:space-y-4">
                 <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
                     TRIBUTES
                 </h2>
                 <p class="text-[#B1B7D6] text-base font-bold leading-loose">
                     Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
                 </p>
-
             </div>
+
             <div class="lg:col-span-2">
                 <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
                     <li class="card">
@@ -39,7 +38,7 @@
 
                             <ul role="list" class="flex space-x-5">
 
-{{-- tribute card --}}
+                                {{-- tribute card --}}
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">Twitter</span>
@@ -48,6 +47,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">LinkedIn</span>
@@ -56,6 +56,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
@@ -78,6 +79,7 @@
                             </div>
 
                             <ul role="list" class="flex space-x-5">
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">Twitter</span>
@@ -86,6 +88,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">LinkedIn</span>
@@ -94,6 +97,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
@@ -116,6 +120,7 @@
                             </div>
 
                             <ul role="list" class="flex space-x-5">
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">Twitter</span>
@@ -124,6 +129,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">LinkedIn</span>
@@ -132,6 +138,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
@@ -154,6 +161,7 @@
                             </div>
 
                             <ul role="list" class="flex space-x-5">
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">Twitter</span>
@@ -162,6 +170,7 @@
                                         </svg>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="#" class="text-yellow-200 hover:text-yellow-300">
                                         <span class="sr-only">LinkedIn</span>
@@ -170,11 +179,14 @@
                                         </svg>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </div>
     </div>
+
 </section>

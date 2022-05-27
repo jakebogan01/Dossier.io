@@ -1,8 +1,8 @@
-<section {{ $attributes->merge(['class' => 'template_one_intro relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[2.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
+<section id="home" {{ $attributes->merge(['class' => 'template_one_intro anchor relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[5.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
     <div class="flex-1">
 
-{{-- menu --}}
-        <div class="absolute top-8" role="menu">
+        {{-- menu --}}
+        <div class="absolute top-16" role="menu">
             <button type="button" class="w-[2.8125rem] cursor-pointer" @click="menuStatus = !menuStatus">
                 <span class="sr-only">Open main menu</span>
                 <div class="bg-white h-[0.1875rem]"></div>
@@ -12,7 +12,7 @@
             </button>
         </div>
 
-{{-- introduction of user --}}
+        {{-- introduction of user --}}
         <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all">
             <h1 class="leading-[1.1] tracking-wider whitespace-nowrap sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
@@ -49,12 +49,14 @@
                 </button>
             </a>
         </div>
+
     </div>
 
-{{-- users profile picture --}}
+    {{-- users profile picture --}}
     <div class="flex-1 flex justify-center 570:justify-start lg:justify-end pt-20 lg:pt-10">
         <div class="profile_picture flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all">
             <img class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="Picture of ">
         </div>
     </div>
+
 </section>

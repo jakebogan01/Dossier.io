@@ -1,20 +1,20 @@
-<section {{ $attributes->merge(['class' => 'template_one_experiences relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }}>
+<section id="experience" {{ $attributes->merge(['class' => 'template_one_experiences anchor relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }}>
 
     <h2 class="mb-8 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none mb-16 transition-all sm:group-hover:text-white">
         EXPERIENCES
     </h2>
 
-{{-- time line --}}
+    {{-- time line --}}
     <div class="hidden lg:block absolute left-[49.85%] border-2 border-[#363A4D] h-full mt-12"></div>
 
-{{-- left timeline --}}
+    {{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
             <div class="-ml-[13px] lg:mx-auto -translate-y-[93px] sm:-translate-y-[28px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="69" viewBox="0 0 21 69">
                     <g transform="translate(0 48)">
-                        <rect width="10" height="50" transform="translate(5 -48)" class="fill-current text-[#1c1f2d] sm:group-hover:text-[#222636]"/>
+                        <rect width="10" height="50" transform="translate(5 -48)" class="fill-current text-[#1c1f2d]"/>
                         <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b"/>
                         <circle cx="4.5" cy="4.5" r="4.5" transform="translate(6 6)" fill="#1c1f2d"/>
                     </g>
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-{{-- right timeline --}}
+    {{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -90,7 +90,7 @@
         </div>
     </div>
 
-{{-- left timeline --}}
+    {{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -130,7 +130,7 @@
         </div>
     </div>
 
-{{-- right timeline --}}
+    {{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -170,7 +170,7 @@
         </div>
     </div>
 
-{{-- left timeline --}}
+    {{-- left timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -210,7 +210,7 @@
         </div>
     </div>
 
-{{-- right timeline --}}
+    {{-- right timeline --}}
     <div class="pb-12 sm:pb-8 lg:pb-0 lg:mb-8 ml-[10px] sm:ml-0 flex justify-between items-center w-full right-timeline border-l-4 border-[#363A4D] lg:border-none transition-all">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -250,7 +250,7 @@
         </div>
     </div>
 
-{{-- left timeline --}}
+    {{-- left timeline --}}
     <div class="ml-[10px] sm:ml-0 flex justify-between lg:flex-row-reverse items-center w-full left-timeline border-l-4 border-[#363A4D] lg:border-none">
         <div class="hidden lg:block order-1 w-5/12"></div>
         <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full">
@@ -289,4 +289,5 @@
             </div>
         </div>
     </div>
+
 </section>

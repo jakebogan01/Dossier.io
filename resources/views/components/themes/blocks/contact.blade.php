@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
+<section id="contact" {{ $attributes->merge(['class' => 'anchor flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
 
     <div class="relative w-full">
         <div class="absolute inset-0">
@@ -10,10 +10,10 @@
                     <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
                         LET'S TALK
                     </h2>
-
                     <p class="mt-3 leading-loose">
                         Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
                     </p>
+
                     <dl class="mt-8 text-base font-bold text-[#6F7490]">
                         <div class="mt-6">
                             <dt class="sr-only">Phone number</dt>
@@ -47,32 +47,34 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><g transform="translate(-1664 -1990)"><circle cx="15" cy="15" r="15" transform="translate(1664 1990)" fill="#e2e7ff"/><path d="M9.365,6.8a4.8,4.8,0,1,0,4.8,4.8A4.795,4.795,0,0,0,9.365,6.8Zm0,7.925A3.122,3.122,0,1,1,12.487,11.6a3.128,3.128,0,0,1-3.122,3.122ZM15.484,6.6a1.12,1.12,0,1,1-1.12-1.12A1.118,1.118,0,0,1,15.484,6.6Zm3.181,1.137a5.544,5.544,0,0,0-1.513-3.925A5.58,5.58,0,0,0,13.227,2.3c-1.547-.088-6.182-.088-7.728,0A5.572,5.572,0,0,0,1.574,3.812,5.562,5.562,0,0,0,.061,7.737c-.088,1.547-.088,6.182,0,7.728a5.544,5.544,0,0,0,1.513,3.925A5.587,5.587,0,0,0,5.5,20.9c1.547.088,6.182.088,7.728,0a5.544,5.544,0,0,0,3.925-1.513,5.58,5.58,0,0,0,1.513-3.925c.088-1.547.088-6.178,0-7.724Zm-2,9.384a3.161,3.161,0,0,1-1.781,1.781c-1.233.489-4.159.376-5.522.376s-4.293.109-5.522-.376a3.161,3.161,0,0,1-1.781-1.781c-.489-1.233-.376-4.159-.376-5.522s-.109-4.293.376-5.522A3.161,3.161,0,0,1,3.843,4.3C5.076,3.812,8,3.925,9.365,3.925s4.293-.109,5.522.376a3.161,3.161,0,0,1,1.781,1.781c.489,1.233.376,4.159.376,5.522S17.156,15.9,16.667,17.125Z" transform="translate(1669.637 1993.396)" fill="#1c1f2d"/></g></svg>
                         </div>
                     </dl>
+
                 </div>
             </div>
+
             <div class="py-16 px-[25px] lg:col-span-3 lg:py-24 lg:px-[85px] xl:pl-12">
                 <div class="max-w-lg mx-auto lg:max-w-none">
+                    {{-- contact form --}}
                     <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
                         @csrf
                         <div>
                             <div class="relative">
-                                <input id="email" name="email" type="email" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="john@doe.com" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" required />
+                                <input id="name" name="name" type="text" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="Full Name" aria-invalid="true" aria-describedby="name-error" style="box-shadow: none;" required />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                                <label for="email" class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
+                                <label for="name" class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
                                     Full Name
                                 </label>
                             </div>
-                            <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>
+                            <p class="mt-2 text-sm text-red-600" id="name-error">Your password must be less than 4 characters.</p>
                         </div>
 
                         <div>
                             <div class="relative">
-                                <input id="phone" name="phone" type="tel" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="8008881234" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" />
+                                <input id="phone" name="phone" type="tel" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="8008881234" aria-invalid="true" aria-describedby="phone-error" style="box-shadow: none;" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <!-- Heroicon name: solid/exclamation-circle -->
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
                                     </svg>
@@ -81,7 +83,7 @@
                                     Phone
                                 </label>
                             </div>
-                            <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>
+                            <p class="mt-2 text-sm text-red-600" id="phone-error">Your password must be less than 4 characters.</p>
                         </div>
 
                         <div>
@@ -103,7 +105,6 @@
                             <div class="relative">
                                 <textarea rows="4" name="message" id="message" class="pt-3 peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <!-- Heroicon name: solid/exclamation-circle -->
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
                                     </svg>
@@ -112,11 +113,11 @@
                                     Message
                                 </label>
                             </div>
-                            <p class="mt-2 text-sm text-red-600" id="email-error">Your password must be less than 4 characters.</p>
+                            <p class="mt-2 text-sm text-red-600" id="message-error">Your password must be less than 4 characters.</p>
                         </div>
 
                         <div class="pt-12">
-                            <button aria-label="send email" type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
+                            <button aria-label="send email" type="submit" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
                                 LETS TALK
                                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -128,4 +129,5 @@
             </div>
         </div>
     </div>
+
 </section>

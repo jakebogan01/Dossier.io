@@ -1,12 +1,13 @@
-<section {{ $attributes->merge(['class' => 'template_one_skills flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
+<section id="skills" {{ $attributes->merge(['class' => 'template_one_skills anchor flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
 
     <div class="relative mx-auto py-12 max-w-7xl sm:px-[85px] lg:pt-40 z-20">
         <div class="space-y-12 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
 
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-2 mt-10 sm:mt-24">
                 <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
-{{-- card --}}
-                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] p-[30px] transition-colors">
+
+                    {{-- card --}}
+                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -34,7 +35,7 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] p-[30px] transition-colors">
+                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px]  transition-all">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -62,7 +63,7 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] p-[30px] transition-colors">
+                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -90,7 +91,7 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] p-[30px] transition-colors">
+                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] transition-all">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -117,10 +118,11 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
 
-{{-- tribute description --}}
+            {{-- tribute description --}}
             <div class="space-y-5 sm:space-y-4 px-[25px] pb-[65px] sm:pb-0 sm:px-0 text-[#B1B7D6] font-bold text-base leading-loose">
                 <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
                     TOP SKILLS
@@ -129,6 +131,7 @@
                     A junior web developer with a background in UI & UX. I have a passion for learning new skills while expanding my existing skill set. I have over 3 years of professional experience.
                 </p>
                 <ul role="list" class="pt-8 space-y-7">
+
                     <li class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
                             <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
@@ -152,8 +155,10 @@
                         </svg>
                         Interaction and illustrations are areas more focused now.
                     </li>
+
                 </ul>
             </div>
+
         </div>
     </div>
 
