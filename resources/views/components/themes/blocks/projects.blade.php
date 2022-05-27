@@ -66,7 +66,10 @@
                 My Projects
             </span>
 
-            <h2 class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white transition-all">
+            <h2
+                class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white transition-all"
+                data-aos="fade-right"
+                data-aos-anchor-placement="bottom-bottom">
                 MY WORK
             </h2>
 
@@ -79,7 +82,11 @@
                 {{-- project --}}
                 <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
                     <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 px-[25px] sm:pl-16" style="background-color: rgba(0,0,0,0.5)">
-                        <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-70">
+                        <h3
+                            class="flex items-center font-bold text-[23px] mb-6 opacity-70"
+                            data-aos="fade-right"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="50">
                             Art app
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-3 opacity-50 hover:opacity-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
@@ -87,7 +94,11 @@
                                 </svg>
                             </span>
                         </h3>
-                        <p class="font-bold text-base sm:max-w-[300px] leading-loose mb-6">
+                        <p
+                            class="font-bold text-base sm:max-w-[300px] leading-loose mb-6"
+                            data-aos="fade-right"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="100">
                             App designed for people’s wellness.
                             There are many functionalities
                             Implemented for better engagement. Food,
@@ -95,7 +106,12 @@
                             major functionalities.
                         </p>
                         <a href="" class="block">
-                            <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
+                            <button
+                                type="button"
+                                class="inline-flex justify-between items-center text-base font-bold text-white"
+                                data-aos="fade-right"
+                                data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="150">
                                 VIEW PROJECT
                                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -103,7 +119,12 @@
                             </button>
                         </a>
                         <a href="" class="block">
-                            <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white">
+                            <button
+                                type="button"
+                                class="inline-flex justify-between items-center text-base font-bold text-white"
+                                data-aos="fade-right"
+                                data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="200">
                                 VIEW CODE
                                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -301,7 +322,10 @@
                     :aria-disabled="atBeginning"
                     :tabindex="atEnd ? -1 : 0"
                     :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
-                    class="flex-1 flex items-center bg-[#2B3046] py-[35px] pl-[82px] group cursor-pointer">
+                    class="flex-1 flex items-center bg-[#2B3046] py-[35px] pl-[82px] group cursor-pointer"
+                    data-aos="fade-right"
+                    data-aos-delay="250"
+                    data-aos-anchor-placement="bottom-bottom">
                     <!-- Prev Button -->
                     <button aria-label="back" class="flex justify-center items-center bg-[#4046FF] w-[48px] h-[48px] sm:group-hover:bg-[#575cff]" type="button">
                         <span aria-hidden="true">
@@ -320,7 +344,10 @@
                     :aria-disabled="atEnd"
                     :tabindex="atEnd ? -1 : 0"
                     :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
-                    class="flex-1 flex justify-end items-center bg-[#272C41] py-[35px] pr-[82px] group cursor-pointer">
+                    class="flex-1 flex justify-end items-center bg-[#272C41] py-[35px] pr-[82px] group cursor-pointer"
+                    data-aos="fade-left"
+                    data-aos-delay="250"
+                    data-aos-anchor-placement="bottom-bottom">
                     <!-- Next Button -->
                     <span class="hidden md:block mr-16 text-[#656A84] text-base font-black sm:group-hover:text-[#B1B7D6]">
                         NEXT

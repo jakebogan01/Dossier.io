@@ -47,7 +47,9 @@
             </dl>
         </div>
 
-        <div>
+        <div
+            data-aos="zoom-in-right"
+             data-aos-delay="400">
             <a href="#">
                 <button type="button" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest">
                     LETS TALK

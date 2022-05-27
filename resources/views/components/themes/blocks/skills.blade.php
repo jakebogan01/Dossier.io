@@ -6,8 +6,10 @@
             <div class="lg:col-span-2 mt-10 sm:mt-24">
                 <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
 
-                    {{-- card --}}
-                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all">
+                    <li
+                        class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all"
+                        data-aos="zoom-in-right"
+                        data-aos-delay="100">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -35,7 +37,9 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px]  transition-all">
+                    <li
+                        class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px]  transition-all"
+                        data-aos="zoom-in-left">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -63,7 +67,10 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all">
+                    <li
+                        class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 transition-all"
+                        data-aos="zoom-in-right"
+                        data-aos-delay="300">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -91,7 +98,10 @@
                         </div>
                     </li>
 
-                    <li class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] transition-all">
+                    <li
+                        class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] transition-all"
+                        data-aos="zoom-in-left"
+                        data-aos-delay="200">
                         <div class="flex justify-center pb-4">
                             <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF">
@@ -122,52 +132,70 @@
                 </ul>
             </div>
 
-            {{-- tribute description --}}
             <div class="space-y-5 sm:space-y-4 px-[25px] pb-[65px] sm:pb-0 sm:px-0 text-[#B1B7D6] font-bold text-base leading-loose">
-                <h2
-                    class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white"
-                    data-aos="fade-left">
-                    TOP SKILLS
-                </h2>
-                <p
-                    class="text-[#B1B7D6] text-base font-bold leading-loose"
+                <div
                     data-aos="fade-left"
-                    data-aos-delay="50">
-                    A junior web developer with a background in UI & UX. I have a passion for learning new skills while expanding my existing skill set. I have over 3 years of professional experience.
-                </p>
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="bottom-bottom">
+                    <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] pb-4 font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
+                        TOP SKILLS
+                    </h2>
+                    <p class="text-[#B1B7D6] text-base font-bold leading-loose">
+                        A junior web developer with a background in UI & UX. I have a passion for learning new skills while expanding my existing skill set. I have over 3 years of professional experience.
+                    </p>
+                </div>
                 <ul role="list" class="pt-8 space-y-7">
 
                     <li class="flex items-center">
                         <span
                             data-aos="zoom-in"
-                            data-aos-delay="100"
                             data-aos-anchor-placement="bottom-bottom">
                             <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
                                 <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
                                 <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
                             </svg>
                         </span>
-                        <span data-aos="fade-left"
-                              data-aos-delay="100"
-                              data-aos-anchor-placement="bottom-bottom">
+                        <span
+                            data-aos="fade-left"
+                            data-aos-anchor-placement="bottom-bottom">
                             learn to design myself. I always create my best.
                         </span>
                     </li>
 
                     <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                            <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                        </svg>
-                        Experimenting with new ideas and design trends is my daily habit.
+                        <span
+                            data-aos="zoom-in"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                            </svg>
+                        </span>
+                        <span
+                            data-aos="fade-left"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="100">
+                            learn to design myself. I always create my best.
+                        </span>
                     </li>
 
                     <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                            <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                        </svg>
-                        Interaction and illustrations are areas more focused now.
+                        <span
+                            data-aos="zoom-in"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                            </svg>
+                        </span>
+                        <span
+                            data-aos="fade-left"
+                            data-aos-anchor-placement="bottom-bottom"
+                            data-aos-delay="200">
+                            learn to design myself. I always create my best.
+                        </span>
                     </li>
 
                 </ul>

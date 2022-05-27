@@ -6,7 +6,9 @@
     <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
 
-            <div class="space-y-5 sm:space-y-4">
+            <div
+                class="space-y-5 sm:space-y-4"
+                data-aos="fade-right">
                 <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
                     TRIBUTES
                 </h2>
@@ -17,7 +19,10 @@
 
             <div class="lg:col-span-2">
                 <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
-                    <li class="card">
+                    <li
+                        class="card"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
@@ -61,7 +66,10 @@
                         </div>
                     </li>
 
-                    <li class="card mt-12 sm:mt-[100px] transition-all">
+                    <li
+                        class="card mt-12 sm:mt-[100px] transition-all"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
@@ -102,7 +110,10 @@
                         </div>
                     </li>
 
-                    <li class="card mt-12 sm:mt-0">
+                    <li
+                        class="card mt-12 sm:mt-0"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
@@ -143,7 +154,10 @@
                         </div>
                     </li>
 
-                    <li class="card mt-12 sm:mt-[100px] transition-all">
+                    <li
+                        class="card mt-12 sm:mt-[100px] transition-all"
+                        data-aos="fade-up"
+                        data-aos-delay="400">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
