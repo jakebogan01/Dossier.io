@@ -124,20 +124,34 @@
 
             {{-- tribute description --}}
             <div class="space-y-5 sm:space-y-4 px-[25px] pb-[65px] sm:pb-0 sm:px-0 text-[#B1B7D6] font-bold text-base leading-loose">
-                <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
+                <h2
+                    class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white"
+                    data-aos="fade-left">
                     TOP SKILLS
                 </h2>
-                <p class="text-[#B1B7D6] text-base font-bold leading-loose">
+                <p
+                    class="text-[#B1B7D6] text-base font-bold leading-loose"
+                    data-aos="fade-left"
+                    data-aos-delay="50">
                     A junior web developer with a background in UI & UX. I have a passion for learning new skills while expanding my existing skill set. I have over 3 years of professional experience.
                 </p>
                 <ul role="list" class="pt-8 space-y-7">
 
                     <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
-                            <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
-                            <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
-                        </svg>
-                        learn to design myself. I always create my best.
+                        <span
+                            data-aos="zoom-in"
+                            data-aos-delay="100"
+                            data-aos-anchor-placement="bottom-bottom">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" />
+                                <circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" />
+                            </svg>
+                        </span>
+                        <span data-aos="fade-left"
+                              data-aos-delay="100"
+                              data-aos-anchor-placement="bottom-bottom">
+                            learn to design myself. I always create my best.
+                        </span>
                     </li>
 
                     <li class="flex items-center">

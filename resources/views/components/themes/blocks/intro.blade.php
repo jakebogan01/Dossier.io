@@ -13,7 +13,9 @@
         </div>
 
         {{-- introduction of user --}}
-        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all">
+        <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all"
+             data-aos="fade-right"
+             data-aos-delay="300">
             <h1 class="leading-[1.1] tracking-wider whitespace-nowrap sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
                 FOO<br>
@@ -24,15 +26,21 @@
 
         <div class="flex font-black my-[3.125rem]">
             <dl class="mt-5 grid grid-cols-3 gap-20">
-                <div>
+                <div
+                    data-aos="fade-right"
+                    data-aos-delay="300">
                     <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">24</dt>
                     <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">CLIENTS</dd>
                 </div>
-                <div>
+                <div
+                    data-aos="fade-right"
+                    data-aos-delay="200">
                     <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">32</dt>
                     <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">PROJECTS</dd>
                 </div>
-                <div>
+                <div
+                    data-aos="fade-right"
+                    data-aos-delay="100">
                     <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">06</dt>
                     <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">TOOLS</dd>
                 </div>
@@ -53,7 +61,10 @@
     </div>
 
     {{-- users profile picture --}}
-    <div class="flex-1 flex justify-center 570:justify-start lg:justify-end pt-20 lg:pt-10">
+    <div
+        class="flex-1 flex justify-center 570:justify-start lg:justify-end pt-20 lg:pt-10"
+        data-aos="zoom-in"
+        data-aos-duration="700">
         <div class="profile_picture flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all">
             <img class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="Picture of ">
         </div>
