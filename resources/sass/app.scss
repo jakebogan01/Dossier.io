@@ -1,5 +1,8 @@
 //globals
-@import "0_globals/mixins";
+@import "0_globals/main";
+@import "0_globals/queries";
 
 //components
-@import "1_components/about";
+@import "1_themes/template-one";
+
+@import "~aos/dist/aos.css";
