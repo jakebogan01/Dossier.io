@@ -87,7 +87,7 @@
         data-aos="zoom-in"
         data-aos-duration="700">
         <div class="profile_picture flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all">
-            <img class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="Picture of ">
+            <img class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4" alt="Picture of " loading="eager">
         </div>
     </div>
 

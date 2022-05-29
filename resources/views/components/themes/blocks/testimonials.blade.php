@@ -1,7 +1,7 @@
 <section id="testimonials" {{ $attributes->merge(['class' => 'template_one_testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
 
     {{-- background decoration image --}}
-    <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration">
+    <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration" loading="eager">
 
     <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
@@ -25,7 +25,7 @@
                         data-aos-delay="100">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
                             </div>
                             <div class="text-white text-base font-bold leading-loose space-y-1">
                                 <h3 class="text-xl">
@@ -72,7 +72,7 @@
                         data-aos-delay="200">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
                             </div>
                             <div class="text-white text-base font-bold leading-loose space-y-1">
                                 <h3 class="text-xl">Emma Dorsey</h3>
@@ -116,7 +116,7 @@
                         data-aos-delay="300">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
                             </div>
                             <div class="text-white text-base font-bold leading-loose space-y-1">
                                 <h3 class="text-xl">Emma Dorsey</h3>
@@ -160,7 +160,7 @@
                         data-aos-delay="400">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                <img class="card_image object-cover shadow-lg rounded-lg transform transition duration-300" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
                             </div>
                             <div class="text-white text-base font-bold leading-loose space-y-1">
                                 <h3 class="text-xl">Emma Dorsey</h3>
