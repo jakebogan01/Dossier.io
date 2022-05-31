@@ -1071,14 +1071,6 @@ select {
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
 }
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1193,14 +1185,8 @@ select {
 .-ml-\[13px\] {
   margin-left: -13px;
 }
-.mr-1 {
-  margin-right: 0.25rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-.ml-8 {
-  margin-left: 2rem;
 }
 .block {
   display: block;
@@ -1826,17 +1812,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 244 91 / var(--tw-bg-opacity));
 }
-.bg-indigo-100 {
+.bg-\[\#2429CE\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+  background-color: rgb(36 41 206 / var(--tw-bg-opacity));
 }
 .bg-\[\#242839\] {
   --tw-bg-opacity: 1;
   background-color: rgb(36 40 57 / var(--tw-bg-opacity));
-}
-.bg-\[\#2429CE\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 41 206 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -2029,14 +2011,14 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
+.pt-\[60px\] {
+  padding-top: 60px;
+}
 .pl-\[3\.125rem\] {
   padding-left: 3.125rem;
 }
 .pr-3 {
   padding-right: 0.75rem;
-}
-.pt-\[60px\] {
-  padding-top: 60px;
 }
 .text-left {
   text-align: left;
@@ -2458,14 +2440,6 @@ select {
 .hover\:bg-\[\#575cff\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(87 92 255 / var(--tw-bg-opacity));
-}
-.hover\:bg-indigo-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
-}
-.hover\:bg-indigo-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
