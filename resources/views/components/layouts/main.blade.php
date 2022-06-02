@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth h-full">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
         <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
 
     </head>
-    <body class="antialiased bg-[#0F1119]">
+    <body class="antialiased bg-[#0F1119] h-full">
 
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -35,11 +35,7 @@
             </div>
         @endif
 
-        <main class="main_container max-w-7xl mx-auto">
-
-            {{ $slot }}
-
-        </main>
+        {{ $slot }}
 
     </body>
 </html>
