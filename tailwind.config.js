@@ -21,7 +21,8 @@ module.exports = {
                 lato: ['Lato', ...defaultTheme.fontFamily.sans],
             },
             screens: {
-                '570': '570px', //570px
+                '570': '570px',
+                '1450': '1450px',
             },
             transitionDelay: {
                 '50': '50ms',
