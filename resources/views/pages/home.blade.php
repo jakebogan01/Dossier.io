@@ -49,16 +49,36 @@
                                 </p>
                             </div>
                             <div class="mt-12 sm:max-w-lg sm:w-full sm:flex">
-                                <div class="mt-4 sm:mt-0">
-                                    <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
-                                        Notify me
-                                    </button>
-                                </div>
-                                <div class="mt-4 sm:mt-0 sm:ml-6">
-                                    <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
-                                        Notify me
-                                    </button>
-                                </div>
+
+                                @if (Route::has('login'))
+                                    @auth
+                                        <div class="mt-4 sm:mt-0">
+                                            <a href="{{ url('/dashboard') }}">
+                                                <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    Dashboard
+                                                </button>
+                                            </a>
+                                        </div>
+                                    @else
+                                        <div class="mt-4 sm:mt-0">
+                                            <a href="{{ route('login') }}">
+                                                <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    Login
+                                                </button>
+                                            </a>
+                                        </div>
+
+                                        @if (Route::has('register'))
+                                            <div class="mt-4 sm:mt-0 sm:ml-6">
+                                                <a href="{{ route('register') }}">
+                                                    <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                        Register
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        @endif
+                                    @endauth
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -67,7 +87,7 @@
                 <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
                     <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                         <div class="hidden sm:block">
-                            <div class="absolute inset-y-0 left-1/2 w-screen bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"></div>
+                            <div class="home_decoration absolute inset-y-0 left-1/2 w-screen rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"></div>
                             <svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392">
                                 <defs>
                                     <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -78,31 +98,67 @@
                             </svg>
                         </div>
                         <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-                            <img class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg" alt="">
+                            <img class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg" alt="our dashboard" loading="eager">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bg-[#0F1119]">
                 <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-                    <h2 class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">Trusted by over 26,000 forward-thinking companies</h2>
-                    <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
-                        </div>
-                        <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                            <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
-                        </div>
-                    </div>
+                    <h2 class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">
+                        Trusted by over 26,000 amazing people
+                    </h2>
+                    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 sm:grid-cols-4 mt-10">
+                        <li>
+                            <div class="space-y-4 text-center">
+                                <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">Michael Foster</h3>
+                                        <p class="text-gray-400">Co-Founder / CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="space-y-4 text-center">
+                                <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">Michael Foster</h3>
+                                        <p class="text-gray-400">Co-Founder / CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="space-y-4 text-center">
+                                <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">Michael Foster</h3>
+                                        <p class="text-gray-400">Co-Founder / CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="space-y-4 text-center">
+                                <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">Michael Foster</h3>
+                                        <p class="text-gray-400">Co-Founder / CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- More people... -->
+                    </ul>
                 </div>
             </div>
         </div>

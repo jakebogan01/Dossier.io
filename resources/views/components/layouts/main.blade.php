@@ -21,33 +21,6 @@
     </head>
     <body class="antialiased bg-[#0F1119] h-full">
 
-{{--    @if (Route::has('login'))--}}
-{{--        @auth--}}
-{{--            <a href="{{ url('/dashboard') }}">--}}
-{{--                <button type="button"--}}
-{{--                        class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-bold text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 tracking-widest transition-colors">--}}
-{{--                    DASHBOARD--}}
-{{--                </button>--}}
-{{--            </a>--}}
-{{--        @else--}}
-{{--            <a href="{{ route('login') }}">--}}
-{{--                <button type="button"--}}
-{{--                        class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-bold text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 tracking-widest transition-colors">--}}
-{{--                    LOGIN--}}
-{{--                </button>--}}
-{{--            </a>--}}
-
-{{--            @if (Route::has('register'))--}}
-{{--                <a href="{{ route('register') }}">--}}
-{{--                    <button type="button"--}}
-{{--                            class="inline-flex justify-between items-center px-6 py-2 ml-6 border border-transparent shadow-sm text-base font-bold text-white bg-[#2429CE] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 tracking-widest transition-colors">--}}
-{{--                        REGISTER--}}
-{{--                    </button>--}}
-{{--                </a>--}}
-{{--            @endif--}}
-{{--        @endauth--}}
-{{--    @endif--}}
-
         {{ $slot }}
 
     </body>
