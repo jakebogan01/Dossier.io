@@ -22,7 +22,7 @@ module.exports = {
             },
             screens: {
                 '570': '570px',
-                '1450': '1450px',
+                '1600': '1600px',
             },
             transitionDelay: {
                 '50': '50ms',

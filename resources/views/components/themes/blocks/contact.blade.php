@@ -113,7 +113,7 @@
                             data-aos="fade-up"
                             data-aos-delay="200">
                             <div class="relative">
-                                <input id="name" name="name" type="text" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="Full Name" aria-invalid="true" aria-describedby="name-error" style="box-shadow: none;" required />
+                                <input id="name" name="name" type="text" class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="Full Name" aria-invalid="true" aria-describedby="name-error" style="box-shadow: none;" required />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
@@ -130,7 +130,7 @@
                             data-aos="fade-up"
                             data-aos-delay="250">
                             <div class="relative">
-                                <input id="phone" name="phone" type="tel" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="8008881234" aria-invalid="true" aria-describedby="phone-error" style="box-shadow: none;" />
+                                <input id="phone" name="phone" type="tel" class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="8008881234" aria-invalid="true" aria-describedby="phone-error" style="box-shadow: none;" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
@@ -147,7 +147,7 @@
                             data-aos="fade-up"
                             data-aos-delay="300">
                             <div class="relative">
-                                <input id="email" name="email" type="email" class="pt-3 peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="john@doe.com" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" required />
+                                <input id="email" name="email" type="email" class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none" placeholder="john@doe.com" aria-invalid="true" aria-describedby="email-error" style="box-shadow: none;" required />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
@@ -164,7 +164,7 @@
                             data-aos="fade-up"
                             data-aos-delay="350">
                             <div class="relative">
-                                <textarea rows="4" name="message" id="message" class="pt-3 peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
+                                <textarea rows="4" name="message" id="message" class="pt-3 pl-px peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none " placeholder="Message" aria-invalid="true" aria-describedby="message-error" style="box-shadow: none;"></textarea>
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
