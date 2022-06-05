@@ -208,7 +208,8 @@
                     class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:max-w-4xl lg:gap-x-2 sm:grid-cols-4 mt-10">
                     <li
                         data-aos="fade-up"
-                        data-aos-delay="100">
+                        data-aos-delay="100"
+                        data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
                                 class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
@@ -229,7 +230,8 @@
                     </li>
                     <li
                         data-aos="fade-up"
-                        data-aos-delay="150">
+                        data-aos-delay="150"
+                        data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
                                 class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
@@ -250,7 +252,8 @@
                     </li>
                     <li
                         data-aos="fade-up"
-                        data-aos-delay="200">
+                        data-aos-delay="200"
+                        data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
                                 class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
@@ -271,7 +274,8 @@
                     </li>
                     <li
                         data-aos="fade-up"
-                        data-aos-delay="250">
+                        data-aos-delay="250"
+                        data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
                                 class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"

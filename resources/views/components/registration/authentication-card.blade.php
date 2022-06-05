@@ -1,0 +1,45 @@
+<div class="min-h-full flex">
+    <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+        <div class="mx-auto w-full max-w-sm lg:w-96">
+            <div>
+                <div>
+                    <div class="absolute top-16">
+                        <div class="w-[2.8125rem] cursor-default">
+                            <div
+                                class="bg-white h-[0.1875rem]"
+                                data-aos="fade-right"></div>
+                            <div
+                                class="bg-white h-[0.1875rem] mt-1.5 w-9 transition-transform duration-300"
+                                data-aos="fade-right"
+                                data-aos-delay="50"></div>
+                            <div
+                                class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem] transition-transform duration-300"
+                                data-aos="fade-right"
+                                data-aos-delay="100"></div>
+                            <div
+                                class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300"
+                                data-aos="fade-right"
+                                data-aos-delay="150"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="mt-16 md:mt-6 text-3xl font-extrabold text-white cursor-default">
+                    Create an account
+                </h2>
+            </div>
+
+            <div class="mt-8">
+                <div class="mt-6">
+                    {{ $slot }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden lg:block relative w-0 flex-1">
+        <img
+            class="absolute inset-0 h-full w-full object-cover"
+            src="/images/registration/register-background.png"
+            alt="Abstract Decoration"
+            loading="eager">
+    </div>
+</div>

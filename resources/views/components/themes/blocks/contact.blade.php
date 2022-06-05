@@ -244,7 +244,8 @@
                         <div
                             class="pt-12"
                             data-aos="fade-up"
-                            data-aos-delay="400">
+                            data-aos-delay="400"
+                            data-aos-anchor-placement="top-bottom">
                             <button
                                 aria-label="send email"
                                 type="submit"
