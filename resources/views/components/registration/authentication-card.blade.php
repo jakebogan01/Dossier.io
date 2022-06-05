@@ -1,4 +1,4 @@
-<div class="min-h-full flex">
+<div class="registration min-h-full flex">
     <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div class="mx-auto w-full max-w-sm lg:w-96">
             <div>
@@ -23,7 +23,10 @@
                         </div>
                     </div>
                 </div>
-                <h2 class="mt-16 md:mt-6 text-3xl font-extrabold text-white cursor-default">
+                <h2
+                    class="mt-16 md:mt-6 text-3xl font-extrabold text-white cursor-default"
+                    data-aos="fade-up"
+                    data-aos-delay="250">
                     Create an account
                 </h2>
             </div>
@@ -36,10 +39,11 @@
         </div>
     </div>
     <div class="hidden lg:block relative w-0 flex-1">
-        <img
-            class="absolute inset-0 h-full w-full object-cover"
-            src="/images/registration/register-background.png"
-            alt="Abstract Decoration"
-            loading="eager">
+{{--        <img--}}
+{{--            class="absolute inset-0 h-full w-full object-cover"--}}
+{{--            src="/images/registration/register-background.png"--}}
+{{--            alt="Abstract Decoration"--}}
+{{--            loading="eager">--}}
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_xwgexn6f.json"  background="#4C46D6"  speed="0.2" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
     </div>
 </div>

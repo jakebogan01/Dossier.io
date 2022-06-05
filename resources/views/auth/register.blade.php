@@ -6,7 +6,9 @@
             action="{{ route('register') }}"
             class="space-y-6">
             @csrf
-            <div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay="300">
                 <x-registration.label
                     for="name"
                     value="{{ __('Name') }}" />
@@ -22,7 +24,9 @@
                     placeholder="Your Name"
                     style="padding: 10px 0 10px 20px;" />
             </div>
-            <div>
+            <div
+                data-aos="fade-up"
+                data-aos-delay="350">
                 <x-registration.label
                     for="email"
                     value="{{ __('Email') }}" />
@@ -36,7 +40,9 @@
                     placeholder="Your Email"
                     style="padding: 10px 0 10px 20px;" />
             </div>
-            <div class="mt-4">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="400">
                 <x-registration.label
                     for="password"
                     value="{{ __('Password') }}" />
@@ -49,7 +55,9 @@
                     placeholder="Your Password"
                     style="padding: 10px 0 10px 20px;" />
             </div>
-            <div class="mt-4">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="450">
                 <x-registration.label
                     for="password_confirmation"
                     value="{{ __('Confirm Password') }}" />
@@ -62,7 +70,10 @@
                     style="padding: 10px 0 10px 20px;"
                     placeholder="Confirm Password" />
             </div>
-            <div class="flex items-center">
+            <div
+                class="flex items-center"
+                data-aos="fade-up"
+                data-aos-delay="500">
                 <div class="text-sm">
                     <a
                         href="{{ route('login') }}"
@@ -72,12 +83,16 @@
                 </div>
             </div>
             <div>
-                <x-registration.button>
+                <x-registration.button
+                    data-aos="fade-up"
+                    data-aos-delay="550">
                     {{ __('Register') }}
                 </x-registration.button>
                 <a
                     href="/"
-                    class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                    class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                    data-aos="fade-up"
+                    data-aos-delay="600">
                     Cancel
                 </a>
             </div>

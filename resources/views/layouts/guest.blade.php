@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
     </head>
-    <body class="registration h-full">
+    <body class="h-full">
         {{ $slot }}
     </body>
 </html>
