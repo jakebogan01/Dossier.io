@@ -40,11 +40,11 @@
                     {{ __('Email Password Reset Link') }}
                 </x-registration.button>
                 <a
-                    href="/"
+                    href="{{ route('login') }}"
                     class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
                     data-aos="fade-up"
                     data-aos-delay="400">
-                    Cancel
+                    Back
                 </a>
             </div>
         </form>
