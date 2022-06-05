@@ -1,6 +1,6 @@
 <x-guest-layout>
     <x-registration.authentication-card>
-        <x-jet-validation-errors class="mb-4" />
+        <x-registration.validation-errors />
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}
