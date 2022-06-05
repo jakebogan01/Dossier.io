@@ -1,6 +1,14 @@
 <x-guest-layout>
     <x-registration.authentication-card>
         <x-jet-validation-errors class="mb-4" />
+        <div class="pb-2">
+            <h2
+                class="mt-16 md:mt-6 text-3xl font-extrabold text-white cursor-default"
+                data-aos="fade-up"
+                data-aos-delay="250">
+                Create an account
+            </h2>
+        </div>
         <form
             method="POST"
             action="{{ route('register') }}"

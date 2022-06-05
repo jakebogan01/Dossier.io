@@ -1,48 +1,87 @@
 <x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
-
+    <x-registration.authentication-card>
         <x-jet-validation-errors class="mb-4" />
-
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}
             </div>
         @endif
-
-        <form method="POST" action="{{ route('login') }}">
+        <div class="pb-2">
+            <h2
+                class="mt-16 md:mt-6 text-3xl font-extrabold text-white cursor-default"
+                data-aos="fade-up"
+                data-aos-delay="250">
+                Login
+            </h2>
+        </div>
+        <form
+            method="POST"
+            action="{{ route('login') }}"
+            class="space-y-6">
             @csrf
-
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <div
+                data-aos="fade-up"
+                data-aos-delay="300">
+                <x-registration.label
+                    for="email"
+                    value="{{ __('Email') }}" />
+                <x-registration.input
+                    id="email"
+                    type="email"
+                    name="email"
+                    :value="old('email')"
+                    placeholder="Your Email"
+                    style="padding: 10px 0 10px 20px;"
+                    required
+                    autofocus />
             </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+            <div
+                data-aos="fade-up"
+                data-aos-delay="350">
+                <x-registration.label
+                    for="password"
+                    value="{{ __('Password') }}" />
+                <x-registration.input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Your Password"
+                    style="padding: 10px 0 10px 20px;"
+                    required
+                    autocomplete="current-password" />
             </div>
-
-            <div class="block mt-4">
+            <div
+                class="flex items-center justify-between"
+                data-aos="fade-up"
+                data-aos-delay="500">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
+                <div class="text-sm">
+                    @if (Route::has('password.request'))
+                        <a
+                            href="{{ route('password.request') }}"
+                            class="font-medium text-gray-200 hover:text-gray-400 transition-colors">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+                </div>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-jet-button class="ml-4">
+            <div>
+                <x-registration.button
+                    data-aos="fade-up"
+                    data-aos-delay="550">
                     {{ __('Log in') }}
-                </x-jet-button>
+                </x-registration.button>
+                <a
+                    href="/"
+                    class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                    data-aos="fade-up"
+                    data-aos-delay="600">
+                    Cancel
+                </a>
             </div>
         </form>
-    </x-jet-authentication-card>
+    </x-registration.authentication-card>
 </x-guest-layout>
