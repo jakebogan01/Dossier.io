@@ -21,7 +21,9 @@ module.exports = {
                 lato: ['Lato', ...defaultTheme.fontFamily.sans],
             },
             screens: {
-                '570': '570px', //570px
+                '570': '570px',
+                '700': '700px',
+                '1600': '1600px',
             },
             transitionDelay: {
                 '50': '50ms',
@@ -36,5 +38,9 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio'),],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 };

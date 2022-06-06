@@ -1,0 +1,13 @@
+// small to big screens
+$breakpoints-up: ('n1600': '100rem')
+
+// big to small screens
+$breakpoints-down: ('n475': '29.6875rem')
+
+@mixin breakpoint-up($size)
+    @media (min-width: map-get($breakpoints-up, $size))
+        @content
+
+@mixin breakpoint-down($size)
+    @media (max-width: map-get($breakpoints-down, $size))
+        @content
