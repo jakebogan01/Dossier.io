@@ -118,7 +118,7 @@
                         <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
                             <img
                                 class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-                                src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+                                src="/images/home/png/dashboard.png"
                                 alt="our dashboard"
                                 loading="eager"
                                 data-aos="zoom-in-left"

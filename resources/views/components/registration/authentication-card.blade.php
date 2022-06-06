@@ -33,11 +33,10 @@
         </div>
     </div>
     <div class="hidden lg:block relative w-0 flex-1">
-{{--        <img--}}
-{{--            class="absolute inset-0 h-full w-full object-cover"--}}
-{{--            src="/images/registration/register-background.png"--}}
-{{--            alt="Abstract Decoration"--}}
-{{--            loading="eager">--}}
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_xwgexn6f.json"  background="#4C46D6"  speed="0.2" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+        <img
+            class="absolute inset-0 h-full w-full object-cover"
+            src="/images/registration/register-background.png"
+            alt="Abstract Decoration"
+            loading="eager">
     </div>
 </div>
