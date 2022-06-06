@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>@yield('title')</title>
-
         <!-- Styles -->
         <style>
+            *, *::before, *::after{
+                scrollbar-width: thin;
+                scrollbar-color: #000000 #252238;
+            }
+            ::-webkit-scrollbar{
+                width: 0.3125rem;
+                background-color: #252238;
+            }
+            ::-webkit-scrollbar-thumb{
+                background: #000000;
+            }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -16,25 +25,20 @@
                 height: 100vh;
                 margin: 0;
             }
-
             .full-height {
                 height: 100vh;
             }
-
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
-
             .position-ref {
                 position: relative;
             }
-
             .content {
                 text-align: center;
             }
-
             .title {
                 font-size: 36px;
                 padding: 20px;

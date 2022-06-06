@@ -1,5 +1,5 @@
 <x-layouts.main>
-    <main class="home">
+    <main class="home bg-gradient-to-r from-[#600F93] to-[#120185]">
         <div class="pb-8 sm:pb-12 lg:pb-12 h-full">
             <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
                 <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -212,7 +212,7 @@
                         data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
                                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                 alt="Real User"
                                 loading="eager">
@@ -234,7 +234,7 @@
                         data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
                                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                 alt="Real User"
                                 loading="eager">
@@ -256,7 +256,7 @@
                         data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
                                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                 alt="Real User"
                                 loading="eager">
@@ -278,7 +278,7 @@
                         data-aos-anchor-placement="top-bottom">
                         <div class="space-y-4 text-center">
                             <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-indigo-500"
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
                                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                 alt="Real User"
                                 loading="eager">

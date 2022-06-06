@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth h-full">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth h-full overflow-x-hidden">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,19 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
         <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
+        <style>
+            *, *::before, *::after{
+                scrollbar-width: thin;
+                scrollbar-color: #000000 #252238;
+            }
+            ::-webkit-scrollbar{
+                width: 0.3125rem;
+                background-color: #252238;
+            }
+            ::-webkit-scrollbar-thumb{
+                background: #000000;
+            }
+        </style>
     </head>
     <body class="antialiased bg-[#0F1119] h-full">
         {{ $slot }}
