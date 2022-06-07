@@ -1,6 +1,6 @@
 <section
     id="skills"
-    {{ $attributes->merge(['class' => 'template_one_skills anchor flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
+    {{ $attributes->merge(['class' => 'anchor flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
     <div class="relative mx-auto py-12 max-w-7xl sm:px-[85px] lg:pt-40 z-20">
         <div class="space-y-12 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div class="lg:col-span-2 mt-10 sm:mt-24">
@@ -12,7 +12,9 @@
                         data-aos="zoom-in-right"
                         data-aos-delay="100">
                         <div class="flex justify-center pb-4">
-                            <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
+                            <div
+                                class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all"
+                                style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
                             </div>
                         </div>
@@ -39,7 +41,9 @@
                         class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px]  transition-all"
                         data-aos="zoom-in-left">
                         <div class="flex justify-center pb-4">
-                            <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
+                            <div
+                                class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all"
+                                style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
                             </div>
                         </div>
@@ -67,7 +71,9 @@
                         data-aos="zoom-in-right"
                         data-aos-delay="300">
                         <div class="flex justify-center pb-4">
-                            <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
+                            <div
+                                class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all"
+                                style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
                             </div>
                         </div>
@@ -95,7 +101,9 @@
                         data-aos="zoom-in-left"
                         data-aos-delay="200">
                         <div class="flex justify-center pb-4">
-                            <div class="card_images sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all">
+                            <div
+                                class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full transition-all"
+                                style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
                             </div>
                         </div>

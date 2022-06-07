@@ -1,6 +1,7 @@
 <section
     id="experience"
-    {{ $attributes->merge(['class' => 'template_one_experiences anchor relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }}>
+    {{ $attributes->merge(['class' => 'anchor relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }}
+    style="background-image: url('/images/themes/svg/background-pattern-2.svg');">
     <h2
         class="mb-8 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none mb-16 transition-all sm:group-hover:text-white"
         data-aos="fade-right"

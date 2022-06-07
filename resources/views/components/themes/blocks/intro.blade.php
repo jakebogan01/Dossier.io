@@ -1,6 +1,7 @@
 <section
     id="home"
-    {{ $attributes->merge(['class' => 'template_one_intro anchor relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[5.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}>
+    {{ $attributes->merge(['class' => 'anchor relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[5.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }}
+    style="background-image: url('/images/themes/svg/background-pattern.svg');">
     <div class="flex-1">
         <div
             class="absolute top-16"
@@ -107,7 +108,9 @@
         class="flex-1 flex justify-center 570:justify-start lg:justify-end pt-20 lg:pt-10"
         data-aos="zoom-in"
         data-aos-duration="700">
-        <div class="profile_picture flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all">
+        <div
+            class="flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all"
+            style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
             <img
                 class="inline-block w-[210px] w-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="https://avatars.githubusercontent.com/u/66225768?v=4"
                 alt="Picture of "

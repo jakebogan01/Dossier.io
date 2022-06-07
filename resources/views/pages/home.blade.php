@@ -1,5 +1,5 @@
 <x-layouts.main>
-    <main class="home bg-gradient-to-r from-[#600F93] to-[#120185]">
+    <main class="bg-gradient-to-r from-[#600F93] to-[#120185]">
         <div class="pb-8 sm:pb-12 lg:pb-12 h-full">
             <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
                 <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -110,7 +110,7 @@
                     <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                         <div class="hidden sm:block">
                             <div
-                                class="home_decoration absolute inset-y-0 left-1/2 w-screen rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"
+                                class="absolute inset-y-0 left-1/2 w-screen rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"
                                 data-aos="zoom-in"
                                 data-aos-delay="200"></div>
                             <svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392" data-aos="zoom-in" data-aos-delay="300"><defs><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" /></pattern></defs><rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" /></svg>
@@ -134,7 +134,7 @@
                             aria-hidden="true"
                             class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
                             <div
-                                class="home_decoration absolute inset-y-0 right-1/2 w-full rounded-r-3xl lg:right-72"
+                                class="absolute inset-y-0 right-1/2 w-[965px] rounded-r-3xl lg:right-72 bg-gradient-to-r from-[#57178d] to-[#4E46DD]"
                                 data-aos="zoom-in"
                                 data-aos-delay="200"></div>
                             <div
