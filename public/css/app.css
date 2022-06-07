@@ -3747,8 +3747,28 @@ select {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
+  .sm\:text-\[\#39499E\] {
+    --tw-text-opacity: 1;
+    color: rgb(57 73 158 / var(--tw-text-opacity));
+  }
+
+  .sm\:text-\[\#9650d9\] {
+    --tw-text-opacity: 1;
+    color: rgb(150 80 217 / var(--tw-text-opacity));
+  }
+
   .sm\:duration-700 {
     transition-duration: 700ms;
+  }
+
+  .sm\:hover\:border-white:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
+
+  .sm\:hover\:border-\[\#be8bfc\]:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(190 139 252 / var(--tw-border-opacity));
   }
 
   .sm\:hover\:bg-\[\#575cff\]:hover {
@@ -3849,6 +3869,15 @@ select {
 
   .sm\:hover\:ring-offset-2:hover {
     --tw-ring-offset-width: 2px;
+  }
+
+  .group:hover .sm\:group-hover\:border-2 {
+    border-width: 2px;
+  }
+
+  .group:hover .sm\:group-hover\:border-\[\#be8bfc\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(190 139 252 / var(--tw-border-opacity));
   }
 
   .group:hover .sm\:group-hover\:bg-\[\#575cff\] {
