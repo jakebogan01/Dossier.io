@@ -99,10 +99,10 @@
                                         class="mt-5 pt-8 flex-1"
                                         aria-label="Sidebar">
                                         <a
-                                            href="#"
-                                            class="text-white sm:hover:text-white group flex pb-4 text-sm font-bold transition-colors">
+                                            href="{{ route('dashboard') }}"
+                                            class="sm:hover:text-white group flex pb-4 text-sm font-bold transition-colors {{ (request()->routeIs('dashboard')) ? 'text-white' : 'text-[#9650d9]' }}">
                                             <span class="relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border border-white h-full block round rounded-fulled-full"></span>
+                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('dashboard')) ? 'border-white' : 'border-transparent' }}"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
                                                 <span class="flex-1">
                                                     Dashboard
@@ -110,10 +110,10 @@
                                             </span>
                                         </a>
                                         <a
-                                            href="#"
-                                            class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold transition-colors">
+                                            href="{{ route('profile') }}"
+                                            class="sm:hover:text-white group flex py-4 text-sm font-bold transition-colors {{ (request()->routeIs('profile')) ? 'text-white' : 'text-[#9650d9]' }}">
                                             <span class="relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
+                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }}"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Profile
@@ -240,10 +240,10 @@
                     class="mt-5 pt-[62px] flex-1"
                     aria-label="Sidebar">
                     <a
-                        href="#"
-                        class="text-white sm:hover:text-white group flex pb-4 text-sm font-bold transition-colors">
+                        href="{{ route('dashboard') }}"
+                        class="sm:hover:text-white group flex pb-4 text-sm font-bold transition-colors {{ (request()->routeIs('dashboard')) ? 'text-white' : 'text-[#9650d9]' }}">
                         <span class="relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border border-white h-full block round rounded-fulled-full"></span>
+                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('dashboard')) ? 'border-white' : 'border-transparent' }}"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
                             <span class="flex-1">
                                 Dashboard
@@ -251,10 +251,10 @@
                         </span>
                     </a>
                     <a
-                        href="#"
-                        class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold transition-colors">
+                        href="{{ route('profile') }}"
+                        class="sm:hover:text-white group flex py-4 text-sm font-bold transition-colors {{ (request()->routeIs('profile')) ? 'text-white' : 'text-[#9650d9]' }}">
                         <span class="relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
+                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }}"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Profile
