@@ -2955,6 +2955,13 @@ select {
 .ease-linear {
   transition-timing-function: linear;
 }
+.hover\:hidden:hover {
+  display: none;
+}
+.hover\:-translate-y-5:hover {
+  --tw-translate-y: -1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -3222,6 +3229,9 @@ select {
 }
 .disabled\:opacity-30:disabled {
   opacity: 0.3;
+}
+.group:hover .group-hover\:hidden {
+  display: none;
 }
 .group:hover .group-hover\:bg-\[\#575cff\] {
   --tw-bg-opacity: 1;
@@ -3869,6 +3879,16 @@ select {
 
   .sm\:hover\:ring-offset-2:hover {
     --tw-ring-offset-width: 2px;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-5 {
+    --tw-translate-y: -1.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-2 {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .group:hover .sm\:group-hover\:border-2 {

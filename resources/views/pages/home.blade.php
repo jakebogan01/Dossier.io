@@ -213,7 +213,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -237,7 +237,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -261,7 +261,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -285,7 +285,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
