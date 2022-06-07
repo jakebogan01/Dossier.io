@@ -31,7 +31,7 @@
                                 data-aos-delay="300">
                                 <a
                                     href="#"
-                                    class="inline-flex items-center text-white bg-[#0F1119] rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                                    class="inline-flex items-center text-white bg-[#0F1119] rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base sm:hover:text-gray-200">
                                     <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-[#3273F6] rounded-full">
                                         We're hiring
                                     </span>
@@ -66,7 +66,7 @@
                                                 <button
                                                     type="submit"
                                                     aria-label="dashboard"
-                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
                                                     Dashboard
                                                 </button>
                                             </a>
@@ -80,7 +80,7 @@
                                                 <button
                                                     type="submit"
                                                     aria-label="login"
-                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
                                                     Login
                                                 </button>
                                             </a>
@@ -94,7 +94,7 @@
                                                     <button
                                                         type="submit"
                                                         aria-label="register"
-                                                        class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                        class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
                                                         Register
                                                     </button>
                                                 </a>
@@ -210,89 +210,97 @@
                         data-aos="fade-up"
                         data-aos-delay="100"
                         data-aos-anchor-placement="top-bottom">
-                        <div class="space-y-4 text-center">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
+                        <a href="#">
+                            <div class="space-y-4 text-center">
+                                <img
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
+                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                    alt="Real User"
+                                    loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">
+                                            Michael Foster
+                                        </h3>
+                                        <p class="text-gray-400">
+                                            Co-Founder / CTO
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li
                         data-aos="fade-up"
                         data-aos-delay="150"
                         data-aos-anchor-placement="top-bottom">
-                        <div class="space-y-4 text-center">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
+                        <a href="#">
+                            <div class="space-y-4 text-center">
+                                <img
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
+                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                    alt="Real User"
+                                    loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">
+                                            Michael Foster
+                                        </h3>
+                                        <p class="text-gray-400">
+                                            Co-Founder / CTO
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li
                         data-aos="fade-up"
                         data-aos-delay="200"
                         data-aos-anchor-placement="top-bottom">
-                        <div class="space-y-4 text-center">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
+                        <a href="#">
+                            <div class="space-y-4 text-center">
+                                <img
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
+                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                    alt="Real User"
+                                    loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">
+                                            Michael Foster
+                                        </h3>
+                                        <p class="text-gray-400">
+                                            Co-Founder / CTO
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li
                         data-aos="fade-up"
                         data-aos-delay="250"
                         data-aos-anchor-placement="top-bottom">
-                        <div class="space-y-4 text-center">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
+                        <a href="#">
+                            <div class="space-y-4 text-center">
+                                <img
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF]"
+                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                    alt="Real User"
+                                    loading="eager">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="text-white">
+                                            Michael Foster
+                                        </h3>
+                                        <p class="text-gray-400">
+                                            Co-Founder / CTO
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
             </div>

@@ -54,7 +54,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             Twitter
                                         </span>
@@ -64,7 +64,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             LinkedIn
                                         </span>
@@ -106,7 +106,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             Twitter
                                         </span>
@@ -116,7 +116,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             LinkedIn
                                         </span>
@@ -158,7 +158,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             Twitter
                                         </span>
@@ -169,7 +169,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             LinkedIn
                                         </span>
@@ -211,7 +211,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             Twitter
                                         </span>
@@ -221,7 +221,7 @@
                                 <li>
                                     <a
                                         href="#"
-                                        class="text-yellow-200 hover:text-yellow-300">
+                                        class="text-yellow-200 sm:hover:text-yellow-300">
                                         <span class="sr-only">
                                             LinkedIn
                                         </span>
