@@ -122,15 +122,9 @@
                             role="menu">
                             <div class="w-[2.8125rem]">
                                 <div class="bg-white h-[0.1875rem]"></div>
-                                <div
-                                    class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[80%]"
-                                    style="transition: width 0.3s linear;"></div>
-                                <div
-                                    class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[60%]"
-                                    style="transition: width 0.3s linear;"></div>
-                                <div
-                                    class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[35%]"
-                                    style="transition: width 0.3s linear;"></div>
+                                <div class="bg-white h-[0.1875rem] mt-1.5 w-full"></div>
+                                <div class="bg-white h-[0.1875rem] mt-1.5 w-full"></div>
+                                <div class="bg-white h-[0.1875rem] mt-1.5 w-full"></div>
                             </div>
                         </div>
                         <div

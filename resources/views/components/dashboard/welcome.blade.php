@@ -144,7 +144,7 @@
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
-                <tr>
+                <tr class="hover:bg-gray-50">
                     <td class="relative w-12 px-6 sm:w-16 sm:px-8">
                         <!-- Selected row marker, only show when row is selected. -->
                         <div class="absolute inset-y-0 left-0 w-0.5 bg-[#501C88]"></div>
@@ -181,7 +181,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="hover:bg-gray-50">
                     <td class="relative w-12 px-6 sm:w-16 sm:px-8">
                         <!-- Selected row marker, only show when row is selected. -->
                         <div class="absolute inset-y-0 left-0 w-0.5 bg-[#501C88]"></div>
@@ -218,7 +218,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="hover:bg-gray-50">
                     <td class="relative w-12 px-6 sm:w-16 sm:px-8">
                         <!-- Selected row marker, only show when row is selected. -->
                         <div class="absolute inset-y-0 left-0 w-0.5 bg-[#501C88]"></div>
@@ -255,7 +255,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="hover:bg-gray-50">
                     <td class="relative w-12 px-6 sm:w-16 sm:px-8">
                         <!-- Selected row marker, only show when row is selected. -->
                         <div class="absolute inset-y-0 left-0 w-0.5 bg-[#501C88]"></div>
@@ -292,7 +292,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="hover:bg-gray-50">
                     <td class="relative w-12 px-6 sm:w-16 sm:px-8">
                         <!-- Selected row marker, only show when row is selected. -->
                         <div class="absolute inset-y-0 left-0 w-0.5 bg-[#501C88]"></div>
