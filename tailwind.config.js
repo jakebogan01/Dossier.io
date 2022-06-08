@@ -26,9 +26,6 @@ module.exports = {
                 '1600': '1600px',
                 '2090': '2090px',
             },
-            transitionProperty: {
-                'border': 'border-radius',
-            },
             transitionDelay: {
                 '50': '50ms',
                 '250': '250ms',

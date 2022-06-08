@@ -39,8 +39,8 @@
                 </div>
                 <div
                     class="absolute -right-12 -bottom-9"
-                     data-aos="zoom-in-up"
-                    data-aos-delay="100">
+                    data-aos="zoom-in-up"
+                    data-aos-delay="200">
                     <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_dfvrnyjk.json"  background="transparent" speed="1" style="width: 200px; height: 200px;" loop  autoplay></lottie-player>
                 </div>
             </div>

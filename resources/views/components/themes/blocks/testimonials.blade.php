@@ -1,6 +1,6 @@
 <section
     id="testimonials"
-    {{ $attributes->merge(['class' => 'template_one_testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
+    {{ $attributes->merge(['class' => 'testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
     <img
         class="absolute bottom-24 left-0 z-10"
         src="/images/themes/svg/background-pattern.svg"

@@ -9,7 +9,7 @@
         Profile Section
     </h2>
 
-    <div class="bg-white shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear">
+    <div class="bg-white shadow-md hover:shadow-sm rounded-lg transition-all duration-300 ease-linear">
         <div class="md:grid xl:grid-cols-2 md:gap-6">
             <div class="mb-5 md:mb-0 md:col-span-1 px-4 py-5 sm:p-6">
                 <form class="space-y-6" action="#" method="POST">

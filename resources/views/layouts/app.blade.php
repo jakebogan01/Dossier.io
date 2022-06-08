@@ -203,7 +203,7 @@
                                 class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[35%]"
                                 style="transition: width 0.3s linear;"></div>
                         </div>
-                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity duration-300 ease-linear delay-200">
+                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity delay-200">
                             DOSSIER.IO
                         </span>
                     </a>
@@ -230,7 +230,7 @@
                                 class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[35%]"
                                 style="transition: width 0.3s linear;"></div>
                         </div>
-                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity duration-300 ease-linear delay-200">
+                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity delay-200">
                             DOSSIER.IO
                         </span>
                     </button>
@@ -323,7 +323,7 @@
                 <div class="flex justify-end min-h-[71px] pr-10">
                     @livewire('navigation-menu')
                 </div>
-                <div class="flex-1 lg:rounded-tl-3xl overflow-hidden bg-[#F3F4F6] shadow-[inset_0_0_0.3125rem_rgb(0,0,0)] transform sm:transition-border duration-300 delay-500 ease-linear">
+                <div class="flex-1 rounded-tl-3xl overflow-hidden bg-[#F3F4F6] shadow-[inset_0_0_0.3125rem_rgb(0,0,0)]">
                     <main class="h-full overflow-x-hidden overflow-y-auto">
                         {{ $slot }}
                     </main>
