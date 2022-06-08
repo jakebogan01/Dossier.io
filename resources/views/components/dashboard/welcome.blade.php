@@ -1,10 +1,10 @@
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-    <h2 class="text-lg pb-3 leading-6 font-medium text-gray-900">
+    <h2 class="text-lg pb-5 leading-6 font-medium text-gray-900">
         Recent Analytics
     </h2>
-    <div class="mt-2 grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
-        <div class="bg-[#e9edf5] rounded-lg p-2 space-y-4 shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear">
-            <div class="flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear">
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
+        <div class="bg-[#e9edf5] rounded-lg p-2 space-y-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
+            <div class="flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                 <div class="flex items-center bg-[#57178D] rounded-md p-4 mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
                 </div>
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear">
+            <div class="flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                 <div class="flex items-center bg-[#57178D] rounded-md p-4 mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" /></svg>
                 </div>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div
-            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear overflow-hidden"
+            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden"
             x-data="{
                 values: [45, 55, 75, 25, 45],
                 labels: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5'],
@@ -72,7 +72,7 @@
         </div>
 
         <div
-            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg transition-all duration-300 ease-linear overflow-hidden"
+            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden"
             x-data="{
                 values: [45, 55, 75, 25, 45, 110],
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
@@ -118,12 +118,12 @@
     </div>
 </div>
 
-<h2 class="mx-auto mt-8 pb-3 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
+<h2 class="mx-auto mt-8 pb-5 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
     All Projects
 </h2>
 <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col mt-2">
-        <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm transition-all duration-300 ease-linear">
+        <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
 {{--            <div class="absolute top-0 left-12 flex h-12 items-center space-x-3 bg-gray-50 sm:left-16">--}}
 {{--                <button type="button" class="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm sm:hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30">Bulk edit</button>--}}
 {{--                <button type="button" class="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm sm:hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30">Delete all</button>--}}

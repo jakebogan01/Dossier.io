@@ -11,15 +11,15 @@
                                         class="bg-white h-[0.1875rem]"
                                         data-aos="fade-right"></div>
                                     <div
-                                        class="bg-white h-[0.1875rem] mt-1.5 w-9 transition-transform duration-300"
+                                        class="bg-white h-[0.1875rem] mt-1.5 w-9"
                                         data-aos="fade-right"
                                         data-aos-delay="50"></div>
                                     <div
-                                        class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem] transition-transform duration-300"
+                                        class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem]"
                                         data-aos="fade-right"
                                         data-aos-delay="100"></div>
                                     <div
-                                        class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300"
+                                        class="bg-white h-[0.1875rem] mt-1.5 w-4"
                                         data-aos="fade-right"
                                         data-aos-delay="150"></div>
                                 </div>
@@ -66,7 +66,7 @@
                                                 <button
                                                     type="submit"
                                                     aria-label="dashboard"
-                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
                                                     Dashboard
                                                 </button>
                                             </a>
@@ -80,7 +80,7 @@
                                                 <button
                                                     type="submit"
                                                     aria-label="login"
-                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
                                                     Login
                                                 </button>
                                             </a>
@@ -94,7 +94,7 @@
                                                     <button
                                                         type="submit"
                                                         aria-label="register"
-                                                        class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 transition-colors">
+                                                        class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
                                                         Register
                                                     </button>
                                                 </a>
@@ -213,7 +213,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -237,7 +237,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -261,7 +261,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">
@@ -285,7 +285,7 @@
                         <a href="#">
                             <div class="space-y-4 text-center group">
                                 <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
                                     src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt="Real User"
                                     loading="eager">

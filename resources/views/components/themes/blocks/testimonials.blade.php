@@ -12,7 +12,7 @@
             <aside
                 class="space-y-5 sm:space-y-4"
                 data-aos="fade-right">
-                <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none transition-all sm:group-hover:text-white">
+                <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white">
                     TRIBUTES
                 </h2>
                 <p class="text-[#B1B7D6] text-base font-bold leading-loose">
@@ -30,7 +30,7 @@
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img
-                                    class="card_image object-cover shadow-lg rounded-lg transform transition duration-300"
+                                    class="card_image object-cover shadow-lg rounded-lg transform sm:transition duration-300"
                                     src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt=""
                                     loading="eager">
@@ -76,13 +76,13 @@
                     </li>
 
                     <li
-                        class="card mt-12 sm:mt-[100px] transition-all"
+                        class="card mt-12 sm:mt-[100px] sm:transition-all"
                         data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img
-                                    class="card_image object-cover shadow-lg rounded-lg transform transition duration-300"
+                                    class="card_image object-cover shadow-lg rounded-lg transform sm:transition duration-300"
                                     src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt=""
                                     loading="eager">
@@ -134,7 +134,7 @@
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img
-                                    class="card_image object-cover shadow-lg rounded-lg transform transition duration-300"
+                                    class="card_image object-cover shadow-lg rounded-lg transform sm:transition duration-300"
                                     src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt=""
                                     loading="eager">
@@ -181,13 +181,13 @@
                     </li>
 
                     <li
-                        class="card mt-12 sm:mt-[100px] transition-all"
+                        class="card mt-12 sm:mt-[100px] sm:transition-all"
                         data-aos="fade-up"
                         data-aos-delay="400">
                         <div class="space-y-4">
                             <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                                 <img
-                                    class="card_image object-cover shadow-lg rounded-lg transform transition duration-300"
+                                    class="card_image object-cover shadow-lg rounded-lg transform sm:transition duration-300"
                                     src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                     alt=""
                                     loading="eager">

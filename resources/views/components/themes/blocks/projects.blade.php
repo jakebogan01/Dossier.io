@@ -71,7 +71,7 @@
                 My Projects
             </span>
             <h2
-                class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white transition-all"
+                class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white sm:Ztransition-all"
                 data-aos="fade-right"
                 data-aos-anchor-placement="bottom-bottom">
                 MY WORK

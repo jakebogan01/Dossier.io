@@ -85,7 +85,7 @@
                 <div class="text-sm">
                     <a
                         href="{{ route('login') }}"
-                        class="font-medium text-gray-200 sm:hover:text-gray-400 transition-colors">
+                        class="font-medium text-gray-200 sm:hover:text-gray-400 sm:transition-colors">
                         {{ __('Already registered?') }}
                     </a>
                 </div>
@@ -98,7 +98,7 @@
                 </x-registration.button>
                 <a
                     href="/"
-                    class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                    class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:transition-colors"
                     data-aos="fade-up"
                     data-aos-delay="600">
                     Cancel

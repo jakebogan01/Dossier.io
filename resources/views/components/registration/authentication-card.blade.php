@@ -9,15 +9,15 @@
                                 class="bg-white h-[0.1875rem]"
                                 data-aos="fade-right"></div>
                             <div
-                                class="bg-white h-[0.1875rem] mt-1.5 w-9 transition-transform duration-300"
+                                class="bg-white h-[0.1875rem] mt-1.5 w-9"
                                 data-aos="fade-right"
                                 data-aos-delay="50"></div>
                             <div
-                                class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem] transition-transform duration-300"
+                                class="bg-white h-[0.1875rem] mt-1.5 w-[1.6875rem]"
                                 data-aos="fade-right"
                                 data-aos-delay="100"></div>
                             <div
-                                class="bg-white h-[0.1875rem] mt-1.5 w-4 transition-transform duration-300"
+                                class="bg-white h-[0.1875rem] mt-1.5 w-4"
                                 data-aos="fade-right"
                                 data-aos-delay="150"></div>
                         </div>

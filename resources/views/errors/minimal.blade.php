@@ -26,16 +26,21 @@
                     <div class="flex justify-center items-center pt-2.5">
                         <a
                             href="/"
-                            class="flex justify-center items-center px-3 py-2 font-semibold text-blue-800 bg-blue-100 sm:hover:bg-blue-50 rounded-md transition-colors">
+                            class="flex justify-center items-center px-3 py-2 font-semibold text-blue-800 bg-blue-100 sm:hover:bg-blue-50 rounded-md sm:transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-blue-700" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
                             Go home
                         </a>
                     </div>
                 </div>
-                <div class="absolute -left-24 -bottom-9">
+                <div
+                    class="absolute -left-24 -bottom-9"
+                    data-aos="zoom-in-up">
                     <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_i2zjbbkk.json"  background="transparent" speed="0.7" style="width: 200px; height: 200px;" loop  autoplay></lottie-player>
                 </div>
-                <div class="absolute -right-12 -bottom-9">
+                <div
+                    class="absolute -right-12 -bottom-9"
+                     data-aos="zoom-in-up"
+                    data-aos-delay="100">
                     <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_dfvrnyjk.json"  background="transparent" speed="1" style="width: 200px; height: 200px;" loop  autoplay></lottie-player>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @if ($errors->any())
     <div
         aria-live="assertive"
-        class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start z-50 transition-all"
+        class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start z-50 sm:transition-all"
         x-data="{ showNotification: true }"
         x-show="showNotification"
         x-cloak
