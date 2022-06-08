@@ -109,7 +109,7 @@
                 <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
                     <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                         <div class="hidden sm:block">
-                            <div class="absolute inset-y-0 left-1/2 w-screen bg-gradient-to-r from-[#4E46DD] to-[#210599] rounded-l-3xl lg:left-80 lg:right-0 lg:w-[956px]"
+                            <div class="absolute inset-y-0 left-1/2 w-screen bg-gradient-to-r from-[#4E46DD] to-[#180481] rounded-l-3xl lg:left-80 lg:right-0 lg:w-[956px]"
                                  data-aos="zoom-in"
                                  data-aos-delay="200"></div>
                             <svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" data-aos="zoom-in" data-aos-delay="300" width="404" height="392" fill="none" viewBox="0 0 404 392">
@@ -134,7 +134,7 @@
                 <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
                     <div class="relative sm:py-16 lg:py-0">
                         <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
-                            <div class="absolute inset-y-0 right-1/2 w-[965px] bg-gradient-to-r from-[#57178d] to-[#4E46DD] rounded-r-3xl lg:right-72" data-aos="zoom-in"
+                            <div class="absolute inset-y-0 right-1/2 w-[965px] bg-gradient-to-r from-[#50148B] to-[#7428bf] rounded-r-3xl lg:right-72" data-aos="zoom-in"
                                  data-aos-delay="200"></div>
                             <div
                                 class="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
@@ -156,7 +156,7 @@
                                 class="relative pt-64 pb-10 h-[300px] sm:h-[400px] lg:h-[400px] rounded-2xl shadow-xl overflow-hidden"
                                 data-aos="zoom-in-right"
                                 data-aos-delay="500">
-                                <div class="absolute flex justify-center items-center inset-0 h-full w-full bg-purple-500">
+                                <div class="absolute flex justify-center items-center inset-0 h-full w-full bg-[#9845de]">
                                     <lottie-player
                                         src="https://assets1.lottiefiles.com/packages/lf20_dkuwscrg.json"
                                         background="transparent"
@@ -191,113 +191,112 @@
 
         <!-- Footer section -->
         <footer class="mt-24 bg-[#0F1119] sm:mt-12">
-            <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2
                     class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide"
                     data-aos="fade-up"
                     data-aos-delay="50">
                     Trusted by over 26,000 amazing people
                 </h2>
-                <ul
-                    role="list"
-                    class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 lg:max-w-4xl lg:gap-x-2 sm:grid-cols-4 mt-10">
-                    <li
-                        data-aos="fade-up"
-                        data-aos-delay="100"
-                        data-aos-anchor-placement="top-bottom">
-                        <a href="#">
-                            <div class="space-y-4 text-center group">
-                                <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                    alt="Real User"
-                                    loading="eager">
-                                <div class="space-y-2">
-                                    <div class="text-xs font-medium lg:text-sm">
-                                        <h3 class="text-white">
-                                            Michael Foster
-                                        </h3>
-                                        <p class="text-gray-400">
-                                            Co-Founder / CTO
-                                        </p>
-                                    </div>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="#"
+                       data-aos="fade-up"
+                       data-aos-delay="100"
+                       data-aos-anchor-placement="top-bottom">
+                        <div class="relative space-y-4 text-center group">
+                            <img
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                alt="Real User"
+                                loading="eager">
+                            <div class="space-y-2">
+                                <div class="text-xs font-medium lg:text-sm">
+                                    <h3 class="text-white">
+                                        Michael Foster
+                                    </h3>
+                                    <p class="text-gray-400">
+                                        Co-Founder / CTO
+                                    </p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                    <li
-                        data-aos="fade-up"
-                        data-aos-delay="150"
-                        data-aos-anchor-placement="top-bottom">
-                        <a href="#">
-                            <div class="space-y-4 text-center group">
-                                <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                    alt="Real User"
-                                    loading="eager">
-                                <div class="space-y-2">
-                                    <div class="text-xs font-medium lg:text-sm">
-                                        <h3 class="text-white">
-                                            Michael Foster
-                                        </h3>
-                                        <p class="text-gray-400">
-                                            Co-Founder / CTO
-                                        </p>
-                                    </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       data-aos="fade-up"
+                       data-aos-delay="150"
+                       data-aos-anchor-placement="top-bottom">
+                        <div class="relative space-y-4 text-center group">
+                            <img
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                alt="Real User"
+                                loading="eager">
+                            <div class="space-y-2">
+                                <div class="text-xs font-medium lg:text-sm">
+                                    <h3 class="text-white">
+                                        Michael Foster
+                                    </h3>
+                                    <p class="text-gray-400">
+                                        Co-Founder / CTO
+                                    </p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                    <li
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                        data-aos-anchor-placement="top-bottom">
-                        <a href="#">
-                            <div class="space-y-4 text-center group">
-                                <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                    alt="Real User"
-                                    loading="eager">
-                                <div class="space-y-2">
-                                    <div class="text-xs font-medium lg:text-sm">
-                                        <h3 class="text-white">
-                                            Michael Foster
-                                        </h3>
-                                        <p class="text-gray-400">
-                                            Co-Founder / CTO
-                                        </p>
-                                    </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       data-aos="fade-up"
+                       data-aos-delay="200"
+                       data-aos-anchor-placement="top-bottom">
+                        <div class="relative space-y-4 text-center group">
+                            <img
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                alt="Real User"
+                                loading="eager">
+                            <div class="space-y-2">
+                                <div class="text-xs font-medium lg:text-sm">
+                                    <h3 class="text-white">
+                                        Michael Foster
+                                    </h3>
+                                    <p class="text-gray-400">
+                                        Co-Founder / CTO
+                                    </p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                    <li
-                        data-aos="fade-up"
-                        data-aos-delay="250"
-                        data-aos-anchor-placement="top-bottom">
-                        <a href="#">
-                            <div class="relative space-y-4 text-center group">
-                                <img
-                                    class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                    alt="Real User"
-                                    loading="eager">
-                                <div class="space-y-2">
-                                    <div class="text-xs font-medium lg:text-sm">
-                                        <h3 class="text-white">
-                                            Michael Foster
-                                        </h3>
-                                        <p class="text-gray-400">
-                                            Co-Founder / CTO
-                                        </p>
-                                    </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       data-aos="fade-up"
+                       data-aos-delay="250"
+                       data-aos-anchor-placement="top-bottom">
+                        <div class="relative space-y-4 text-center group">
+                            <img
+                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-[#be8bfc] sm:group-hover:border-2 sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
+                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                alt="Real User"
+                                loading="eager">
+                            <div class="space-y-2">
+                                <div class="text-xs font-medium lg:text-sm">
+                                    <h3 class="text-white">
+                                        Michael Foster
+                                    </h3>
+                                    <p class="text-gray-400">
+                                        Co-Founder / CTO
+                                    </p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </div>
+                    </a>
+                </div>
+                <p class="mt-8 text-center text-base text-gray-400"
+                   data-aos="fade-up"
+                   data-aos-delay="300"
+                   data-aos-anchor-placement="top-bottom">
+                    Created By Jake Bogan
+                </p>
             </div>
         </footer>
     </div>

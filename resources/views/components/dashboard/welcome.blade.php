@@ -35,7 +35,7 @@
         <div
             class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden"
             x-data="{
-                values: [45, 55, 75, 25, 45],
+                values: [50, 55, 65, 54, 51],
                 labels: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5'],
                 init() {
                     let chart = new ApexCharts(this.$refs.chart, this.options)
@@ -51,7 +51,36 @@
                         fill: {
                           colors: ['#4C148B']
                         },
-                        chart: { type: 'bar', toolbar: false },
+
+                        dataLabels: {
+                          enabled: true,
+                          formatter: function (val) {
+                            return val + '%';
+                        },
+                        offsetY: -20,
+                        style: {
+                        fontSize: '12px',
+                        colors: ['#304758']
+                        }
+                        },
+
+                        plotOptions: {
+                          bar: {
+                            dataLabels: {
+                              position: 'top', // top, center, bottom
+                            },
+                          }
+                        },
+                        title: {
+                          text: 'Monthly Inflation in Argentina, 2002',
+                          floating: true,
+                          offsetY: 330,
+                          align: 'center',
+                          style: {
+                            color: '#444'
+                          }
+                        },
+                        chart: { type: 'bar', height: 350, toolbar: false },
                         tooltip: {
                             marker: false,
                             y: {
@@ -60,10 +89,49 @@
                                 }
                             }
                         },
-                        xaxis: { categories: this.labels },
-                        series: [{
-                            name: 'LIKES',
-                            data: this.values,
+                        xaxis: {
+                            categories: this.labels,
+                            position: 'top',
+                            axisBorder: {
+                                show: false
+                            },
+                            axisTicks: {
+                               show: false
+                            },
+                            crosshairs: {
+                        fill: {
+                          type: 'gradient',
+                          gradient: {
+                            colorFrom: '#D8E3F0',
+                            colorTo: '#BED1E6',
+                            stops: [0, 100],
+                            opacityFrom: 0.4,
+                            opacityTo: 0.5,
+                          }
+                        }
+                      },
+                      tooltip: {
+                        enabled: true,
+                      },
+                    },
+                    yaxis: {
+                      axisBorder: {
+                        show: false
+                      },
+                      axisTicks: {
+                        show: false,
+                      },
+                      labels: {
+                        show: false,
+                        formatter: function (val) {
+                          return val + '%';
+                    }
+                    }
+
+                    },
+                            series: [{
+                    name: 'LIKES',
+                    data: this.values,
                         }],
                     }
                 }
@@ -90,15 +158,26 @@
                         colors: ['#4C148B'],
                         dataLabels: {
                             style: {
-                                colors: ['#F44336', '#E91E63', '#9C27B0']
+                                colors: ['#57178D', '#E91E63', '#9C27B0']
                             }
+                        },
+                        legend: {
+                          horizontalAlign: 'left'
                         },
                         markers: {
                            colors: ['#150380']
                         },
-                        chart: { type: 'line', toolbar: false },
+                        title: {
+                          text: 'Fundamental Analysis of Stocks',
+                          align: 'left'
+                        },
+                        subtitle: {
+                          text: 'Price Movements',
+                          align: 'left'
+                        },
+                        chart: { type: 'area', toolbar: false },
                         tooltip: {
-                            marker: false,
+                            marker: true,
                             y: {
                                 formatter(number) {
                                     return number
