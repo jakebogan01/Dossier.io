@@ -16,11 +16,12 @@
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <style>
             *, *::before, *::after{
-                scrollbar-width: thin;
+                scrollbar-width: none;
+                scrollbar-width: 0;
                 scrollbar-color: #000000 #252238;
             }
             ::-webkit-scrollbar{
-                width: 0.3125rem;
+                width: 0;
                 background-color: #252238;
             }
             ::-webkit-scrollbar-thumb{

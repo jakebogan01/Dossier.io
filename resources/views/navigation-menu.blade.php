@@ -52,10 +52,30 @@
             </div>
         </div>
     </div>
-    <div class="relative flex justify-center items-center pl-1">
-        <a href="/portfolio/2" class="mt-1">
+    <div class="relative flex justify-center items-center pl-1" x-data="{ showMessage: true }">
+        <div class="absolute bg-[#a85de8] w-[800px] h-[800px] rounded-full z-40 shadow-2xl transform" x-show="showMessage" x-cloak="!showMessage"
+             x-transition:enter="transform transition-transform ease-in-out duration-300"
+             x-transition:enter-start="scale-100"
+             x-transition:enter-end="scale-0"
+             x-transition:leave="transform transition-transform ease-in-out duration-300"
+             x-transition:leave-start="scale-0"
+             x-transition:leave-end="scale-0">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#1F0682] h-20 w-20 rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white h-20 w-20 rounded-full animate-ping transform origin-bottom-right"></div>
+            <div class="absolute top-1/2 left-0 transform translate-x-24 translate-y-20 font-medium text-white max-w-[325px] cursor-default">
+                <h3 class="font-bold text-lg">
+                    Click Here
+                </h3>
+                <p class="pt-2">
+                    By clicking here you can view your personal portfolio!
+                </p>
+            </div>
+        </div>
+        <a href="/portfolio/2" target="_blank" class="mt-1 relative z-50">
             <button type="button" class="text-gray-500 group rounded-full inline-flex items-center text-base font-medium sm:hover:outline-none sm:hover:ring-2 sm:hover:ring-offset-2 sm:hover:ring-indigo-500" aria-expanded="false">
                 <img
+                    @mouseenter="showMessage = false"
+                    @mouseleave="showMessage = false"
                     class="h-8 w-8 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="">
