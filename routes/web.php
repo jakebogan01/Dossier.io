@@ -22,4 +22,8 @@ Route::middleware([
         ->name('profile');
     Route::get('/skills', [DashboardController::class, 'skills'])
         ->name('skills');
+    Route::get('/experiences', [DashboardController::class, 'experiences'])
+        ->name('experiences');
+    Route::get('/projects', [DashboardController::class, 'projects'])
+        ->name('projects');
 });

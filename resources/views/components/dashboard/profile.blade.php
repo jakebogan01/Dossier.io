@@ -11,7 +11,7 @@
                 <div class="bg-white sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
                         <h2 id="profile-information-title" class="text-lg leading-6 font-medium text-gray-900">Profile Information</h2>
-                        <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details with live preview.</p>
+                        <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details with existing preview.</p>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
                         <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 bg-gray-100 rounded-lg lg: p-2 p-4">
@@ -26,14 +26,6 @@
                                 <dd class="mt-1 text-sm text-gray-900">56</dd>
                             </div>
                             <div class="sm:col-span-1">
-                                <dt class="text-sm font-medium text-gray-500">Your emal</dt>
-                                <dd class="mt-1 text-sm text-gray-900">Jon@gmail.com</dd>
-                            </div>
-                            <div class="sm:col-span-1">
-                                <dt class="text-sm font-medium text-gray-500">Total known software tools</dt>
-                                <dd class="mt-1 text-sm text-gray-900">10</dd>
-                            </div>
-                            <div class="sm:col-span-1">
                                 <dt class="text-sm font-medium text-gray-500">Photo</dt>
                                 <dd class="mt-1 text-sm text-gray-900">
                                     <div class="flex-shrink-0 inline-block rounded-full overflow-hidden h-14 w-14" aria-hidden="true">
@@ -41,11 +33,15 @@
                                     </div>
                                 </dd>
                             </div>
+                            <div class="sm:col-span-1">
+                                <dt class="text-sm font-medium text-gray-500">Total known software tools</dt>
+                                <dd class="mt-1 text-sm text-gray-900">10</dd>
+                            </div>
                         </dl>
                             <div class="sm:col-span-2">
                                 <form class="lg:col-span-9" action="#" method="POST">
                                     <!-- Profile section -->
-                                    <div class="pt-14">
+                                    <div class="pt-24">
                                         <div>
                                             <h2 class="text-lg leading-6 font-medium text-gray-900">Profile</h2>
                                             <p class="mt-1 text-sm text-gray-500">The information you submit will reflect that of your personal portfolio publicly.</p>
@@ -54,21 +50,10 @@
                                         <div class="flex flex-col lg:flex-row">
                                             <div class="flex-grow space-y-6">
 
-                                                <div class="mt-8 grid grid-cols-12 gap-6">
-                                                    <div class="col-span-12 sm:col-span-6">
-                                                        <div>
-                                                            <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
-                                                                <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-span-12 sm:col-span-6">
-                                                        <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
-                                                            <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                                                        </div>
+                                                <div class="mt-6">
+                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
+                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
 
@@ -92,7 +77,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="mt-6 pt-8 flex-grow lg:mt-0 lg:ml-12 lg:flex-grow-0 lg:flex-shrink-0">
+                                            <div class="mt-4 pt-6 flex-grow lg:mt-0 lg:ml-12 lg:flex-grow-0 lg:flex-shrink-0">
                                                 <div class="grid grid-cols-1 gap-6">
                                                     <div class="col-span-1">
                                                         <div class="flex items-center lg:justify-between">
@@ -168,7 +153,7 @@
                                     </div>
 
                                     <!-- Privacy section -->
-                                    <div class="pt-14">
+                                    <div class="pt-24">
                                         <div>
                                             <div>
                                                 <h2 class="text-lg leading-6 font-medium text-gray-900">Profile Settings</h2>

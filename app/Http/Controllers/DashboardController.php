@@ -20,4 +20,14 @@ class DashboardController extends Controller
     {
         return view('pages.jetstream.skills');
     }
+
+    public function experiences ()
+    {
+        return view('pages.jetstream.experiences');
+    }
+
+    public function projects ()
+    {
+        return view('pages.jetstream.projects');
+    }
 }
