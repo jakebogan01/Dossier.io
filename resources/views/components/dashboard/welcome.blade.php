@@ -51,7 +51,6 @@
                         fill: {
                           colors: ['#4C148B']
                         },
-
                         dataLabels: {
                           enabled: true,
                           formatter: function (val) {
@@ -81,14 +80,6 @@
                           }
                         },
                         chart: { type: 'bar', height: 350, toolbar: false },
-                        tooltip: {
-                            marker: false,
-                            y: {
-                                formatter(number) {
-                                    return number
-                                }
-                            }
-                        },
                         xaxis: {
                             categories: this.labels,
                             position: 'top',

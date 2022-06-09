@@ -51,19 +51,24 @@
                                             <p class="mt-1 text-sm text-gray-500">The information you submit will reflect that of your personal portfolio publicly.</p>
                                         </div>
 
-                                        <div class="mt-6 flex flex-col lg:flex-row">
+                                        <div class="flex flex-col lg:flex-row">
                                             <div class="flex-grow space-y-6">
-                                                <div>
-                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
-                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                                                    </div>
-                                                </div>
 
-                                                <div>
-                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
-                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                <div class="mt-8 grid grid-cols-12 gap-6">
+                                                    <div class="col-span-12 sm:col-span-6">
+                                                        <div>
+                                                            <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                                <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
+                                                                <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-span-12 sm:col-span-6">
+                                                        <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
+                                                            <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -87,7 +92,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="mt-6 flex-grow lg:mt-0 lg:ml-12 lg:flex-grow-0 lg:flex-shrink-0">
+                                            <div class="mt-6 pt-8 flex-grow lg:mt-0 lg:ml-12 lg:flex-grow-0 lg:flex-shrink-0">
                                                 <div class="grid grid-cols-1 gap-6">
                                                     <div class="col-span-1">
                                                         <div class="flex items-center lg:justify-between">

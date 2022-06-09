@@ -123,11 +123,11 @@
                                             </span>
                                         </a>
                                         <a
-                                            href="#"
-                                            class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                                            href="{{ route('skills') }}"
+                                            class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('skills')) ? 'text-white' : 'text-white sm:text-[#9650d9]' }}">
                                             <span class="relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" /></svg>
+                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Skills
                                                 </span>
@@ -264,11 +264,11 @@
                         </span>
                     </a>
                     <a
-                        href="#"
-                        class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                        href="{{ route('skills') }}"
+                        class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('skills')) ? 'text-white' : 'text-[#9650d9]' }}">
                         <span class="relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" /></svg>
+                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Skills
                             </span>

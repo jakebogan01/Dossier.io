@@ -20,4 +20,6 @@ Route::middleware([
         ->name('dashboard');
     Route::get('/profile', [DashboardController::class, 'profile'])
         ->name('profile');
+    Route::get('/skills', [DashboardController::class, 'skills'])
+        ->name('skills');
 });
