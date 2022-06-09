@@ -6,7 +6,7 @@
     </div>
 
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-10">
-        <div class="col-span-2 bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+        <div class="col-span-2 bg-white p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
             <section aria-labelledby="profile-information-title">
                 <div class="bg-white sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
@@ -14,41 +14,95 @@
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal experiences with existing preview.</p>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
-                        <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 bg-gray-100 rounded-lg lg: p-2 p-4">
-                            <dl class="col-span-1 sm:col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+
+                        <div class="bg-gray-100 rounded-lg p-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+                            </div>
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+                            </div>
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+                            </div>
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+                            </div>
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">June 1990</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</dd>
+                            </div>
+                            <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-indigo-600">
+                                            <a href="#" class="hover:underline"> June 1990 </a>
+                                        </p>
+                                        <a href="#" class="block mt-2">
+                                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quisquam quo ratione!</p>
+                                        </a>
+                                    </div>
                                 </div>
-                            </dl>
-                        </dl>
+                            </div>
+                        </div>
+
                         <div class="sm:col-span-2">
                             <form class="lg:col-span-9" action="#" method="POST" x-data="addRemove()">
                                 <div class="pt-24">
                                     <div class="flex justify-between items-center">
                                         <div>
                                             <h2 class="text-lg leading-6 font-medium text-gray-900">Work Experiences</h2>
-                                            <p class="mt-1 text-sm text-gray-500">Provide a date and a short description of important work experiences.</p>
+                                            <p class="mt-1 text-sm text-gray-500">Provide a date, title, and a short description of important work experiences.</p>
                                         </div>
 
                                         <button type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors" @click="addNewField()">
@@ -59,10 +113,34 @@
                                     </div>
 
                                     <div class="mt-6 flex flex-col lg:flex-row">
-                                        <div class="flex-grow">
+                                        <div class="flex-grow space-y-14">
+                                            <div>
+                                                <div class="grid grid-cols-12 gap-6">
+                                                    <div class="flex col-span-12 sm:col-span-3 min-w-[146px]">
+                                                        <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Date</label>
+                                                            <input type="date" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mt-5">
+                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
+                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mt-5">
+                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
+                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <template x-for="(field, index) in fields" :key="field.id">
                                                 <div>
-                                                    <div class="pt-6 grid grid-cols-12 gap-6">
+                                                    <div class="grid grid-cols-12 gap-6">
                                                         <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
                                                             <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                 <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Date</label>
@@ -73,6 +151,13 @@
                                                                     <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
                                                                 </svg>
                                                             </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-5">
+                                                        <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
+                                                            <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                         </div>
                                                     </div>
 

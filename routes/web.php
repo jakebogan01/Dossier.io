@@ -26,4 +26,8 @@ Route::middleware([
         ->name('experiences');
     Route::get('/projects', [DashboardController::class, 'projects'])
         ->name('projects');
+    Route::get('/testimonials', [DashboardController::class, 'testimonials'])
+        ->name('testimonials');
+    Route::get('/contact', [DashboardController::class, 'contact'])
+        ->name('contact');
 });

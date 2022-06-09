@@ -156,22 +156,22 @@
                                             </span>
                                         </a>
                                         <a
-                                            href="#"
-                                            class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                                            href="{{ route('testimonials') }}"
+                                            class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('testimonials')) ? 'text-white' : 'text-white sm:text-[#9650d9]' }}">
                                             <span class="relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Testimonials
                                                 </span>
                                             </span>
                                         </a>
                                         <a
-                                            href="#"
-                                            class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                                            href="{{ route('contact') }}"
+                                            class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('contact')) ? 'text-white' : 'text-white sm:text-[#9650d9]' }}">
                                             <span class="relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
+                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Contact
                                                 </span>
@@ -297,22 +297,22 @@
                         </span>
                     </a>
                     <a
-                        href="#"
-                        class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                        href="{{ route('testimonials') }}"
+                        class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('testimonials')) ? 'text-white' : 'text-[#9650d9]' }}">
                         <span class="relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Testimonials
                             </span>
                         </span>
                     </a>
                     <a
-                        href="#"
-                        class="text-[#9650d9] sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
+                        href="{{ route('contact') }}"
+                        class="sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors {{ (request()->routeIs('contact')) ? 'text-white' : 'text-[#9650d9]' }}">
                         <span class="relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border border-transparent h-full block rounded-full"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
+                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Contact
                             </span>

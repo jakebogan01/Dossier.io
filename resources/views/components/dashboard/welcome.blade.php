@@ -3,7 +3,7 @@
         Recent Analytics
     </h2>
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
-        <div class="bg-[#e9edf5] rounded-lg p-2 space-y-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
+        <div class="bg-[#e9edf5] p-2 space-y-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
             <div class="flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                 <div class="flex items-center bg-[#57178D] rounded-md p-4 mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
@@ -234,7 +234,7 @@
                         56
                     </td>
                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                        <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         July 4, 2022
@@ -274,7 +274,7 @@
                         56
                     </td>
                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                        <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         July 4, 2022
@@ -314,7 +314,7 @@
                         56
                     </td>
                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                        <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         July 4, 2022
@@ -354,7 +354,7 @@
                         56
                     </td>
                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                        <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         July 4, 2022
@@ -394,7 +394,7 @@
                         56
                     </td>
                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                        <span class="inline-flex rounded-full bg-red-100 px-2 text-xs font-semibold leading-5 text-red-800">Not Active</span>
+                        <div class="rounded-full bg-red-400 w-2 h-2 border-2 border-red-500"></div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         July 4, 2022

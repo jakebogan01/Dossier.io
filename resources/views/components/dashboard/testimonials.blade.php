@@ -10,74 +10,74 @@
             <section aria-labelledby="profile-information-title">
                 <div class="bg-white sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
-                        <h2 id="profile-information-title" class="text-lg leading-6 font-medium text-gray-900">Project Information</h2>
-                        <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal projects with existing preview.</p>
+                        <h2 id="profile-information-title" class="text-lg leading-6 font-medium text-gray-900">Testimonials Information</h2>
+                        <p class="mt-1 max-w-2xl text-sm text-gray-500">Professional testimonials with existing preview.</p>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
 
                         <div class="bg-gray-100 rounded-lg p-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                             <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                                 <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=320&h=320&q=80" alt="">
+                                    <img class="h-48 w-full object-cover" src="https://www.smartheadshots.com/blog/photos/actor-headshots-1283.jpg" alt="">
                                 </div>
                                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                     <div class="flex flex-col">
                                         <div class="flex space-x-3">
                                             <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
-                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path></svg>
                                             </a>
-                                            <a href="#" target="_blank" class="text-[#9E61E0] hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" fill="#6466E9" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M345,291.6c9.6,0,18,4.8,25,14.5c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5 c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6s3.5-26,10.6-35.6C325.9,296.4,334.7,291.6,345,291.6 M470.8,161.4 c27.5,29.7,41.2,65.7,41.2,108c0,27.5-3.2,52.1-9.5,74c-6.3,21.9-14.3,39.7-23.9,53.4c-9.6,13.7-21.5,25.8-35.6,36.2 s-27.1,18-39,22.8c-11.9,4.8-25.4,8.5-40.6,11.1c-15.2,2.6-26.7,4.1-34.5,4.5c-7.8,0.4-16.1,0.6-25,0.6c-2.2,0-8.9,0.2-20,0.6 c-11.1,0.4-20.4,0.6-27.8,0.6s-16.7-0.2-27.8-0.6c-11.1-0.4-17.8-0.6-20-0.6c-8.9,0-17.3-0.2-25-0.6c-7.8-0.4-19.3-1.9-34.5-4.5 c-15.2-2.6-28.8-6.3-40.6-11.1C96.1,451,83.1,443.4,69,433s-26-22.4-35.6-36.2c-9.6-13.7-17.6-31.5-23.9-53.4 c-6.3-21.9-9.5-46.6-9.5-74c0-42.3,13.7-78.3,41.2-108c-3-1.5-3.2-16.3-0.6-44.5S49.3,62.7,59,39c34.1,3.7,76.4,23,126.9,57.9 c17.1-4.5,40.4-6.7,70.1-6.7c31.2,0,54.5,2.2,70.1,6.7c23-15.6,45.1-28.2,66.2-37.8s36.5-15.2,46.2-16.7L453,39 c9.6,23.7,15.8,49.7,18.4,77.9C474,145.1,473.8,159.9,470.8,161.4 M257.1,447.4c61.6,0,108.2-7.4,139.7-22.3s47.3-45.3,47.3-91.3 c0-26.7-10-49-30.1-66.8c-10.4-9.6-22.4-15.6-36.2-17.8c-13.7-2.2-34.7-2.2-62.9,0c-28.2,2.2-47.5,3.3-57.9,3.3H256h-1.1 c-11.9,0-27.3-0.7-46.2-2.2s-33.8-2.4-44.5-2.8c-10.8-0.4-22.4,0.9-35.1,3.9c-12.6,3-23,8.2-31.2,15.6   C78.7,284.2,69,306.5,69,333.9c0,46,15.6,76.4,46.7,91.3s77.5,22.3,139.1,22.3H257.1 M168.1,291.6c9.6,0,18,4.8,25,14.5   c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6   s3.5-26,10.6-35.6C149,296.4,157.7,291.6,168.1,291.6"/></g></svg>
+                                            <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
                                             </a>
                                         </div>
                                         <div class="mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">Project 1 title</p>
-                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque doloremque est et eum eveniet fugiat fugit ipsam, natus perferendis quas, quidem, reprehenderit soluta vero.</p>
+                                            <p class="text-xl font-semibold text-gray-900">Jamie Jackson</p>
+                                            <p class="text-sm font-semibold text-gray-900 mt-1">CEO of Walmart</p>
+                                            <p class="mt-3 text-base text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                                 <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=320&h=320&q=80" alt="">
+                                    <img class="h-48 w-full object-cover" src="https://www.smartheadshots.com/blog/photos/actor-headshots-1283.jpg" alt="">
                                 </div>
                                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                     <div class="flex flex-col">
                                         <div class="flex space-x-3">
                                             <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
-                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path></svg>
                                             </a>
-                                            <a href="#" target="_blank" class="text-[#9E61E0] hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" fill="#6466E9" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M345,291.6c9.6,0,18,4.8,25,14.5c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5 c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6s3.5-26,10.6-35.6C325.9,296.4,334.7,291.6,345,291.6 M470.8,161.4 c27.5,29.7,41.2,65.7,41.2,108c0,27.5-3.2,52.1-9.5,74c-6.3,21.9-14.3,39.7-23.9,53.4c-9.6,13.7-21.5,25.8-35.6,36.2 s-27.1,18-39,22.8c-11.9,4.8-25.4,8.5-40.6,11.1c-15.2,2.6-26.7,4.1-34.5,4.5c-7.8,0.4-16.1,0.6-25,0.6c-2.2,0-8.9,0.2-20,0.6 c-11.1,0.4-20.4,0.6-27.8,0.6s-16.7-0.2-27.8-0.6c-11.1-0.4-17.8-0.6-20-0.6c-8.9,0-17.3-0.2-25-0.6c-7.8-0.4-19.3-1.9-34.5-4.5 c-15.2-2.6-28.8-6.3-40.6-11.1C96.1,451,83.1,443.4,69,433s-26-22.4-35.6-36.2c-9.6-13.7-17.6-31.5-23.9-53.4 c-6.3-21.9-9.5-46.6-9.5-74c0-42.3,13.7-78.3,41.2-108c-3-1.5-3.2-16.3-0.6-44.5S49.3,62.7,59,39c34.1,3.7,76.4,23,126.9,57.9 c17.1-4.5,40.4-6.7,70.1-6.7c31.2,0,54.5,2.2,70.1,6.7c23-15.6,45.1-28.2,66.2-37.8s36.5-15.2,46.2-16.7L453,39 c9.6,23.7,15.8,49.7,18.4,77.9C474,145.1,473.8,159.9,470.8,161.4 M257.1,447.4c61.6,0,108.2-7.4,139.7-22.3s47.3-45.3,47.3-91.3 c0-26.7-10-49-30.1-66.8c-10.4-9.6-22.4-15.6-36.2-17.8c-13.7-2.2-34.7-2.2-62.9,0c-28.2,2.2-47.5,3.3-57.9,3.3H256h-1.1 c-11.9,0-27.3-0.7-46.2-2.2s-33.8-2.4-44.5-2.8c-10.8-0.4-22.4,0.9-35.1,3.9c-12.6,3-23,8.2-31.2,15.6   C78.7,284.2,69,306.5,69,333.9c0,46,15.6,76.4,46.7,91.3s77.5,22.3,139.1,22.3H257.1 M168.1,291.6c9.6,0,18,4.8,25,14.5   c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6   s3.5-26,10.6-35.6C149,296.4,157.7,291.6,168.1,291.6"/></g></svg>
+                                            <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
                                             </a>
                                         </div>
                                         <div class="mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">Project 1 title</p>
-                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque doloremque est et eum eveniet fugiat fugit ipsam, natus perferendis quas, quidem, reprehenderit soluta vero.</p>
+                                            <p class="text-xl font-semibold text-gray-900">Jamie Jackson</p>
+                                            <p class="text-sm font-semibold text-gray-900 mt-1">CEO of Walmart</p>
+                                            <p class="mt-3 text-base text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                                 <div class="flex-shrink-0">
-                                    <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=320&h=320&q=80" alt="">
+                                    <img class="h-48 w-full object-cover" src="https://www.smartheadshots.com/blog/photos/actor-headshots-1283.jpg" alt="">
                                 </div>
                                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                     <div class="flex flex-col">
                                         <div class="flex space-x-3">
                                             <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
-                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path></svg>
                                             </a>
-                                            <a href="#" target="_blank" class="text-[#9E61E0] hover:opacity-75 transition-opacity">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" fill="#6466E9" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M345,291.6c9.6,0,18,4.8,25,14.5c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5 c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6s3.5-26,10.6-35.6C325.9,296.4,334.7,291.6,345,291.6 M470.8,161.4 c27.5,29.7,41.2,65.7,41.2,108c0,27.5-3.2,52.1-9.5,74c-6.3,21.9-14.3,39.7-23.9,53.4c-9.6,13.7-21.5,25.8-35.6,36.2 s-27.1,18-39,22.8c-11.9,4.8-25.4,8.5-40.6,11.1c-15.2,2.6-26.7,4.1-34.5,4.5c-7.8,0.4-16.1,0.6-25,0.6c-2.2,0-8.9,0.2-20,0.6 c-11.1,0.4-20.4,0.6-27.8,0.6s-16.7-0.2-27.8-0.6c-11.1-0.4-17.8-0.6-20-0.6c-8.9,0-17.3-0.2-25-0.6c-7.8-0.4-19.3-1.9-34.5-4.5 c-15.2-2.6-28.8-6.3-40.6-11.1C96.1,451,83.1,443.4,69,433s-26-22.4-35.6-36.2c-9.6-13.7-17.6-31.5-23.9-53.4 c-6.3-21.9-9.5-46.6-9.5-74c0-42.3,13.7-78.3,41.2-108c-3-1.5-3.2-16.3-0.6-44.5S49.3,62.7,59,39c34.1,3.7,76.4,23,126.9,57.9 c17.1-4.5,40.4-6.7,70.1-6.7c31.2,0,54.5,2.2,70.1,6.7c23-15.6,45.1-28.2,66.2-37.8s36.5-15.2,46.2-16.7L453,39 c9.6,23.7,15.8,49.7,18.4,77.9C474,145.1,473.8,159.9,470.8,161.4 M257.1,447.4c61.6,0,108.2-7.4,139.7-22.3s47.3-45.3,47.3-91.3 c0-26.7-10-49-30.1-66.8c-10.4-9.6-22.4-15.6-36.2-17.8c-13.7-2.2-34.7-2.2-62.9,0c-28.2,2.2-47.5,3.3-57.9,3.3H256h-1.1 c-11.9,0-27.3-0.7-46.2-2.2s-33.8-2.4-44.5-2.8c-10.8-0.4-22.4,0.9-35.1,3.9c-12.6,3-23,8.2-31.2,15.6   C78.7,284.2,69,306.5,69,333.9c0,46,15.6,76.4,46.7,91.3s77.5,22.3,139.1,22.3H257.1 M168.1,291.6c9.6,0,18,4.8,25,14.5   c7,9.6,10.6,21.5,10.6,35.6s-3.5,26-10.6,35.6c-7,9.6-15.4,14.5-25,14.5c-10.4,0-19.1-4.8-26.2-14.5c-7-9.6-10.6-21.5-10.6-35.6   s3.5-26,10.6-35.6C149,296.4,157.7,291.6,168.1,291.6"/></g></svg>
+                                            <a href="#" target="_blank" class="text-indigo-500 hover:opacity-75 transition-opacity">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
                                             </a>
                                         </div>
                                         <div class="mt-2">
-                                            <p class="text-xl font-semibold text-gray-900">Project 1 title</p>
-                                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque doloremque est et eum eveniet fugiat fugit ipsam, natus perferendis quas, quidem, reprehenderit soluta vero.</p>
+                                            <p class="text-xl font-semibold text-gray-900">Jamie Jackson</p>
+                                            <p class="text-sm font-semibold text-gray-900 mt-1">CEO of Walmart</p>
+                                            <p class="mt-3 text-base text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -88,8 +88,8 @@
                                 <div class="pt-24">
                                     <div class="flex justify-between items-center">
                                         <div>
-                                            <h2 class="text-lg leading-6 font-medium text-gray-900">Your Projects</h2>
-                                            <p class="mt-1 text-sm text-gray-500">Upload your projects here.</p>
+                                            <h2 class="text-lg leading-6 font-medium text-gray-900">Testimonials</h2>
+                                            <p class="mt-1 text-sm text-gray-500">Provide any professional testimonies to your portfolio.</p>
                                         </div>
 
                                         <button type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors" @click="addNewField()">
@@ -102,9 +102,14 @@
                                     <div class="mt-6 flex flex-col lg:flex-row">
                                         <div class="flex-grow space-y-28">
                                             <div>
-                                                <div>
-                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                <div class="grid grid-cols-4 gap-6">
+                                                    <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                         <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
+                                                        <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                    </div>
+
+                                                    <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Position</label>
                                                         <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
@@ -156,46 +161,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <ul role="list" class="mt-2 divide-y divide-gray-200">
-                                                    <li class="py-4 flex items-center justify-between">
-                                                        <div class="flex flex-col">
-                                                            <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make project public</p>
-                                                            <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your project to be seen by the public.</p>
-                                                        </div>
-                                                        <!-- Enabled: "bg-teal-500", Not Enabled: "bg-gray-200" -->
-                                                        <div
-                                                            x-data="{ value: false }"
-                                                            class="flex items-center justify-center"
-                                                            x-id="['toggle-label']">
-                                                            <input type="hidden" name="sendNotifications" :value="value">
-
-                                                            <!-- Label -->
-                                                            <label
-                                                                @click="$refs.toggle.click(); $refs.toggle.focus()"
-                                                                :id="$id('toggle-label')"
-                                                                class="text-gray-900 transition-colors dark:text-white">
-                                                                Send notifications
-                                                            </label>
-
-                                                            <!-- Button -->
-                                                            <button
-                                                                x-ref="toggle"
-                                                                @click="value = ! value"
-                                                                type="button"
-                                                                role="switch"
-                                                                :aria-checked="value"
-                                                                :aria-labelledby="$id('toggle-label')"
-                                                                :class="value ? 'bg-indigo-600 border-2 border-transparent' : 'bg-gray-200 border-2 border-transparent'"
-                                                                class="ml-4 relative h-6 w-11 px-0 inline-flex flex-shrink-0 rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
-                                                        <span
-                                                            :class="value ? 'bg-white translate-x-5' : 'bg-white translate-x-0'"
-                                                            class="inline-block h-5 w-5 rounded-full transition shadow transform ring-0 ease-in-out duration-200"
-                                                            aria-hidden="true"></span>
-                                                            </button>
-                                                        </div>
-                                                    </li>
-                                                </ul>
                                             </div>
 
                                             <template x-for="(field, index) in fields" :key="field.id">
@@ -206,9 +171,14 @@
                                                         </button>
                                                     </div>
 
-                                                    <div class="mt-5">
-                                                        <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                    <div class="grid grid-cols-4 gap-6 mt-5">
+                                                        <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
+                                                            <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                                        </div>
+
+                                                        <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Position</label>
                                                             <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                         </div>
                                                     </div>
@@ -260,52 +230,13 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <ul role="list" class="mt-2 divide-y divide-gray-200">
-                                                        <li class="py-4 flex items-center justify-between">
-                                                            <div class="flex flex-col">
-                                                                <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make project public</p>
-                                                                <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your project to be seen by the public.</p>
-                                                            </div>
-                                                            <!-- Enabled: "bg-teal-500", Not Enabled: "bg-gray-200" -->
-                                                            <div
-                                                                x-data="{ value: false }"
-                                                                class="flex items-center justify-center"
-                                                                x-id="['toggle-label']">
-                                                                <input type="hidden" name="sendNotifications" :value="value">
-
-                                                                <!-- Label -->
-                                                                <label
-                                                                    @click="$refs.toggle.click(); $refs.toggle.focus()"
-                                                                    :id="$id('toggle-label')"
-                                                                    class="text-gray-900 transition-colors dark:text-white">
-                                                                    Send notifications
-                                                                </label>
-
-                                                                <!-- Button -->
-                                                                <button
-                                                                    x-ref="toggle"
-                                                                    @click="value = ! value"
-                                                                    type="button"
-                                                                    role="switch"
-                                                                    :aria-checked="value"
-                                                                    :aria-labelledby="$id('toggle-label')"
-                                                                    :class="value ? 'bg-indigo-600 border-2 border-transparent' : 'bg-gray-200 border-2 border-transparent'"
-                                                                    class="ml-4 relative h-6 w-11 px-0 inline-flex flex-shrink-0 rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
-                                                        <span
-                                                            :class="value ? 'bg-white translate-x-5' : 'bg-white translate-x-0'"
-                                                            class="inline-block h-5 w-5 rounded-full transition shadow transform ring-0 ease-in-out duration-200"
-                                                            aria-hidden="true"></span>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
                                                 </div>
                                             </template>
                                         </div>
 
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
@@ -466,4 +397,3 @@
         }
     }
 </script>
-
