@@ -25,6 +25,10 @@
                                 <dt class="text-sm font-medium text-gray-500">Phone number</dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">757-800-8888</dd>
                             </div>
+                            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt class="text-sm font-medium text-gray-500">Your email</dt>
+                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">jondoe@gmail.com</dd>
+                            </div>
                         </dl>
                         <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 rounded-lg mt-8">
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 items-center">
@@ -93,6 +97,13 @@
                                                 <div class="relative mt-1">
                                                     <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Conclusion </label>
                                                     <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="grid grid-cols-2">
+                                                <div class="col-span-2 sm:col-span-1 relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                    <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
+                                                    <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                 </div>
                                             </div>
 
