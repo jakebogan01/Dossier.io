@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="relative flex justify-center items-center pl-1" x-data="{ showMessage: true }">
-        <div class="absolute bg-[#a85de8] w-[800px] h-[800px] rounded-full z-40 shadow-2xl transform" x-show="showMessage" x-cloak="!showMessage"
+        <div class="absolute bg-[#a85de8] w-[800px] h-[800px] rounded-full z-30 shadow-2xl transform" x-show="showMessage" x-cloak="!showMessage"
              x-transition:enter="transform transition-transform ease-in-out duration-300"
              x-transition:enter-start="scale-100"
              x-transition:enter-end="scale-0"
@@ -71,7 +71,7 @@
                 </p>
             </div>
         </div>
-        <a href="/portfolio/2" target="_blank" class="mt-1 relative z-50">
+        <a href="/portfolio/2" target="_blank" class="mt-1 relative z-40">
             <button type="button" class="text-gray-500 group rounded-full inline-flex items-center text-base font-medium sm:hover:outline-none sm:hover:ring-2 sm:hover:ring-offset-2 sm:hover:ring-indigo-500" aria-expanded="false">
                 <img
                     @mouseenter="showMessage = false"

@@ -42,7 +42,7 @@
             class="flex h-full"
             x-data="{ showMenu: false }">
             <div
-                class="relative z-20"
+                class="relative z-50"
                 aria-labelledby="slide-over-title"
                 role="dialog"
                 aria-modal="true"

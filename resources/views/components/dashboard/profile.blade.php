@@ -21,7 +21,7 @@
                                     <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
                                     <div class="flex-1">
                                         <p class="text-sm font-bold text-indigo-500">
-                                            <a href="#" class="hover:underline"> Jon Doe </a>
+                                            Jon Doe
                                         </p>
                                         <dl class="sm:divide-y sm:divide-gray-200 pt-4">
                                             <div class="flex justify-between pb-2">
