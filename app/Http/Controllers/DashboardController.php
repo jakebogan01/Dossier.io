@@ -13,7 +13,9 @@ class DashboardController extends Controller
 
     public function profile ()
     {
-        return view('pages.jetstream.profile');
+        $currentUser = auth()->user()->profile;
+
+        return view('pages.jetstream.profile', compact('currentUser'));
     }
 
     public function skills ()

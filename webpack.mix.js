@@ -7,7 +7,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .js('resources/js/counter.js', 'public/js')
     .sass('resources/sass/app.sass', 'public/css')
     .browserSync({
         proxy: 'https://' + domain,

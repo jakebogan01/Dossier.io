@@ -15,6 +15,14 @@ class Profile extends Model
     /**
      * @var string[]
      */
+    protected $fillable = [
+        'portfolio_name',
+        'total_clients',
+    ];
+
+    /**
+     * @var string[]
+     */
     protected $casts = [
         'settings' => 'array'
     ];

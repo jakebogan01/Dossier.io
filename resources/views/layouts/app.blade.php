@@ -12,7 +12,6 @@
         @livewireStyles
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="{{ mix('js/counter.js') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <style>
             *, *::before, *::after{
