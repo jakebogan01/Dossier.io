@@ -25,7 +25,7 @@ class ProfileForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'portfolio_name' => 'required|max:17',
+        'portfolio_name' => 'required|max:16',
         'portfolio_email' => 'required',
         'total_clients' => 'required',
         'total_tools' => 'required',

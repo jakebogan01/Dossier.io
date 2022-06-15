@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
@@ -7,9 +8,8 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/portfolio/{id}', function ($id) {
-    return view('pages.template-one');
-})->name('home');
+Route::get('/portfolio/{id}', [ThemeController::class, 'themeOne'])
+    ->name('theme-one');
 
 Route::middleware([
     'auth:sanctum',
