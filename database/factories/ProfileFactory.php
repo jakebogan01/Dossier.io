@@ -27,7 +27,7 @@ class ProfileFactory extends Factory
     {
 
         return [
-            'user_id' => User::factory()->create()->id,
+            'user_id' => 1,
             'portfolio_name' => $this->faker->name(),
             'portfolio_email' => $this->faker->unique()->safeEmail(),
             'total_clients' => $this->faker->randomDigit(),

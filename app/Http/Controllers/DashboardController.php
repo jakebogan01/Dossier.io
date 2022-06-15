@@ -22,8 +22,9 @@ class DashboardController extends Controller
     public function skills ()
     {
         $skillIcons = Config::get("skills");
+        $currentUser = auth()->user()->skill;
 
-        return view('pages.jetstream.skills', compact('skillIcons'));
+        return view('pages.jetstream.skills', compact('currentUser', 'skillIcons'));
     }
 
     public function experiences ()

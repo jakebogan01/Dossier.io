@@ -71,12 +71,19 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class, 'user_id');
     }
 
+    /**
+     * @return HasOne
+     */
+    public function skill(): HasOne
+    {
+        return $this->hasOne(Skill::class, 'user_id');
+    }
+
     public static function boot()
     {
         parent::boot();
 
         static::created(function($model){
-            Log::info('hello', ['model' => $model]);
             $model->profile()->create([
                 'user_id' => $model->id,
                 'portfolio_name' => null,

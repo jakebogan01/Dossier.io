@@ -31,11 +31,6 @@ class ProfileForm extends Component
         'total_tools' => 'required',
     ];
 
-//    public function updated($propertyName)
-//    {
-//        $this->validateOnly($propertyName);
-//    }
-
     /**
      * @param $currentUser
      * @return void

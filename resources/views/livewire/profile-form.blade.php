@@ -19,7 +19,7 @@
                     <div class="px-4 py-5 sm:px-6">
 
                         <div class="space-y-4 bg-gray-100 p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                            <div class="flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 z-0 rounded-lg bg-no-repeat bg-bottom bg-contain" style="background-image: url('/images/dashboard/svg/profile-background.svg');">
+                            <div class="flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 z-0 rounded-lg bg-no-repeat bg-bottom bg-cover" style="background-image: url('/images/dashboard/svg/profile-background.svg');">
                                 <div class="flex justify-start items-start relative z-10">
                                     <img class="rounded-full w-36 h-36" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt=""
                                     style="min-width: 144px;">
@@ -128,19 +128,19 @@
                                             <p class="mt-1 text-sm text-gray-500">Here are some core settings that change the behavior of your portfolio.</p>
                                         </div>
                                         <ul role="list" class="mt-2 divide-y divide-gray-200">
-                                            <x-dashboard.components.settings-switch setting="make_public">
+                                            <x-dashboard.components.settings-switch>
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make portfolio public</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch setting="dark_mode">
+                                            <x-dashboard.components.settings-switch>
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-2-label">Enable dark mode</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-2-description">Switch between light and dark mode.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch setting="track_views">
+                                            <x-dashboard.components.settings-switch>
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-3-label">Allow tracking of views</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch setting="track_likes">
+                                            <x-dashboard.components.settings-switch>
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-4-label">Allow tracking of likes</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-4-description">This will track the number of likes for each project.</p>
                                             </x-dashboard.components.settings-switch>
