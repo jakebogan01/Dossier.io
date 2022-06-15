@@ -14,29 +14,29 @@
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal skills with existing preview.</p>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
-                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 rounded-lg">
+                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt class="text-sm font-medium text-gray-500">Introduction</dt>
+                                <dt class="text-sm font-medium text-indigo-400">Introduction</dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut beatae dolore explicabo ipsum modi numquam officiis placeat praesentium quae quas soluta tenetur totam, ullam. Ducimus eius illum in minus molestias natus nobis non nostrum pariatur sapiente sequi, unde.</dd>
                             </div>
                         </dl>
-                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 rounded-lg mt-8">
+                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 mt-8 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt class="text-sm font-medium text-gray-500">First fact</dt>
+                                <dt class="text-sm font-medium text-indigo-400">First fact</dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio eius inventore?</dd>
                             </div>
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt class="text-sm font-medium text-gray-500">Second fact</dt>
+                                <dt class="text-sm font-medium text-indigo-400">Second fact</dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio eius inventore?</dd>
                             </div>
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt class="text-sm font-medium text-gray-500">Third fact</dt>
+                                <dt class="text-sm font-medium text-indigo-400">Third fact</dt>
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio eius inventore?</dd>
                             </div>
                         </dl>
-                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 rounded-lg mt-8">
+                        <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 mt-8 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 items-center">
-                                <dt class="text-sm font-medium text-gray-500">
+                                <dt class="text-sm font-medium text-indigo-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clip-rule="evenodd" />
                                     </svg>
@@ -44,7 +44,7 @@
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, facilis laudantium? Cupiditate maxime possimus recusandae!</dd>
                             </div>
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 items-center">
-                                <dt class="text-sm font-medium text-gray-500">
+                                <dt class="text-sm font-medium text-indigo-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z" clip-rule="evenodd" />
                                     </svg>
@@ -52,7 +52,7 @@
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, facilis laudantium? Cupiditate maxime possimus recusandae!</dd>
                             </div>
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 items-center">
-                                <dt class="text-sm font-medium text-gray-500">
+                                <dt class="text-sm font-medium text-indigo-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M13 7H7v6h6V7z" />
                                         <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd" />
@@ -61,7 +61,7 @@
                                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, facilis laudantium? Cupiditate maxime possimus recusandae!</dd>
                             </div>
                             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 items-center">
-                                <dt class="text-sm font-medium text-gray-500">
+                                <dt class="text-sm font-medium text-indigo-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
                                     </svg>

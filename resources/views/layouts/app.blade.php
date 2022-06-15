@@ -12,9 +12,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="icon" href="/images/icon/icon.svg" id="icon" type="image/svg+xml">
+        <link rel="shortcut icon" type="image/x-icon" href="/images/icons/light-icon.svg" id="faviconTag">
         @livewireStyles
         <!-- Scripts -->
+        <script>
+            const faviconTag = document.getElementById("faviconTag");
+            const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+            const changeFavicon = () => {
+                if (isDark.matches) faviconTag.href = "/images/icons/dark-icon.svg";
+                else faviconTag.href = "/images/icons/light-icon.svg";
+            };
+            isDark.addEventListener('change', (e) => changeFavicon());
+            isDark.addListener((e) => changeFavicon());
+            changeFavicon();
+        </script>
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier.io Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

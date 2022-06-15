@@ -18,11 +18,8 @@
                     </div>
                     <div class="px-4 py-5 sm:px-6">
 
-                        <div class="space-y-4 bg-gray-100 rounded-lg p-4">
-                            <div class="relative flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden z-0">
-                                <div class="absolute right-0 bottom-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1038" height="144.093" viewBox="0 0 1038 144.093"><path d="M0,0C69.544-.735,131.717,2.374,207.6,28.8S346,81.45,415.2,79.2,553.6,38.25,622.8,40.815C692,43.2,761.2,86.4,830.4,108s138.4,21.6,173,21.6H1038V144H0Z" transform="translate(0 0.093)" fill="#b48af2"/></svg>
-                                </div>
+                        <div class="space-y-4 bg-gray-100 p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                            <div class="flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 z-0 rounded-lg bg-no-repeat bg-bottom bg-contain" style="background-image: url('/images/dashboard/svg/profile-background.svg');">
                                 <div class="flex justify-start items-start relative z-10">
                                     <img class="rounded-full w-36 h-36" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt=""
                                     style="min-width: 144px;">
