@@ -158,44 +158,44 @@
                                                 </div>
                                             </div>
 
-                                            <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <x-dashboard.components.skill-select>
-                                                    Second Skill
-                                                </x-dashboard.components.skill-select>
-                                            </div>
+{{--                                            <div class="mt-8 grid grid-cols-12 gap-6">--}}
+{{--                                                <x-dashboard.components.skill-select>--}}
+{{--                                                    Second Skill--}}
+{{--                                                </x-dashboard.components.skill-select>--}}
+{{--                                            </div>--}}
 
-                                            <div>
-                                                <div class="relative mt-1">
-                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
-                                                </div>
-                                            </div>
+{{--                                            <div>--}}
+{{--                                                <div class="relative mt-1">--}}
+{{--                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>--}}
+{{--                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
 
-                                            <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <x-dashboard.components.skill-select>
-                                                    Third Skill
-                                                </x-dashboard.components.skill-select>
-                                            </div>
+{{--                                            <div class="mt-8 grid grid-cols-12 gap-6">--}}
+{{--                                                <x-dashboard.components.skill-select>--}}
+{{--                                                    Third Skill--}}
+{{--                                                </x-dashboard.components.skill-select>--}}
+{{--                                            </div>--}}
 
-                                            <div>
-                                                <div class="relative mt-1">
-                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
-                                                </div>
-                                            </div>
+{{--                                            <div>--}}
+{{--                                                <div class="relative mt-1">--}}
+{{--                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>--}}
+{{--                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
 
-                                            <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <x-dashboard.components.skill-select>
-                                                    Fourth Skill
-                                                </x-dashboard.components.skill-select>
-                                            </div>
+{{--                                            <div class="mt-8 grid grid-cols-12 gap-6">--}}
+{{--                                                <x-dashboard.components.skill-select>--}}
+{{--                                                    Fourth Skill--}}
+{{--                                                </x-dashboard.components.skill-select>--}}
+{{--                                            </div>--}}
 
-                                            <div>
-                                                <div class="relative mt-1">
-                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
-                                                </div>
-                                            </div>
+{{--                                            <div>--}}
+{{--                                                <div class="relative mt-1">--}}
+{{--                                                    <label for="about" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>--}}
+{{--                                                    <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
                                         </div>
 
                                     </div>

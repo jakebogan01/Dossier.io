@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SkillIcon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 

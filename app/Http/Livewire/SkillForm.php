@@ -17,6 +17,7 @@ class SkillForm extends Component
     public string $fact_one = 'Fact one';
     public string $fact_two = 'Fact two';
     public string $fact_three = 'Fact three';
+    public string $skill_one = '';
 
     /**
      * @var array|string[]
@@ -54,7 +55,13 @@ class SkillForm extends Component
                 'one' => $this->fact_one,
                 'two' => $this->fact_two,
                 'three' => $this->fact_three,
-            ]
+            ],
+            'skills' => [
+                '1' => [
+                    'skill' => $this->skill_one,
+//                    'description' =>
+                ],
+            ],
         ]);
 
         session()->flash('message', 'Your skills has been updated.');
