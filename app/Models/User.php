@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Log;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -68,5 +69,27 @@ class User extends Authenticatable
     public function profile(): HasOne
     {
         return $this->hasOne(Profile::class, 'user_id');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function($model){
+            Log::info('hello', ['model' => $model]);
+            $model->profile()->create([
+                'user_id' => $model->id,
+                'portfolio_name' => null,
+                'portfolio_email' => null,
+                'total_clients' => 0,
+                'total_tools' => 0,
+                'settings' => [
+                    'public' => false,
+                    'dark_mode' => false,
+                    'track_views' => false,
+                    'track_likes' => false,
+                ]
+            ]);
+        });
     }
 }

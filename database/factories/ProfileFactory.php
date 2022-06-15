@@ -29,13 +29,14 @@ class ProfileFactory extends Factory
         return [
             'user_id' => User::factory()->create()->id,
             'portfolio_name' => $this->faker->name(),
+            'portfolio_email' => $this->faker->unique()->safeEmail(),
             'total_clients' => $this->faker->randomDigit(),
             'total_tools' => $this->faker->randomDigit(),
             'settings' => [
-                'public' => $this->faker->boolean(50),
-                'dark_mode' => $this->faker->boolean(50),
-                'track_views' => $this->faker->boolean(50),
-                'track_likes' => $this->faker->boolean(50)
+                'public' => (int) $this->faker->boolean(50),
+                'dark_mode' => (int) $this->faker->boolean(50),
+                'track_views' => (int) $this->faker->boolean(50),
+                'track_likes' => (int) $this->faker->boolean(50)
             ]
         ];
     }

@@ -21,7 +21,5 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@gmail.com',
             'password' => bcrypt('12345678'),
         ]);
-
-        Profile::factory()->count(2)->create();
     }
 }

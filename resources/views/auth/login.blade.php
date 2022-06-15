@@ -29,7 +29,9 @@
                     id="email"
                     type="email"
                     name="email"
-                    :value="old('email')"
+{{--                    replace value when ready for production--}}
+{{--                    :value="old('email')"--}}
+                    value="test@gmail.com"
                     placeholder="Your Email"
                     style="padding: 10px 0 10px 20px;"
                     required
@@ -45,6 +47,8 @@
                     id="password"
                     type="password"
                     name="password"
+{{--                    remove value when ready for production--}}
+                    value="12345678"
                     placeholder="Your Password"
                     style="padding: 10px 0 10px 20px;"
                     required
@@ -55,7 +59,8 @@
                 data-aos="fade-up"
                 data-aos-delay="500">
                 <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
+{{--                    remove checked when ready for production--}}
+                    <x-jet-checkbox id="remember_me" name="remember" checked />
                     <span class="ml-2 text-sm text-gray-300">{{ __('Remember me') }}</span>
                 </label>
                 <div class="text-sm">

@@ -12,23 +12,29 @@ use Livewire\Component;
 class ProfileForm extends Component
 {
     public $currentUser;
-    public string $portfolio_name = '';
-    public $total_clients = 0;
-    public $total_tools = 0;
+    public string $portfolio_name = 'Jake';
+    public string $portfolio_email = 'Jake@gmail.com';
+    public int $total_clients = 0;
+    public int $total_tools = 0;
+    public bool $make_public;
+    public bool $dark_mode;
+    public bool $track_views;
+    public bool $track_likes;
 
     /**
      * @var array|string[]
      */
     protected array $rules = [
-        'portfolio_name' => 'required|max:50',
+        'portfolio_name' => 'required|max:17',
+        'portfolio_email' => 'required',
         'total_clients' => 'required',
         'total_tools' => 'required',
     ];
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
+//    public function updated($propertyName)
+//    {
+//        $this->validateOnly($propertyName);
+//    }
 
     /**
      * @param $currentUser
@@ -37,6 +43,10 @@ class ProfileForm extends Component
     public function mount($currentUser)
     {
         $this->currentUser = $currentUser;
+        $this->make_public =  $currentUser->settings['public'];
+        $this->dark_mode =  $currentUser->settings['dark_mode'];
+        $this->track_views =  $currentUser->settings['track_views'];
+        $this->track_likes =  $currentUser->settings['track_likes'];
     }
 
     /**
@@ -48,8 +58,15 @@ class ProfileForm extends Component
 
         auth()->user()->profile()->update([
             'portfolio_name' => $this->portfolio_name,
+            'portfolio_email' => strtolower($this->portfolio_email),
             'total_clients' => $this->total_clients,
             'total_tools' => $this->total_tools,
+            'settings' => [
+                'public' => $this->make_public,
+                'dark_mode' => $this->dark_mode,
+                'track_views' => $this->track_views,
+                'track_likes' => $this->track_likes,
+            ]
         ]);
 
         session()->flash('message', 'Your profile has been updated.');

@@ -17,14 +17,17 @@ class Profile extends Model
      */
     protected $fillable = [
         'portfolio_name',
+        'portfolio_email',
         'total_clients',
+        'total_tools',
+        'settings'
     ];
 
     /**
      * @var string[]
      */
     protected $casts = [
-        'settings' => 'array'
+        'settings' => 'json'
     ];
 
     /**

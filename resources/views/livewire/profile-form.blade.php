@@ -18,32 +18,41 @@
                     </div>
                     <div class="px-4 py-5 sm:px-6">
 
-                        <ul role="list" class="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-2 lg:gap-8 bg-gray-100 rounded-lg p-4">
-                            <li class="py-10 px-6 bg-white text-center xl:text-left shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                                <div class="space-y-6 xl:space-y-10">
-                                    <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-bold text-indigo-500">
+                        <div class="space-y-4 bg-gray-100 rounded-lg p-4">
+                            <div class="relative flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden z-0">
+                                <div class="absolute right-0 bottom-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1038" height="144.093" viewBox="0 0 1038 144.093"><path d="M0,0C69.544-.735,131.717,2.374,207.6,28.8S346,81.45,415.2,79.2,553.6,38.25,622.8,40.815C692,43.2,761.2,86.4,830.4,108s138.4,21.6,173,21.6H1038V144H0Z" transform="translate(0 0.093)" fill="#b48af2"/></svg>
+                                </div>
+                                <div class="flex justify-start items-start relative z-10">
+                                    <img class="rounded-full w-36 h-36" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt=""
+                                    style="min-width: 144px;">
+                                </div>
+                                <div class="relative flex items-center z-10">
+                                    <div>
+                                        <p class="text-3xl font-bold text-white mb-1">
                                             {{ $currentUser->portfolio_name ?: 'Your Name' }}
                                         </p>
-                                        <dl class="sm:divide-y sm:divide-gray-200 pt-4">
-                                            <div class="flex justify-between pb-2">
-                                                <dt class="text-sm font-medium text-gray-500">Total Clients</dt>
-                                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                                    {{ $currentUser->total_clients ?: 0 }}
-                                                </dd>
-                                            </div>
-                                            <div class="flex justify-between pt-2">
-                                                <dt class="text-sm font-medium text-gray-500">Total known tools</dt>
-                                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        <p class="text-base font-semibold text-white">
+                                            {{ $currentUser->portfolio_email ?: 'Your Email' }}
+                                        </p>
+                                        <div class="flex space-x-2 text-sm text-white">
+                                            <div class="flex space-x-2 items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-2.5 h-2.5" viewBox="0 0 36.194 36.2"><g transform="translate(0 0.007)" fill="#FFFFFF"><path d="M0,2.25,2.25,0,9.182,4.95a2.25,2.25,0,0,1,.943,1.834v.158a2.25,2.25,0,0,0,.659,1.593l12.841,12.84,2.057-.686a2.25,2.25,0,0,1,2.3.544l7.551,7.551a2.25,2.25,0,0,1,0,3.181l-3.569,3.569a2.25,2.25,0,0,1-3.181,0l-7.551-7.551a2.25,2.25,0,0,1-.544-2.3l.685-2.056L8.534,10.784a2.25,2.25,0,0,0-1.591-.659h-.16a2.25,2.25,0,0,1-1.831-.943Zm25.546,21.7a1.126,1.126,0,0,0-1.593,1.593L30.7,32.3A1.126,1.126,0,0,0,32.3,30.7l-6.75-6.75Z" fill-rule="evenodd"/><path d="M35.77,5a6.757,6.757,0,0,1-8.278,8.267L13.226,27.338a6.75,6.75,0,1,1-4.561-4.561L22.732,8.51A6.75,6.75,0,0,1,31,.225L26.182,5.044,27,9l3.953.819L35.77,5ZM5.688,25.295l1.064-.545,1.06.544L9,25.352l.646,1,1,.646.058,1.19.543,1.061-.544,1.06-.058,1.19-1,.646-.646,1-1.19.058L6.75,33.75l-1.06-.544L4.5,33.147l-.646-1-1-.646-.058-1.19L2.25,29.25l.544-1.06L2.852,27l1-.646.646-1,1.19-.058Z" fill-rule="evenodd"/></g></svg>
+                                                <span>
                                                     {{ $currentUser->total_tools ?: 0 }}
-                                                </dd>
+                                                </span>
                                             </div>
-                                        </dl>
+                                            <div class="flex space-x-2 items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                                                <span>
+                                                    {{ $currentUser->total_clients ?: 0 }}
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         <div class="sm:col-span-2">
                             <div class="lg:col-span-9">
                                 <!-- Profile section -->
@@ -56,12 +65,25 @@
                                     <div>
                                         <div class="flex-grow space-y-6">
 
-                                            <div class="mt-6">
-                                                <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                    <label for="portfolio_name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
-                                                    <input wire:model="portfolio_name" type="text" name="portfolio_name" id="portfolio_name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
+                                            <div class="mt-8 grid grid-cols-12 gap-6">
+                                                <div class="col-span-12 sm:col-span-6">
+                                                    <div>
+                                                        <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="portfolio_name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
+                                                            <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="block w-full border-0 px-3 py-2 rounded-md text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" maxlength="17" required>
+                                                        </div>
+                                                        @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                                    </div>
                                                 </div>
-                                                @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+
+                                                <div class="col-span-12 sm:col-span-6">
+                                                    <div>
+                                                        <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                                            <label for="portfolio_email" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
+                                                            <input wire:model="portfolio_email" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="block w-full border-0 px-3 py-2 text-gray-900 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div>
@@ -109,19 +131,19 @@
                                             <p class="mt-1 text-sm text-gray-500">Here are some core settings that change the behavior of your portfolio.</p>
                                         </div>
                                         <ul role="list" class="mt-2 divide-y divide-gray-200">
-                                            <x-dashboard.components.settings-switch :currentUser="$currentUser">
+                                            <x-dashboard.components.settings-switch setting="make_public">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make portfolio public</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch :currentUser="$currentUser">
+                                            <x-dashboard.components.settings-switch setting="dark_mode">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-2-label">Enable dark mode</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-2-description">Switch between light and dark mode.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch :currentUser="$currentUser">
+                                            <x-dashboard.components.settings-switch setting="track_views">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-3-label">Allow tracking of views</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch :currentUser="$currentUser">
+                                            <x-dashboard.components.settings-switch setting="track_likes">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-4-label">Allow tracking of likes</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-4-description">This will track the number of likes for each project.</p>
                                             </x-dashboard.components.settings-switch>

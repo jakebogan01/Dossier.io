@@ -1,41 +1,44 @@
-@aware (['currentUser'])
+@aware(['setting'])
 
 <li class="py-4 flex items-center justify-between">
     <div class="flex flex-col">
         {{ $slot }}
     </div>
-    <div
-        @if ($currentUser->settings['public'] !== null || isset($currentUser->settings['public']))
-            x-data="{ value: {{ $currentUser->settings['public'] ?: false }} }"
-        @else
-            x-data="{ value: false }"
-        @endif
-        class="flex items-center justify-center"
-        x-id="['toggle-label']">
-        <input type="hidden" name="sendNotifications" :value="value">
-
-        <!-- Label -->
-        <label
-            @click="$refs.toggle.click(); $refs.toggle.focus()"
-            :id="$id('toggle-label')"
-            class="text-gray-900 transition-colors dark:text-white">
-            Send notifications
-        </label>
-
-        <!-- Button -->
-        <button
-            x-ref="toggle"
-            @click="value = ! value"
-            type="button"
-            role="switch"
-            :aria-checked="value"
-            :aria-labelledby="$id('toggle-label')"
-            :class="value ? 'bg-indigo-600 border-2 border-transparent' : 'bg-gray-200 border-2 border-transparent'"
-            class="ml-4 relative h-6 w-11 px-0 inline-flex flex-shrink-0 rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
-            <span
-                :class="value ? 'bg-white translate-x-5' : 'bg-white translate-x-0'"
-                class="inline-block h-5 w-5 rounded-full transition shadow transform ring-0 ease-in-out duration-200"
-                aria-hidden="true"></span>
-        </button>
+    <div class="relative inline-block h-6 w-11 align-middle select-none transition duration-200 ease-in">
+        <input
+            wire:model="{{ $setting }}"
+            type="checkbox"
+            name="{{ $setting }}"
+            id="{{ $setting }}"
+            class="toggle-checkbox absolute block outline-none border border-white bg-white appearance-none cursor-pointer p-0 h-5 w-5 mt-0.5 mx-0.5 rounded-full transition shadow transform ring-0 ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" />
+        <label for="{{ $setting }}" class="toggle-label block overflow-hidden h-6 w-11 rounded-full bg-gray-200 cursor-pointer transition"></label>
+        <label for="{{ $setting }}" class="text-xs text-gray-700 sr-only">{{ $setting }}</label>
     </div>
 </li>
+
+
+<style>
+    /* CHECKBOX TOGGLE SWITCH */
+    /* @apply rules for documentation, these do not work as inline style */
+    .toggle-checkbox:checked{
+        @apply: right-0;
+        right: 0;
+        border-color: #ffffff;
+    }
+    .toggle-checkbox:after{
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 21px;
+        border-radius: 100%;
+        height: 21px;
+        background-color: #ffffff;
+        position: absolute;
+
+    }
+    .toggle-checkbox:checked + .toggle-label {
+        @apply: bg-indigo-600;
+        background-color: #4E46DD;
+    }
+</style>

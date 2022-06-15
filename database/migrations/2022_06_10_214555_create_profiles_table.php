@@ -18,7 +18,11 @@ return new class extends Migration
             $table->foreignId('user_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->string('portfolio_name');
+            $table->string('portfolio_name')
+                ->nullable();
+            $table->string('portfolio_email')
+                ->nullable()
+                ->unique();
             $table->integer('total_clients')
                 ->nullable();
             $table->integer('total_tools')

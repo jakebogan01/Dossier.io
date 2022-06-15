@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="relative flex justify-center items-center pl-1" x-data="{ showMessage: true }">
-        <div class="absolute bg-[#a85de8] w-[800px] h-[800px] rounded-full z-30 shadow-2xl transform" x-show="showMessage" x-cloak="!showMessage"
+        <div class="hidden absolute bg-[#a85de8] w-[800px] h-[800px] rounded-full z-30 shadow-2xl transform" x-show="showMessage" x-cloak="!showMessage"
              x-transition:enter="transform transition-transform ease-in-out duration-300"
              x-transition:enter-start="scale-100"
              x-transition:enter-end="scale-0"
