@@ -1,3 +1,5 @@
+@aware(['skillIcons'])
+
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
     <div class="flex justify-end">
         <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
@@ -143,14 +145,9 @@
                                         <div class="flex-grow space-y-6">
 
                                             <div class="grid grid-cols-12 gap-6">
-                                                <div class="col-span-12 sm:col-span-3 min-w-[300px]">
-                                                    <label for="location" class="text-sm font-medium text-gray-700">First Skill</label>
-                                                    <select id="location" name="location" class="h-[38px] mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                        <option>United States</option>
-                                                        <option selected>Canada</option>
-                                                        <option>Mexico</option>
-                                                    </select>
-                                                </div>
+                                                <x-dashboard.components.skill-select>
+                                                    First Skill
+                                                </x-dashboard.components.skill-select>
                                             </div>
 
                                             <div>
@@ -161,14 +158,9 @@
                                             </div>
 
                                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <div class="col-span-12 sm:col-span-3 min-w-[300px]">
-                                                    <label for="location" class="text-sm font-medium text-gray-700">Second Skill</label>
-                                                    <select id="location" name="location" class="h-[38px] mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                        <option>United States</option>
-                                                        <option selected>Canada</option>
-                                                        <option>Mexico</option>
-                                                    </select>
-                                                </div>
+                                                <x-dashboard.components.skill-select>
+                                                    Second Skill
+                                                </x-dashboard.components.skill-select>
                                             </div>
 
                                             <div>
@@ -179,14 +171,9 @@
                                             </div>
 
                                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <div class="col-span-12 sm:col-span-3 min-w-[300px]">
-                                                    <label for="location" class="text-sm font-medium text-gray-700">Third Skill</label>
-                                                    <select id="location" name="location" class="h-[38px] mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                        <option>United States</option>
-                                                        <option selected>Canada</option>
-                                                        <option>Mexico</option>
-                                                    </select>
-                                                </div>
+                                                <x-dashboard.components.skill-select>
+                                                    Third Skill
+                                                </x-dashboard.components.skill-select>
                                             </div>
 
                                             <div>
@@ -197,14 +184,9 @@
                                             </div>
 
                                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <div class="col-span-12 sm:col-span-3 min-w-[300px]">
-                                                    <label for="location" class="text-sm font-medium text-gray-700">Fourth Skill</label>
-                                                    <select id="location" name="location" class="h-[38px] mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                                        <option>United States</option>
-                                                        <option selected>Canada</option>
-                                                        <option>Mexico</option>
-                                                    </select>
-                                                </div>
+                                                <x-dashboard.components.skill-select>
+                                                    Fourth Skill
+                                                </x-dashboard.components.skill-select>
                                             </div>
 
                                             <div>

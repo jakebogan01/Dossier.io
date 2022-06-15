@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class DashboardController extends Controller
 {
@@ -20,7 +21,9 @@ class DashboardController extends Controller
 
     public function skills ()
     {
-        return view('pages.jetstream.skills');
+        $skillIcons = Config::get("skills");
+
+        return view('pages.jetstream.skills', compact('skillIcons'));
     }
 
     public function experiences ()
