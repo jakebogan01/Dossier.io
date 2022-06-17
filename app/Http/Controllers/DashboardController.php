@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SkillIcon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
@@ -22,10 +21,9 @@ class DashboardController extends Controller
 
     public function skills ()
     {
-        $skillIcons = Config::get("skills");
         $currentUser = auth()->user()->skill;
 
-        return view('pages.jetstream.skills', compact('currentUser', 'skillIcons'));
+        return view('pages.jetstream.skills', compact('currentUser'));
     }
 
     public function experiences ()

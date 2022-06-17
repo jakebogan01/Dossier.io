@@ -2,7 +2,7 @@
     <x-themes.navigation.nav></x-themes.navigation.nav>
     <div class="flex-1">
         <x-themes.blocks.intro :user="$user"></x-themes.blocks.intro>
-        <x-themes.blocks.skills></x-themes.blocks.skills>
+        <x-themes.blocks.skills :userSkills="$userSkills"></x-themes.blocks.skills>
         <x-themes.blocks.experience></x-themes.blocks.experience>
         <x-themes.blocks.projects></x-themes.blocks.projects>
         <x-themes.blocks.testimonials></x-themes.blocks.testimonials>
