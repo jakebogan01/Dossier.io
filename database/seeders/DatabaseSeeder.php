@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Experience;
 use App\Models\Project;
 use App\Models\Skill;
+use App\Models\Testimonial;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
         User::factory()
             ->hasAttached(Experience::factory()->create())
             ->hasAttached(Project::factory()->create())
+            ->hasAttached(Testimonial::factory()->create())
             ->create([
                 'name' => 'test',
                 'email' => 'test@gmail.com',

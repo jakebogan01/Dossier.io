@@ -96,6 +96,14 @@ class User extends Authenticatable
         return $this->belongsToMany(Project::class, 'project_user', 'user_id', 'project_id');
     }
 
+    /**
+     * @return BelongsToMany
+     */
+    public function testimonials(): BelongsToMany
+    {
+        return $this->belongsToMany(Testimonial::class, 'testimonial_user', 'user_id', 'testimonial_id');
+    }
+
     public static function boot()
     {
         parent::boot();

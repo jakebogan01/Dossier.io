@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Project extends Model
+class Testimonial extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -24,6 +24,7 @@ class Project extends Model
      */
     protected $fillable = [
         'title',
+        'job_position',
         'description',
         'links',
     ];
