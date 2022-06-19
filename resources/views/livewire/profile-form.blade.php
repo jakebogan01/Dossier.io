@@ -1,4 +1,5 @@
 <form action="#" wire:submit.prevent="register">
+    @csrf
 
     <x-dashboard.components.success-notification></x-dashboard.components.success-notification>
 
@@ -128,19 +129,19 @@
                                             <p class="mt-1 text-sm text-gray-500">Here are some core settings that change the behavior of your portfolio.</p>
                                         </div>
                                         <ul role="list" class="mt-2 divide-y divide-gray-200">
-                                            <x-dashboard.components.settings-switch>
+                                            <x-dashboard.components.settings-switch setting="make_public">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make portfolio public</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch>
+                                            <x-dashboard.components.settings-switch setting="dark_mode">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-2-label">Enable dark mode</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-2-description">Switch between light and dark mode.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch>
+                                            <x-dashboard.components.settings-switch setting="track_views">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-3-label">Allow tracking of views</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
                                             </x-dashboard.components.settings-switch>
-                                            <x-dashboard.components.settings-switch>
+                                            <x-dashboard.components.settings-switch setting="track_likes">
                                                 <p class="text-sm font-medium text-gray-900" id="privacy-option-4-label">Allow tracking of likes</p>
                                                 <p class="text-sm text-gray-500" id="privacy-option-4-description">This will track the number of likes for each project.</p>
                                             </x-dashboard.components.settings-switch>

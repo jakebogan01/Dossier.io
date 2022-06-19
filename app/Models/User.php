@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -77,6 +78,22 @@ class User extends Authenticatable
     public function skill(): HasOne
     {
         return $this->hasOne(Skill::class, 'user_id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function experiences(): BelongsToMany
+    {
+        return $this->belongsToMany(Experience::class, 'experience_user', 'user_id', 'experience_id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function projects(): BelongsToMany
+    {
+        return $this->belongsToMany(Project::class, 'project_user', 'user_id', 'project_id');
     }
 
     public static function boot()

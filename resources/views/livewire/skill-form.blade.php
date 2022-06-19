@@ -1,4 +1,5 @@
 <form action="#" wire:submit.prevent="register">
+    @csrf
 
     <x-dashboard.components.success-notification></x-dashboard.components.success-notification>
 
