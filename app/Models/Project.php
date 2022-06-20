@@ -16,7 +16,8 @@ class Project extends Model
      * @var string[]
      */
     protected $casts = [
-        'links' => 'json'
+        'links' => 'json',
+        'created_at' => 'date',
     ];
 
     /**
