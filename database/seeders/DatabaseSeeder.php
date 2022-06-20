@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Contact;
 use App\Models\Experience;
 use App\Models\Project;
 use App\Models\Skill;
@@ -29,5 +30,6 @@ class DatabaseSeeder extends Seeder
             ]);
 
         Skill::factory()->count(1)->create();
+        Contact::factory()->count(1)->create();
     }
 }

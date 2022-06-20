@@ -104,6 +104,14 @@ class User extends Authenticatable
         return $this->belongsToMany(Testimonial::class, 'testimonial_user', 'user_id', 'testimonial_id');
     }
 
+    /**
+     * @return HasOne
+     */
+    public function contact(): HasOne
+    {
+        return $this->hasOne(Contact::class, 'user_id');
+    }
+
     public static function boot()
     {
         parent::boot();

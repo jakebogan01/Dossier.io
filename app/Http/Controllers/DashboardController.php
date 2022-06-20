@@ -43,6 +43,8 @@ class DashboardController extends Controller
 
     public function contact ()
     {
-        return view('pages.jetstream.contact');
+        $currentUser = auth()->user()->contact;
+
+        return view('pages.jetstream.contact', compact('currentUser'));
     }
 }
