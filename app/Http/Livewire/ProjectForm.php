@@ -12,7 +12,7 @@ use Livewire\Component;
 class ProjectForm extends Component
 {
     public $projects;
-    public $title, $code, $github, $description;
+    public $title, $code, $github, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
     public $inputs = [];
     public $i = 0;
 
@@ -114,5 +114,32 @@ class ProjectForm extends Component
         session()->flash('message', 'Your project has been deleted.');
 
         return redirect()->route('projects');
+    }
+
+    /**
+     * @param $id
+     * @return void
+     */
+    public function show($id)
+    {
+        $this->item = $id;
+        $this->updateTitle = $this->projects->find($id)->title;
+        $this->updateDescription = $this->projects->find($id)->description;
+        $this->updateCode = $this->projects->find($id)->links['code'];
+        $this->updateGithub = $this->projects->find($id)->links['github'];
+    }
+
+    public function updateData($id)
+    {
+        $this->projects->find($id)->update([
+            'title' => $this->updateTitle,
+            'description' => $this->updateDescription,
+            'links' => [
+                'code' => $this->updateCode,
+                'github' => $this->updateGithub,
+            ],
+        ]);
+
+        session()->flash('message', 'Your project has been updated.');
     }
 }

@@ -12,7 +12,7 @@ use Livewire\Component;
 class TestimonialForm extends Component
 {
     public $testimonials;
-    public $title, $facebook, $linkedin, $description, $job_position;
+    public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription;
     public $inputs = [];
     public $i = 0;
 
@@ -119,5 +119,34 @@ class TestimonialForm extends Component
         session()->flash('message', 'Your testimonial has been deleted.');
 
         return redirect()->route('testimonials');
+    }
+
+    /**
+     * @param $id
+     * @return void
+     */
+    public function show($id)
+    {
+        $this->item = $id;
+        $this->updateTitle = $this->testimonials->find($id)->title;
+        $this->updateDescription = $this->testimonials->find($id)->description;
+        $this->updateJobPosition = $this->testimonials->find($id)->job_position;
+        $this->updateFacebook = $this->testimonials->find($id)->links['facebook'];
+        $this->updateLinkedin = $this->testimonials->find($id)->links['linkedin'];
+    }
+
+    public function updateData($id)
+    {
+        $this->testimonials->find($id)->update([
+            'title' => $this->updateTitle,
+            'description' => $this->updateDescription,
+            'job_position' => $this->updateJobPosition,
+            'links' => [
+                'facebook' => $this->updateFacebook,
+                'linkedin' => $this->updateLinkedin,
+            ],
+        ]);
+
+        session()->flash('message', 'Your testimonial has been updated.');
     }
 }

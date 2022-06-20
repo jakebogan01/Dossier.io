@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Experience;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -13,10 +12,13 @@ use Illuminate\Contracts\Foundation\Application;
 class ExperienceForm extends Component
 {
     public $experiences;
-    public $title, $date, $description;
+    public $title, $date, $item, $description, $updateDate, $updateTitle, $updateDescription;
     public $inputs = [];
     public $i = 0;
 
+    /**
+     * @return void
+     */
     public function mount()
     {
         $this->experiences = auth()->user()->experiences;
@@ -114,5 +116,28 @@ class ExperienceForm extends Component
         session()->flash('message', 'Your experience has been deleted.');
 
         return redirect()->route('experiences');
+    }
+
+    /**
+     * @param $id
+     * @return void
+     */
+    public function show($id)
+    {
+        $this->item = $id;
+        $this->updateDate = $this->experiences->find($id)->date->format('Y-m-d');
+        $this->updateTitle = $this->experiences->find($id)->title;
+        $this->updateDescription = $this->experiences->find($id)->description;
+    }
+
+    public function updateData($id)
+    {
+        $this->experiences->find($id)->update([
+            'date' => $this->updateDate,
+            'title' => $this->updateTitle,
+            'description' => $this->updateDescription,
+        ]);
+        
+        session()->flash('message', 'Your experience has been updated.');
     }
 }
