@@ -102,4 +102,17 @@ class ProjectForm extends Component
 
         return redirect()->route('projects');
     }
+
+    /**
+     * @param $id
+     * @return Redirector|Application|RedirectResponse
+     */
+    public function delete($id): Redirector|Application|RedirectResponse
+    {
+        $this->projects->find($id)->delete();
+
+        session()->flash('message', 'Your project has been deleted.');
+
+        return redirect()->route('projects');
+    }
 }

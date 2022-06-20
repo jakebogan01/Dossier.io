@@ -107,4 +107,17 @@ class TestimonialForm extends Component
 
         return redirect()->route('testimonials');
     }
+
+    /**
+     * @param $id
+     * @return Redirector|Application|RedirectResponse
+     */
+    public function delete($id): Redirector|Application|RedirectResponse
+    {
+        $this->testimonials->find($id)->delete();
+
+        session()->flash('message', 'Your testimonial has been deleted.');
+
+        return redirect()->route('testimonials');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Experience;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -65,7 +66,7 @@ class ExperienceForm extends Component
     /**
      * @return Redirector|Application|RedirectResponse
      */
-    public function store() :Redirector|Application|RedirectResponse
+    public function store(): Redirector|Application|RedirectResponse
     {
         $validatedDate = $this->validate([
             'title.0' => 'required|min:4',
@@ -98,6 +99,19 @@ class ExperienceForm extends Component
         $this->resetInputFields(); //resets all wire:model variables
 
         session()->flash('message', 'Your experiences has been updated.');
+
+        return redirect()->route('experiences');
+    }
+
+    /**
+     * @param $id
+     * @return Redirector|Application|RedirectResponse
+     */
+    public function delete($id): Redirector|Application|RedirectResponse
+    {
+        $this->experiences->find($id)->delete();
+
+        session()->flash('message', 'Your experience has been deleted.');
 
         return redirect()->route('experiences');
     }
