@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory()
-            ->hasAttached(Experience::factory()->create())
+            ->hasAttached(Experience::factory()->count(6)->create())
             ->hasAttached(Project::factory()->create())
             ->hasAttached(Testimonial::factory()->create())
             ->create([
