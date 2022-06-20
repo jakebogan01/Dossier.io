@@ -89,7 +89,7 @@
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">Professional testimonials with existing preview.</p>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
-                        <div class="bg-gray-100 p-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                        <div class="bg-gray-100 p-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                             @if (count($testimonials) >= 1)
                                 @foreach ($testimonials as $key => $testimonial)
                                     @if ($key >= 10)
@@ -171,7 +171,7 @@
                                 </div>
                             @endif
                         </div>
-                        @unless ($testimonials->count() >= 6)
+                        @unless ($testimonials->count() >= 4)
                         <div class="sm:col-span-2">
                             <div class="lg:col-span-9">
                                 <div class="pt-24">

@@ -27,8 +27,8 @@ class TestimonialForm extends Component
      */
     public function add($i)
     {
-        if (count($this->inputs) >= (5 - auth()->user()->testimonials->count())) {
-            session()->flash('warning', 'Cannot create more than 6 testimonials!');
+        if (count($this->inputs) >= (3 - auth()->user()->testimonials->count())) {
+            session()->flash('warning', 'Cannot create more than 4 testimonials!');
         } else {
             $i++; //increments i by 1
             $this->i = $i; //store new number to i

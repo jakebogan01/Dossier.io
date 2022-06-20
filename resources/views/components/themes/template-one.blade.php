@@ -5,7 +5,7 @@
         <x-themes.blocks.skills :user="$user"></x-themes.blocks.skills>
         <x-themes.blocks.experience :user="$user"></x-themes.blocks.experience>
         <x-themes.blocks.projects :user="$user"></x-themes.blocks.projects>
-        <x-themes.blocks.testimonials></x-themes.blocks.testimonials>
+        <x-themes.blocks.testimonials :user="$user"></x-themes.blocks.testimonials>
         <x-themes.blocks.contact></x-themes.blocks.contact>
     </div>
     <a href="#home" aria-label="scroll up" class="fixed bottom-0 right-0 opacity-0 -translate-y-10 -translate-x-2 sm:transition-all z-50" :class="{ 'opacity-100' : showBar }" @scroll.window="showBar = (window.pageYOffset >= 20)">

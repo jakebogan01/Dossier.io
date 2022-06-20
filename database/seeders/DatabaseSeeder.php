@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory()
-            ->hasAttached(Experience::factory()->count(6)->create())
+            ->hasAttached(Experience::factory()->count(10)->create())
             ->hasAttached(Project::factory()->count(6)->create())
-            ->hasAttached(Testimonial::factory()->create())
+            ->hasAttached(Testimonial::factory()->count(4)->create())
             ->create([
                 'name' => 'test',
                 'email' => 'test@gmail.com',
