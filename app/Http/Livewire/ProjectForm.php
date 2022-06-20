@@ -12,7 +12,9 @@ use Livewire\Component;
 class ProjectForm extends Component
 {
     public $projects;
-    public $title, $code, $github, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
+    public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
+    public $github = '';
+    public $code = '';
     public $inputs = [];
     public $i = 0;
 

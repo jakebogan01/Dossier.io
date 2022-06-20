@@ -4,7 +4,7 @@
         <x-themes.blocks.intro :user="$user"></x-themes.blocks.intro>
         <x-themes.blocks.skills :user="$user"></x-themes.blocks.skills>
         <x-themes.blocks.experience :user="$user"></x-themes.blocks.experience>
-        <x-themes.blocks.projects></x-themes.blocks.projects>
+        <x-themes.blocks.projects :user="$user"></x-themes.blocks.projects>
         <x-themes.blocks.testimonials></x-themes.blocks.testimonials>
         <x-themes.blocks.contact></x-themes.blocks.contact>
     </div>

@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()
             ->hasAttached(Experience::factory()->count(6)->create())
-            ->hasAttached(Project::factory()->create())
+            ->hasAttached(Project::factory()->count(6)->create())
             ->hasAttached(Testimonial::factory()->create())
             ->create([
                 'name' => 'test',
