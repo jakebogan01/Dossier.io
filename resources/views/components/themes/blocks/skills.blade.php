@@ -1,6 +1,6 @@
-@aware(['userSkills'])
+@aware(['user'])
 
-@if ($userSkills)
+@if ($user->skill)
     <section
         id="skills"
         {{ $attributes->merge(['class' => 'anchor flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
@@ -10,125 +10,25 @@
                     <ul
                         role="list"
                         class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
-                        <li
-                            class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 sm:transition-all"
-                            data-aos="zoom-in-right"
-                            data-aos-delay="100">
-                            <div class="flex justify-center pb-4">
-                                <div
-                                    class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full sm:transition-all"
-                                    style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
-                                </div>
-                            </div>
-                            <div class="space-y-4 text-base font-bold leading-loose text-white text-center sm:text-left">
-                                <div class="text-white text-base font-bold leading-loose space-y-1">
-                                    <h3 class="text-2xl">
-                                        {{ $userSkills->skills[1]['skill'] ?: '<span class="text-red-300">Skill Title</span>' }}
-                                    </h3>
-                                </div>
-                                <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose">
-                                    <p>
-                                        {{ $userSkills->skills[1]['description'] ?: '<span class="text-red-300">Description needed</span>' }}
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="pt-4 flex items-center justify-center sm:justify-start text-white sm:hover:text-gray-300 sm:transition-all">
-                                        View more
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li
-                            class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px]  sm:transition-all"
-                            data-aos="zoom-in-left">
-                            <div class="flex justify-center pb-4">
-                                <div
-                                    class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full sm:transition-all"
-                                    style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
-                                </div>
-                            </div>
-                            <div class="space-y-4 text-base font-bold leading-loose text-white text-center sm:text-left">
-                                <div class="text-white text-base font-bold leading-loose space-y-1">
-                                    <h3 class="text-2xl">
-                                        {{ $userSkills->skills[1]['skill'] ?: '<span class="text-red-300">Skill Title</span>' }}
-                                    </h3>
-                                </div>
-                                <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose">
-                                    <p>
-                                        {{ $userSkills->skills[1]['description'] ?: '<span class="text-red-300">Description needed</span>' }}
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="pt-4 flex items-center justify-center sm:justify-start text-white sm:hover:text-gray-300 sm:transition-all">
-                                        View more
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li
-                            class="card relative bg-[#4046FF] sm:bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] mt-0 sm:mt-12 sm:transition-all"
-                            data-aos="zoom-in-right"
-                            data-aos-delay="300">
-                            <div class="flex justify-center pb-4">
-                                <div
-                                    class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full sm:transition-all"
-                                    style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
-                                </div>
-                            </div>
-                            <div class="space-y-4 text-base font-bold leading-loose text-white text-center sm:text-left">
-                                <div class="text-white text-base font-bold leading-loose space-y-1">
-                                    <h3 class="text-2xl">
-                                        {{ $userSkills->skills[1]['skill'] ?: '<span class="text-red-300">Skill Title</span>' }}
-                                    </h3>
-                                </div>
-                                <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose">
-                                    <p>
-                                        {{ $userSkills->skills[1]['description'] ?: '<span class="text-red-300">Description needed</span>' }}
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="pt-4 flex items-center justify-center sm:justify-start text-white sm:hover:text-gray-300 sm:transition-all">
-                                        View more
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li
-                            class="card relative bg-[#555C7E] sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all"
-                            data-aos="zoom-in-left"
-                            data-aos-delay="200">
-                            <div class="flex justify-center pb-4">
-                                <div
-                                    class="sm:absolute top-0 sm:left-3/4 sm:-translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-[65px] h-[65px] rounded-full sm:transition-all"
-                                    style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#4046FF"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
-                                </div>
-                            </div>
-                            <div class="space-y-4 text-base font-bold leading-loose text-white text-center sm:text-left">
-                                <div class="text-white text-base font-bold leading-loose space-y-1">
-                                    <h3 class="text-2xl">
-                                        {{ $userSkills->skills[1]['skill'] ?: '<span class="text-red-300">Skill Title</span>' }}
-                                    </h3>
-                                </div>
-                                <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose">
-                                    <p>
-                                        {{ $userSkills->skills[1]['description'] ?: '<span class="text-red-300">Description needed</span>' }}
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="pt-4 flex items-center justify-center sm:justify-start text-white sm:hover:text-gray-300 sm:transition-all">
-                                        View more
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                        @foreach($user->skill->skills as $key => $skill)
+                            @switch($key)
+                                @case(1)
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="100" :user="$skill"></x-themes.blocks.components.skill-block>
+                                @break
+
+                                @case(2)
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" :user="$skill"></x-themes.blocks.components.skill-block>
+                                @break
+
+                                @case(3)
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="300" :user="$skill"></x-themes.blocks.components.skill-block>
+                                @break
+
+                                @case(4)
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" animateDelay="200" :user="$skill"></x-themes.blocks.components.skill-block>
+                                @break
+                            @endswitch
+                        @endforeach
                     </ul>
                 </div>
                 <aside class="space-y-5 sm:space-y-4 px-[25px] pb-[65px] sm:pb-0 sm:px-0 text-[#B1B7D6] font-bold text-base leading-loose">
@@ -140,52 +40,15 @@
                             TOP SKILLS
                         </h2>
                         <p class="text-[#B1B7D6] text-base font-bold leading-loose">
-                            {{ $userSkills->introduction ?: '<span class="text-red-300">Description needed</span>' }}
+                            {{ $user->skill->introduction ?: 'Description needed' }}
                         </p>
                     </div>
                     <ul
                         role="list"
                         class="pt-8 space-y-7">
-                        <li class="flex items-center">
-                            <span
-                                data-aos="zoom-in"
-                                data-aos-anchor-placement="bottom-bottom">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21"><circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" /><circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" /></svg>
-                            </span>
-                            <span
-                                data-aos="fade-left"
-                                data-aos-anchor-placement="bottom-bottom">
-                                {{ $userSkills->facts['one'] ?: '<span class="text-red-300">First fact needed</span>' }}
-                            </span>
-                        </li>
-                        <li class="flex items-center">
-                            <span
-                                data-aos="zoom-in"
-                                data-aos-anchor-placement="bottom-bottom"
-                                data-aos-delay="100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21"><circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" /><circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" /></svg>
-                            </span>
-                            <span
-                                data-aos="fade-left"
-                                data-aos-anchor-placement="bottom-bottom"
-                                data-aos-delay="100">
-                                {{ $userSkills->facts['two'] ?: '' }}
-                            </span>
-                        </li>
-                        <li class="flex items-center">
-                            <span
-                                data-aos="zoom-in"
-                                data-aos-anchor-placement="bottom-bottom"
-                                data-aos-delay="200">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="min-w-[1.3125rem] w-[1.3125rem] h-[1.3125rem] mr-5" viewBox="0 0 21 21"><circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" /><circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" /></svg>
-                            </span>
-                            <span
-                                data-aos="fade-left"
-                                data-aos-anchor-placement="bottom-bottom"
-                                data-aos-delay="200">
-                                {{ $userSkills->facts['three'] ?: '' }}
-                            </span>
-                        </li>
+                        @foreach($user->skill->facts as $key => $fact)
+                            <x-themes.blocks.components.fact-item :key="$key" :user="$fact"></x-themes.blocks.components.fact-item>
+                        @endforeach
                     </ul>
                 </aside>
             </div>

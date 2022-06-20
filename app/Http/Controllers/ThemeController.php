@@ -8,10 +8,8 @@ class ThemeController extends Controller
 {
     public function themeOne()
     {
-        $user = auth()->user()->profile;
+        $user = auth()->user();
 
-        $userSkills = auth()->user()->skill;
-
-        return view('pages.template-one', compact('user', 'userSkills'));
+        return view('pages.template-one', compact('user'));
     }
 }

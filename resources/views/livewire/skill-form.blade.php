@@ -35,15 +35,15 @@
                             <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 mt-8 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                                 <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="text-sm font-medium text-indigo-400">First fact</dt>
-                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts['one'] ?: 'Fun skill fact' }}</dd>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts[1] ?: 'Fun skill fact' }}</dd>
                                 </div>
                                 <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="text-sm font-medium text-indigo-400">Second fact</dt>
-                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts['two'] ?: 'Fun skill fact' }}</dd>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts[2] ?: 'Fun skill fact' }}</dd>
                                 </div>
                                 <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="text-sm font-medium text-indigo-400">Third fact</dt>
-                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts['three'] ?: 'Fun skill fact' }}</dd>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ $currentUser->facts[3] ?: 'Fun skill fact' }}</dd>
                                 </div>
                             </dl>
                             <dl class="sm:divide-y sm:divide-gray-200 bg-gray-100 mt-8 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -156,7 +156,7 @@
                                         <div class="flex-grow space-y-6">
 
                                             <div class="grid grid-cols-12 gap-6">
-                                                <x-dashboard.components.skill-select num="skill_one" :skills="$skills">
+                                                <x-dashboard.components.skill-select num="skill_one" :skills="$skills" req="required">
                                                     First Skill
                                                 </x-dashboard.components.skill-select>
                                             </div>
@@ -169,7 +169,7 @@
                                             </div>
 
                                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                                <x-dashboard.components.skill-select num="skill_two" :skills="$skills">
+                                                <x-dashboard.components.skill-select num="skill_two" :skills="$skills" req="required">
                                                     Second Skill
                                                 </x-dashboard.components.skill-select>
                                             </div>
@@ -190,7 +190,7 @@
                                             <div>
                                                 <div class="relative mt-1">
                                                     <label for="description_three" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                    <textarea wire:model="description_three" id="description_three" name="description_three" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
+                                                    <textarea wire:model="description_three" id="description_three" name="description_three" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
                                                 </div>
                                             </div>
 
@@ -203,7 +203,7 @@
                                             <div>
                                                 <div class="relative mt-1">
                                                     <label for="description_four" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                    <textarea wire:model="description_four" id="description_four" name="description_four" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
+                                                    <textarea wire:model="description_four" id="description_four" name="description_four" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
                                                 </div>
                                             </div>
                                         </div>

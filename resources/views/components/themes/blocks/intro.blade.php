@@ -24,7 +24,7 @@
         <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all" data-aos="fade-right" data-aos-delay="300">
             <h1 class="leading-[1.1] tracking-wider whitespace-nowrap sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
-                {{ strtoupper($user->portfolio_name) ?: 'YOUR NAME' }}<br>
+                {{ strtoupper($user->profile->portfolio_name) ?: 'YOUR NAME' }}<br>
                 AND THIS…<br>
                 IS MY LEGACY
             </h1>
@@ -33,7 +33,7 @@
             <dl class="mt-5 grid grid-cols-3 gap-20">
                 <div data-aos="fade-right" data-aos-delay="300">
                     <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
-                        {{ strtoupper($user->total_clients) ?: 0 }}
+                        {{ strtoupper($user->profile->total_clients) ?: 0 }}
                     </dt>
                     <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
                         CLIENTS
@@ -41,7 +41,7 @@
                 </div>
                 <div data-aos="fade-right" data-aos-delay="200">
                     <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
-                        {{ strtoupper($user->total_tools) ?: 0 }}
+                        {{ strtoupper($user->profile->total_tools) ?: 0 }}
                     </dt>
                     <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
                         TOOLS

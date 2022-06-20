@@ -15,17 +15,17 @@ class SkillForm extends Component
     public $skills;
     public $currentUser;
     public string $introduction = 'Description test';
-    public string $fact_one = 'Fact one';
-    public string $fact_two = 'Fact two';
-    public string $fact_three = 'Fact three';
-    public string $skill_one = 'HTML';
-    public string $description_one = 'First description';
-    public string $skill_two = 'HTML';
-    public string $description_two = 'Second description';
-    public string $skill_three = 'HTML';
-    public string $description_three = 'Third description';
-    public string $skill_four = 'HTML';
-    public string $description_four = 'Fourth description';
+    public string $fact_one = '';
+    public string $fact_two = '';
+    public string $fact_three = '';
+    public string $skill_one = '';
+    public string $description_one = '';
+    public string $skill_two = '';
+    public string $description_two = '';
+    public string $skill_three = '';
+    public string $description_three = '';
+    public string $skill_four = '';
+    public string $description_four = '';
 
     /**
      * @var array|string[]
@@ -72,9 +72,9 @@ class SkillForm extends Component
         return auth()->user()->skill()->$action([
             'introduction' => $this->introduction,
             'facts' => [
-                'one' => $this->fact_one,
-                'two' => $this->fact_two,
-                'three' => $this->fact_three,
+                1 => $this->fact_one,
+                2 => $this->fact_two,
+                3 => $this->fact_three,
             ],
             'skills' => [
                 1 => [

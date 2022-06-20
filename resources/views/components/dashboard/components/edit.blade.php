@@ -21,8 +21,7 @@
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div>
                         <div>
-                            <h2 class="text-lg leading-6 font-medium text-gray-900">Work Experiences</h2>
-                            <p class="mt-1 text-sm text-gray-500">Provide a date, title, and a short description of important work experiences.</p>
+                            <h2 class="text-lg leading-6 font-medium text-gray-900">Update</h2>
                         </div>
                         {{ $slot }}
                     </div>

@@ -7,7 +7,7 @@
         <div class="mt-5">
             <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                 <label for="updateTitle" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
-                <input wire:model.defer="updateTitle" type="text" name="updateTitle" id="updateTitle" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                <input wire:model="updateTitle" type="text" name="updateTitle" id="updateTitle" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
             </div>
             @error('updateTitle') <span class="text-danger error">{{ $message }}</span>@enderror
         </div>
@@ -34,7 +34,7 @@
         <div class="mt-5">
             <div class="relative mt-1">
                 <label for="updateDescription" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                <textarea wire:model.defer="updateDescription" id="updateDescription" name="updateDescription" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
+                <textarea wire:model="updateDescription" id="updateDescription" name="updateDescription" rows="3" class="shadow-sm focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
             </div>
             @error('updateDescription') <span class="text-danger error">{{ $message }}</span>@enderror
         </div>
@@ -46,7 +46,7 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                         <span class="text-gray-500 sm:text-sm"> https:// </span>
                     </div>
-                    <input wire:model.defer="updateCode" type="text" name="updateCode" id="updateCode" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                    <input wire:model="updateCode" type="text" name="updateCode" id="updateCode" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                 </div>
                 @error('updateCode') <span class="text-danger error">{{ $message }}</span>@enderror
             </div>
@@ -57,7 +57,7 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                         <span class="text-gray-500 sm:text-sm"> https:// </span>
                     </div>
-                    <input wire:model.defer="updateGithub" type="text" name="updateGithub" id="updateGithub" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                    <input wire:model="updateGithub" type="text" name="updateGithub" id="updateGithub" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                 </div>
                 @error('updateGithub') <span class="text-danger error">{{ $message }}</span>@enderror
             </div>

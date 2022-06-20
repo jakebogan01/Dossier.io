@@ -8,7 +8,7 @@
             <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
                 <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                     <label for="updateDate" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Date</label>
-                    <input wire:model.defer="updateDate" type="date" name="updateDate" id="updateDate" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                    <input wire:model="updateDate" type="date" name="updateDate" id="updateDate" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                 </div>
                 @error('updateDate') <span class="text-danger error">{{ $message }}</span>@enderror
             </div>
@@ -17,7 +17,7 @@
         <div class="mt-5">
             <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                 <label for="updateTitle" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
-                <input wire:model.defer="updateTitle" type="text" name="updateTitle" id="updateTitle" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                <input wire:model="updateTitle" type="text" name="updateTitle" id="updateTitle" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
             </div>
             @error('updateTitle') <span class="text-danger error">{{ $message }}</span>@enderror
         </div>
@@ -25,7 +25,7 @@
         <div class="mt-5">
             <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                 <label for="updateDescription" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                <input wire:model.defer="updateDescription" type="text" name="updateDescription" id="updateDescription" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                <input wire:model="updateDescription" type="text" name="updateDescription" id="updateDescription" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
             </div>
             @error('updateDescription') <span class="text-danger error">{{ $message }}</span>@enderror
         </div>
@@ -122,7 +122,7 @@
                                                         <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
                                                             <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                 <label for="date" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Date</label>
-                                                                <input wire:model.defer="date.0" type="date" name="date" id="date" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                                <input wire:model="date.0" type="date" name="date" id="date" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                             </div>
                                                             @error('date.0') <span class="text-danger error">{{ $message }}</span>@enderror
                                                         </div>
@@ -131,7 +131,7 @@
                                                     <div class="mt-5">
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
-                                                            <input wire:model.defer="title.0" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="title.0" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
                                                         @error('title.0') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
@@ -139,7 +139,7 @@
                                                     <div class="mt-5">
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                            <input wire:model.defer="description.0" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="description.0" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
                                                         @error('description.0') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
@@ -151,7 +151,7 @@
                                                                 <div>
                                                                     <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                         <label for="date" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Date</label>
-                                                                        <input wire:model.defer="date.{{ $value }}" type="date" name="date" id="date" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                                        <input wire:model="date.{{ $value }}" type="date" name="date" id="date" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                                     </div>
                                                                     @error('date.0') <span class="text-danger error">{{ $message }}</span>@enderror
                                                                 </div>
@@ -164,7 +164,7 @@
                                                         <div class="mt-5">
                                                             <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                 <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Title</label>
-                                                                <input wire:model.defer="title.{{ $value }}" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 h-9 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                                <input wire:model="title.{{ $value }}" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 h-9 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                             </div>
                                                             @error('title.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
                                                         </div>
@@ -172,7 +172,7 @@
                                                         <div class="mt-5">
                                                             <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                 <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Description</label>
-                                                                <input wire:model.defer="description.{{ $value }}" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                                <input wire:model="description.{{ $value }}" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                             </div>
                                                             @error('description.0') <span class="text-danger error">{{ $message }}</span>@enderror
                                                         </div>

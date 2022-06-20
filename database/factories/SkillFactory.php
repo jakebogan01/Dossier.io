@@ -28,9 +28,9 @@ class SkillFactory extends Factory
             'user_id' => 1,
             'introduction' => (string) $this->faker->sentences(3, true),
             'facts' => [
-                'one' => $this->faker->sentence(10),
-                'two' => $this->faker->sentence(10),
-                'three' => $this->faker->sentence(10),
+                1 => $this->faker->sentence(10),
+                2 => $this->faker->sentence(10),
+                3 => $this->faker->sentence(10),
             ],
             'skills' => [
                 1 => [

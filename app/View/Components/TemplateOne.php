@@ -13,10 +13,7 @@ class TemplateOne extends Component
      *
      * @return void
      */
-    public function __construct(public $user, public $userSkills)
-    {
-        //
-    }
+    public function __construct(public $user){}
 
     /**
      * Get the view / contents that represent the component.
