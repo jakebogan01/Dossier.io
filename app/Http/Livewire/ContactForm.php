@@ -14,11 +14,11 @@ class ContactForm extends Component
     public $currentUser;
     public string $conclusion = 'Conclusion test';
     public string $phone = 'phone';
-    public string $instagram = 'instagram url';
-    public string $facebook = 'facebook url';
-    public string $github = 'github url';
-    public string $linkedin = 'linkedin url';
-    public string $dribbble = 'dribbble url';
+    public string $instagram = '';
+    public string $facebook = '';
+    public string $github = '';
+    public string $linkedin = '';
+    public string $dribbble = '';
 
     /**
      * @var array|string[]

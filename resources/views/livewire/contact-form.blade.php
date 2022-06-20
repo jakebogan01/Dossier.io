@@ -135,7 +135,7 @@
                                                         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                             <span class="text-gray-500 sm:text-sm"> https:// </span>
                                                         </div>
-                                                        <input wire:model="instagram" type="text" name="instagram" id="instagram" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        <input wire:model="instagram" type="text" name="instagram" id="instagram" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
 
@@ -145,7 +145,7 @@
                                                         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                             <span class="text-gray-500 sm:text-sm"> https:// </span>
                                                         </div>
-                                                        <input wire:model="facebook" type="text" name="facebook" id="facebook" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        <input wire:model="facebook" type="text" name="facebook" id="facebook" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
 
@@ -155,7 +155,7 @@
                                                         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                             <span class="text-gray-500 sm:text-sm"> https:// </span>
                                                         </div>
-                                                        <input wire:model="github" type="text" name="github" id="github" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        <input wire:model="github" type="text" name="github" id="github" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
 
@@ -165,7 +165,7 @@
                                                         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                             <span class="text-gray-500 sm:text-sm"> https:// </span>
                                                         </div>
-                                                        <input wire:model="linkedin" type="text" name="linkedin" id="linkedin" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        <input wire:model="linkedin" type="text" name="linkedin" id="linkedin" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
 
@@ -175,7 +175,7 @@
                                                         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                             <span class="text-gray-500 sm:text-sm"> https:// </span>
                                                         </div>
-                                                        <input wire:model="dribbble" type="text" name="dribbble" id="dribbble" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                        <input wire:model="dribbble" type="text" name="dribbble" id="dribbble" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm">
                                                     </div>
                                                 </div>
                                             </div>
