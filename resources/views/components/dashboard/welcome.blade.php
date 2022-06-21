@@ -225,7 +225,7 @@
                                         56
                                     </td>
                                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
+                                        <div class="rounded-full w-2 h-2 border-2 {{ $project->public ? 'bg-green-400 border-green-500' : 'bg-red-400 border-red-500' }}"></div>
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         {{ $project->created_at->format('F d, Y') }}

@@ -112,6 +112,20 @@ class User extends Authenticatable
         return $this->hasOne(Contact::class, 'user_id');
     }
 
+    /**
+     * @return bool
+     */
+    public static function checkProjectStatuses(): bool
+    {
+        $projects = Project::all();
+
+        if ($projects->every(fn($project) => $project->public === 0)) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static function boot()
     {
         parent::boot();

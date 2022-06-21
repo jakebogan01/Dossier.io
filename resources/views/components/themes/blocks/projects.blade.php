@@ -1,6 +1,6 @@
 @aware(['user'])
 
-@if(count($user->projects) >= 1)
+@if(count($user->projects) >= 1 && !$user->checkProjectStatuses())
     <section
         id="projects"
         {{ $attributes->merge(['class' => 'template_one_projects anchor flex relative bg-[#1C1F2D] overflow-hidden group']) }}>
@@ -86,8 +86,11 @@
                     class="flex w-full overflow-x-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
 
                     @foreach($user->projects as $project)
-                        {{-- project --}}
-                        <x-themes.blocks.components.project-item :project="$project"></x-themes.blocks.components.project-item>
+                        @if($project->public)
+                            {{-- project --}}
+                            <x-themes.blocks.components.project-item :project="$project"></x-themes.blocks.components.project-item>
+                            @break
+                        @endif
                     @endforeach
                 </ul>
                 @if(count($user->projects) >= 2)
