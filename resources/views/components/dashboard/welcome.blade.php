@@ -188,97 +188,98 @@
             <div x-ref="chart" class=""></div>
         </div>
     </div>
-</div>
 
-@if(count($currentUser->projects) >= 1)
-    <div>
-        <h2 class="mx-auto mt-8 pb-5 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
-            All Projects
-        </h2>
-        <div class="mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col mt-2">
-                <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
-                    <table class="min-w-full divide-y divide-gray-300">
-                        <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Title</th>
-                            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
-                            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Status</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
-                            <th scope="col" class="pl-3 pr-4 sm:pr-6 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th>
-                        </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200 bg-white">
-                        @foreach($currentUser->projects as $project)
-                            <tr class="hover:bg-gray-50 transition-colors group">
-                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 border-l-2 border-transparent group-hover:border-[#6B158C7F] transition-colors">
-                                    <div class="flex items-center">
-                                        <div class="h-10 w-10 flex-shrink-0">
-                                            <img class="h-10 w-10 rounded-full" src="https://nickjanetakis.com/assets/blog/cards/how-to-start-and-finish-any-web-app-project-678900795cfd6d4fa60e3655dd62ae9f61ef5e14b62ca62050e817e43e861f11.jpg" alt="">
-                                        </div>
-                                        <div class="hidden sm:block ml-4">
-                                            <div class="font-medium text-gray-900">{{ $project->title }}</div>
-                                            <a href="{{ $project->links['code'] }}" class="text-gray-500 hover:text-indigo-500">View Project</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-900 sm:table-cell">
-                                    56
-                                </td>
-                                <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                                    <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
-                                </td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    {{ $project->created_at->format('F d, Y') }}
-                                </td>
-                                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                    <a href="{{ route('projects') }}" class="flex text-[#6B158C7F] sm:hover:text-indigo-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
-                                        </svg>
-                                        <span class="sr-only">, Lindsay Walton</span>
-                                    </a>
-                                </td>
+    @if(count($currentUser->projects) >= 1)
+        <div>
+            <h2 class="mx-auto mt-8 pb-5 text-lg leading-6 font-medium text-gray-900">
+                All Projects
+            </h2>
+            <div class="mx-auto">
+                <div class="flex flex-col mt-2">
+                    <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Title</th>
+                                <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
+                                <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Status</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
+                                <th scope="col" class="pl-3 pr-4 sm:pr-6 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                    <nav
-                        class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
-                        aria-label="Pagination">
-                        <div class="hidden sm:block">
-                            <p class="text-sm text-gray-700">
-                                Showing
-                                <span class="font-medium">
-                                    1
-                                </span>
-                                to
-                                <span class="font-medium">
-                                    10
-                                </span>
-                                of
-                                <span class="font-medium">
-                                    20
-                                </span>
-                                results
-                            </p>
-                        </div>
-                        <div class="flex-1 flex justify-between sm:justify-end">
-                            <a
-                                href="#"
-                                class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
-                                Previous
-                            </a>
-                            <a
-                                href="#"
-                                class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
-                                Next
-                            </a>
-                        </div>
-                    </nav>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                            @foreach($currentUser->projects as $project)
+                                <tr class="hover:bg-gray-50 transition-colors group">
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 border-l-2 border-transparent group-hover:border-[#6B158C7F] transition-colors">
+                                        <div class="flex items-center">
+                                            <div class="h-10 w-10 flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="https://nickjanetakis.com/assets/blog/cards/how-to-start-and-finish-any-web-app-project-678900795cfd6d4fa60e3655dd62ae9f61ef5e14b62ca62050e817e43e861f11.jpg" alt="">
+                                            </div>
+                                            <div class="hidden sm:block ml-4">
+                                                <div class="font-medium text-gray-900">{{ $project->title }}</div>
+                                                <a href="{{ $project->links['code'] }}" class="text-gray-500 hover:text-indigo-500">View Project</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-900 sm:table-cell">
+                                        56
+                                    </td>
+                                    <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
+                                        <div class="rounded-full bg-green-400 w-2 h-2 border-2 border-green-500"></div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                        {{ $project->created_at->format('F d, Y') }}
+                                    </td>
+                                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                        <a href="{{ route('projects', "project=$project->id") }}" class="flex text-[#6B158C7F] sm:hover:text-indigo-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="sr-only">, Lindsay Walton</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        <nav
+                            class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
+                            aria-label="Pagination">
+                            <div class="hidden sm:block">
+                                <p class="text-sm text-gray-700">
+                                    Showing
+                                    <span class="font-medium">
+                                        1
+                                    </span>
+                                    to
+                                    <span class="font-medium">
+                                        10
+                                    </span>
+                                    of
+                                    <span class="font-medium">
+                                        20
+                                    </span>
+                                    results
+                                </p>
+                            </div>
+                            <div class="flex-1 flex justify-between sm:justify-end">
+                                <a
+                                    href="#"
+                                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
+                                    Previous
+                                </a>
+                                <a
+                                    href="#"
+                                    class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
+                                    Next
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-@endif
+    @endif
+
+</div>

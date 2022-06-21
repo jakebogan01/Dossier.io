@@ -1,4 +1,4 @@
-<form action="#" x-data="{ showEdit: false }">
+<form action="#" x-data="{ showEdit: {{ $status }} }">
     @csrf
 
     <x-dashboard.components.success-notification></x-dashboard.components.success-notification>

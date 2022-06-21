@@ -13,6 +13,8 @@ class ProjectForm extends Component
 {
     public $projects;
     public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
+    public bool $status = false;
+    public $projectId;
     public $github = '';
     public $code = '';
     public $inputs = [];
@@ -20,7 +22,17 @@ class ProjectForm extends Component
 
     public function mount()
     {
+
+        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $id = preg_replace("/^https?:\/\/.*\?.*project=([^&]+).*$/", "$1", $url);
+        $this->projectId = (int) $id;
+
         $this->projects = auth()->user()->projects;
+
+        if ($this->projectId !== 0) {
+            $this->status = true;
+            $this->show($this->projectId);
+        }
     }
 
     /**
@@ -142,6 +154,17 @@ class ProjectForm extends Component
             ],
         ]);
 
-        session()->flash('message', 'Your project has been updated.');
+        if ($this->projectId !== 0) {
+            session()->flash('message', 'Your projects has been updated.');
+
+            return redirect()->route('projects');
+        }
+    }
+
+    public function checkUTM()
+    {
+        if ($this->projectId !== 0) {
+            return redirect()->route('projects');
+        }
     }
 }
