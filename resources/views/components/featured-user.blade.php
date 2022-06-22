@@ -1,5 +1,5 @@
-@if(count($users) >= 1)
-    @foreach($users as $key => $user)
+@if($featuredUsers !== null)
+    @foreach($featuredUsers as $key => $user)
         <a href="#"
            data-aos="fade-up"
            data-aos-delay="{{ $key }}00"

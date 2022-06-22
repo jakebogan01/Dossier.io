@@ -10,6 +10,7 @@ use Illuminate\View\Component;
 class FeaturedUser extends Component
 {
     public $users;
+    public $featuredUsers;
 
     /**
      * Create a new component instance.
@@ -18,9 +19,13 @@ class FeaturedUser extends Component
      */
     public function __construct()
     {
-        $this->users = User::whereRelation('profile', 'portfolio_name', '!=', null)
+        $this->users = $users = User::whereRelation('profile', 'portfolio_name', '!=', null)
             ->whereRelation('profile', 'settings->public', 'true')
-            ->pluck('name')->random(4);
+            ->pluck('name');
+
+        if (!$users->isEmpty()) {
+            $this->featuredUsers = $users->random(4);
+        }
     }
 
     /**

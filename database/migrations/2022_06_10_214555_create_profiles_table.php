@@ -20,6 +20,8 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->string('portfolio_name')
                 ->nullable();
+            $table->string('slug')
+                ->nullable();
             $table->string('portfolio_email')
                 ->nullable()
                 ->unique();

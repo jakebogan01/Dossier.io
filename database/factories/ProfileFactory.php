@@ -29,6 +29,7 @@ class ProfileFactory extends Factory
         return [
             'user_id' => 1,
             'portfolio_name' => $this->faker->name(),
+            'slug' => $this->faker->slug(),
             'portfolio_email' => $this->faker->unique()->safeEmail(),
             'total_clients' => $this->faker->randomDigit(),
             'total_tools' => $this->faker->randomDigit(),

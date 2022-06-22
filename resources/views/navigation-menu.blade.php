@@ -71,7 +71,7 @@
                 </p>
             </div>
         </div>
-        <a href="/portfolio/2" target="_blank" class="mt-1 relative z-40">
+        <a href="{{ route('theme-one', auth()->user()->profile->slug ) }}" target="_blank" class="mt-1 relative z-40">
             <button type="button" class="text-gray-500 group rounded-full inline-flex items-center text-base font-medium sm:hover:outline-none sm:hover:ring-2 sm:hover:ring-offset-2 sm:hover:ring-indigo-500" aria-expanded="false">
                 <img
                     @mouseenter="showMessage = false"

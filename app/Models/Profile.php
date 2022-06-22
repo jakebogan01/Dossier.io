@@ -17,6 +17,7 @@ class Profile extends Model
      */
     protected $fillable = [
         'portfolio_name',
+        'slug',
         'portfolio_email',
         'total_clients',
         'total_tools',

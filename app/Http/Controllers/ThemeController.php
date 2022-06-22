@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class ThemeController extends Controller
 {
     public function themeOne($id)
     {
-        $userName = strtolower(preg_replace("/[_\s-]+/", " ", $id));
-        $user = User::whereName($userName)->first();
+        $user = User::whereRelation('profile', 'slug', '!=', null)
+            ->whereRelation('profile', 'slug', $id)->first();
 
         return view('pages.template-one', compact('user'));
     }
