@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ThemeController extends Controller
 {
-    public function themeOne()
+    public function themeOne($id)
     {
-        $user = auth()->user();
+        $userName = strtolower(preg_replace("/[_\s-]+/", " ", $id));
+        $user = User::whereName($userName)->first();
 
         return view('pages.template-one', compact('user'));
     }

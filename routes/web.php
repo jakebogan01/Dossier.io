@@ -9,6 +9,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/portfolio/{id}', [ThemeController::class, 'themeOne'])
+    ->where('id', '([a-z\-\_]+)')
     ->name('theme-one');
 
 Route::middleware([
