@@ -194,106 +194,15 @@
             <div class="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2
                     class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide"
-                    data-aos="fade-up"
-                    data-aos-delay="50">
+                    data-aos="fade-up">
                     Trusted by over 26,000 amazing people
                 </h2>
                 <div class="mt-8 flex justify-center space-x-6">
-                    <a href="#"
-                       data-aos="fade-up"
-                       data-aos-delay="100"
-                       data-aos-anchor-placement="top-bottom">
-                        <div class="relative space-y-4 text-center group">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-white sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#"
-                       data-aos="fade-up"
-                       data-aos-delay="150"
-                       data-aos-anchor-placement="top-bottom">
-                        <div class="relative space-y-4 text-center group">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-white sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#"
-                       data-aos="fade-up"
-                       data-aos-delay="200"
-                       data-aos-anchor-placement="top-bottom">
-                        <div class="relative space-y-4 text-center group">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-white sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#"
-                       data-aos="fade-up"
-                       data-aos-delay="250"
-                       data-aos-anchor-placement="top-bottom">
-                        <div class="relative space-y-4 text-center group">
-                            <img
-                                class="mx-auto h-16 w-16 rounded-full border-4 border-[#9D59EF] sm:group-hover:border-white sm:transition-all duration-200 ease-linear transform sm:group-hover:-translate-y-2"
-                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                alt="Real User"
-                                loading="eager">
-                            <div class="space-y-2">
-                                <div class="text-xs font-medium lg:text-sm">
-                                    <h3 class="text-white">
-                                        Michael Foster
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Co-Founder / CTO
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <x-featured-user></x-featured-user>
                 </div>
                 <p class="mt-8 text-center text-base text-gray-400"
                    data-aos="fade-up"
-                   data-aos-delay="300"
+                   data-aos-delay="250"
                    data-aos-anchor-placement="top-bottom">
                     Created By Jake Bogan
                 </p>
