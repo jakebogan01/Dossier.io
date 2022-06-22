@@ -15,7 +15,7 @@
                         Total Views
                     </dt>
                     <dd class="mt-1 text-3xl font-semibold text-gray-900">
-                        71,897
+                        {{ $currentUser->total_views ?: 0 }}
                     </dd>
                 </div>
             </div>

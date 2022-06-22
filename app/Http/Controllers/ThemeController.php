@@ -15,6 +15,8 @@ class ThemeController extends Controller
             return redirect()->route('home');
         }
 
+        $user->increment('total_views');
+
         return view('pages.template-one', compact('user'));
     }
 }
