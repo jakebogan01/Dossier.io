@@ -149,5 +149,14 @@ class User extends Authenticatable
                 ]
             ]);
         });
+
+        static::updated(function($model){
+
+            $slugName = str($model->name)->slug()->__toString();
+
+            $model->profile()->update([
+                'slug' => $slugName,
+            ]);
+        });
     }
 }
