@@ -97,7 +97,7 @@
                                         </div>
                                     </td>
                                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-900 sm:table-cell">
-                                        56
+                                        {{ number_format($project->total_likes) ?: 0 }}
                                     </td>
                                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
                                         <div class="rounded-full w-2 h-2 border-2 {{ $project->public ? 'bg-green-400 border-green-500' : 'bg-red-400 border-red-500' }}"></div>

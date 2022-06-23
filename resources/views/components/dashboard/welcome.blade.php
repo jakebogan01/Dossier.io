@@ -29,7 +29,7 @@
                         Total Likes
                     </dt>
                     <dd class="mt-1 text-3xl font-semibold text-gray-900">
-                        71,897
+                        <x-dashboard.components.total-like></x-dashboard.components.total-like>
                     </dd>
                 </div>
             </div>
