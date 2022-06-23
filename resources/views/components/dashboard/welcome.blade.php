@@ -1,7 +1,7 @@
-@aware(['currentUser'])
+@aware(['currentUser', 'areaChart', 'barChart'])
 
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-    <h2 class="text-lg pb-5 leading-6 font-medium text-gray-900">
+    <h2 class="text-lg pb-5 leading-6 font-bold text-[#1C0681]">
         Recent Analytics
     </h2>
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
@@ -34,160 +34,20 @@
                 </div>
             </div>
         </div>
-        <div
-            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden"
-            x-data="{
-                    values: [50, 55, 65, 54, 51],
-                    labels: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5'],
-                    init() {
-                        let chart = new ApexCharts(this.$refs.chart, this.options)
 
-                        chart.render()
-
-                        this.$watch('values', () => {
-                            chart.updateOptions(this.options)
-                        })
-                    },
-                    get options() {
-                        return {
-                            fill: {
-                              colors: ['#4C148B']
-                            },
-                            dataLabels: {
-                              enabled: true,
-                              formatter: function (val) {
-                                return val + '%';
-                            },
-                            offsetY: -20,
-                            style: {
-                            fontSize: '12px',
-                            colors: ['#304758']
-                            }
-                            },
-
-                            plotOptions: {
-                              bar: {
-                                dataLabels: {
-                                  position: 'top', // top, center, bottom
-                                },
-                              }
-                            },
-                            title: {
-                              text: 'Monthly Inflation in Argentina, 2002',
-                              floating: true,
-                              offsetY: 330,
-                              align: 'center',
-                              style: {
-                                color: '#444'
-                              }
-                            },
-                            chart: { type: 'bar', height: 350, toolbar: false },
-                            xaxis: {
-                                categories: this.labels,
-                                position: 'top',
-                                axisBorder: {
-                                    show: false
-                                },
-                                axisTicks: {
-                                   show: false
-                                },
-                                crosshairs: {
-                            fill: {
-                              type: 'gradient',
-                              gradient: {
-                                colorFrom: '#D8E3F0',
-                                colorTo: '#BED1E6',
-                                stops: [0, 100],
-                                opacityFrom: 0.4,
-                                opacityTo: 0.5,
-                              }
-                            }
-                          },
-                          tooltip: {
-                            enabled: true,
-                          },
-                        },
-                        yaxis: {
-                          axisBorder: {
-                            show: false
-                          },
-                          axisTicks: {
-                            show: false,
-                          },
-                          labels: {
-                            show: false,
-                            formatter: function (val) {
-                              return val + '%';
-                        }
-                        }
-
-                        },
-                                series: [{
-                        name: 'LIKES',
-                        data: this.values,
-                            }],
-                        }
-                    }
-                }">
-            <div x-ref="chart" class=""></div>
-        </div>
-
-        <div
-            class="bg-white rounded-lg p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden"
-            x-data="{
-                    values: [45, 55, 75, 25, 45, 110],
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
-                    init() {
-                        let chart = new ApexCharts(this.$refs.chart, this.options)
-
-                        chart.render()
-
-                        this.$watch('values', () => {
-                            chart.updateOptions(this.options)
-                        })
-                    },
-                    get options() {
-                        return {
-                            colors: ['#4C148B'],
-                            dataLabels: {
-                                style: {
-                                    colors: ['#57178D', '#E91E63', '#9C27B0']
-                                }
-                            },
-                            legend: {
-                              horizontalAlign: 'left'
-                            },
-                            markers: {
-                               colors: ['#150380']
-                            },
-                            title: {
-                              text: 'Fundamental Analysis of Stocks',
-                              align: 'left'
-                            },
-                            subtitle: {
-                              text: 'Price Movements',
-                              align: 'left'
-                            },
-                            chart: { type: 'area', toolbar: false },
-                            tooltip: {
-                                marker: true,
-                                y: {
-                                    formatter(number) {
-                                        return number
-                                    }
-                                }
-                            },
-                            xaxis: { categories: this.labels },
-                            series: [{
-                                name: 'Views',
-                                data: this.values,
-                            }],
-                        }
-                    }
-                }">
-            <div x-ref="chart" class=""></div>
+        <div class="bg-white rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+            {!! $barChart->container() !!}
         </div>
     </div>
 
+    <div class="bg-white rounded-lg pt-4 mt-6 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+        {!! $areaChart->container() !!}
+    </div>
+
     <livewire:dashboard-form :currentUser="$currentUser"/>
+
+    <script src="{{ $barChart->cdn() }}"></script>
+    <script src="{{ $areaChart->cdn() }}"></script>
+    {{ $areaChart->script() }}
+    {{ $barChart->script() }}
 </div>

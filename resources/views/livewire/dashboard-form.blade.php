@@ -65,11 +65,11 @@
     </x-dashboard.components.edit>
 
     @if(count($currentUser->projects) >= 1)
-        <div>
-            <h2 class="mx-auto mt-8 pb-5 text-lg leading-6 font-medium text-gray-900">
-                All Projects
-            </h2>
-            <div class="mx-auto">
+{{--        <div>--}}
+{{--            <h2 class="mx-auto mt-8 pb-5 text-lg leading-6 font-medium text-gray-900">--}}
+{{--                All Projects--}}
+{{--            </h2>--}}
+            <div class="mx-auto mt-6">
                 <div class="flex flex-col mt-2">
                     <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
                         <table class="min-w-full divide-y divide-gray-300">
@@ -153,6 +153,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+{{--        </div>--}}
     @endif
 </form>

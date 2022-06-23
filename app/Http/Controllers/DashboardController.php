@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\MonthlyViewsChart;
+use App\Charts\TopProjectsChart;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function dashboard ()
+    public function dashboard (MonthlyViewsChart $areaChart, TopProjectsChart $barChart)
     {
         $currentUser = auth()->user();
-        return view('dashboard', compact('currentUser'));
+        return view('dashboard', compact('currentUser'), [
+            'areaChart' => $areaChart->build(),
+            'barChart' => $barChart->build(),
+            ]);
     }
 
     public function profile ()
