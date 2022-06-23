@@ -18,8 +18,6 @@ class MonthlyViewsChart
     {
         $totalViews = auth()->user();
 
-
-
         return $this->chart->areaChart()
             ->setTitle('Monthly Views')
             ->addData('Most Views', [0, $totalViews->total_views])
