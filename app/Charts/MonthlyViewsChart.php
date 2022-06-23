@@ -16,10 +16,14 @@ class MonthlyViewsChart
 
     public function build(): AreaChart
     {
+        $totalViews = auth()->user();
+
+
+
         return $this->chart->areaChart()
             ->setTitle('Monthly Views')
-            ->addData('Most Views', [70, 29, 77, 28, 55, 45])
-            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June'])
+            ->addData('Most Views', [0, $totalViews->total_views])
+            ->setXAxis([$totalViews->created_at->format('F'), $totalViews->updated_at->format('F')])
             ->setHeight('300')
             ->setGrid(false, '#B18EC3', 0.05)
             ->setColors(['#B18EC3'])

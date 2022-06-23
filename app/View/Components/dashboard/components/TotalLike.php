@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 
 class TotalLike extends Component
 {
-    public int $totalLikes = 0;
+    public $totalLikes;
 
     /**
      * Create a new component instance.

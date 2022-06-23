@@ -16,10 +16,15 @@ class TopProjectsChart
 
     public function build(): BarChart
     {
+        $topProjects = auth()->user()
+            ->projects->where('public', 1)
+            ->sortByDesc('total_likes')
+            ->take(3);
+
         return $this->chart->barChart()
-            ->setTitle('Top Five Projects')
-            ->addData('Most Liked', [6, 9, 3, 4, 10])
-            ->setXAxis(['January', 'February', 'March', 'April', 'May'])
+            ->setTitle('Most Popular Projects')
+            ->addData('Total', $topProjects->pluck('total_likes')->toArray())
+            ->setXAxis($topProjects->pluck('title')->toArray())
             ->setColors(['#815ED7'])
             ->setFontFamily('Lato')
             ->setFontColor('#1C0681')
