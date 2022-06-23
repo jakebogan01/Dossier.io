@@ -23,6 +23,8 @@ return new class extends Migration
                 ->nullable();
             $table->boolean('public')
                 ->default(0);
+            $table->integer('total_likes')
+                ->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

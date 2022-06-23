@@ -14,6 +14,7 @@
         <!-- Styles -->
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="/images/icons/light-icon.svg" id="faviconTag">
+        @livewireStyles
         <!-- Scripts -->
         <script>
             const faviconTag = document.getElementById("faviconTag");
@@ -47,5 +48,6 @@
     </head>
     <body class="antialiased bg-[#0F1119] h-full">
         {{ $slot }}
+        @livewireScripts
     </body>
 </html>

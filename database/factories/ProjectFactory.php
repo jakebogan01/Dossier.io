@@ -32,6 +32,7 @@ class ProjectFactory extends Factory
                 'github' => $this->faker->url(),
             ],
             'public' => $this->faker->boolean(50),
+            'total_likes' => $this->faker->randomNumber(),
         ];
     }
 }
