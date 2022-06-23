@@ -84,12 +84,10 @@
                     role="listbox"
                     aria-labelledby="carousel-content-label"
                     class="flex w-full overflow-x-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
-
                     @foreach($user->projects as $project)
                         @if($project->public)
                             {{-- project --}}
                             <x-themes.blocks.components.project-item :project="$project"></x-themes.blocks.components.project-item>
-                            @break
                         @endif
                     @endforeach
                 </ul>
