@@ -37,15 +37,14 @@
             <div class="h-full flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                 <div class="flex items-center bg-[#57178D] rounded-md p-3.5 mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z" />
-                        <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z" />
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
                 </div>
                 <div>
                     <dt class="text-sm font-medium text-gray-500 truncate">
-                        Your Portfolio
+                        Portfolio Link
                     </dt>
-                    <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <dd class="flex mt-1 text-3xl font-semibold text-gray-900">
                         <x-dashboard.components.portfolio-link></x-dashboard.components.portfolio-link>
                     </dd>
                 </div>

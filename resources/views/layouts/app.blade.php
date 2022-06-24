@@ -26,9 +26,34 @@
             isDark.addListener((e) => changeFavicon());
             changeFavicon();
         </script>
+        <!-- Source -->
+        <script>
+            document.addEventListener('alpine:init', () => {
+                // Magic: $tooltip
+                Alpine.magic('tooltip', el => message => {
+                    let instance = tippy(el, {
+                        content: message,
+                        trigger: 'manual',
+                        placement: 'right',
+                        arrow: true,
+                        animation: 'fade',
+                    })
+
+                    instance.show()
+
+                    setTimeout(() => {
+                        instance.hide()
+
+                        setTimeout(() => instance.destroy(), 150)
+                    }, 1000)
+                })
+            })
+        </script>
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier.io Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="{{ @asset('vendor/larapex-charts/apexcharts.js') }}" defer></script>
+        <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+        <script src="https://unpkg.com/tippy.js@6" defer></script>
         <style>
             *, *::before, *::after{
                 scrollbar-width: none;
