@@ -339,7 +339,7 @@
                 <div class="flex justify-end min-h-[71px] pr-10">
                     @livewire('navigation-menu')
                 </div>
-                <div class="flex-1 rounded-tl-3xl overflow-hidden bg-[#F3F4F6] shadow-[inset_0_0_0.3125rem_rgb(0,0,0)]">
+                <div class="flex-1 rounded-tl-3xl overflow-hidden bg-[#EEEEEE] shadow-[inset_0_0_0.3125rem_rgb(0,0,0)]">
                     <main class="h-full overflow-x-hidden overflow-y-auto">
                         {{ $slot }}
                     </main>

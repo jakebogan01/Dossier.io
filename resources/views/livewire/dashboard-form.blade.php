@@ -65,24 +65,20 @@
     </x-dashboard.components.edit>
 
     @if(count($currentUser->projects) >= 1)
-{{--        <div>--}}
-{{--            <h2 class="mx-auto mt-8 pb-5 text-lg leading-6 font-medium text-gray-900">--}}
-{{--                All Projects--}}
-{{--            </h2>--}}
-            <div class="mx-auto mt-6">
-                <div class="flex flex-col mt-2">
-                    <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
-                        <table class="min-w-full divide-y divide-gray-300">
-                            <thead class="bg-gray-50">
-                            <tr>
-                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Title</th>
-                                <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
-                                <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Status</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
-                                <th scope="col" class="pl-3 pr-4 sm:pr-6 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th>
-                            </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200 bg-white">
+        <div class="mx-auto mt-6">
+            <div class="flex flex-col mt-2">
+                <div class="relative align-middle min-w-full overflow-x-auto overflow-hidden sm:rounded-lg shadow-md sm:hover:shadow-sm sm:transition-all duration-300 ease-linear">
+                    <table class="min-w-full divide-y divide-gray-300">
+                        <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Title</th>
+                            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
+                            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Status</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
+                            <th scope="col" class="pl-3 pr-4 sm:pr-6 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
                             @foreach($currentUser->projects as $project)
                                 <tr class="hover:bg-gray-50 transition-colors group">
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 border-l-2 border-transparent group-hover:border-[#6B158C7F] transition-colors">
@@ -115,44 +111,43 @@
                                     </td>
                                 </tr>
                             @endforeach
-                            </tbody>
-                        </table>
-                        <nav
-                            class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
-                            aria-label="Pagination">
-                            <div class="hidden sm:block">
-                                <p class="text-sm text-gray-700">
-                                    Showing
-                                    <span class="font-medium">
-                                            1
-                                        </span>
-                                    to
-                                    <span class="font-medium">
-                                            10
-                                        </span>
-                                    of
-                                    <span class="font-medium">
-                                            20
-                                        </span>
-                                    results
-                                </p>
-                            </div>
-                            <div class="flex-1 flex justify-between sm:justify-end">
-                                <a
-                                    href="#"
-                                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
-                                    Previous
-                                </a>
-                                <a
-                                    href="#"
-                                    class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
-                                    Next
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
+                        </tbody>
+                    </table>
+                    <nav
+                        class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
+                        aria-label="Pagination">
+                        <div class="hidden sm:block">
+                            <p class="text-sm text-gray-700">
+                                Showing
+                                <span class="font-medium">
+                                        1
+                                    </span>
+                                to
+                                <span class="font-medium">
+                                        10
+                                    </span>
+                                of
+                                <span class="font-medium">
+                                        20
+                                    </span>
+                                results
+                            </p>
+                        </div>
+                        <div class="flex-1 flex justify-between sm:justify-end">
+                            <a
+                                href="#"
+                                class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
+                                Previous
+                            </a>
+                            <a
+                                href="#"
+                                class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white sm:hover:bg-gray-50">
+                                Next
+                            </a>
+                        </div>
+                    </nav>
                 </div>
             </div>
-{{--        </div>--}}
+        </div>
     @endif
 </form>

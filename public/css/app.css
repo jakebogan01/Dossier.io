@@ -1446,11 +1446,11 @@ select {
 .h-3 {
   height: 0.75rem;
 }
-.h-3\.5 {
-  height: 0.875rem;
-}
 .h-7 {
   height: 1.75rem;
+}
+.h-3\.5 {
+  height: 0.875rem;
 }
 .max-h-\[550px\] {
   max-height: 550px;
@@ -1572,11 +1572,11 @@ select {
 .w-3 {
   width: 0.75rem;
 }
-.w-3\.5 {
-  width: 0.875rem;
-}
 .w-7 {
   width: 1.75rem;
+}
+.w-3\.5 {
+  width: 0.875rem;
 }
 .min-w-0 {
   min-width: 0px;
@@ -2281,6 +2281,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(87 23 141 / var(--tw-bg-opacity));
 }
+.bg-\[\#EEEEEE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2363,11 +2367,11 @@ select {
 .p-1 {
   padding: 0.25rem;
 }
-.p-3 {
-  padding: 0.75rem;
-}
 .p-3\.5 {
   padding: 0.875rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -2596,9 +2600,6 @@ select {
 }
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-.pl-2 {
-  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -2863,6 +2864,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(150 80 217 / var(--tw-text-opacity));
 }
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -2878,14 +2883,6 @@ select {
 .text-\[\#1C0681\] {
   --tw-text-opacity: 1;
   color: rgb(28 6 129 / var(--tw-text-opacity));
-}
-.text-blue-200 {
-  --tw-text-opacity: 1;
-  color: rgb(191 219 254 / var(--tw-text-opacity));
-}
-.text-blue-400 {
-  --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -3221,6 +3218,14 @@ select {
 .hover\:text-indigo-400:hover {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
+}
+.hover\:text-blue-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.hover\:text-blue-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
 }
 .hover\:opacity-75:hover {
   opacity: 0.75;
