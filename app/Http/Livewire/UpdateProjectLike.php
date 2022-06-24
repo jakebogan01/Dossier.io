@@ -29,7 +29,7 @@ class UpdateProjectLike extends Component
     {
         $project = $this->project->find($id);
 
-        if ($this->count >= 1) {
+        if ($this->count >= 1 || auth()->user()) {
             return false;
         } else {
             $project->increment('total_likes');

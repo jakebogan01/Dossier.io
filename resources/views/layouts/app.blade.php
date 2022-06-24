@@ -15,6 +15,8 @@
         <link rel="shortcut icon" type="image/x-icon" href="/images/icons/light-icon.svg" id="faviconTag">
         @livewireStyles
         <!-- Scripts -->
+        <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+        <script src="https://unpkg.com/tippy.js@6" defer></script>
         <script>
             const faviconTag = document.getElementById("faviconTag");
             const isDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -52,8 +54,6 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier.io Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="{{ @asset('vendor/larapex-charts/apexcharts.js') }}" defer></script>
-        <script src="https://unpkg.com/@popperjs/core@2" defer></script>
-        <script src="https://unpkg.com/tippy.js@6" defer></script>
         <style>
             *, *::before, *::after{
                 scrollbar-width: none;
