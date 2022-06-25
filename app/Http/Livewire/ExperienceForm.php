@@ -13,6 +13,7 @@ class ExperienceForm extends Component
 {
     public $experiences;
     public $title, $date, $item, $description, $updateDate, $updateTitle, $updateDescription;
+    public bool $toggleWarning = false;
     public $inputs = [];
     public $i = 0;
 
@@ -65,10 +66,7 @@ class ExperienceForm extends Component
         $this->description = '';
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function store(): Redirector|Application|RedirectResponse
+    public function store()
     {
         $validatedDate = $this->validate([
             'title.0' => 'required|min:4',
@@ -100,22 +98,20 @@ class ExperienceForm extends Component
 
         $this->resetInputFields(); //resets all wire:model variables
 
-        session()->flash('message', 'Your experiences has been updated.');
+        $this->toggleWarning = true;
 
-        return redirect()->route('experiences');
+        $this->mount();
+        $this->render();
     }
 
-    /**
-     * @param $id
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function delete($id): Redirector|Application|RedirectResponse
+    public function delete($id)
     {
         $this->experiences->find($id)->delete();
 
-        session()->flash('message', 'Your experience has been deleted.');
+        $this->toggleWarning = true;
 
-        return redirect()->route('experiences');
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -137,7 +133,10 @@ class ExperienceForm extends Component
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
         ]);
-        
-        session()->flash('message', 'Your experience has been updated.');
+
+        $this->toggleWarning = true;
+
+        $this->mount();
+        $this->render();
     }
 }
