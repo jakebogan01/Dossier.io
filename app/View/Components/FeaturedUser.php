@@ -19,12 +19,16 @@ class FeaturedUser extends Component
      */
     public function __construct()
     {
-        $this->users = $users = User::whereRelation('profile', 'portfolio_name', '!=', null)
+        $this->users = User::whereRelation('profile', 'portfolio_name', '!=', null)
             ->whereRelation('profile', 'settings->public', 'true')
             ->pluck('name');
 
-        if (!$users->isEmpty()) {
-            $this->featuredUsers = $users->random(4);
+        if (!$this->users->isEmpty()) {
+            $this->featuredUsers = $this->users->take(4);
+        }
+
+        if ($this->users->count() >= 4) {
+            $this->featuredUsers = $this->users->random(4);
         }
     }
 
