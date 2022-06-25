@@ -7,6 +7,7 @@ use Livewire\Component;
 class DashboardForm extends Component
 {
     public $currentUser, $item, $updateCode, $updateGithub, $updateTitle, $updateDescription;
+    public bool $toggleWarning = false;
 
     public function mount($currentUser)
     {
@@ -18,7 +19,7 @@ class DashboardForm extends Component
         return view('livewire.dashboard-form');
     }
 
-    public function edit($id)
+    public function editProject($id)
     {
         $this->item = $id;
         $this->updateTitle = $this->currentUser->projects->find($id)->title;
@@ -38,8 +39,6 @@ class DashboardForm extends Component
             ],
         ]);
 
-        session()->flash('message', 'Your project has been updated.');
-
-        return redirect()->route('dashboard');
+        $this->toggleWarning = true;
     }
 }

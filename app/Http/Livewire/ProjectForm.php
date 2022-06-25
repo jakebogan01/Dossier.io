@@ -15,6 +15,7 @@ class ProjectForm extends Component
     public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
     public $github = '';
     public $code = '';
+    public bool $toggleWarning = false;
     public $inputs = [];
     public $i = 0;
 
@@ -65,10 +66,7 @@ class ProjectForm extends Component
         $this->description = '';
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function store() :Redirector|Application|RedirectResponse
+    public function store()
     {
         $validatedDate = $this->validate([
             'title.0' => 'required|min:4',
@@ -100,22 +98,18 @@ class ProjectForm extends Component
 
         $this->resetInputFields(); //resets all wire:model variables
 
-        session()->flash('message', 'Your projects has been updated.');
+        $this->toggleWarning = true;
 
-        return redirect()->route('projects');
+        $this->mount();
+        $this->render();
     }
 
-    /**
-     * @param $id
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function delete($id): Redirector|Application|RedirectResponse
+    public function delete($id)
     {
         $this->projects->find($id)->delete();
-
-        session()->flash('message', 'Your project has been deleted.');
-
-        return redirect()->route('projects');
+        $this->toggleWarning = true;
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -141,5 +135,8 @@ class ProjectForm extends Component
                 'github' => $this->updateGithub,
             ],
         ]);
+        $this->toggleWarning = true;
+        $this->mount();
+        $this->render();
     }
 }
