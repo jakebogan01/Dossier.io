@@ -12,6 +12,7 @@ use Livewire\Component;
 class ProfileForm extends Component
 {
     public $currentUser;
+    public bool $toggleWarning = false;
     public string $portfolio_name = 'Jake';
     public string $portfolio_email = 'Jake@gmail.com';
     public int $total_clients = 0;
@@ -44,10 +45,7 @@ class ProfileForm extends Component
         $this->track_likes =  $currentUser->settings['track_likes'];
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function register() :Redirector|Application|RedirectResponse
+    public function register()
     {
         $this->validate();
 
@@ -64,9 +62,9 @@ class ProfileForm extends Component
             ]
         ]);
 
-        session()->flash('message', 'Your profile has been updated.');
+        $this->toggleWarning = true;
 
-        return redirect()->route('profile');
+        $this->currentUser->refresh();
     }
 
     /**

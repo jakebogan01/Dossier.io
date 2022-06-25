@@ -14,6 +14,7 @@ class SkillForm extends Component
 {
     public $skills;
     public $currentUser;
+    public bool $toggleWarning = false;
     public string $introduction = 'Description test';
     public string $fact_one = '';
     public string $fact_two = '';
@@ -49,10 +50,7 @@ class SkillForm extends Component
         $this->currentUser = $currentUser;
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function register() :Redirector|Application|RedirectResponse
+    public function register()
     {
         $this->validate();
 
@@ -62,9 +60,9 @@ class SkillForm extends Component
             $this->updateSkills('create');
         }
 
-        session()->flash('message', 'Your skills has been updated.');
+        $this->toggleWarning = true;
 
-        return redirect()->route('skills');
+        $this->currentUser->refresh();
     }
 
     public function updateSkills($action)

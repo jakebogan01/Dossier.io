@@ -12,6 +12,7 @@ use Livewire\Component;
 class ContactForm extends Component
 {
     public $currentUser;
+    public bool $toggleWarning = false;
     public string $conclusion = 'Conclusion test';
     public string $phone = 'phone';
     public string $instagram = '';
@@ -42,10 +43,7 @@ class ContactForm extends Component
         $this->currentUser = $currentUser;
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function register() :Redirector|Application|RedirectResponse
+    public function register()
     {
         $this->validate();
 
@@ -55,9 +53,8 @@ class ContactForm extends Component
             $this->updateContact('create');
         }
 
-        session()->flash('message', 'Your contacts has been updated.');
-
-        return redirect()->route('contact');
+        $this->toggleWarning = true;
+        $this->currentUser->refresh();
     }
 
     public function updateContact($action)
