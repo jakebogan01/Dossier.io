@@ -55,6 +55,9 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="{{ @asset('vendor/larapex-charts/apexcharts.js') }}" defer></script>
         <style>
+            [x-cloak] {
+                display: none !important;
+            }
             *, *::before, *::after{
                 scrollbar-width: none;
                 scrollbar-width: 0;

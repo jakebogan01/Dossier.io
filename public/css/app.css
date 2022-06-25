@@ -2461,10 +2461,6 @@ select {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -2864,9 +2860,8 @@ select {
   --tw-text-opacity: 1;
   color: rgb(150 80 217 / var(--tw-text-opacity));
 }
-.text-blue-400 {
-  --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
+.text-\[\#3531B87F\] {
+  color: #3531B87F;
 }
 .text-\[\#6F7490\] {
   --tw-text-opacity: 1;
@@ -2879,21 +2874,6 @@ select {
 .text-\[\#1C0681\] {
   --tw-text-opacity: 1;
   color: rgb(28 6 129 / var(--tw-text-opacity));
-}
-.text-blue-300 {
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
-}
-.text-\[\#240783\] {
-  --tw-text-opacity: 1;
-  color: rgb(36 7 131 / var(--tw-text-opacity));
-}
-.text-\[\#3531B8\] {
-  --tw-text-opacity: 1;
-  color: rgb(53 49 184 / var(--tw-text-opacity));
-}
-.text-\[\#3531B87F\] {
-  color: #3531B87F;
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -3162,19 +3142,9 @@ select {
 .focus-within\:ring-offset-2:focus-within {
   --tw-ring-offset-width: 2px;
 }
-.hover\:scale-95:hover {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .hover\:scale-75:hover {
   --tw-scale-x: .75;
   --tw-scale-y: .75;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.hover\:scale-90:hover {
-  --tw-scale-x: .9;
-  --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:border-gray-300:hover {
@@ -3244,10 +3214,6 @@ select {
 .hover\:text-indigo-400:hover {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
-}
-.hover\:text-blue-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#3531B8\]:hover {
   --tw-text-opacity: 1;

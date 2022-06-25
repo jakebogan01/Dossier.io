@@ -32,6 +32,9 @@
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
         <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
         <style>
+            [x-cloak] {
+                display: none !important;
+            }
             *, *::before, *::after{
                 scrollbar-width: none;
                 scrollbar-width: 0;
