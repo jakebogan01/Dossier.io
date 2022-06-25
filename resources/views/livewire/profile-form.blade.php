@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                             <div>
-                                                <p class="text-sm text-gray-500">Updated your <a href="#" class="font-medium text-gray-900">Profile Settings</a></p>
+                                                <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Profile Settings</a> Updated</p>
                                             </div>
                                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
                                                 <time datetime="2020-09-20">Sep 20</time>
@@ -233,7 +233,7 @@
                                         </div>
                                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                             <div>
-                                                <p class="text-sm text-gray-500">Updated your <a href="#" class="font-medium text-gray-900">Contact Settings</a></p>
+                                                <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Contact Settings</a> Updated</p>
                                             </div>
                                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
                                                 <time datetime="2020-09-22">Sep 22</time>
@@ -257,7 +257,7 @@
                                         </div>
                                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                             <div>
-                                                <p class="text-sm text-gray-500">Updated your <a href="#" class="font-medium text-gray-900">Contact Settings</a></p>
+                                                <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Contact Settings</a> Updated</p>
                                             </div>
                                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
                                                 <time datetime="2020-09-28">Sep 28</time>
@@ -281,7 +281,7 @@
                                         </div>
                                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                             <div>
-                                                <p class="text-sm text-gray-500">Updated your <a href="#" class="font-medium text-gray-900">Experience Settings</a></p>
+                                                <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Experience Settings</a> Updated</p>
                                             </div>
                                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
                                                 <time datetime="2020-09-30">Sep 30</time>
@@ -304,7 +304,7 @@
                                         </div>
                                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                             <div>
-                                                <p class="text-sm text-gray-500">Updated your <a href="#" class="font-medium text-gray-900">Profile Settings</a></p>
+                                                <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Profile Settings</a> Updated</p>
                                             </div>
                                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
                                                 <time datetime="2020-10-04">Oct 4</time>
@@ -316,11 +316,14 @@
                         </ul>
                     </div>
                     <div class="mt-6 flex flex-col justify-stretch">
-                        <button type="button" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">See all</button>
+                        <button type="button" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                            See more
+                        </button>
                     </div>
                 </div>
             </section>
         </div>
+
     </div>
 </form>
 </div>
