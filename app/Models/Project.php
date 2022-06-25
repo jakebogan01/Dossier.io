@@ -27,6 +27,7 @@ class Project extends Model
         'title',
         'description',
         'links',
+        'public',
     ];
 
     /**

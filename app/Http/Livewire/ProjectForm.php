@@ -16,6 +16,7 @@ class ProjectForm extends Component
     public $github = '';
     public $code = '';
     public bool $toggleWarning = false;
+    public bool $make_public;
     public $inputs = [];
     public $i = 0;
 
@@ -123,6 +124,7 @@ class ProjectForm extends Component
         $this->updateDescription = $this->projects->find($id)->description;
         $this->updateCode = $this->projects->find($id)->links['code'];
         $this->updateGithub = $this->projects->find($id)->links['github'];
+        $this->make_public = $this->projects->find($id)->public;
     }
 
     public function updateData($id)
@@ -134,6 +136,7 @@ class ProjectForm extends Component
                 'code' => $this->updateCode,
                 'github' => $this->updateGithub,
             ],
+            'public' => $this->make_public,
         ]);
         $this->toggleWarning = true;
         $this->mount();
