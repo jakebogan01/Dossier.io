@@ -13,6 +13,7 @@ class TestimonialForm extends Component
 {
     public $testimonials;
     public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription;
+    public bool $toggleWarning = false;
     public $inputs = [];
     public $i = 0;
 
@@ -64,10 +65,7 @@ class TestimonialForm extends Component
         $this->job_position = '';
     }
 
-    /**
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function store() :Redirector|Application|RedirectResponse
+    public function store()
     {
         $validatedDate = $this->validate([
             'title.0' => 'required|min:4',
@@ -102,23 +100,20 @@ class TestimonialForm extends Component
         $this->inputs = []; //resets input array
 
         $this->resetInputFields(); //resets all wire:model variables
+        $this->toggleWarning = true;
 
-        session()->flash('message', 'Your testimonials has been updated.');
+        $this->mount();
+        $this->render();
 
-        return redirect()->route('testimonials');
     }
 
-    /**
-     * @param $id
-     * @return Redirector|Application|RedirectResponse
-     */
-    public function delete($id): Redirector|Application|RedirectResponse
+    public function delete($id)
     {
         $this->testimonials->find($id)->delete();
+        $this->toggleWarning = true;
 
-        session()->flash('message', 'Your testimonial has been deleted.');
-
-        return redirect()->route('testimonials');
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -147,6 +142,9 @@ class TestimonialForm extends Component
             ],
         ]);
 
-        session()->flash('message', 'Your testimonial has been updated.');
+        $this->toggleWarning = true;
+
+        $this->mount();
+        $this->render();
     }
 }
