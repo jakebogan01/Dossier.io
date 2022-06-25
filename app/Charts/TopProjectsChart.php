@@ -2,8 +2,9 @@
 
 namespace App\Charts;
 
-use ArielMejiaDev\LarapexCharts\BarChart;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
+use ArielMejiaDev\LarapexCharts\PieChart;
+use Carbon\Carbon;
 
 class TopProjectsChart
 {
@@ -14,22 +15,22 @@ class TopProjectsChart
         $this->chart = $chart;
     }
 
-    public function build(): BarChart
+    public function build(): PieChart
     {
         $topProjects = auth()->user()
             ->projects->where('public', 1)
             ->sortByDesc('total_likes')
             ->take(3);
 
-        return $this->chart->barChart()
+        return $this->chart->pieChart()
             ->setTitle('Most Popular Projects')
-            ->addData('Total', $topProjects->pluck('total_likes')->toArray())
-            ->setXAxis($topProjects->pluck('title')->toArray())
-            ->setColors(['#815ED7'])
+            ->setSubtitle(Carbon::now()->format('F, Y'))
+            ->addData($topProjects->pluck('total_likes')->toArray())
+            ->setLabels($topProjects->pluck('title')->toArray())
+            ->setColors(['#815ED7', '#a95ed7', '#6a5ed7'])
+            ->setHeight('350')
             ->setFontFamily('Lato')
             ->setFontColor('#1C0681')
-            ->setHeight('350')
-            ->setDataLabels(true)
-            ->setGrid();
+            ->setDataLabels(true);
     }
 }

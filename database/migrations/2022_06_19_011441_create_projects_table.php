@@ -22,7 +22,7 @@ return new class extends Migration
             $table->json('links')
                 ->nullable();
             $table->boolean('public')
-                ->nullable();
+                ->default(1);
             $table->integer('total_likes')
                 ->default(0);
             $table->timestamps();

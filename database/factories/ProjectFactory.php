@@ -31,7 +31,7 @@ class ProjectFactory extends Factory
                 'code' => $this->faker->url(),
                 'github' => $this->faker->url(),
             ],
-            'public' => $this->faker->boolean(50),
+            'public' => 1,
             'total_likes' => $this->faker->numberBetween(0, 300),
         ];
     }
