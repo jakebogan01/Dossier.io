@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->string('updated')
+            $table->string('section')
                 ->nullable();
-            $table->string('type_updated')
+            $table->string('action')
                 ->nullable();
             $table->timestamps();
         });

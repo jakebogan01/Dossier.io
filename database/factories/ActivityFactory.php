@@ -25,8 +25,8 @@ class ActivityFactory extends Factory
     public function definition()
     {
         return [
-            'updated' => 'Profile',
-            'type_updated' => 'Profile Updated',
+            'section' => 'Profile',
+            'action' => 'updated',
         ];
     }
 }

@@ -23,8 +23,8 @@ class Activity extends Model
      * @var string[]
      */
     protected $fillable = [
-        'updated',
-        'type_updated',
+        'section',
+        'action',
     ];
 
     /**

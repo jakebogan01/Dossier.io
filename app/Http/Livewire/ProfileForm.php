@@ -54,11 +54,11 @@ class ProfileForm extends Component
         $this->mount($this->currentUser);
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action,
         ]);
 
         $this->mount($this->currentUser);
@@ -83,7 +83,7 @@ class ProfileForm extends Component
 
         $this->toggleWarning = true;
 
-        $this->updateActivity('Profile');
+        $this->updateActivity('Profile', 'updated');
 
         $this->currentUser->refresh();
     }

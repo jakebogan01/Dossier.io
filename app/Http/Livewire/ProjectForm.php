@@ -34,11 +34,11 @@ class ProjectForm extends Component
         $this->render();
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action,
         ]);
 
         $this->mount();
@@ -121,6 +121,8 @@ class ProjectForm extends Component
 
         $this->toggleWarning = true;
 
+        $this->updateActivity('Projects', 'created');
+
         $this->mount();
         $this->render();
     }
@@ -129,6 +131,7 @@ class ProjectForm extends Component
     {
         $this->projects->find($id)->delete();
         $this->toggleWarning = true;
+        $this->updateActivity('Projects', 'deleted');
         $this->mount();
         $this->render();
     }
@@ -160,7 +163,7 @@ class ProjectForm extends Component
         ]);
         $this->toggleWarning = true;
 
-        $this->updateActivity('Project');
+        $this->updateActivity('Projects', 'updated');
 
         $this->mount();
         $this->render();

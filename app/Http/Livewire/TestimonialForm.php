@@ -31,11 +31,11 @@ class TestimonialForm extends Component
         $this->render();
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action,
         ]);
 
         $this->mount();
@@ -121,6 +121,7 @@ class TestimonialForm extends Component
 
         $this->resetInputFields(); //resets all wire:model variables
         $this->toggleWarning = true;
+        $this->updateActivity('Testimonials', 'created');
 
         $this->mount();
         $this->render();
@@ -131,7 +132,7 @@ class TestimonialForm extends Component
     {
         $this->testimonials->find($id)->delete();
         $this->toggleWarning = true;
-
+        $this->updateActivity('Testimonials', 'deleted');
         $this->mount();
         $this->render();
     }
@@ -164,7 +165,7 @@ class TestimonialForm extends Component
 
         $this->toggleWarning = true;
 
-        $this->updateActivity('Testimonial');
+        $this->updateActivity('Testimonials', 'updated');
 
         $this->mount();
         $this->render();

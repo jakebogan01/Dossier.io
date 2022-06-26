@@ -51,11 +51,11 @@ class ContactForm extends Component
         $this->mount($this->currentUser);
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action . 'd',
         ]);
 
         $this->mount($this->currentUser);
@@ -72,12 +72,14 @@ class ContactForm extends Component
         }
 
         $this->toggleWarning = true;
-        $this->updateActivity('Contact');
+
         $this->currentUser->refresh();
     }
 
     public function updateContact($action)
     {
+        $this->updateActivity('Contact', $action);
+
         return auth()->user()->contact()->$action([
             'conclusion' => $this->conclusion,
             'phone' => $this->phone,

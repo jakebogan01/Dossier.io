@@ -34,11 +34,11 @@ class ExperienceForm extends Component
         $this->render();
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action,
         ]);
 
         $this->mount();
@@ -120,6 +120,8 @@ class ExperienceForm extends Component
 
         $this->toggleWarning = true;
 
+        $this->updateActivity('Experiences', 'created');
+
         $this->mount();
         $this->render();
     }
@@ -129,6 +131,8 @@ class ExperienceForm extends Component
         $this->experiences->find($id)->delete();
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Experiences', 'deleted');
 
         $this->mount();
         $this->render();
@@ -156,7 +160,7 @@ class ExperienceForm extends Component
 
         $this->toggleWarning = true;
 
-        $this->updateActivity('Experience');
+        $this->updateActivity('Experiences', 'updated');
 
         $this->mount();
         $this->render();

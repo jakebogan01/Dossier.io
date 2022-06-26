@@ -59,11 +59,11 @@ class SkillForm extends Component
         $this->mount($this->currentUser);
     }
 
-    public function updateActivity($updated)
+    public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
-            'updated' => $updated,
-            'type_updated' => $updated . 'Updated ',
+            'section' => $section,
+            'action' => $action . 'd ',
         ]);
 
         $this->mount($this->currentUser);
@@ -81,13 +81,13 @@ class SkillForm extends Component
 
         $this->toggleWarning = true;
 
-        $this->updateActivity('Skill');
-
         $this->currentUser->refresh();
     }
 
     public function updateSkills($action)
     {
+        $this->updateActivity('Skills', $action);
+
         return auth()->user()->skill()->$action([
             'introduction' => $this->introduction,
             'facts' => [
