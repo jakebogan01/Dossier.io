@@ -2,11 +2,8 @@
 
 @if(count($activities) >= 1)
     @foreach($activities as $key => $activity)
-        @if($key >= 5)
-            @break
-        @endif
         <li>
-            <div class="relative {{ ($key === 4) ? 'pb-0' : 'pb-8' }}">
+            <div class="relative {{ ($loop->last) ? 'pb-0' : 'pb-8' }}">
                 @if(!$loop->last)
                     <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                 @endif

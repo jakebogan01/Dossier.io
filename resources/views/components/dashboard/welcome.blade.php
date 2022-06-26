@@ -61,7 +61,7 @@
             </p>
             <div class="flex items-center w-full">
                 <ul role="list" class="w-full">
-                    <x-dashboard.components.dashboard-activity :activities="$currentUser->activities"></x-dashboard.components.dashboard-activity>
+                    <x-dashboard.components.dashboard-activity :activities="$currentUser->activities->sortByDesc('id')->take(5)"></x-dashboard.components.dashboard-activity>
                 </ul>
             </div>
         </div>
