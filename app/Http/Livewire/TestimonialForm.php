@@ -16,10 +16,30 @@ class TestimonialForm extends Component
     public bool $toggleWarning = false;
     public $inputs = [];
     public $i = 0;
+    public int $numOfActivities = 5;
 
     public function mount()
     {
         $this->testimonials = auth()->user()->testimonials;
+        $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function showMoreActivities($num)
+    {
+        $this->numOfActivities = $num;
+        $this->mount();
+        $this->render();
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -143,6 +163,8 @@ class TestimonialForm extends Component
         ]);
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Testimonial');
 
         $this->mount();
         $this->render();

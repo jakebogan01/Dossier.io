@@ -16,6 +16,7 @@ class ExperienceForm extends Component
     public bool $toggleWarning = false;
     public $inputs = [];
     public $i = 0;
+    public int $numOfActivities = 5;
 
     /**
      * @return void
@@ -23,6 +24,25 @@ class ExperienceForm extends Component
     public function mount()
     {
         $this->experiences = auth()->user()->experiences;
+        $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function showMoreActivities($num)
+    {
+        $this->numOfActivities = $num;
+        $this->mount();
+        $this->render();
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -135,6 +155,8 @@ class ExperienceForm extends Component
         ]);
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Experience');
 
         $this->mount();
         $this->render();

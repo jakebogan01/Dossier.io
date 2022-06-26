@@ -20,6 +20,7 @@ class ContactForm extends Component
     public string $github = '';
     public string $linkedin = '';
     public string $dribbble = '';
+    public int $numOfActivities = 5;
 
     /**
      * @var array|string[]
@@ -41,6 +42,23 @@ class ContactForm extends Component
     public function mount($currentUser)
     {
         $this->currentUser = $currentUser;
+        $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function showMoreActivities($num)
+    {
+        $this->numOfActivities = $num;
+        $this->mount($this->currentUser);
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount($this->currentUser);
     }
 
     public function register()
@@ -54,6 +72,7 @@ class ContactForm extends Component
         }
 
         $this->toggleWarning = true;
+        $this->updateActivity('Contact');
         $this->currentUser->refresh();
     }
 

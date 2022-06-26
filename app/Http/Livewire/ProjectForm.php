@@ -19,10 +19,30 @@ class ProjectForm extends Component
     public bool $make_public;
     public $inputs = [];
     public $i = 0;
+    public int $numOfActivities = 5;
 
     public function mount()
     {
         $this->projects = auth()->user()->projects;
+        $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function showMoreActivities($num)
+    {
+        $this->numOfActivities = $num;
+        $this->mount();
+        $this->render();
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount();
+        $this->render();
     }
 
     /**
@@ -139,6 +159,9 @@ class ProjectForm extends Component
             'public' => $this->make_public,
         ]);
         $this->toggleWarning = true;
+
+        $this->updateActivity('Project');
+
         $this->mount();
         $this->render();
     }
