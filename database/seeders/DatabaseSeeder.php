@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Activity;
 use App\Models\Contact;
 use App\Models\Experience;
 use App\Models\Project;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         User::factory()
             ->hasAttached(Experience::factory()->count(10)->create())
             ->hasAttached(Project::factory()->count(6)->create())
+            ->hasAttached(Activity::factory()->count(3)->create())
             ->hasAttached(Testimonial::factory()->count(4)->create())
             ->create([
                 'name' => 'test',

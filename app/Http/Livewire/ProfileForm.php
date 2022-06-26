@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Activity;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -21,6 +22,7 @@ class ProfileForm extends Component
     public bool $dark_mode;
     public bool $track_views;
     public bool $track_likes;
+    public $activities;
 
     /**
      * @var array|string[]
@@ -43,6 +45,17 @@ class ProfileForm extends Component
         $this->dark_mode =  $currentUser->settings['dark_mode'];
         $this->track_views =  $currentUser->settings['track_views'];
         $this->track_likes =  $currentUser->settings['track_likes'];
+        $this->activities =  auth()->user()->activities;
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount($this->currentUser);
     }
 
     public function register()
@@ -63,6 +76,8 @@ class ProfileForm extends Component
         ]);
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Profile');
 
         $this->currentUser->refresh();
     }

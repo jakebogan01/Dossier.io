@@ -99,6 +99,14 @@ class User extends Authenticatable
     /**
      * @return BelongsToMany
      */
+    public function activities(): BelongsToMany
+    {
+        return $this->belongsToMany(Activity::class, 'activity_user', 'user_id', 'activity_id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
     public function testimonials(): BelongsToMany
     {
         return $this->belongsToMany(Testimonial::class, 'testimonial_user', 'user_id', 'testimonial_id');
