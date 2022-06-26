@@ -163,6 +163,7 @@ class User extends Authenticatable
                 'portfolio_email' => null,
                 'total_clients' => 0,
                 'total_tools' => 0,
+                'aware' => 0,
                 'settings' => [
                     'public' => false,
                     'dark_mode' => true,

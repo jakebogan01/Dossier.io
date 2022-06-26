@@ -29,6 +29,8 @@ return new class extends Migration
                 ->nullable();
             $table->integer('total_tools')
                 ->nullable();
+            $table->boolean('aware')
+                ->default(0);
             $table->json('settings')
                 ->nullable();
             $table->timestamps();

@@ -33,6 +33,7 @@ class ProfileFactory extends Factory
             'portfolio_email' => $this->faker->unique()->safeEmail(),
             'total_clients' => $this->faker->randomDigit(),
             'total_tools' => $this->faker->randomDigit(),
+            'aware' => $this->faker->boolean(50),
             'settings' => [
                 'public' => (int) $this->faker->boolean(50),
                 'dark_mode' => (int) $this->faker->boolean(50),
