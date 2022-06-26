@@ -21,7 +21,7 @@
                                 <span class="text-sm text-gray-500"><span class="font-medium text-gray-900">{{ $activity->section }}</span> {{ $activity->action }}</span>
                             </div>
                             <div class="text-right text-sm whitespace-nowrap text-gray-500 pr-1">
-                                <time datetime="2020-09-20">{{ $activity->serializeDate(now()) }}</time>
+                                <time datetime="2020-09-20">{{ $activity->serializeDate($activity->created_at) }}</time>
                             </div>
                         </div>
                     </div>
