@@ -51,13 +51,24 @@
             </div>
         </div>
 
+        <div class="bg-white rounded-lg p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+            <p class="text-[#19077C] font-bold text-sm mb-4" style="font-family: Lato; opacity: 1;">
+                Recent Activity
+            </p>
+            <div class="flex items-center w-full">
+                <ul role="list" class="w-full">
+                    <x-dashboard.components.dashboard-activity :activities="$currentUser->activities"></x-dashboard.components.dashboard-activity>
+                </ul>
+            </div>
+        </div>
+
         <div class="bg-white rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
             {!! $barChart->container() !!}
         </div>
-    </div>
 
-    <div class="bg-white rounded-lg pt-4 mt-6 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-        {!! $areaChart->container() !!}
+        <div class="bg-white rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+            {!! $areaChart->container() !!}
+        </div>
     </div>
 
     <livewire:dashboard-form :currentUser="$currentUser"/>
