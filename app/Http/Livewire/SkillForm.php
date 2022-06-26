@@ -27,6 +27,8 @@ class SkillForm extends Component
     public string $description_three = '';
     public string $skill_four = '';
     public string $description_four = '';
+    public $activities;
+    public int $numOfActivities = 5;
 
     /**
      * @var array|string[]
@@ -48,6 +50,23 @@ class SkillForm extends Component
     {
         $this->skills = Config::get('skillicons');
         $this->currentUser = $currentUser;
+        $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function showMoreActivities($num)
+    {
+        $this->numOfActivities = $num;
+        $this->mount($this->currentUser);
+    }
+
+    public function updateActivity($updated)
+    {
+        auth()->user()->activities()->create([
+            'updated' => $updated,
+            'type_updated' => $updated . 'Updated ',
+        ]);
+
+        $this->mount($this->currentUser);
     }
 
     public function register()
@@ -61,6 +80,8 @@ class SkillForm extends Component
         }
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Skill');
 
         $this->currentUser->refresh();
     }
