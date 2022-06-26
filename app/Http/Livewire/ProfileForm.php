@@ -86,6 +86,8 @@ class ProfileForm extends Component
         $this->updateActivity('Profile', 'updated');
 
         $this->currentUser->refresh();
+
+        $this->mount($this->currentUser);
     }
 
     /**
