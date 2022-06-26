@@ -7,7 +7,7 @@
         @endif
         <li>
             <div class="relative {{ ($key === 4) ? 'pb-0' : 'pb-8' }}">
-                @if($key !== 4)
+                @if(!$loop->last)
                     <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                 @endif
                 <a href="{{ route(strtolower($activity->section)) }}">
