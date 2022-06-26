@@ -35,8 +35,8 @@ class Activity extends Model
         return $this->belongsToMany(User::class);
     }
 
-    public function serializeDate(DateTimeInterface $date)
+    public function serializeDate($date)
     {
-        return $date->format('F j, g:i');
+        return $date->format('F j, g:ia');
     }
 }

@@ -1,10 +1,10 @@
 @aware(['currentUser', 'areaChart', 'barChart'])
 
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-    <h2 class="text-lg pb-5 leading-6 font-bold text-[#1C0681]">
-        Recent Analytics
-    </h2>
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
+{{--    <h2 class="text-lg pb-5 leading-6 font-bold text-[#1C0681]">--}}
+{{--        Quick Overview--}}
+{{--    </h2>--}}
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
         <div class="flex flex-col justify-center space-y-4 rounded-lg">
             @if($currentUser->profile->settings['track_views'])
                 <div class="h-full flex px-4 py-5 bg-white overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
