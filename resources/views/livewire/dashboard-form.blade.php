@@ -179,7 +179,9 @@
                         <thead class="bg-gray-50">
                         <tr>
                             <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Title</th>
-                            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
+                            @if($currentUser->profile->settings['track_likes'])
+                                <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">Likes</th>
+                            @endif
                             <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Status</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
                             <th scope="col" class="pl-3 pr-4 sm:pr-6 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th>
@@ -199,9 +201,11 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-900 sm:table-cell">
-                                        {{ number_format($project->total_likes) ?: 0 }}
-                                    </td>
+                                    @if($currentUser->profile->settings['track_likes'])
+                                        <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-900 sm:table-cell">
+                                            {{ number_format($project->total_likes) ?: 0 }}
+                                        </td>
+                                    @endif
                                     <td class="hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell">
                                         <div class="rounded-full w-2 h-2 border-2 {{ $project->public ? 'bg-green-400 border-green-500' : 'bg-red-400 border-red-500' }}"></div>
                                     </td>

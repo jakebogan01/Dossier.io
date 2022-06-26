@@ -165,9 +165,9 @@ class User extends Authenticatable
                 'total_tools' => 0,
                 'settings' => [
                     'public' => false,
-                    'dark_mode' => false,
-                    'track_views' => false,
-                    'track_likes' => false,
+                    'dark_mode' => true,
+                    'track_views' => true,
+                    'track_likes' => true,
                 ]
             ]);
         });
