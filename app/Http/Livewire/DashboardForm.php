@@ -8,6 +8,7 @@ class DashboardForm extends Component
 {
     public $currentUser, $item, $updateCode, $updateGithub, $updateTitle, $updateDescription;
     public bool $toggleWarning = false;
+    public bool $make_public;
 
     public function mount($currentUser)
     {
@@ -26,6 +27,7 @@ class DashboardForm extends Component
         $this->updateDescription = $this->currentUser->projects->find($id)->description;
         $this->updateCode = $this->currentUser->projects->find($id)->links['code'];
         $this->updateGithub = $this->currentUser->projects->find($id)->links['github'];
+        $this->make_public = $this->currentUser->projects->find($id)->public;
     }
 
     public function updateData($id)
@@ -37,6 +39,7 @@ class DashboardForm extends Component
                 'code' => $this->updateCode,
                 'github' => $this->updateGithub,
             ],
+            'public' => $this->make_public,
         ]);
 
         $this->toggleWarning = true;

@@ -116,6 +116,50 @@
                                     @error('updateGithub') <span class="text-danger error">{{ $message }}</span>@enderror
                                 </div>
                             </div>
+
+                            <div class="py-4 flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make project public</p>
+                                    <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow this project to be seen by the public.</p>
+                                </div>
+                                <div class="relative inline-block h-6 w-11 align-middle select-none transition duration-200 ease-in">
+                                    <input
+                                        wire:model="make_public"
+                                        type="checkbox"
+                                        name="make_public"
+                                        id="make_public"
+                                        class="toggle-checkbox absolute block outline-none border border-white bg-white appearance-none cursor-pointer p-0 h-5 w-5 mt-0.5 mx-0.5 rounded-full transition shadow transform ring-0 ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" />
+                                    <label for="make_public" class="toggle-label block overflow-hidden h-6 w-11 rounded-full bg-gray-200 cursor-pointer transition"></label>
+                                    <label for="make_public" class="text-xs text-gray-700 sr-only">make_public</label>
+                                </div>
+                            </div>
+
+
+                            <style>
+                                /* CHECKBOX TOGGLE SWITCH */
+                                /* @apply rules for documentation, these do not work as inline style */
+                                .toggle-checkbox:checked{
+                                    @apply: right-0;
+                                    right: 0;
+                                    border-color: #ffffff;
+                                }
+                                .toggle-checkbox:after{
+                                    content: "";
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    width: 21px;
+                                    border-radius: 100%;
+                                    height: 21px;
+                                    background-color: #ffffff;
+                                    position: absolute;
+
+                                }
+                                .toggle-checkbox:checked + .toggle-label {
+                                    @apply: bg-indigo-600;
+                                    background-color: #4E46DD;
+                                }
+                            </style>
                         </div>
                     </div>
                     <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
