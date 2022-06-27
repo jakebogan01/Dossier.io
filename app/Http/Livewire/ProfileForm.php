@@ -83,7 +83,8 @@ class ProfileForm extends Component
         $this->validate();
 
         $path = 'profile_images';
-        $file = 'profile_image' . uniqid() . '.' . $this->profile_picture->extension();
+//        uniqid()
+        $file = 'profile_image' . auth()->user()->name . '.' . $this->profile_picture->extension();
         Storage::disk('public')->putFileAs($path, $this->profile_picture, $file);
 
         auth()->user()->profile()->update([
