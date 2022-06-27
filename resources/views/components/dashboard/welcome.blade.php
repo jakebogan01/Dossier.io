@@ -66,13 +66,13 @@
             </div>
         </div>
 
-        @if($currentUser->profile->settings['track_likes'])
+        @if($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1)
             <div class="{{ ($currentUser->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 {!! $barChart->container() !!}
             </div>
         @endif
 
-        @if($currentUser->profile->settings['track_views'])
+        @if($currentUser->profile->settings['track_views'] && $currentUser->total_views >= 1)
             <div class="{{ ($currentUser->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 {!! $areaChart->container() !!}
             </div>
