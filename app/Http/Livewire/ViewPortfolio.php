@@ -7,10 +7,17 @@ use Livewire\Component;
 class ViewPortfolio extends Component
 {
     public bool $test;
+    public string $profileImage;
 
     public function mount()
     {
         $this->test = auth()->user()->profile->aware;
+
+        if (empty(auth()->user()->profile->profile_photo_path)) {
+            $this->profileImage = auth()->user()->getAvatar();
+        } else {
+            $this->profileImage = auth()->user()->profile->profile_photo_path;
+        }
     }
 
     public function update()

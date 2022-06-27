@@ -24,7 +24,7 @@
                 wire:mouseover.prevent="update()"
                 @mouseenter="message = 1;"
                 class="h-8 w-8 rounded-full"
-                src="{{ auth()->user()->getAvatar() }}"
+                src="{{ $profileImage }}"
                 alt="User Avatar">
         </button>
     </a>

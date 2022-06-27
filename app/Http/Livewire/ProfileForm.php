@@ -8,9 +8,14 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Livewire\Component;
+use function PHPUnit\Framework\isEmpty;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileForm extends Component
 {
+    use WithFileUploads;
+
     public $currentUser;
     public bool $toggleWarning = false;
     public string $portfolio_name = 'Jake';
@@ -23,6 +28,8 @@ class ProfileForm extends Component
     public bool $track_likes;
     public $activities;
     public int $numOfActivities = 5;
+    public $profile_picture;
+    public string $profileImage;
 
     /**
      * @var array|string[]
@@ -32,6 +39,7 @@ class ProfileForm extends Component
         'portfolio_email' => 'required',
         'total_clients' => 'required',
         'total_tools' => 'required',
+        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
     /**
@@ -46,6 +54,12 @@ class ProfileForm extends Component
         $this->track_views =  $currentUser->settings['track_views'];
         $this->track_likes =  $currentUser->settings['track_likes'];
         $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+
+        if (empty($currentUser->profile_photo_path)) {
+            $this->profileImage = auth()->user()->getAvatar();
+        } else {
+            $this->profileImage = $currentUser->profile_photo_path;
+        }
     }
 
     public function showMoreActivities($num)
@@ -68,6 +82,10 @@ class ProfileForm extends Component
     {
         $this->validate();
 
+        $path = 'profile_images';
+        $file = 'profile_image' . uniqid() . '.' . $this->profile_picture->extension();
+        Storage::disk('public')->putFileAs($path, $this->profile_picture, $file);
+
         auth()->user()->profile()->update([
             'portfolio_name' => $this->portfolio_name,
             'portfolio_email' => strtolower($this->portfolio_email),
@@ -78,8 +96,11 @@ class ProfileForm extends Component
                 'dark_mode' => $this->dark_mode,
                 'track_views' => $this->track_views,
                 'track_likes' => $this->track_likes,
-            ]
+            ],
+            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
         ]);
+
+        $this->profileImage = Storage::disk('public')->url($path . '/' . $file);
 
         $this->toggleWarning = true;
 
