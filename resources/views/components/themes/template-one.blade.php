@@ -1,5 +1,5 @@
 <div class="template_one flex font-lato" x-data="{ menuStatus: false, showBar: false }">
-    <x-themes.navigation.nav></x-themes.navigation.nav>
+    <x-themes.navigation.nav :user="$user"></x-themes.navigation.nav>
     <div class="flex-1">
         <x-themes.blocks.intro :user="$user"></x-themes.blocks.intro>
         <x-themes.blocks.skills :user="$user"></x-themes.blocks.skills>
