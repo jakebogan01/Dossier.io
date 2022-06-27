@@ -15,6 +15,16 @@ class DashboardForm extends Component
         $this->currentUser = $currentUser;
     }
 
+    public function updateActivity($section, $action)
+    {
+        auth()->user()->activities()->create([
+            'section' => $section,
+            'action' => $action,
+        ]);
+
+        $this->mount($this->currentUser);
+    }
+
     public function render()
     {
         return view('livewire.dashboard-form');
@@ -43,5 +53,7 @@ class DashboardForm extends Component
         ]);
 
         $this->toggleWarning = true;
+
+        $this->updateActivity('Projects', 'updated');
     }
 }
