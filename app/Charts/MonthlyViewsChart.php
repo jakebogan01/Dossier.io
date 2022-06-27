@@ -18,6 +18,12 @@ class MonthlyViewsChart
     {
         $totalViews = auth()->user();
 
+        if (auth()->user()->dark_mode) {
+            $color = '#ffffff';
+        } else {
+            $color = '#1C0681';
+        }
+
         return $this->chart->areaChart()
             ->setTitle('Monthly Views')
             ->addData('Most Views', [0, $totalViews->total_views])
@@ -26,7 +32,7 @@ class MonthlyViewsChart
             ->setGrid(false, '#B18EC3', 0.05)
             ->setColors(['#B18EC3'])
             ->setFontFamily('Lato')
-            ->setFontColor('#1C0681')
+            ->setFontColor($color)
             ->setMarkers(['#57178E', '#E040FB'], 7, 10);
     }
 }

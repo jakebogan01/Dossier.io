@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->integer('total_views')->default(0);
+            $table->boolean('dark_mode')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

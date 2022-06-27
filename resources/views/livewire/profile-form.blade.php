@@ -36,23 +36,29 @@
         </div>
     </div>
 
-    <div class="flex justify-end">
-        <button @click="notify = true" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
-            Publish
-        </button>
-    </div>
+{{--    <div class="flex justify-end">--}}
+{{--        <button @click="notify = true" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">--}}
+{{--            Publish--}}
+{{--        </button>--}}
+{{--    </div>--}}
 
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-10">
-        <div class="col-span-2 bg-white p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
+        <div class="col-span-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
             <section aria-labelledby="profile-information-title">
-                <div class="bg-white sm:rounded-lg">
-                    <div class="px-4 py-5 sm:px-6">
-                        <h2 id="profile-information-title" class="text-lg leading-6 font-medium text-gray-900">Profile Information</h2>
-                        <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details with existing preview.</p>
+                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} sm:rounded-lg">
+                    <div class="flex justify-between px-4 py-5 sm:px-6">
+                        <div>
+                            <h2 id="profile-information-title" class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile Information</h2>
+                            <p class="mt-1 max-w-2xl text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Personal details with existing preview.</p>
+                        </div>
+
+                        <button @click="notify = true" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
+                            Publish
+                        </button>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
 
-                        <div class="space-y-4 bg-gray-100 p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                        <div class="space-y-4 {{ (auth()->user()->dark_mode) ? 'bg-[#310B5C]' : 'bg-gray-100' }} p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                             <div class="flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 z-0 rounded-lg bg-no-repeat bg-bottom bg-cover" style="background-image: url('/images/dashboard/svg/profile-background.svg');">
                                 <div class="flex justify-start items-start relative z-10">
                                     <img class="rounded-full w-36 h-36" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt=""
@@ -89,8 +95,8 @@
                                 <!-- Profile section -->
                                 <div class="pt-24">
                                     <div>
-                                        <h2 class="text-lg leading-6 font-medium text-gray-900">Profile</h2>
-                                        <p class="mt-1 text-sm text-gray-500">The information you submit will reflect that of your personal portfolio publicly.</p>
+                                        <h2 class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile</h2>
+                                        <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">The information you submit will reflect that of your personal portfolio publicly.</p>
                                     </div>
 
                                     <div>
@@ -100,8 +106,8 @@
                                                 <div class="col-span-12 sm:col-span-6">
                                                     <div>
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                            <label for="portfolio_name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Name</label>
-                                                            <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="block w-full border-0 px-3 py-2 rounded-md text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" maxlength="16" required>
+                                                            <label for="portfolio_name" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Name</label>
+                                                            <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="block w-full border-0 px-3 py-2 rounded-md {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} focus:ring-0 sm:text-sm" maxlength="16" required>
                                                         </div>
                                                         @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
                                                     </div>
@@ -110,8 +116,8 @@
                                                 <div class="col-span-12 sm:col-span-6">
                                                     <div>
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                            <label for="portfolio_email" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Email</label>
-                                                            <input wire:model="portfolio_email" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="block w-full border-0 px-3 py-2 text-gray-900 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <label for="portfolio_email" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Email</label>
+                                                            <input wire:model="portfolio_email" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="block w-full border-0 px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -119,33 +125,33 @@
 
                                             <div>
                                                 <div class="relative mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                                                    <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Photo</label>
+                                                    <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Photo</label>
                                                     <div class="space-y-1 text-center">
                                                         <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
                                                             <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                         </svg>
-                                                        <div class="flex text-sm text-gray-600">
-                                                            <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                        <div class="flex text-sm {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }}">
+                                                            <label for="file-upload" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                                 <span>Upload a file</span>
                                                                 <input id="file-upload" name="file-upload" type="file" class="sr-only">
                                                             </label>
                                                             <p class="pl-1">or drag and drop</p>
                                                         </div>
-                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                                        <p class="text-xs {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">PNG, JPG, GIF up to 10MB</p>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-span-6">
                                                 <div x-data="{ total: 0 }" class="w-full">
-                                                    <label for="total_clients" class="block text-sm font-medium text-gray-700" x-text="`Number of Clients: ${total}`"></label>
+                                                    <label for="total_clients" class="block text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }}" x-text="`Number of Clients: ${total}`"></label>
                                                     <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="w-full h-2 bg-gray-200 appearance-none rounded" step="1"/>
                                                 </div>
                                             </div>
 
                                             <div class="col-span-6">
                                                 <div x-data="{ total: 0 }" class="w-full">
-                                                    <label for="total_tools" class="block text-sm font-medium text-gray-700" x-text="`Number of Clients: ${total}`"></label>
+                                                    <label for="total_tools" class="block text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }}" x-text="`Number of Tools: ${total}`"></label>
                                                     <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="w-full h-2 bg-gray-200 appearance-none rounded" step="1"/>
                                                 </div>
                                             </div>
@@ -158,25 +164,25 @@
                                 <div class="pt-24">
                                     <div>
                                         <div>
-                                            <h2 class="text-lg leading-6 font-medium text-gray-900">Profile Settings</h2>
-                                            <p class="mt-1 text-sm text-gray-500">Here are some core settings that change the behavior of your portfolio.</p>
+                                            <h2 class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile Settings</h2>
+                                            <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Here are some core settings that change the behavior of your portfolio.</p>
                                         </div>
-                                        <ul role="list" class="mt-2 divide-y divide-gray-200">
+                                        <ul role="list" class="mt-2 divide-y {{ (auth()->user()->dark_mode) ? 'divide-[#a95ae6]' : 'divide-gray-200' }}">
                                             <x-dashboard.components.settings-switch setting="make_public">
-                                                <p class="text-sm font-medium text-gray-900" id="privacy-option-1-label">Make portfolio public</p>
-                                                <p class="text-sm text-gray-500" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
+                                                <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-1-label">Make portfolio public</p>
+                                                <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
                                             </x-dashboard.components.settings-switch>
                                             <x-dashboard.components.settings-switch setting="dark_mode">
-                                                <p class="text-sm font-medium text-gray-900" id="privacy-option-2-label">Enable dark mode</p>
-                                                <p class="text-sm text-gray-500" id="privacy-option-2-description">Switch between light and dark mode.</p>
+                                                <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-2-label">Enable dark mode</p>
+                                                <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-2-description">Switch between light and dark mode.</p>
                                             </x-dashboard.components.settings-switch>
                                             <x-dashboard.components.settings-switch setting="track_views">
-                                                <p class="text-sm font-medium text-gray-900" id="privacy-option-3-label">Allow tracking of views</p>
-                                                <p class="text-sm text-gray-500" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
+                                                <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-3-label">Allow tracking of views</p>
+                                                <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
                                             </x-dashboard.components.settings-switch>
                                             <x-dashboard.components.settings-switch setting="track_likes">
-                                                <p class="text-sm font-medium text-gray-900" id="privacy-option-4-label">Allow tracking of likes</p>
-                                                <p class="text-sm text-gray-500" id="privacy-option-4-description">This will track the number of likes for each project.</p>
+                                                <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-4-label">Allow tracking of likes</p>
+                                                <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-4-description">This will track the number of likes for each project.</p>
                                             </x-dashboard.components.settings-switch>
                                         </ul>
                                     </div>

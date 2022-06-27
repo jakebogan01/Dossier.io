@@ -73,6 +73,7 @@ class ContactForm extends Component
 
         $this->toggleWarning = true;
 
+        $this->mount($this->currentUser);
         $this->currentUser->refresh();
     }
 

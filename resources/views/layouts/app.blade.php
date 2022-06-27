@@ -80,7 +80,7 @@
            }
         </style>
     </head>
-    <body class="bg-gradient-to-r from-[#600F93] to-[#120185] antialiased h-full">
+    <body class="bg-gradient-to-r {{ (auth()->user()->dark_mode) ? 'from-[#3a0e5e] to-[#0b0152]' : 'from-[#600F93] to-[#120185]' }} antialiased h-full">
         <div
             class="flex h-full"
             x-data="{ showMenu: false }">
@@ -367,7 +367,7 @@
                 <div class="flex justify-end min-h-[71px] pr-10">
                     @livewire('navigation-menu')
                 </div>
-                <div class="flex-1 rounded-tl-3xl overflow-hidden bg-[#EEEEEE] shadow-[inset_0_0_0.3125rem_rgb(0,0,0)]">
+                <div class="flex-1 rounded-tl-3xl overflow-hidden {{ (auth()->user()->dark_mode) ? 'bg-[#0e0430]' : 'bg-[#EEEEEE]' }} shadow-[inset_0_0_0.3125rem_rgb(0,0,0)]">
                     <main class="h-full overflow-x-hidden overflow-y-auto">
                         {{ $slot }}
                     </main>
