@@ -28,6 +28,7 @@ class Project extends Model
         'description',
         'links',
         'public',
+        'profile_photo_path',
     ];
 
     /**

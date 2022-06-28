@@ -33,6 +33,8 @@ return new class extends Migration
                 ->default(0);
             $table->json('settings')
                 ->nullable();
+            $table->string('profile_photo_path', 2048)
+                ->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
