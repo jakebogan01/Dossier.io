@@ -16,7 +16,7 @@ class Activity extends Model
      * @var string[]
      */
     protected $casts = [
-        'created_at' => 'date',
+        'created_at' => 'datetime',
     ];
 
     /**
@@ -35,7 +35,11 @@ class Activity extends Model
         return $this->belongsToMany(User::class);
     }
 
-    public function serializeDate($date)
+    /**
+     * @param $date
+     * @return string
+     */
+    public function serializeDate($date): string
     {
         return $date->format('F j, g:ia');
     }
