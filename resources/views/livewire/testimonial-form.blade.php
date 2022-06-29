@@ -1,4 +1,4 @@
-<form action="#" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
+<form action="#" enctype="multipart/form-data" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
     @csrf
 
     <div aria-live="assertive" class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 transform transition-all" x-cloak x-show="notify" style="z-index: 100;">
@@ -84,9 +84,9 @@
                                             <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <div class="flex text-sm {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }}">
-                                            <label for="file-upload" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                            <label for="updateTestimonialPicture" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                 <span>Upload a file</span>
-                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                                <input wire:model="updateTestimonialPicture" id="updateTestimonialPicture" name="updateTestimonialPicture" type="file" class="sr-only">
                                             </label>
                                             <p class="pl-1">or drag and drop</p>
                                         </div>
@@ -137,25 +137,15 @@
         </div>
     </div>
 
-{{--    <div class="flex justify-end">--}}
-{{--        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">--}}
-{{--            Publish--}}
-{{--        </button>--}}
-{{--    </div>--}}
-
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
         <div class="col-span-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
             <section aria-labelledby="profile-information-title">
                 <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} sm:rounded-lg">
-                    <div class="flex justify-between px-4 py-5 sm:px-6">
+                    <div class="px-4 py-5 sm:px-6">
                         <div>
                             <h2 id="profile-information-title" class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Testimonials Information</h2>
                             <p class="mt-1 max-w-2xl text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Professional testimonials with existing preview.</p>
                         </div>
-
-                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
-                            Publish
-                        </button>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#310B5C]' : 'bg-gray-100' }} p-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -166,7 +156,9 @@
                                     @endif
                                     <div class="flex flex-col shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                                         <div class="flex-shrink-0">
-                                            <img class="h-48 w-full object-cover" src="https://www.smartheadshots.com/blog/photos/actor-headshots-1283.jpg" alt="">
+                                            @if(!is_null($testimonial->profile_photo_path))
+                                                <img class="h-48 w-full object-cover" src="{{ $testimonial->profile_photo_path }}" alt="">
+                                            @endif
                                         </div>
                                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                             <div class="flex flex-col">
@@ -239,10 +231,8 @@
                                             <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Provide any professional testimonies to your portfolio.</p>
                                         </div>
 
-                                        <button wire:click.prevent="add({{$i}})" type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
-                                            </svg>
+                                        <button wire:click.prevent="store()" @click="notify = true" aria-label="Create Project" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                                         </button>
                                     </div>
 
@@ -253,17 +243,17 @@
                                                     <div>
                                                         <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Title</label>
-                                                            <input wire:model="title.0" type="text" name="title" id="title" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="title" type="text" name="title" id="title" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('title.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('title') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
 
                                                     <div>
                                                         <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="job_position" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Position</label>
-                                                            <input wire:model="job_position.0" type="text" name="job_position" id="job_position" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="job_position" type="text" name="job_position" id="job_position" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('job_position.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('job_position') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
                                                 </div>
 
@@ -275,9 +265,9 @@
                                                                 <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                             </svg>
                                                             <div class="flex text-sm {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }}">
-                                                                <label for="file-upload" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                                <label for="testimonial_picture" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                                     <span>Upload a file</span>
-                                                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                                                    <input wire:model="testimonial_picture" id="testimonial_picture" name="testimonial_picture" type="file" class="sr-only">
                                                                 </label>
                                                                 <p class="pl-1">or drag and drop</p>
                                                             </div>
@@ -289,9 +279,9 @@
                                                 <div class="mt-5">
                                                     <div class="relative mt-1">
                                                         <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Description</label>
-                                                        <textarea wire:model="description.0" id="description" name="description" rows="3" class="shadow-sm {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
+                                                        <textarea wire:model="description" id="description" name="description" rows="3" class="shadow-sm {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
                                                     </div>
-                                                    @error('description.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                    @error('description') <span class="text-danger error">{{ $message }}</span>@enderror
                                                 </div>
 
                                                 <div class="grid grid-cols-4 gap-6 mt-5">
@@ -301,9 +291,9 @@
                                                             <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                                 <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm"> https:// </span>
                                                             </div>
-                                                            <input wire:model="facebook.0" type="text" name="facebook" id="facebook" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="facebook" type="text" name="facebook" id="facebook" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('facebook.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('facebook') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
 
                                                     <div class="relative col-span-4 sm:col-span-2 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
@@ -312,90 +302,12 @@
                                                             <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
                                                                 <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm"> https:// </span>
                                                             </div>
-                                                            <input wire:model="linkedin.0" type="text" name="linkedin" id="linkedin" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="linkedin" type="text" name="linkedin" id="linkedin" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('linkedin.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('linkedin') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
                                                 </div>
                                             </div>
-                                            @foreach($inputs as $key => $value)
-                                                <div>
-                                                    <div class="flex justify-end">
-                                                        <button wire:click.prevent="remove({{$key}})" type="button" class="border border-transparent {{ (auth()->user()->dark_mode) ? 'text-red-300' : 'text-indigo-300' }} {{ (auth()->user()->dark_mode) ? 'sm:hover:text-red-400' : 'sm:hover:text-indigo-600' }} focus:outline-none transition-colors">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
-                                                        </button>
-                                                    </div>
-
-                                                    <div class="grid grid-cols-4 gap-6 mt-5">
-                                                        <div>
-                                                            <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Title</label>
-                                                                <input wire:model="title.{{ $value }}" type="text" name="title" id="title" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('title.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="relative col-span-4 sm:col-span-2  border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="job_position" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Position</label>
-                                                                <input wire:model="job_position.{{ $value }}" wire:model="job_position.{{ $value }}" type="text" name="job_position" id="job_position" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('job_position.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mt-5">
-                                                        <div class="relative mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                                                            <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Photo</label>
-                                                            <div class="space-y-1 text-center">
-                                                                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                </svg>
-                                                                <div class="flex text-sm {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }}">
-                                                                    <label for="file-upload" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                                                        <span>Upload a file</span>
-                                                                        <input id="file-upload" name="file-upload" type="file" class="sr-only">
-                                                                    </label>
-                                                                    <p class="pl-1">or drag and drop</p>
-                                                                </div>
-                                                                <p class="text-xs {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">PNG, JPG, GIF up to 10MB</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mt-5">
-                                                        <div class="relative mt-1">
-                                                            <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Description</label>
-                                                            <textarea wire:model="description.{{ $value }}" wire:model="description.{{ $value }}" id="description" name="description" rows="3" class="shadow-sm {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} focus:ring-sky-500 focus:border-sky-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" required></textarea>
-                                                        </div>
-                                                        @error('description.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                    </div>
-
-                                                    <div class="grid grid-cols-4 gap-6 mt-5">
-                                                        <div class="relative col-span-4 sm:col-span-2 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                            <label for="code" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Project</label>
-                                                            <div class="relative rounded-md shadow-sm">
-                                                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm"> https:// </span>
-                                                                </div>
-                                                                <input wire:model="facebook.{{ $value }}" wire:model="facebook.{{ $value }}" type="text" name="code" id="code" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('facebook.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-
-                                                        <div class="relative col-span-4 sm:col-span-2 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                            <label for="linkedin" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">GitHub</label>
-                                                            <div class="relative rounded-md shadow-sm">
-                                                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm"> https:// </span>
-                                                                </div>
-                                                                <input wire:model="linkedin.{{ $value }}" wire:model="linkedin.{{ $value }}" type="text" name="linkedin" id="linkedin" class="block w-full border-0 pl-16 sm:pl-[48px] py-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('linkedin.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
                                         </div>
 
                                     </div>

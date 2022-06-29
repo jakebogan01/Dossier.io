@@ -27,6 +27,7 @@ class Testimonial extends Model
         'job_position',
         'description',
         'links',
+        'profile_photo_path',
     ];
 
     /**

@@ -7,16 +7,28 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class TestimonialForm extends Component
 {
+    use WithFileUploads;
+
     public $testimonials;
-    public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription;
+    public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription, $updateTestimonialPicture;
     public bool $toggleWarning = false;
-    public $inputs = [];
-    public $i = 0;
     public int $numOfActivities = 5;
+    public $testimonial_picture;
+    public string $testimonialImage;
+
+    /**
+     * @var array|string[]
+     */
+    protected array $rules = [
+        'title' => 'required',
+        'testimonial_picture' => 'mimes:jpeg,jpg,png|max:10000',
+    ];
 
     public function mount()
     {
@@ -43,30 +55,6 @@ class TestimonialForm extends Component
     }
 
     /**
-     * @param $i
-     * @return void
-     */
-    public function add($i)
-    {
-        if (count($this->inputs) >= (3 - auth()->user()->testimonials->count())) {
-            session()->flash('warning', 'Cannot create more than 4 testimonials!');
-        } else {
-            $i++; //increments i by 1
-            $this->i = $i; //store new number to i
-            $this->inputs[] = $i; //array push i into inputs array
-        }
-    }
-
-    /**
-     * @param $i
-     * @return void
-     */
-    public function remove($i)
-    {
-        unset($this->inputs[$i]); //removes current index in the array
-    }
-
-    /**
      * @return Application|Factory|View
      */
     public function render(): View|Factory|Application
@@ -87,45 +75,41 @@ class TestimonialForm extends Component
 
     public function store()
     {
-        $validatedDate = $this->validate([
-            'title.0' => 'required|min:4',
-            'description.0' => 'required',
-            'job_position.0' => 'required',
-            'title.*' => 'required|min:4',
-            'description.*' => 'required',
-            'job_position.*' => 'required',
-        ],
-            [
-                'title.0.required' => 'Title field is required',
-                'description.0.required' => 'Description field is required',
-                'job_position.0.required' => 'Job position field is required',
-                'title.*.required' => 'Title field is required',
-                'description.*.required' => 'Description field is required',
-                'job_position.*.required' => 'Job position field is required',
-            ]
-        );
+        $this->validate();
 
-        foreach ($this->title as $key => $value) {
-            auth()->user()->testimonials()->create([
-                'title' => $this->title[$key],
-                'job_description' => $this->job_position[$key],
-                'description' => $this->description[$key],
-                'links' => [
-                    'facebook' => $this->facebook[$key],
-                    'linkedin' => $this->linkedin[$key],
-                ],
-            ]);
+        $path = 'testimonial_images';
+
+        if ($this->testimonials->count() < 1) {
+            $file = 'testimonial_image' . '-' . 0 . '.' . $this->testimonial_picture->extension();
+            Storage::disk('public')->putFileAs($path, $this->testimonial_picture, $file);
+        } else {
+            foreach ($this->testimonials as $testimonial) {
+                $file = 'testimonial_image' . '-' . $testimonial->id . '.' . $this->testimonial_picture->extension();
+                Storage::disk('public')->putFileAs($path, $this->testimonial_picture, $file);
+            }
         }
 
-        $this->inputs = []; //resets input array
+        auth()->user()->testimonials()->create([
+            'title' => $this->title,
+            'job_position' => $this->job_position,
+            'description' => $this->description,
+            'links' => [
+                'facebook' => $this->facebook,
+                'linkedin' => $this->linkedin,
+            ],
+            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+        ]);
+
+        $this->testimonialImage = Storage::disk('public')->url($path . '/' . $file);
 
         $this->resetInputFields(); //resets all wire:model variables
+
         $this->toggleWarning = true;
+
         $this->updateActivity('Testimonials', 'created');
 
         $this->mount();
         $this->render();
-
     }
 
     public function delete($id)
@@ -149,10 +133,15 @@ class TestimonialForm extends Component
         $this->updateJobPosition = $this->testimonials->find($id)->job_position;
         $this->updateFacebook = $this->testimonials->find($id)->links['facebook'];
         $this->updateLinkedin = $this->testimonials->find($id)->links['linkedin'];
+//        $this->updateTestimonialPicture = $this->testimonials->find($id - 1)->profile_photo_path;
     }
 
     public function updateData($id)
     {
+        $path = 'testimonial_images';
+        $file = 'testimonial_image' . '-' . $this->testimonials->find($id)->id . '.' . $this->updateTestimonialPicture->extension();
+        Storage::disk('public')->putFileAs($path, $this->updateTestimonialPicture, $file);
+
         $this->testimonials->find($id)->update([
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
@@ -161,12 +150,16 @@ class TestimonialForm extends Component
                 'facebook' => $this->updateFacebook,
                 'linkedin' => $this->updateLinkedin,
             ],
+            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
         ]);
+
+        $this->testimonialImage = Storage::disk('public')->url($path . '/' . $file);
 
         $this->toggleWarning = true;
 
         $this->updateActivity('Testimonials', 'updated');
 
+        $this->testimonials->find($id)->refresh();
         $this->mount();
         $this->render();
     }

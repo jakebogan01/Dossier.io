@@ -23,6 +23,8 @@ return new class extends Migration
                 ->nullable();
             $table->json('links')
                 ->nullable();
+            $table->string('profile_photo_path', 2048)
+                ->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
