@@ -2,24 +2,37 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Project;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class ProjectForm extends Component
 {
+    use WithFileUploads;
+
     public $projects;
-    public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription;
+    public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription, $updateProjectPicture;
     public $github = '';
     public $code = '';
     public bool $toggleWarning = false;
     public bool $make_public;
-    public $inputs = [];
-    public $i = 0;
     public int $numOfActivities = 5;
+    public $project_picture;
+    public string $projectImage;
+
+    /**
+     * @var array|string[]
+     */
+    protected array $rules = [
+        'title' => 'required',
+        'project_picture' => 'mimes:jpeg,jpg,png|max:10000',
+    ];
 
     public function mount()
     {
@@ -46,30 +59,6 @@ class ProjectForm extends Component
     }
 
     /**
-     * @param $i
-     * @return void
-     */
-    public function add($i)
-    {
-        if (count($this->inputs) >= (5 - auth()->user()->projects->count())) {
-            session()->flash('warning', 'Cannot create more than 6 projects!');
-        } else {
-            $i++; //increments i by 1
-            $this->i = $i; //store new number to i
-            $this->inputs[] = $i; //array push i into inputs array
-        }
-    }
-
-    /**
-     * @param $i
-     * @return void
-     */
-    public function remove($i)
-    {
-        unset($this->inputs[$i]); //removes current index in the array
-    }
-
-    /**
      * @return Application|Factory|View
      */
     public function render(): View|Factory|Application
@@ -89,33 +78,31 @@ class ProjectForm extends Component
 
     public function store()
     {
-        $validatedDate = $this->validate([
-            'title.0' => 'required|min:4',
-            'description.0' => 'required',
-            'title.*' => 'required|min:4',
-            'description.*' => 'required',
-        ],
-            [
-                'title.0.required' => 'Title field is required',
-                'description.0.required' => 'Description field is required',
-                'title.*.required' => 'Title field is required',
-                'description.*.required' => 'Description field is required',
-            ]
-        );
+        $this->validate();
 
-        foreach ($this->title as $key => $value) {
-            auth()->user()->projects()->create([
-                'title' => $this->title[$key],
-                'description' => $this->description[$key],
-                'links' => [
-                    'code' => $this->code[$key],
-                    'github' => $this->github[$key],
-                ],
-                'public' => 1,
-            ]);
+        $path = 'project_images';
+
+        if ($this->projects->count() < 1) {
+            $file = 'project_image' . '-' . 0 . '.' . $this->project_picture->extension();
+            Storage::disk('public')->putFileAs($path, $this->project_picture, $file);
+        } else {
+            foreach ($this->projects as $project) {
+                $file = 'project_image' . '-' . $project->id . '.' . $this->project_picture->extension();
+                Storage::disk('public')->putFileAs($path, $this->project_picture, $file);
+            }
         }
 
-        $this->inputs = []; //resets input array
+        auth()->user()->projects()->create([
+            'title' => $this->title,
+            'description' => $this->description,
+            'links' => [
+                'code' => $this->code,
+                'github' => $this->github,
+            ],
+            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+        ]);
+
+        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
 
         $this->resetInputFields(); //resets all wire:model variables
 
@@ -148,10 +135,15 @@ class ProjectForm extends Component
         $this->updateCode = $this->projects->find($id)->links['code'];
         $this->updateGithub = $this->projects->find($id)->links['github'];
         $this->make_public = $this->projects->find($id)->public;
+//        $this->updateProjectPicture = $this->projects->find($id - 1)->profile_photo_path;
     }
 
     public function updateData($id)
     {
+        $path = 'project_images';
+        $file = 'project_image' . '-' . $this->projects->find($id)->id - 1 . '.' . $this->updateProjectPicture->extension();
+        Storage::disk('public')->putFileAs($path, $this->updateProjectPicture, $file);
+
         $this->projects->find($id)->update([
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
@@ -160,11 +152,17 @@ class ProjectForm extends Component
                 'github' => $this->updateGithub,
             ],
             'public' => $this->make_public,
+            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
         ]);
+
+        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
+
         $this->toggleWarning = true;
 
         $this->updateActivity('Projects', 'updated');
 
+
+        $this->projects->find($id)->refresh();
         $this->mount();
         $this->render();
     }
