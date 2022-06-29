@@ -1,10 +1,10 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Browser Sessions') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#121826]' }}">{{ __('Browser Sessions') }}</span>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Manage and log out your active sessions on other browsers and devices.') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-[#48505E]' }}">{{ __('Manage and log out your active sessions on other browsers and devices.') }}</span>
     </x-slot>
 
     <x-slot name="content">

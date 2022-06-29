@@ -1,10 +1,10 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#121826]' }}">{{ __('Two Factor Authentication') }}</span>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Add additional security to your account using two factor authentication.') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-[#48505E]' }}">{{ __('Add additional security to your account using two factor authentication.') }}</span>
     </x-slot>
 
     <x-slot name="content">

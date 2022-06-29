@@ -1,10 +1,10 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#121826]' }}">{{ __('Profile Information') }}</span>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-[#48505E]' }}">{{ __('Update your account\'s profile information and email address.') }}</span>
     </x-slot>
 
     <x-slot name="form">

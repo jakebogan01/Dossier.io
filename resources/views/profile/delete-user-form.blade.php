@@ -1,10 +1,10 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Delete Account') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#121826]' }}">{{ __('Delete Account') }}</span>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-[#48505E]' }}">{{ __('Permanently delete your account.') }}</span>
     </x-slot>
 
     <x-slot name="content">

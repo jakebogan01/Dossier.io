@@ -1,10 +1,10 @@
 <x-jet-form-section submit="updatePassword">
     <x-slot name="title">
-        {{ __('Update Password') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#121826]' }}">{{ __('Update Password') }}</span>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Ensure your account is using a long, random password to stay secure.') }}
+        <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-[#48505E]' }}">{{ __('Ensure your account is using a long, random password to stay secure.') }}</span>
     </x-slot>
 
     <x-slot name="form">
