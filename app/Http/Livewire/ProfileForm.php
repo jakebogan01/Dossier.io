@@ -39,7 +39,7 @@ class ProfileForm extends Component
         'portfolio_email' => 'required',
         'total_clients' => 'required',
         'total_tools' => 'required',
-        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
+//        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
     /**
@@ -82,11 +82,6 @@ class ProfileForm extends Component
     {
         $this->validate();
 
-        $path = 'profile_images';
-//        uniqid()
-        $file = 'profile_image' . '-' . auth()->user()->id . '.' . $this->profile_picture->extension();
-        Storage::disk('public')->putFileAs($path, $this->profile_picture, $file);
-
         auth()->user()->profile()->update([
             'portfolio_name' => $this->portfolio_name,
             'portfolio_email' => strtolower($this->portfolio_email),
@@ -97,11 +92,20 @@ class ProfileForm extends Component
                 'dark_mode' => $this->dark_mode,
                 'track_views' => $this->track_views,
                 'track_likes' => $this->track_likes,
-            ],
-            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+            ]
         ]);
 
-        $this->profileImage = Storage::disk('public')->url($path . '/' . $file);
+        if (!is_null($this->profile_picture)) {
+            $path = 'profile_images';
+            $file = 'profile_image' . '-' . auth()->user()->id . '.' . $this->profile_picture->extension();
+            Storage::disk('public')->putFileAs($path, $this->profile_picture, $file);
+
+            auth()->user()->profile()->update([
+                'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+            ]);
+
+            $this->profileImage = Storage::disk('public')->url($path . '/' . $file);
+        }
 
         $this->toggleWarning = true;
 
