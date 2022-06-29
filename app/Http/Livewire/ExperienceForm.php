@@ -14,9 +14,14 @@ class ExperienceForm extends Component
     public $experiences;
     public $title, $date, $item, $description, $updateDate, $updateTitle, $updateDescription;
     public bool $toggleWarning = false;
-    public $inputs = [];
-    public $i = 0;
     public int $numOfActivities = 5;
+
+    /**
+     * @var array|string[]
+     */
+    protected array $rules = [
+        'title' => 'required',
+    ];
 
     /**
      * @return void
@@ -46,30 +51,6 @@ class ExperienceForm extends Component
     }
 
     /**
-     * @param $i
-     * @return void
-     */
-    public function add($i)
-    {
-        if (count($this->inputs) >= (9 - auth()->user()->experiences->count())) {
-            session()->flash('warning', 'Cannot create more than 10 experiences!');
-        } else {
-            $i++; //increments i by 1
-            $this->i = $i; //store new number to i
-            $this->inputs[] = $i; //array push i into inputs array
-        }
-    }
-
-    /**
-     * @param $i
-     * @return void
-     */
-    public function remove($i)
-    {
-        unset($this->inputs[$i]); //removes current index in the array
-    }
-
-    /**
      * @return Application|Factory|View
      */
     public function render(): View|Factory|Application
@@ -88,33 +69,13 @@ class ExperienceForm extends Component
 
     public function store()
     {
-        $validatedDate = $this->validate([
-            'title.0' => 'required|min:4',
-            'date.0' => 'required',
-            'description.0' => 'required',
-            'title.*' => 'required|min:4',
-            'date.*' => 'required',
-            'description.*' => 'required',
-        ],
-            [
-                'title.0.required' => 'Title field is required',
-                'date.0.required' => 'Date field is required',
-                'description.0.required' => 'Description field is required',
-                'title.*.required' => 'Title field is required',
-                'date.*.required' => 'Date field is required',
-                'description.*.required' => 'Description field is required',
-            ]
-        );
+        $this->validate();
 
-        foreach ($this->title as $key => $value) {
-            auth()->user()->experiences()->create([
-                'title' => $this->title[$key],
-                'date' => $this->date[$key],
-                'description' => $this->description[$key],
-            ]);
-        }
-
-        $this->inputs = []; //resets input array
+        auth()->user()->experiences()->create([
+            'title' => $this->title,
+            'date' => $this->date,
+            'description' => $this->description,
+        ]);
 
         $this->resetInputFields(); //resets all wire:model variables
 
@@ -162,6 +123,7 @@ class ExperienceForm extends Component
 
         $this->updateActivity('Experiences', 'updated');
 
+        $this->experiences->find($id)->refresh();
         $this->mount();
         $this->render();
     }

@@ -94,25 +94,15 @@
         </div>
     </div>
 
-{{--    <div class="flex justify-end">--}}
-{{--        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">--}}
-{{--            Publish--}}
-{{--        </button>--}}
-{{--    </div>--}}
-
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
         <div class="col-span-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
             <section aria-labelledby="profile-information-title">
                 <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} sm:rounded-lg">
-                    <div class="flex justify-between px-4 py-5 sm:px-6">
+                    <div class="px-4 py-5 sm:px-6">
                         <div>
                             <h2 id="profile-information-title" class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Experience Information</h2>
                             <p class="mt-1 max-w-2xl text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Personal experiences with existing preview.</p>
                         </div>
-
-                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
-                            Publish
-                        </button>
                     </div>
                     <div class="px-4 py-5 sm:px-6">
 
@@ -179,7 +169,7 @@
                                                 <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Provide a date, title, and a short description of important work experiences.</p>
                                             </div>
 
-                                            <button wire:click.prevent="add({{$i}})" type="button" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
+                                            <button wire:click.prevent="store()" @click="notify = true" aria-label="Create Project" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                                             </button>
                                         </div>
@@ -191,62 +181,28 @@
                                                         <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
                                                             <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                                 <label for="date" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Date</label>
-                                                                <input wire:model="date.0" type="date" name="date" id="date" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                                <input wire:model="date" type="date" name="date" id="date" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                             </div>
-                                                            @error('date.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                            @error('date') <span class="text-danger error">{{ $message }}</span>@enderror
                                                         </div>
                                                     </div>
 
                                                     <div class="mt-5">
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Title</label>
-                                                            <input wire:model="title.0" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="title" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('title.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('title') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
 
                                                     <div class="mt-5">
                                                         <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                                                             <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Description</label>
-                                                            <input wire:model="description.0" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                                            <input wire:model="description" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                                         </div>
-                                                        @error('description.0') <span class="text-danger error">{{ $message }}</span>@enderror
+                                                        @error('description') <span class="text-danger error">{{ $message }}</span>@enderror
                                                     </div>
                                                 </div>
-                                                @foreach($inputs as $key => $value)
-                                                    <div>
-                                                        <div class="grid grid-cols-12 gap-6">
-                                                            <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
-                                                                <div>
-                                                                    <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                        <label for="date" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Date</label>
-                                                                        <input wire:model="date.{{ $value }}" type="date" name="date" id="date" class="block w-full border-0 p-0 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                                    </div>
-                                                                    @error('date.0') <span class="text-danger error">{{ $message }}</span>@enderror
-                                                                </div>
-                                                                <button wire:click.prevent="remove({{$key}})" type="button" class="ml-4 inline-flex justify-center border border-transparent {{ (auth()->user()->dark_mode) ? 'text-red-300' : 'text-indigo-300' }} {{ (auth()->user()->dark_mode) ? 'sm:hover:text-red-400' : 'sm:hover:text-indigo-600' }} focus:outline-none transition-colors">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="mt-5">
-                                                            <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="title" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Title</label>
-                                                                <input wire:model="title.{{ $value }}" type="text" name="title" id="title" class="block w-full border-0 rounded-md px-3 h-9 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('title.'.$value) <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-
-                                                        <div class="mt-5">
-                                                            <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="description" class="absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Description</label>
-                                                                <input wire:model="description.{{ $value }}" type="text" name="description" id="description" class="block w-full border-0 rounded-md px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                            @error('description.0') <span class="text-danger error">{{ $message }}</span>@enderror
-                                                        </div>
-                                                    </div>
-                                                @endforeach
                                             </div>
 
                                         </div>
