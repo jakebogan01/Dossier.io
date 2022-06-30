@@ -1,6 +1,7 @@
 @if($featuredUsers !== null)
     @foreach($featuredUsers as $key => $user)
-        <a href="#"
+        <a href="{{ route('theme-one', str($user)->slug()->__toString()) }}"
+           target="_blank"
            data-aos="fade-up"
            data-aos-delay="{{ $key }}00"
            data-aos-anchor-placement="top-bottom">
