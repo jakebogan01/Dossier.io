@@ -2450,6 +2450,26 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
+.bg-\[\#3e7dfa\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(62 125 250 / var(--tw-bg-opacity));
+}
+.bg-\[\#4371EE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 113 238 / var(--tw-bg-opacity));
+}
+.bg-\[\#4e7bf5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 123 245 / var(--tw-bg-opacity));
+}
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -4383,6 +4403,11 @@ select {
   .sm\:hover\:bg-\[\#0F1119\]:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(15 17 25 / var(--tw-bg-opacity));
+  }
+
+  .sm\:hover\:bg-blue-500:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
   }
 
   .sm\:hover\:text-indigo-500:hover {

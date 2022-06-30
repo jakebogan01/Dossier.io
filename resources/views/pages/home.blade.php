@@ -38,27 +38,27 @@
                                 @if (Route::has('login'))
                                     @auth
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <a href="{{ url('/dashboard') }}">
-                                                <button type="submit" aria-label="dashboard" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
+                                            <div class="inline-flex rounded-md shadow">
+                                                <button href="{{ route('dashboard') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 sm:hover:bg-blue-600 sm:transition-colors">
                                                     Dashboard
                                                 </button>
-                                            </a>
+                                            </div>
                                         </div>
                                     @else
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <a href="{{ route('login') }}">
-                                                <button type="submit" aria-label="login" class="block w-full rounded-md border border-transparent px-5 py-3 bg-[#3273F6] text-base font-medium text-white shadow sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
+                                            <div class="inline-flex rounded-md shadow">
+                                                <button href="{{ route('login') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 sm:hover:bg-blue-600 sm:transition-colors">
                                                     Login
                                                 </button>
-                                            </a>
+                                            </div>
                                         </div>
                                         @if (Route::has('register'))
                                             <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
-                                                <a href="{{ route('register') }}">
-                                                    <button type="submit" aria-label="register" class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-700 text-base font-medium text-white shadow sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10 sm:transition-colors">
+                                                <div class="inline-flex rounded-md shadow">
+                                                    <button href="{{ route('register') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 sm:hover:bg-blue-600 sm:transition-colors">
                                                         Register
                                                     </button>
-                                                </a>
+                                                </div>
                                             </div>
                                         @endif
                                     @endauth
