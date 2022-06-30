@@ -38,27 +38,23 @@
                                 @if (Route::has('login'))
                                     @auth
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <div class="inline-flex rounded-md shadow">
-                                                <button href="{{ route('dashboard') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 sm:hover:bg-blue-600 sm:transition-colors">
+                                            <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
+                                                <x-home.button link="dashboard" class="bg-blue-500 sm:hover:bg-blue-600">
                                                     Dashboard
-                                                </button>
+                                                </x-home.button>
                                             </div>
                                         </div>
                                     @else
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <div class="inline-flex rounded-md shadow">
-                                                <button href="{{ route('login') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 sm:hover:bg-blue-600 sm:transition-colors">
-                                                    Login
-                                                </button>
-                                            </div>
+                                            <x-home.button link="login" class="bg-blue-500 sm:hover:bg-blue-600">
+                                                Login
+                                            </x-home.button>
                                         </div>
                                         @if (Route::has('register'))
                                             <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
-                                                <div class="inline-flex rounded-md shadow">
-                                                    <button href="{{ route('register') }}" aria-label="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 sm:hover:bg-blue-600 sm:transition-colors">
-                                                        Register
-                                                    </button>
-                                                </div>
+                                                <x-home.button link="register" class="bg-blue-700 sm:hover:bg-blue-600">
+                                                    Register
+                                                </x-home.button>
                                             </div>
                                         @endif
                                     @endauth
@@ -79,8 +75,8 @@
                     </div>
                 </div>
             </div>
-            <div id="learn" class="relative">
-                <div class="mx-auto lg:max-w-7xl lg:px-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-24 lg:items-start">
+            <div class="relative">
+                <div id="learn" class="mx-auto lg:max-w-7xl lg:px-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-24 lg:items-start">
                     <div class="relative mt-16 lg:mt-0 sm:py-16 lg:py-0 order-last lg:order-none">
                         <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
                             <div data-aos="zoom-in" data-aos-delay="200" class="absolute inset-y-0 right-1/2 w-[965px] bg-gradient-to-r from-[#50148B] to-[#7428bf] rounded-r-3xl lg:right-72"></div>
@@ -160,15 +156,16 @@
                         </span>
                     </h2>
                     <div class="mt-8 flex justify-center lg:justify-start lg:mt-0 lg:flex-shrink-0">
-                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-anchor-placement="top-bottom" class="inline-flex rounded-md shadow">
-                            <a href="#register" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 sm:hover:bg-blue-600 sm:transition-colors">
+                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-anchor-placement="top-bottom">
+                            <x-home.button anchor="#register" class="bg-blue-500 sm:hover:bg-blue-600">
                                 Get started
-                            </a>
+                            </x-home.button>
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="600" data-aos-anchor-placement="top-bottom" class="ml-3 inline-flex rounded-md shadow">
-                            <a href="#learn" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white sm:hover:bg-blue-100 sm:transition-colors">
+
+                        <div data-aos="zoom-in" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
+                            <x-home.button anchor="#learn" class="ml-3 text-indigo-600 bg-white sm:hover:bg-blue-100">
                                 Learn more
-                            </a>
+                            </x-home.button>
                         </div>
                     </div>
                 </div>
@@ -180,7 +177,7 @@
                     Trusted by over 26,000 amazing people
                 </h2>
                 <div class="mt-8 flex justify-center space-x-6">
-                    <x-featured-user></x-featured-user>
+                    <x-home.featured-user></x-home.featured-user>
                 </div>
                 <p data-aos="fade-up" data-aos-delay="250" data-aos-anchor-placement="top-bottom" class="mt-8 text-center text-base text-gray-400 cursor-default">
                     Created By Jake Bogan
