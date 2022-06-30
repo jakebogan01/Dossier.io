@@ -78,6 +78,32 @@
             .nav_container::-webkit-scrollbar {
                display: none; /* Chrome, Safari, Opera */
            }
+            /* CHECKBOX TOGGLE SWITCH */
+            /* @apply rules for documentation, these do not work as inline style */
+            .toggle-checkbox:checked{
+                @apply: right-0;
+                right: 0;
+                border-color: #ffffff;
+            }
+            .toggle-checkbox:after{
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 21px;
+                border-radius: 100%;
+                height: 21px;
+                background-color: #ffffff;
+                position: absolute;
+            }
+            .toggle-checkbox:checked + .toggle-label {
+                @apply: bg-indigo-600;
+                background-color: #4E46DD;
+            }
+            .toggle-checkbox:checked + .toggle-dark-label {
+                @apply: bg-blue-800;
+                background-color: #0C042E;
+            }
         </style>
     </head>
     <body class="bg-gradient-to-r {{ (auth()->user()->dark_mode) ? 'from-[#3a0e5e] to-[#0b0152]' : 'from-[#600F93] to-[#120185]' }} antialiased h-full">

@@ -39,20 +39,20 @@
                                     @auth
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
                                             <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
-                                                <x-home.button link="dashboard" class="bg-blue-500 sm:hover:bg-blue-600">
+                                                <x-home.button purpose="Dashboard" link="dashboard" class="bg-blue-500 sm:hover:bg-blue-600">
                                                     Dashboard
                                                 </x-home.button>
                                             </div>
                                         </div>
                                     @else
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <x-home.button link="login" class="bg-blue-500 sm:hover:bg-blue-600">
+                                            <x-home.button purpose="Login" link="login" class="bg-blue-500 sm:hover:bg-blue-600">
                                                 Login
                                             </x-home.button>
                                         </div>
                                         @if (Route::has('register'))
                                             <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
-                                                <x-home.button link="register" class="bg-blue-700 sm:hover:bg-blue-600">
+                                                <x-home.button purpose="Register" link="register" class="bg-blue-700 sm:hover:bg-blue-600">
                                                     Register
                                                 </x-home.button>
                                             </div>
@@ -157,13 +157,13 @@
                     </h2>
                     <div class="mt-8 flex justify-center lg:justify-start lg:mt-0 lg:flex-shrink-0">
                         <div data-aos="zoom-in" data-aos-delay="400" data-aos-anchor-placement="top-bottom">
-                            <x-home.button anchor="#register" class="bg-blue-500 sm:hover:bg-blue-600">
+                            <x-home.button purpose="Login/Register" anchor="#register" class="bg-blue-500 sm:hover:bg-blue-600">
                                 Get started
                             </x-home.button>
                         </div>
 
                         <div data-aos="zoom-in" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
-                            <x-home.button anchor="#learn" class="ml-3 text-indigo-600 bg-white sm:hover:bg-blue-100">
+                            <x-home.button purpose="Learn More" anchor="#learn" class="ml-3 text-indigo-600 bg-white sm:hover:bg-blue-100">
                                 Learn more
                             </x-home.button>
                         </div>
