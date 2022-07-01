@@ -15,7 +15,7 @@ class SkillForm extends Component
     public $skills;
     public $currentUser;
     public bool $toggleWarning = false;
-    public string $introduction = 'Description test';
+    public string $introduction = '';
     public string $fact_one = '';
     public string $fact_two = '';
     public string $fact_three = '';
