@@ -30,6 +30,7 @@ class ProfileForm extends Component
     public int $numOfActivities = 5;
     public $profile_picture;
     public string $profileImage;
+    public string $message = 'Updated';
 
     /**
      * @var array|string[]

@@ -12,8 +12,9 @@
                  x-transition:enter-end="opacity-100 translate-y-0"
                  x-transition:leave="transition ease-in duration-150"
                  x-transition:leave-start="opacity-100 translate-y-0"
-                 x-transition:leave-end="opacity-0 translate-y-1">
-                <div class="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                 x-transition:leave-end="opacity-0 translate-y-1"
+                 style="z-index: 1000 !important;">
+                <div class="relative rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div class="relative grid gap-2 bg-white">
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
                             {{ __('Profile') }}

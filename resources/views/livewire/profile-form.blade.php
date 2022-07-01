@@ -2,198 +2,149 @@
     <form action="#" enctype="multipart/form-data" wire:submit.prevent="register" x-data="{ notify: @entangle($toggleWarning) }">
         @csrf
 
-        <div aria-live="assertive" class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 transform transition-all" x-cloak x-show="notify" style="z-index: 100;">
-            <div class="w-full flex flex-col items-center space-y-4 sm:items-end transform transition-all"
-                 x-transition:enter="transform ease-out duration-300 transition"
-                 x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-                 x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
-                 x-transition:leave="transition ease-in duration-100"
-                 x-transition:leave-start="opacity-100"
-                 x-transition:leave-end="opacity-0">
-                <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="p-4">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <svg class="h-6 w-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+        <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
+
+        <section class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
+            <div class="col-span-2 space-y-4">
+                <div aria-labelledby="profile live preview"  class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                    <div class="relative flex flex-col">
+                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>
+                        <div class="relative w-full flex m-3 ml-4 text-white cursor-default z-10">
+                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-white' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
+                            <div class="title mt-11 ml-3 font-bold flex flex-col">
+                                <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#73148B]' }} break-words">
+                                    {{ $currentUser->portfolio_name ?: 'Name' }}
+                                </div>
+                                <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#4E148B]' }} font-semibold text-sm italic dark">
+                                    Web Developer
+                                </div>
                             </div>
-                            <div class="ml-3 w-0 flex-1 pt-0.5">
-                                <p class="text-sm font-medium text-gray-900">Successfully updated!</p>
-                                <p class="mt-1 text-sm text-gray-500">Great</p>
+                        </div>
+                        <div class="flex absolute bottom-0 font-bold right-0 text-xs space-x-0 my-3.5 mr-3 z-10">
+                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-white' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-l-2xl rounded-r-sm p-1 px-4 cursor-default">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                                <span>{{ $currentUser->total_clients ?: 0 }}</span>
                             </div>
-                            <div class="ml-4 flex-shrink-0 flex">
-                                <button @click="notify = false" type="button" class="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    <span class="sr-only">Close</span>
-                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </button>
+                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-white' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-r-2xl rounded-l-sm p-1 px-4 cursor-default">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" /><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" /></svg>
+                                <span>{{ $currentUser->total_tools ?: 0 }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        {{--    <div class="flex justify-end">--}}
-        {{--        <button @click="notify = true" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium text-white bg-indigo-600 sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">--}}
-        {{--            Publish--}}
-        {{--        </button>--}}
-        {{--    </div>--}}
-
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
-            <div class="col-span-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} p-2 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                <section aria-labelledby="profile-information-title">
-                    <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} sm:rounded-lg">
-                        <div class="flex justify-between px-4 py-5 sm:px-6">
-                            <div>
-                                <h2 id="profile-information-title" class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile Information</h2>
-                                <p class="mt-1 max-w-2xl text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Personal details with existing preview.</p>
-                            </div>
-
-                            <button @click="notify = true" type="submit" class="inline-flex justify-center items-center h-10 px-4 border border-transparent text-sm font-medium text-white {{ (auth()->user()->dark_mode) ? 'bg-indigo-500' : 'bg-indigo-600' }} sm:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md transition-colors">
-                                Publish
-                            </button>
-                        </div>
-                        <div class="px-4 py-5 sm:px-6">
-
-                            <div class="space-y-4 {{ (auth()->user()->dark_mode) ? 'bg-[#310B5C]' : 'bg-gray-100' }} p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                                <div class="flex flex-col md:flex-row space-x-6 bg-[#4926ab] bg-opacity-75 py-6 px-12 z-0 rounded-lg bg-no-repeat bg-bottom bg-cover" style="background-image: url('/images/dashboard/svg/profile-background.svg');">
-                                    <div class="flex justify-start items-start relative z-10">
-                                        <img class="rounded-full w-36 h-36" src="{{ $profileImage }}" alt=""
-                                             style="min-width: 144px;">
+                <div aria-labelledby="profile form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                    <div class="flex justify-between items-center">
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Profile
+                        </h2>
+                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-indigo-600 sm:hover:bg-indigo-700' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
+                    <div class="flex-grow space-y-6">
+                        <div class="mt-8 grid grid-cols-12 gap-6">
+                            <div class="col-span-12 sm:col-span-6">
+                                <div>
+                                    <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                        <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium">
+                                            Name
+                                        </label>
+                                        <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} block w-full px-3 py-2 rounded-md sm:text-sm" maxlength="16" required>
                                     </div>
-                                    <div class="relative flex items-center z-10">
-                                        <div>
-                                            <p class="text-3xl font-bold text-white mb-1">
-                                                {{ $currentUser->portfolio_name ?: 'Your Name' }}
-                                            </p>
-                                            <p class="text-base font-semibold text-white">
-                                                {{ $currentUser->portfolio_email ?: 'Your Email' }}
-                                            </p>
-                                            <div class="flex space-x-2 text-sm text-white">
-                                                <div class="flex space-x-2 items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-2.5 h-2.5" viewBox="0 0 36.194 36.2"><g transform="translate(0 0.007)" fill="#FFFFFF"><path d="M0,2.25,2.25,0,9.182,4.95a2.25,2.25,0,0,1,.943,1.834v.158a2.25,2.25,0,0,0,.659,1.593l12.841,12.84,2.057-.686a2.25,2.25,0,0,1,2.3.544l7.551,7.551a2.25,2.25,0,0,1,0,3.181l-3.569,3.569a2.25,2.25,0,0,1-3.181,0l-7.551-7.551a2.25,2.25,0,0,1-.544-2.3l.685-2.056L8.534,10.784a2.25,2.25,0,0,0-1.591-.659h-.16a2.25,2.25,0,0,1-1.831-.943Zm25.546,21.7a1.126,1.126,0,0,0-1.593,1.593L30.7,32.3A1.126,1.126,0,0,0,32.3,30.7l-6.75-6.75Z" fill-rule="evenodd"/><path d="M35.77,5a6.757,6.757,0,0,1-8.278,8.267L13.226,27.338a6.75,6.75,0,1,1-4.561-4.561L22.732,8.51A6.75,6.75,0,0,1,31,.225L26.182,5.044,27,9l3.953.819L35.77,5ZM5.688,25.295l1.064-.545,1.06.544L9,25.352l.646,1,1,.646.058,1.19.543,1.061-.544,1.06-.058,1.19-1,.646-.646,1-1.19.058L6.75,33.75l-1.06-.544L4.5,33.147l-.646-1-1-.646-.058-1.19L2.25,29.25l.544-1.06L2.852,27l1-.646.646-1,1.19-.058Z" fill-rule="evenodd"/></g></svg>
-                                                    <span>
-                                                    {{ $currentUser->total_tools ?: 0 }}
-                                                </span>
-                                                </div>
-                                                <div class="flex space-x-2 items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
-                                                    <span>
-                                                    {{ $currentUser->total_clients ?: 0 }}
-                                                </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
                                 </div>
                             </div>
-                            <div class="sm:col-span-2">
-                                <div class="lg:col-span-9">
-                                    <!-- Profile section -->
-                                    <div class="pt-24">
-                                        <div>
-                                            <h2 class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile</h2>
-                                            <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">The information you submit will reflect that of your personal portfolio publicly.</p>
-                                        </div>
-
-                                        <div>
-                                            <div class="flex-grow space-y-6">
-
-                                                <div class="mt-8 grid grid-cols-12 gap-6">
-                                                    <div class="col-span-12 sm:col-span-6">
-                                                        <div>
-                                                            <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="portfolio_name" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Name</label>
-                                                                <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="block w-full border-0 px-3 py-2 rounded-md {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} focus:ring-0 sm:text-sm" maxlength="16" required>
-                                                            </div>
-                                                            @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-span-12 sm:col-span-6">
-                                                        <div>
-                                                            <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                                                <label for="portfolio_email" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Email</label>
-                                                                <input wire:model="portfolio_email" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="block w-full border-0 px-3 py-2 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="relative mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                                                        <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} text-xs font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Photo</label>
-                                                        <div class="space-y-1 text-center">
-                                                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                            <div class="flex text-sm {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }}">
-                                                                <label for="profile_picture" class="relative cursor-pointer {{ (auth()->user()->dark_mode) ? 'bg-[#742fa8]' : 'bg-white' }} rounded-md font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                                                    <span>Upload a file</span>
-                                                                    <input wire:model="profile_picture" id="profile_picture" name="profile_picture" type="file" class="sr-only">
-                                                                </label>
-                                                                <p class="pl-1">or drag and drop</p>
-                                                            </div>
-                                                            <p class="text-xs {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">PNG, JPG, GIF up to 10MB</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-span-6">
-                                                    <div x-data="{ total: 0 }" class="w-full">
-                                                        <label for="total_clients" class="block text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }}" x-text="`Number of Clients: ${total}`"></label>
-                                                        <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="w-full h-2 bg-gray-200 appearance-none rounded" step="1"/>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-span-6">
-                                                    <div x-data="{ total: 0 }" class="w-full">
-                                                        <label for="total_tools" class="block text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }}" x-text="`Number of Tools: ${total}`"></label>
-                                                        <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="w-full h-2 bg-gray-200 appearance-none rounded" step="1"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                            <div class="col-span-12 sm:col-span-6">
+                                <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                    <label for="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium">
+                                        Email
+                                    </label>
+                                    <input wire:model="portfolio_email" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="relative mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <label for="name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium">
+                                    Photo
+                                </label>
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                                    <div class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }} flex text-sm">
+                                        <label for="file-upload" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white sm:hover:text-[#4FAE9D]' : 'bg-white text-indigo-600 sm:hover:text-indigo-500' }} relative cursor-pointer rounded-md font-medium focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                            <span>
+                                                Upload a file
+                                            </span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                        </label>
+                                        <p class="pl-1">
+                                            or drag and drop
+                                        </p>
                                     </div>
+                                    <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-xs">
+                                        PNG, JPG, GIF up to 10MB
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-6 lg:col-span-3">
+                                <div x-data="{ total: 0 }" class="w-full">
+                                    <label for="total_clients" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Number of Clients: ${total}`"></label>
+                                    <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#202123]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
+                                </div>
+                            </div>
 
-                                    <!-- Privacy section -->
-                                    <div class="pt-24">
-                                        <div>
-                                            <div>
-                                                <h2 class="text-lg leading-6 font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">Profile Settings</h2>
-                                                <p class="mt-1 text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}">Here are some core settings that change the behavior of your portfolio.</p>
-                                            </div>
-                                            <ul role="list" class="mt-2 divide-y {{ (auth()->user()->dark_mode) ? 'divide-[#a95ae6]' : 'divide-gray-200' }}">
-                                                <x-dashboard.components.settings-switch setting="make_public">
-                                                    <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-1-label">Make portfolio public</p>
-                                                    <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-1-description">Allow your portfolio to be seen by the public.</p>
-                                                </x-dashboard.components.settings-switch>
-                                                <x-dashboard.components.settings-switch setting="dark_mode">
-                                                    <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-2-label">Enable dark mode</p>
-                                                    <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-2-description">Switch between light and dark mode.</p>
-                                                </x-dashboard.components.settings-switch>
-                                                <x-dashboard.components.settings-switch setting="track_views">
-                                                    <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-3-label">Allow tracking of views</p>
-                                                    <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-3-description">This will track the number of viewers that visit your portfolio.</p>
-                                                </x-dashboard.components.settings-switch>
-                                                <x-dashboard.components.settings-switch setting="track_likes">
-                                                    <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}" id="privacy-option-4-label">Allow tracking of likes</p>
-                                                    <p class="text-sm {{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }}" id="privacy-option-4-description">This will track the number of likes for each project.</p>
-                                                </x-dashboard.components.settings-switch>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="col-span-6 lg:col-span-3">
+                                <div x-data="{ total: 0 }" class="w-full">
+                                    <label for="total_tools" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Number of Tools: ${total}`"></label>
+                                    <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#202123]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div aria-labelledby="profile settings" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                    <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 mb-4 font-medium">
+                        My Settings
+                    </h2>
+                    <ul role="list">
+                        <x-dashboard.components.settings-switch setting="make_public">
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-1-label">
+                                Make portfolio public
+                            </p>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-sm" id="privacy-option-1-description">
+                                Allow your portfolio to be seen by the public.
+                            </p>
+                        </x-dashboard.components.settings-switch>
+                        <x-dashboard.components.settings-switch setting="dark_mode">
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-2-label">
+                                Enable dark mode
+                            </p>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-sm" id="privacy-option-2-description">
+                                Switch between light and dark mode.
+                            </p>
+                        </x-dashboard.components.settings-switch>
+                        <x-dashboard.components.settings-switch setting="track_views">
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-3-label">
+                                Allow tracking of views
+                            </p>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-sm" id="privacy-option-3-description">
+                                This will track the number of viewers that visit your portfolio.
+                            </p>
+                        </x-dashboard.components.settings-switch>
+                        <x-dashboard.components.settings-switch setting="track_likes">
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-4-label">
+                                Allow tracking of likes
+                            </p>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-sm" id="privacy-option-4-description">
+                                This will track the number of likes for each project.
+                            </p>
+                        </x-dashboard.components.settings-switch>
+                    </ul>
+                </div>
             </div>
             <x-dashboard.components.recent-activities :activities="$activities"></x-dashboard.components.recent-activities>
-        </div>
+        </section>
     </form>
 </div>
