@@ -103,7 +103,7 @@
         </style>
     </head>
     <body class="{{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-gradient-to-r from-[#600F93] to-[#120185]' }} antialiased h-full">
-        <div class="flex h-full" x-data="{ showMenu: false }">
+        <div x-data="{ showMenu: false }" class="flex h-full">
             <div role="dialog" aria-modal="true" aria-labelledby="slide-over-title" class="relative z-50" x-cloak x-show="showMenu"
                 x-transition:enter="transition ease-in-out duration-500"
                 x-transition:enter-start="opacity-0"
@@ -129,14 +129,14 @@
                                  x-transition:leave-start="opacity-100"
                                  x-transition:leave-end="opacity-0">
                                 <div class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">
-                                    <button type="button" class="rounded-md text-gray-300 sm:hover:text-white focus:outline-none focus:ring-2 focus:ring-white" @click="showMenu = !showMenu">
+                                    <button @click="showMenu = !showMenu" type="button" class="rounded-md text-gray-300 sm:hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
                                         <span class="sr-only">
                                             Close panel
                                         </span>
                                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                                     </button>
                                 </div>
-                                <div class="nav_container {{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-[#48128A]' }} w-full max-w-[256px] h-full flex flex-col py-6 overflow-y-auto shadow-xl transform transition-all duration-300 ease-linear">
+                                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-[#48128A]' }} nav_container w-full max-w-[256px] h-full flex flex-col py-6 overflow-y-auto shadow-xl">
                                     <a href="{{ route('home') }}" class="text-center">
                                         <span class="sr-only">
                                             Open panel
@@ -148,7 +148,7 @@
                                     <nav aria-label="Sidebar" class="mt-5 pt-8 flex-1">
                                         <a href="{{ route('dashboard') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex pb-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('dashboard')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('dashboard')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('dashboard')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
                                                 <span class="flex-1">
                                                     Dashboard
@@ -157,7 +157,7 @@
                                         </a>
                                         <a href="{{ route('profile') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('profile')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Profile
@@ -166,7 +166,7 @@
                                         </a>
                                         <a href="{{ route('skills') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('skills')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Skills
@@ -175,7 +175,7 @@
                                         </a>
                                         <a href="{{ route('experiences') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('experiences')) ? 'text-white' : ''}} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('experiences')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('experiences')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Experience
@@ -184,7 +184,7 @@
                                         </a>
                                         <a href="{{ route('projects') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('projects')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('projects')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('projects')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Projects
@@ -193,7 +193,7 @@
                                         </a>
                                         <a href="{{ route('testimonials') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('testimonials')) ? 'text-white' : ''}} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Testimonials
@@ -202,7 +202,7 @@
                                         </a>
                                         <a href="{{ route('contact') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                                             <span class="{{ (request()->routeIs('contact')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                                                <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }}"></span>
+                                                <span class="{{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                                                 <span class="flex-1">
                                                     Contact
@@ -236,7 +236,7 @@
             </div>
             <div class="visible lg:invisible opacity-100 lg:opacity-0 absolute left-0 top-5 flex items-center flex-shrink-0 pl-8 z-10">
                 <div class="cursor-pointer">
-                    <button type="button" class="flex items-center" @click="showMenu = !showMenu">
+                    <button @click="showMenu = !showMenu" type="button" class="flex items-center">
                         <span class="sr-only">
                             Open panel
                         </span>
@@ -265,7 +265,7 @@
                     </a>
                     <a href="{{ route('profile') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('profile')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('profile')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Profile
@@ -274,7 +274,7 @@
                     </a>
                     <a href="{{ route('skills') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('skills')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('skills')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Skills
@@ -283,7 +283,7 @@
                     </a>
                     <a href="{{ route('experiences') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('experiences')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('experiences')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('experiences')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Experience
@@ -292,7 +292,7 @@
                     </a>
                     <a href="{{ route('projects') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('projects')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('projects')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('projects')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Projects
@@ -301,7 +301,7 @@
                     </a>
                     <a href="{{ route('testimonials') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('testimonials')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('testimonials')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Testimonials
@@ -310,7 +310,7 @@
                     </a>
                     <a href="{{ route('contact') }}" class="{{ (auth()->user()->dark_mode) ? 'text-gray-500' : 'text-[#9650d9]' }} sm:hover:text-white group flex py-4 text-sm font-bold sm:transition-colors">
                         <span class="{{ (request()->routeIs('contact')) ? 'text-white' : '' }} relative flex items-center pl-10 grow">
-                            <span class="absolute left-0 border h-full block round rounded-fulled-full {{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }}"></span>
+                            <span class="{{ (request()->routeIs('contact')) ? 'border-white' : 'border-transparent' }} absolute left-0 border h-full block round rounded-fulled-full"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                             <span class="flex-1">
                                 Contact
