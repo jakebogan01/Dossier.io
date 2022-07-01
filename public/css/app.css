@@ -4372,6 +4372,11 @@ select {
     background-color: rgb(220 220 220 / var(--tw-bg-opacity));
   }
 
+  .sm\:hover\:bg-gray-200:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  }
+
   .sm\:hover\:text-indigo-600:hover {
     --tw-text-opacity: 1;
     color: rgb(79 70 229 / var(--tw-text-opacity));
@@ -4440,6 +4445,11 @@ select {
   .sm\:hover\:text-\[\#E96C97\]:hover {
     --tw-text-opacity: 1;
     color: rgb(233 108 151 / var(--tw-text-opacity));
+  }
+
+  .sm\:hover\:text-\[\#4FAE9D\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(79 174 157 / var(--tw-text-opacity));
   }
 
   .sm\:hover\:opacity-100:hover {

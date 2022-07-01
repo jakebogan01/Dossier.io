@@ -39,7 +39,7 @@
                                 <div class="space-y-1 text-center">
                                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
                                     <div class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }} flex text-sm">
-                                        <label for="file-upload" class="{{ (auth()->user()->dark_mode) ? 'bg-[#353B42] text-white' : 'bg-white text-indigo-600' }} relative cursor-pointer rounded-md font-medium sm:hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                        <label for="file-upload" class="{{ (auth()->user()->dark_mode) ? 'bg-[#353B42] text-white sm:hover:text-[#4FAE9D]' : 'bg-white text-indigo-600 sm:hover:text-indigo-500' }} relative cursor-pointer rounded-md font-medium focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                             <span>
                                                 Upload a file
                                             </span>
@@ -113,8 +113,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-gray-50' }} px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button @click="edit = false; notify = true" wire:click.prevent="updateData({{ $item }})" type="button" class="w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 bg-white sm:hover:bg-[#DCDCDC] text-base font-medium text-gray-900 focus:outline-none focus-within:outline-none sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
+                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-gray-100' }} px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button @click="edit = false; notify = true" wire:click.prevent="updateData({{ $item }})" type="button" class="w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 bg-white {{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#DCDCDC]' : 'sm:hover:bg-gray-50' }} text-base font-medium text-gray-900 focus:outline-none focus-within:outline-none sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
                         Submit
                     </button>
                     <button @click="edit = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 text-base font-medium text-white bg-red-600 sm:hover:bg-red-500 focus:outline-none outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
