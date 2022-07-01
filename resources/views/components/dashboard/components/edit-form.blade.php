@@ -9,7 +9,7 @@
      x-transition:leave-end="opacity-0">
     <div class="fixed inset-0 {{ (auth()->user()->dark_mode) ? 'bg-gray-800' : 'bg-gray-500' }} bg-opacity-75 transition-opacity"></div>
     <div class="fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0"
+        <div class="sm:flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0"
              x-transition:enter="ease-out duration-300"
              x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
              x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
