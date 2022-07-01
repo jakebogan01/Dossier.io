@@ -9,6 +9,7 @@ class DashboardForm extends Component
     public $currentUser, $item, $updateCode, $updateGithub, $updateTitle, $updateDescription;
     public bool $toggleWarning = false;
     public bool $make_public;
+    public string $message = "Updated";
 
     public function mount($currentUser)
     {

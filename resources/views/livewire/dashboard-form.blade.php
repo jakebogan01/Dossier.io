@@ -1,7 +1,7 @@
 <form action="#" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
     @csrf
 
-    <x-dashboard.components.notification></x-dashboard.components.notification>
+    <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
 
     <x-dashboard.components.edit-form :item="$item" content="Project"></x-dashboard.components.edit-form>
 

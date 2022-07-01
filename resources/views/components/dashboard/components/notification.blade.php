@@ -1,4 +1,6 @@
-<div aria-live="assertive" class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 transform transition-all" x-cloak x-show="notify" style="z-index: 100;">
+@aware(['message'])
+
+<div aria-live="assertive" x-cloak x-show="notify" class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 transform transition-all" style="z-index: 100;">
     <div class="w-full flex flex-col items-center space-y-4 sm:items-end transform transition-all"
          x-transition:enter="transform ease-out duration-300 transition"
          x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -6,18 +8,15 @@
          x-transition:leave="transition ease-in duration-100"
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0">
-        <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+        <div class="max-w-sm w-full {{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-white' }} shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div class="p-4">
                 <div class="flex items-start">
                     <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
                     <div class="ml-3 w-0 flex-1 pt-0.5">
-                        <p class="text-sm font-medium text-gray-900">
-                            Successfully updated!
-                        </p>
-                        <p class="mt-1 text-sm text-gray-500">
-                            Great
+                        <p class="text-sm font-medium {{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }}">
+                            Successfully {{ $message }}!
                         </p>
                     </div>
                     <div class="ml-4 flex-shrink-0 flex">
