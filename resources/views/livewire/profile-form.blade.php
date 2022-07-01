@@ -44,15 +44,13 @@
                     <div class="flex-grow space-y-6">
                         <div class="mt-8 grid grid-cols-12 gap-6">
                             <div class="col-span-12 sm:col-span-6">
-                                <div>
-                                    <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                                        <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium">
-                                            Name
-                                        </label>
-                                        <input wire:model="portfolio_name" type="text" autocomplete="portfolio_name" name="portfolio_name" id="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} block w-full px-3 py-2 rounded-md sm:text-sm" maxlength="16" required>
-                                    </div>
-                                    @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                                    <label for="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} absolute -top-2 left-2 -mt-px inline-block px-1 text-xs font-medium">
+                                        Name
+                                    </label>
+                                    <input wire:model="portfolio_name" type="email" autocomplete="portfolio_email" name="portfolio_email" id="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                 </div>
+                                @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
                             </div>
                             <div class="col-span-12 sm:col-span-6">
                                 <div class="relative border border-gray-300 rounded-md shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
