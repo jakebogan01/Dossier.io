@@ -6,26 +6,26 @@
 
         <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
             <div class="col-span-2 space-y-10">
-                <div aria-labelledby="profile live preview"  class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                <div aria-labelledby="profile with live preview"  class="bg-white shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="relative flex flex-col">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>
                         <div class="relative w-full flex m-3 ml-4 text-white cursor-default z-10">
-                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-white' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
+                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
                             <div class="title mt-11 ml-3 font-bold flex flex-col">
                                 <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#73148B]' }} break-words">
                                     {{ $currentUser->portfolio_name ?: 'Name' }}
                                 </div>
-                                <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#4E148B]' }} font-semibold text-sm italic dark">
+                                <div class="{{ (auth()->user()->dark_mode) ? 'text-gray-600' : 'text-[#4E148B]' }} font-semibold text-sm italic dark">
                                     Web Developer
                                 </div>
                             </div>
                         </div>
                         <div class="flex absolute bottom-0 font-bold right-0 text-xs space-x-0 my-3.5 mr-3 z-10">
-                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-white' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-l-2xl rounded-r-sm p-1 px-4 cursor-default">
+                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-gray-600' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-l-2xl rounded-r-sm p-1 px-4 cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
                                 <span>{{ $currentUser->total_clients ?: 0 }}</span>
                             </div>
-                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-white' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-r-2xl rounded-l-sm p-1 px-4 cursor-default">
+                            <div class="{{ (auth()->user()->dark_mode) ? 'border-gray-300 text-gray-600' : 'border-transparent text-gray-800' }} flex items-center space-x-2 border rounded-r-2xl rounded-l-sm p-1 px-4 cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" /><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" /></svg>
                                 <span>{{ $currentUser->total_tools ?: 0 }}</span>
                             </div>

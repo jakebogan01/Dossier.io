@@ -29,6 +29,7 @@ class SkillForm extends Component
     public string $description_four = '';
     public $activities;
     public int $numOfActivities = 5;
+    public string $message = 'Updated';
 
     /**
      * @var array|string[]
