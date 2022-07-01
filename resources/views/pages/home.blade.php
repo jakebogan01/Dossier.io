@@ -38,7 +38,7 @@
                                 @if (Route::has('login'))
                                     @auth
                                         <div data-aos="zoom-in" data-aos-delay="600" class="mt-4 sm:mt-0">
-                                            <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0 sm:ml-6">
+                                            <div data-aos="zoom-in" data-aos-delay="700" class="mt-4 sm:mt-0">
                                                 <x-home.button purpose="Dashboard" link="dashboard" class="bg-blue-500 sm:hover:bg-blue-600">
                                                     Dashboard
                                                 </x-home.button>
