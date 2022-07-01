@@ -3,6 +3,6 @@
         https://dossier.test/portfolio/{{ $usersPrtfolio }}
     </span>
     <span class="{{ (auth()->user()->dark_mode) ? 'text-white sm:hover:text-blue-300' : 'text-[#3531B87F] sm:hover:text-[#3531B8]' }} block transform sm:hover:scale-90 sm:transition-all">
-        portfolio/{{ $usersPrtfolio }}
+        /{{ $usersPrtfolio }}
     </span>
 </button>
