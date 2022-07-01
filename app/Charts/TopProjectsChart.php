@@ -24,8 +24,10 @@ class TopProjectsChart
 
         if (auth()->user()->dark_mode) {
             $color = '#ffffff';
+            $chartColor = ['#4FAE9E', '#5EADD6', '#333333'];
         } else {
             $color = '#1C0681';
+            $chartColor = ['#815ED7', '#a95ed7', '#6a5ed7'];
         }
 
         return $this->chart->pieChart()
@@ -33,7 +35,7 @@ class TopProjectsChart
             ->setSubtitle(Carbon::now()->format('F, Y'))
             ->addData($topProjects->pluck('total_likes')->toArray())
             ->setLabels($topProjects->pluck('title')->toArray())
-            ->setColors(['#815ED7', '#a95ed7', '#6a5ed7'])
+            ->setColors($chartColor)
             ->setHeight('350')
             ->setFontFamily('Lato')
             ->setFontColor($color)

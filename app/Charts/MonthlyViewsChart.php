@@ -20,8 +20,10 @@ class MonthlyViewsChart
 
         if (auth()->user()->dark_mode) {
             $color = '#ffffff';
+            $chartColor = '#DCDCDC';
         } else {
             $color = '#1C0681';
+            $chartColor = '#B18EC3';
         }
 
         return $this->chart->areaChart()
@@ -29,10 +31,10 @@ class MonthlyViewsChart
             ->addData('Most Views', [0, $totalViews->total_views])
             ->setXAxis([$totalViews->created_at->format('F'), $totalViews->updated_at->format('F')])
             ->setHeight('300')
-            ->setGrid(false, '#B18EC3', 0.05)
-            ->setColors(['#B18EC3'])
+            ->setGrid(false, $chartColor, 0.05)
+            ->setColors([$chartColor])
             ->setFontFamily('Lato')
             ->setFontColor($color)
-            ->setMarkers(['#57178E', '#E040FB'], 7, 10);
+            ->setMarkers([$chartColor, $chartColor], 7, 10);
     }
 }
