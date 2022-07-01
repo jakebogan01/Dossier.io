@@ -97,8 +97,8 @@
                 background-color: #4E46DD;
             }
             .toggle-checkbox:checked + .toggle-dark-label {
-                @apply: bg-blue-800;
-                background-color: #0C042E;
+                @apply: bg-cyan-400;
+                background-color: #4FAE9D;
             }
         </style>
     </head>

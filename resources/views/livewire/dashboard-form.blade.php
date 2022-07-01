@@ -3,7 +3,7 @@
 
     <x-dashboard.components.notification></x-dashboard.components.notification>
 
-    <x-dashboard.components.edit-form :item="$item"></x-dashboard.components.edit-form>
+    <x-dashboard.components.edit-form :item="$item" content="Project"></x-dashboard.components.edit-form>
 
     @if(count($currentUser->projects) >= 1)
         <div class="mt-6 space-y-4">
