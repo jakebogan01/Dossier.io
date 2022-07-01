@@ -1129,6 +1129,18 @@ select {
 .bottom-24 {
   bottom: 6rem;
 }
+.-top-4 {
+  top: -1rem;
+}
+.-top-5 {
+  top: -1.25rem;
+}
+.-top-\[18px\] {
+  top: -18px;
+}
+.-top-\[18\] {
+  top: -18;
+}
 .z-0 {
   z-index: 0;
 }
@@ -2048,6 +2060,9 @@ select {
 .rounded-2xl {
   border-radius: 1rem;
 }
+.rounded-none {
+  border-radius: 0px;
+}
 .rounded-l-md {
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -2384,6 +2399,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(85 92 126 / var(--tw-bg-opacity));
 }
+.bg-\[\#262c33\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 44 51 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2690,6 +2709,12 @@ select {
 }
 .pr-\[3\.125rem\] {
   padding-right: 3.125rem;
+}
+.pl-6 {
+  padding-left: 1.5rem;
+}
+.pl-0 {
+  padding-left: 0px;
 }
 .text-left {
   text-align: left;
@@ -3257,6 +3282,9 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(79 70 229 / var(--tw-border-opacity));
 }
+.focus-within\:border-transparent:focus-within {
+  border-color: transparent;
+}
 .focus-within\:outline-none:focus-within {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3278,6 +3306,9 @@ select {
 .focus-within\:ring-indigo-500:focus-within {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+.focus-within\:ring-transparent:focus-within {
+  --tw-ring-color: transparent;
 }
 .focus-within\:ring-offset-2:focus-within {
   --tw-ring-offset-width: 2px;

@@ -18,13 +18,18 @@ class ProfileForm extends Component
 
     public $currentUser;
     public bool $toggleWarning = false;
-    public string $portfolio_name, $portfolio_email, $profileImage;
+    public string $portfolio_name = '';
+    public string $portfolio_email = '';
     public int $total_clients = 0;
     public int $total_tools = 0;
-    public bool $make_public, $dark_mode, $track_views, $track_likes;
+    public bool $make_public;
+    public bool $dark_mode;
+    public bool $track_views;
+    public bool $track_likes;
     public $activities;
     public int $numOfActivities = 5;
     public $profile_picture;
+    public string $profileImage;
     public string $message = 'Updated';
 
     /**
