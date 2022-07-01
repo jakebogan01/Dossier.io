@@ -155,36 +155,14 @@
             <div class="invisible lg:visible opacity-0 lg:opacity-100 absolute left-0 top-5 flex items-center flex-shrink-0 pl-8 z-10">
                 <div class="cursor-pointer">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <span class="sr-only">
-                            Open panel
-                        </span>
-                        <div class="w-[2.8125rem] transform scale-50">
-                            <div class="bg-white h-[0.1875rem]"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[80%]" style="transition: width 0.3s linear;"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[60%]" style="transition: width 0.3s linear;"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[35%]" style="transition: width 0.3s linear;"></div>
-                        </div>
-                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity delay-200">
-                            DOSSIER.IO
-                        </span>
+                        <x-dashboard.components.nav-logo></x-dashboard.components.nav-logo>
                     </a>
                 </div>
             </div>
             <div class="visible lg:invisible opacity-100 lg:opacity-0 absolute left-0 top-5 flex items-center flex-shrink-0 pl-8 z-10">
                 <div class="cursor-pointer">
                     <button @click="showMenu = !showMenu" type="button" class="flex items-center">
-                        <span class="sr-only">
-                            Open panel
-                        </span>
-                        <div class="w-[2.8125rem] transform scale-50">
-                            <div class="bg-white h-[0.1875rem]"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[80%]" style="transition: width 0.3s linear;"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[60%]" style="transition: width 0.3s linear;"></div>
-                            <div class="bg-white h-[0.1875rem] mt-1.5 w-full lg:w-[35%]" style="transition: width 0.3s linear;"></div>
-                        </div>
-                        <span class="opacity-0 lg:opacity-100 leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl transition-opacity delay-200">
-                            DOSSIER.IO
-                        </span>
+                        <x-dashboard.components.nav-logo></x-dashboard.components.nav-logo>
                     </button>
                 </div>
             </div>
