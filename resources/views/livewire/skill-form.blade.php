@@ -75,7 +75,7 @@
                     <div role="tabpanels" class="bg-[#434c56]">
                         <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
                             :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
-                            role="tabpanel">
+                            role="tabpanel" x-cloak>
                             <dl>
                                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="flex items-center text-sm font-medium text-gray-500">
@@ -89,7 +89,7 @@
                         </section>
                         <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
                              :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
-                             role="tabpanel">
+                             role="tabpanel" x-cloak>
                             <dl>
                                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="flex items-center text-sm font-medium text-gray-500">
@@ -119,7 +119,7 @@
                         </section>
                         <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
                              :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
-                             role="tabpanel">
+                             role="tabpanel" x-cloak>
                             <dl>
                                 <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                     <dt class="flex items-center text-sm font-medium text-gray-500">
