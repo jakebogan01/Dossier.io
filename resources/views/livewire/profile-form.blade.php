@@ -4,8 +4,8 @@
 
         <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
 
-        <section class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3 mt-8">
-            <div class="col-span-2 space-y-4">
+        <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
+            <div class="col-span-2 space-y-10">
                 <div aria-labelledby="profile live preview"  class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="relative flex flex-col">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>

@@ -1926,6 +1926,9 @@ select {
 .gap-20 {
   gap: 5rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .gap-y-6 {
   row-gap: 1.5rem;
 }
@@ -2018,6 +2021,11 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;

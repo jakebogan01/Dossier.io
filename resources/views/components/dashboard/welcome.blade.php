@@ -1,7 +1,7 @@
 @aware(['currentUser', 'areaChart', 'barChart'])
 
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
         <div class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ?: 'justify-center' }} flex flex-col space-y-4 rounded-lg">
             @if($currentUser->profile->settings['track_views'])
                 <div aria-roledescription="total views stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">

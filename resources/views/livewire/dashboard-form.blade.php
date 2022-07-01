@@ -6,7 +6,7 @@
     <x-dashboard.components.edit-form :item="$item" content="Project"></x-dashboard.components.edit-form>
 
     @if(count($currentUser->projects) >= 1)
-        <div class="mt-6 space-y-4">
+        <div class="mt-10 space-y-2">
             @foreach($currentUser->projects as $project)
                 <div aria-roledescription="list of all projects" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] sm:hover:bg-[#2a2f36]' : 'bg-white' }} group shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                     <div class="px-4 py-4 sm:px-6">
