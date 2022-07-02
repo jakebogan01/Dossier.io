@@ -17,7 +17,7 @@
                                     @endunless
                                     <a href="{{ route(strtolower($activity->section)) }}">
                                         <div class="{{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#59626e]' : 'sm:hover:bg-gray-100' }} relative flex space-x-3 cursor-pointer">
-                                              <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] ring-[#434c56]' : 'bg-[#8936d6] ring-white' }} h-8 w-8 rounded-full flex items-center justify-center ring-8 sm:transition-all duration-300 ease-linear">
+                                              <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] ring-[#434c56]' : 'bg-[#57168C] ring-white' }} h-8 w-8 rounded-full flex items-center justify-center ring-8 sm:transition-all duration-300 ease-linear">
                                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" /></svg>
                                               </span>
                                             <div class="min-w-0 flex-1 flex justify-between items-center space-x-4">
@@ -53,12 +53,12 @@
             </div>
             @if(count($activities) >= 5)
                 <div class="mt-6 flex flex-col justify-stretch" x-cloak x-show.transition="more" >
-                    <button wire:click.prevent="showMoreActivities(10)" @click="more = false" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#3c9182]' : 'bg-[#7F3BCE] sm:hover:bg-[#993BCE]' }} inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:transition-colors">
+                    <button wire:click.prevent="showMoreActivities(10)" @click="more = false" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#3c9182]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:transition-colors">
                         See more
                     </button>
                 </div>
                 <div class="mt-6 flex flex-col justify-stretch" x-cloak x-show.transition="!more" >
-                    <button wire:click.prevent="showMoreActivities(5)" @click="more = true" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#3c9182]' : 'bg-[#7F3BCE] sm:hover:bg-[#993BCE]' }} inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white bg-[#6596B6] sm:hover:bg-[#426174] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:transition-colors">
+                    <button wire:click.prevent="showMoreActivities(5)" @click="more = true" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#3c9182]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-md text-white bg-[#6596B6] sm:hover:bg-[#426174] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:transition-colors">
                         See less
                     </button>
                 </div>

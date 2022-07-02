@@ -10,7 +10,7 @@
                     <div class="relative flex flex-col">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>
                         <div class="relative w-full flex m-3 ml-4 text-white cursor-default z-10">
-                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-md" src="{{ $profileImage }}" alt="Avatar"/>
+                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
                             <div class="title mt-11 ml-3 font-bold flex flex-col">
                                 <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#73148B]' }} break-words">
                                     {{ $currentUser->portfolio_name ?: 'Name' }}
@@ -37,7 +37,7 @@
                         <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                             My Profile
                         </h2>
-                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-indigo-600 sm:hover:bg-indigo-700' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                         </button>
                     </div>

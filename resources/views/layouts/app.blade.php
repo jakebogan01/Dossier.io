@@ -93,8 +93,8 @@
                 position: absolute;
             }
             .toggle-checkbox:checked + .toggle-label {
-                @apply: bg-indigo-600;
-                background-color: #4E46DD;
+                @apply: bg-purple-600;
+                background-color: #57168C;
             }
             .toggle-checkbox:checked + .toggle-dark-label {
                 @apply: bg-cyan-400;
