@@ -6,11 +6,11 @@
 
         <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
             <div class="col-span-2 space-y-10">
-                <div aria-labelledby="profile with live preview"  class="bg-white shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                <div aria-labelledby="profile with live preview" class="bg-white shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="relative flex flex-col">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>
                         <div class="relative w-full flex m-3 ml-4 text-white cursor-default z-10">
-                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
+                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#73148B]' }} w-28 h-28 p-1 rounded-md" src="{{ $profileImage }}" alt="Avatar"/>
                             <div class="title mt-11 ml-3 font-bold flex flex-col">
                                 <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#73148B]' }} break-words">
                                     {{ $currentUser->portfolio_name ?: 'Name' }}
@@ -45,19 +45,19 @@
                         <div class="mt-8 grid grid-cols-12 gap-6">
                             <div class="col-span-12 sm:col-span-6">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                    <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-4 left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
+                                    <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
                                         Name
                                     </label>
-                                    <input wire:model="portfolio_name" type="text" name="portfolio_name" id="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" style="border-radius: 0.375rem !important;" required>
+                                    <input wire:model="portfolio_name" type="text" name="portfolio_name" id="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                 </div>
                                 @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
                             </div>
                             <div class="col-span-12 sm:col-span-6">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                    <label for="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-4 left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
+                                    <label for="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
                                         Email
                                     </label>
-                                    <input wire:model="portfolio_email" type="email" name="portfolio_email" id="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" style="border-radius: 0.375rem !important;" required>
+                                    <input wire:model="portfolio_email" type="email" name="portfolio_email" id="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm" required>
                                 </div>
                                 @error('portfolio_email') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
                             </div>
