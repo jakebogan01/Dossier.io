@@ -4,14 +4,14 @@ namespace App\Http\Livewire;
 
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Redirector;
 use Livewire\Component;
 use Illuminate\Contracts\Foundation\Application;
+use Livewire\WithPagination;
 
 class ExperienceForm extends Component
 {
-    public $experiences;
+    use WithPagination;
+
     public $title, $date, $item, $description, $updateDate, $updateTitle, $updateDescription;
     public bool $toggleWarning = false;
     public int $numOfActivities = 5;
@@ -28,7 +28,6 @@ class ExperienceForm extends Component
      */
     public function mount()
     {
-        $this->experiences = auth()->user()->experiences;
         $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
     }
 
@@ -55,7 +54,9 @@ class ExperienceForm extends Component
      */
     public function render(): View|Factory|Application
     {
-        return view('livewire.experience-form');
+        return view('livewire.experience-form', [
+            'experiences' => (auth()->user()->experiences()->paginate(6)),
+        ]);
     }
 
     /**
