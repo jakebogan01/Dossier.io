@@ -63,7 +63,7 @@
 
     <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
         <div class="col-span-2 space-y-10">
-            <div aria-labelledby="profile with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+            <div aria-labelledby="profile with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 @if (count($experiences) >= 1)
                     <ul role="list" class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 p-4">
                         @foreach ($experiences as $key => $experience)
@@ -71,7 +71,7 @@
                                 @break
                             @endif
                             <li class="col-span-1 flex shadow-sm rounded-md">
-                                <div class="flex-shrink-0 flex items-center justify-center w-16 bg-[#cf5184] text-white text-sm font-medium rounded-l-md">
+                                <div class="flex-shrink-0 flex items-center justify-center w-16 bg-[#4FAE9D] text-white text-sm font-medium rounded-l-md">
                                     {{ $experience->date->format('Y') ?: 'Year' }}
                                 </div>
                                 <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
