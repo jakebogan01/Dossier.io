@@ -33,7 +33,6 @@ class ProjectForm extends Component
      */
     protected array $rules = [
         'title' => 'required',
-        'project_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
     public function mount()
@@ -85,11 +84,11 @@ class ProjectForm extends Component
 
         $path = 'project_images';
 
-        if ($this->projects->count() < 1) {
+        if (auth()->user()->projects->count() < 1) {
             $file = 'project_image' . '-' . 0 . '.' . $this->project_picture->extension();
             Storage::disk('public')->putFileAs($path, $this->project_picture, $file);
         } else {
-            foreach ($this->projects as $project) {
+            foreach (auth()->user()->projects as $project) {
                 $file = 'project_image' . '-' . $project->id . '.' . $this->project_picture->extension();
                 Storage::disk('public')->putFileAs($path, $this->project_picture, $file);
             }

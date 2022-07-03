@@ -117,7 +117,7 @@
                                             <span class="text-gray-800 font-bold sm:hover:text-gray-600">
                                                 {{ $project->title ?: 'Title Needed' }}
                                             </span>
-                                            <span class="block text-gray-500 pt-2 line-clamp-1">
+                                            <span class=" block text-gray-500 pt-2 line-clamp-1">
                                                 {{ $project->description ?: 'Description Needed' }}
                                             </span>
                                         </div>
