@@ -33,6 +33,7 @@ class ProjectFactory extends Factory
             ],
             'public' => 1,
             'total_likes' => $this->faker->numberBetween(0, 300),
+            'profile_photo_path' => $this->faker->imageUrl(350, 250, 'cats', true, 'Faker', true),
         ];
     }
 }

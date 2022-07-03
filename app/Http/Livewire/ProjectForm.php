@@ -25,7 +25,6 @@ class ProjectForm extends Component
     public bool $make_public;
     public int $numOfActivities = 5;
     public $project_picture;
-    public string $projectImage;
     public string $message;
 
     /**
@@ -109,6 +108,7 @@ class ProjectForm extends Component
         $this->resetInputFields(); //resets all wire:model variables
 
         $this->toggleWarning = true;
+        $this->message = 'Created';
 
         $this->updateActivity('Projects', 'created');
 
@@ -118,8 +118,9 @@ class ProjectForm extends Component
 
     public function delete($id)
     {
-        $this->projects->find($id)->delete();
+        auth()->user()->projects->find($id)->delete();
         $this->toggleWarning = true;
+        $this->message = 'Deleted';
         $this->updateActivity('Projects', 'deleted');
         $this->mount();
         $this->render();
@@ -162,9 +163,8 @@ class ProjectForm extends Component
             'profile_photo_path' => $newImage,
         ]);
 
-//        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
-
         $this->toggleWarning = true;
+        $this->message = 'Updated';
 
         $this->updateActivity('Projects', 'updated');
 
