@@ -1,10 +1,10 @@
 <div>
     @if ($paginator->hasPages())
-        <nav role="navigation" aria-label="Pagination Navigation" class="flex justify-between">
+        <nav role="navigation" aria-label="Pagination Navigation" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-gray-100' }} rounded-b-lg p-4 flex justify-between">
             <span>
                 {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())
-                    <span class="flex items-center justify-center bg-gray-100 px-2 py-1 text-gray-400 rounded-lg cursor-pointer">
+                    <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-gray-500' : 'bg-gray-100 text-gray-300' }} flex items-center justify-center px-2 py-1 rounded-lg cursor-pointer">
                         {!! __('pagination.previous') !!}
                     </span>
                 @else
@@ -21,7 +21,7 @@
                         {!! __('pagination.next') !!}
                     </button>
                 @else
-                    <span class="flex items-center justify-center bg-gray-100 px-2 py-1 text-gray-400 rounded-lg cursor-pointer">
+                    <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] text-gray-500' : 'bg-gray-100 text-gray-300' }} flex items-center justify-center px-2 py-1 rounded-lg cursor-pointer">
                         {!! __('pagination.next') !!}
                     </span>
                 @endif

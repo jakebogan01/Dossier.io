@@ -15,6 +15,7 @@ class ExperienceForm extends Component
     public $title, $date, $item, $description, $updateDate, $updateTitle, $updateDescription;
     public bool $toggleWarning = false;
     public int $numOfActivities = 5;
+    public string $message;
 
     /**
      * @var array|string[]
@@ -81,6 +82,7 @@ class ExperienceForm extends Component
         $this->resetInputFields(); //resets all wire:model variables
 
         $this->toggleWarning = true;
+        $this->message = 'Created';
 
         $this->updateActivity('Experiences', 'created');
 
@@ -90,9 +92,10 @@ class ExperienceForm extends Component
 
     public function delete($id)
     {
-        $this->experiences->find($id)->delete();
+        auth()->user()->experiences->find($id)->delete();
 
         $this->toggleWarning = true;
+        $this->message = 'Deleted';
 
         $this->updateActivity('Experiences', 'deleted');
 
@@ -107,24 +110,25 @@ class ExperienceForm extends Component
     public function show($id)
     {
         $this->item = $id;
-        $this->updateDate = $this->experiences->find($id)->date->format('Y-m-d');
-        $this->updateTitle = $this->experiences->find($id)->title;
-        $this->updateDescription = $this->experiences->find($id)->description;
+        $this->updateDate = auth()->user()->experiences->find($id)->date->format('Y-m-d');
+        $this->updateTitle = auth()->user()->experiences->find($id)->title;
+        $this->updateDescription = auth()->user()->experiences->find($id)->description;
     }
 
     public function updateData($id)
     {
-        $this->experiences->find($id)->update([
+        auth()->user()->experiences->find($id)->update([
             'date' => $this->updateDate,
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
         ]);
 
         $this->toggleWarning = true;
+        $this->message = 'Updated';
 
         $this->updateActivity('Experiences', 'updated');
 
-        $this->experiences->find($id)->refresh();
+        auth()->user()->experiences->find($id)->refresh();
         $this->mount();
         $this->render();
     }

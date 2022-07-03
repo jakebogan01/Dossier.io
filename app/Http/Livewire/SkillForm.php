@@ -38,11 +38,6 @@ class SkillForm extends Component
         'introduction' => 'required|max:16',
     ];
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
-
     /**
      * @param $currentUser
      * @return void
@@ -74,15 +69,16 @@ class SkillForm extends Component
     {
         $this->validate();
 
-        if ($this->currentUser) {
-            $this->updateSkills('update');
-        } else {
+        if (is_null($this->currentUser)) {
             $this->updateSkills('create');
+        } else {
+            $this->updateSkills('update');
         }
 
         $this->toggleWarning = true;
 
-        $this->currentUser->refresh();
+        $this->currentUser?->refresh();
+//        return redirect('skills');
     }
 
     public function updateSkills($action)
