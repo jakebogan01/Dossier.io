@@ -35,8 +35,6 @@
         </div>
     </x-dashboard.components.edit-form>
 
-
-
     <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
         <div class="col-span-2 {{ (!count($experiences) >= 1) ?: 'space-y-10' }}">
             <div aria-labelledby="profile with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
@@ -115,7 +113,7 @@
                             @error('date') <span class="text-danger error">{{ $message }}</span>@enderror
                         </div>
                     </div>
-                    <div class="mt-5">
+                    <div class="mt-10">
                         <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
                             <label for="title" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
                                 Title

@@ -8,7 +8,7 @@
                         {!! __('pagination.previous') !!}
                     </span>
                 @else
-                    <button wire:click="previousPage" wire:loading.attr="disabled" rel="prev" class="flex items-center justify-center bg-white px-2 py-1 text-gray-500 hover:text-gray-600 rounded-lg cursor-pointer">
+                    <button wire:click="previousPage" wire:loading.attr="disabled" rel="prev" type="button" class="flex items-center justify-center bg-white px-2 py-1 text-gray-500 hover:text-gray-600 rounded-lg cursor-pointer">
                         {!! __('pagination.previous') !!}
                     </button>
                 @endif
@@ -17,7 +17,7 @@
             <span>
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
-                    <button wire:click="nextPage" wire:loading.attr="disabled" rel="next" class="flex items-center justify-center bg-white px-2 py-1 text-gray-500 hover:text-gray-600 rounded-lg cursor-pointer">
+                    <button wire:click="nextPage" wire:loading.attr="disabled" type="button" rel="next" class="flex items-center justify-center bg-white px-2 py-1 text-gray-500 hover:text-gray-600 rounded-lg cursor-pointer">
                         {!! __('pagination.next') !!}
                     </button>
                 @else

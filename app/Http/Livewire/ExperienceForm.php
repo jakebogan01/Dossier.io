@@ -2,11 +2,11 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
 use Livewire\Component;
-use Illuminate\Contracts\Foundation\Application;
 use Livewire\WithPagination;
+use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\Foundation\Application;
 
 class ExperienceForm extends Component
 {
@@ -79,7 +79,7 @@ class ExperienceForm extends Component
             'description' => $this->description,
         ]);
 
-        $this->resetInputFields(); //resets all wire:model variables
+        $this->resetInputFields();
 
         $this->toggleWarning = true;
         $this->message = 'Created';
@@ -93,7 +93,6 @@ class ExperienceForm extends Component
     public function delete($id)
     {
         auth()->user()->experiences->find($id)->delete();
-
         $this->toggleWarning = true;
         $this->message = 'Deleted';
         $this->updateActivity('Experiences', 'deleted');
@@ -125,7 +124,6 @@ class ExperienceForm extends Component
         $this->message = 'Updated';
 
         $this->updateActivity('Experiences', 'updated');
-
         auth()->user()->experiences->find($id)->refresh();
         $this->mount();
         $this->render();
