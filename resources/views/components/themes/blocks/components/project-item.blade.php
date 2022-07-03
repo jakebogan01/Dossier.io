@@ -1,6 +1,6 @@
 @aware(['project'])
 
-<li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center g-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
+<li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center bg-no-repeat bg-center bg-cover" role="option" style="background-image: url('https://avatars.githubusercontent.com/u/66225768?v=4')">
     <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 px-[25px] sm:pl-16" style="background-color: rgba(0,0,0,0.5)">
         <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-70" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="50">
             {{ $project->title ?: 'Need title' }}

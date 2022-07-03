@@ -46,7 +46,7 @@
                             @if ($key >= 10)
                                 @break
                             @endif
-                            <li class="col-span-1 flex shadow-sm rounded-mdz" x-data="{ settings: false }" @click.away="settings = false" @close.stop="settings = false">
+                            <li class="col-span-1 flex shadow-sm rounded-md" x-data="{ settings: false }" @click.away="settings = false" @close.stop="settings = false">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#57168C]' }} flex-shrink-0 flex items-center justify-center w-16 text-white text-sm font-medium rounded-l-md cursor-default">
                                     {{ $experience->date->format('Y') ?: 'Year' }}
                                 </div>
@@ -60,7 +60,7 @@
                                         </span>
                                     </div>
                                     <div class="relative flex-shrink-0 pr-2">
-                                        <button @click="settings = !settings" type="button" class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent sm:hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <button @click="settings = !settings" type="button" class="border-none outline-none w-8 mt-2 inline-flex items-center justify-center text-gray-400 bg-transparent sm:hover:text-gray-500 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-transparent">
                                             <span class="sr-only">
                                                 Open options
                                             </span>

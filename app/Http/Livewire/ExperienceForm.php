@@ -96,9 +96,7 @@ class ExperienceForm extends Component
 
         $this->toggleWarning = true;
         $this->message = 'Deleted';
-
         $this->updateActivity('Experiences', 'deleted');
-
         $this->mount();
         $this->render();
     }

@@ -11,13 +11,14 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class ProjectForm extends Component
 {
+    use WithPagination;
     use WithFileUploads;
 
-    public $projects;
-    public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription, $updateProjectPicture;
+    public $title, $item, $description, $updateCode, $updateGithub, $updateTitle, $updateDescription, $updateProjectPicture, $newProjectPicture;
     public $github = '';
     public $code = '';
     public bool $toggleWarning = false;
@@ -25,6 +26,7 @@ class ProjectForm extends Component
     public int $numOfActivities = 5;
     public $project_picture;
     public string $projectImage;
+    public string $message;
 
     /**
      * @var array|string[]
@@ -36,7 +38,6 @@ class ProjectForm extends Component
 
     public function mount()
     {
-        $this->projects = auth()->user()->projects;
         $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
     }
 
@@ -63,7 +64,9 @@ class ProjectForm extends Component
      */
     public function render(): View|Factory|Application
     {
-        return view('livewire.project-form');
+        return view('livewire.project-form', [
+            'projects' => (auth()->user()->projects()->paginate(3)),
+        ]);
     }
 
     /**
@@ -130,21 +133,26 @@ class ProjectForm extends Component
     public function show($id)
     {
         $this->item = $id;
-        $this->updateTitle = $this->projects->find($id)->title;
-        $this->updateDescription = $this->projects->find($id)->description;
-        $this->updateCode = $this->projects->find($id)->links['code'];
-        $this->updateGithub = $this->projects->find($id)->links['github'];
-        $this->make_public = $this->projects->find($id)->public;
-//        $this->updateProjectPicture = $this->projects->find($id - 1)->profile_photo_path;
+        $this->updateTitle = auth()->user()->projects->find($id)->title;
+        $this->updateDescription = auth()->user()->projects->find($id)->description;
+        $this->updateCode = auth()->user()->projects->find($id)->links['code'];
+        $this->updateGithub = auth()->user()->projects->find($id)->links['github'];
+        $this->make_public = auth()->user()->projects->find($id)->public;
+        $this->updateProjectPicture = auth()->user()->projects->find($id)->profile_photo_path;
     }
 
     public function updateData($id)
     {
-        $path = 'project_images';
-        $file = 'project_image' . '-' . $this->projects->find($id)->id - 1 . '.' . $this->updateProjectPicture->extension();
-        Storage::disk('public')->putFileAs($path, $this->updateProjectPicture, $file);
+        $newImage = $this->updateProjectPicture;
 
-        $this->projects->find($id)->update([
+        if (!is_null($this->newProjectPicture)) {
+            $path = 'project_images';
+            $file = 'project_image' . '-' . auth()->user()->projects->find($id)->id - 1 . '.' . $this->newProjectPicture->extension();
+            Storage::disk('public')->putFileAs($path, $this->newProjectPicture, $file);
+            $newImage = Storage::disk('public')->url($path . '/' . $file);
+        }
+
+        auth()->user()->projects->find($id)->update([
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
             'links' => [
@@ -152,17 +160,17 @@ class ProjectForm extends Component
                 'github' => $this->updateGithub,
             ],
             'public' => $this->make_public,
-            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+            'profile_photo_path' => $newImage,
         ]);
 
-        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
+//        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
 
         $this->toggleWarning = true;
 
         $this->updateActivity('Projects', 'updated');
 
 
-        $this->projects->find($id)->refresh();
+        auth()->user()->projects->find($id)->refresh();
         $this->mount();
         $this->render();
     }
