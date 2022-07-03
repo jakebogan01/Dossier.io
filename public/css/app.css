@@ -3077,6 +3077,14 @@ select {
   --tw-text-opacity: 1;
   color: rgb(72 80 94 / var(--tw-text-opacity));
 }
+.text-\[\#993BCE\] {
+  --tw-text-opacity: 1;
+  color: rgb(153 59 206 / var(--tw-text-opacity));
+}
+.text-\[\#57168C\] {
+  --tw-text-opacity: 1;
+  color: rgb(87 22 140 / var(--tw-text-opacity));
+}
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;

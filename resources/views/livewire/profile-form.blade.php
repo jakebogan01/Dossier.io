@@ -42,7 +42,7 @@
                         </button>
                     </div>
                     <div class="flex-grow space-y-6">
-                        <div class="mt-8 grid grid-cols-12 gap-6">
+                        <div class="mt-8 grid grid-cols-12 gap-6 mt-12">
                             <div class="col-span-12 sm:col-span-6">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
                                     <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
