@@ -32,6 +32,7 @@ class TestimonialFactory extends Factory
                 'facebook' => $this->faker->url(),
                 'linkedin' => $this->faker->url(),
             ],
+            'profile_photo_path' => $this->faker->imageUrl(350, 250, 'cats', true, 'Faker', true)
         ];
     }
 }

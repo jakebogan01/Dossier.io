@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="flex bg-white">
                                         <div class="flex-1 px-4 py-2 text-sm cursor-default">
-                                            <span class="text-gray-800 font-bold sm:hover:text-gray-600">
+                                            <span class="text-gray-800 font-bold">
                                                 {{ $project->title ?: 'Title Needed' }}
                                             </span>
                                             <span class=" block text-gray-500 pt-2 line-clamp-1">

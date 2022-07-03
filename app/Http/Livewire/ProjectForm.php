@@ -103,9 +103,7 @@ class ProjectForm extends Component
             'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
         ]);
 
-        $this->projectImage = Storage::disk('public')->url($path . '/' . $file);
-
-        $this->resetInputFields(); //resets all wire:model variables
+        $this->resetInputFields();
 
         $this->toggleWarning = true;
         $this->message = 'Created';

@@ -10,29 +10,28 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class TestimonialForm extends Component
 {
+    use WithPagination;
     use WithFileUploads;
 
-    public $testimonials;
-    public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription, $updateTestimonialPicture;
+    public $title, $facebook, $linkedin, $job_position, $item, $description, $updateJobPosition, $updateLinkedin, $updateFacebook, $updateTitle, $updateDescription, $updateTestimonialPicture, $newTestimonialPicture;
     public bool $toggleWarning = false;
     public int $numOfActivities = 5;
     public $testimonial_picture;
-    public string $testimonialImage;
+    public string $message;
 
     /**
      * @var array|string[]
      */
     protected array $rules = [
         'title' => 'required',
-        'testimonial_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
     public function mount()
     {
-        $this->testimonials = auth()->user()->testimonials;
         $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
     }
 
@@ -59,7 +58,9 @@ class TestimonialForm extends Component
      */
     public function render(): View|Factory|Application
     {
-        return view('livewire.testimonial-form');
+        return view('livewire.testimonial-form', [
+            'testimonials' => (auth()->user()->testimonials()->paginate(2)),
+        ]);
     }
 
     /**
@@ -79,11 +80,11 @@ class TestimonialForm extends Component
 
         $path = 'testimonial_images';
 
-        if ($this->testimonials->count() < 1) {
+        if (auth()->user()->testimonials->count() < 1) {
             $file = 'testimonial_image' . '-' . 0 . '.' . $this->testimonial_picture->extension();
             Storage::disk('public')->putFileAs($path, $this->testimonial_picture, $file);
         } else {
-            foreach ($this->testimonials as $testimonial) {
+            foreach (auth()->user()->testimonials as $testimonial) {
                 $file = 'testimonial_image' . '-' . $testimonial->id . '.' . $this->testimonial_picture->extension();
                 Storage::disk('public')->putFileAs($path, $this->testimonial_picture, $file);
             }
@@ -100,11 +101,10 @@ class TestimonialForm extends Component
             'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
         ]);
 
-        $this->testimonialImage = Storage::disk('public')->url($path . '/' . $file);
-
-        $this->resetInputFields(); //resets all wire:model variables
+        $this->resetInputFields();
 
         $this->toggleWarning = true;
+        $this->message = 'Created';
 
         $this->updateActivity('Testimonials', 'created');
 
@@ -114,8 +114,9 @@ class TestimonialForm extends Component
 
     public function delete($id)
     {
-        $this->testimonials->find($id)->delete();
+        auth()->user()->testimonials->find($id)->delete();
         $this->toggleWarning = true;
+        $this->message = 'Deleted';
         $this->updateActivity('Testimonials', 'deleted');
         $this->mount();
         $this->render();
@@ -128,21 +129,26 @@ class TestimonialForm extends Component
     public function show($id)
     {
         $this->item = $id;
-        $this->updateTitle = $this->testimonials->find($id)->title;
-        $this->updateDescription = $this->testimonials->find($id)->description;
-        $this->updateJobPosition = $this->testimonials->find($id)->job_position;
-        $this->updateFacebook = $this->testimonials->find($id)->links['facebook'];
-        $this->updateLinkedin = $this->testimonials->find($id)->links['linkedin'];
-//        $this->updateTestimonialPicture = $this->testimonials->find($id - 1)->profile_photo_path;
+        $this->updateTitle = auth()->user()->testimonials->find($id)->title;
+        $this->updateDescription = auth()->user()->testimonials->find($id)->description;
+        $this->updateJobPosition = auth()->user()->testimonials->find($id)->job_position;
+        $this->updateFacebook = auth()->user()->testimonials->find($id)->links['facebook'];
+        $this->updateLinkedin = auth()->user()->testimonials->find($id)->links['linkedin'];
+        $this->updateTestimonialPicture = auth()->user()->testimonials->find($id)->profile_photo_path;
     }
 
     public function updateData($id)
     {
-        $path = 'testimonial_images';
-        $file = 'testimonial_image' . '-' . $this->testimonials->find($id)->id . '.' . $this->updateTestimonialPicture->extension();
-        Storage::disk('public')->putFileAs($path, $this->updateTestimonialPicture, $file);
+        $newImage = $this->updateTestimonialPicture;
 
-        $this->testimonials->find($id)->update([
+        if (!is_null($this->newTestimonialPicture)) {
+            $path = 'testimonial_images';
+            $file = 'testimonial_image' . '-' . auth()->user()->testimonials->find($id)->id - 1 . '.' . $this->newTestimonialPicture->extension();
+            Storage::disk('public')->putFileAs($path, $this->newTestimonialPicture, $file);
+            $newImage = Storage::disk('public')->url($path . '/' . $file);
+        }
+
+        auth()->user()->testimonials->find($id)->update([
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
             'job_position' => $this->updateJobPosition,
@@ -150,16 +156,15 @@ class TestimonialForm extends Component
                 'facebook' => $this->updateFacebook,
                 'linkedin' => $this->updateLinkedin,
             ],
-            'profile_photo_path' => Storage::disk('public')->url($path . '/' . $file),
+            'profile_photo_path' => $newImage,
         ]);
 
-        $this->testimonialImage = Storage::disk('public')->url($path . '/' . $file);
-
         $this->toggleWarning = true;
+        $this->message = 'Updated';
 
         $this->updateActivity('Testimonials', 'updated');
 
-        $this->testimonials->find($id)->refresh();
+        auth()->user()->testimonials->find($id)->refresh();
         $this->mount();
         $this->render();
     }
