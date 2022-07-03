@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
                                     <div class="flex-1 px-4 py-2 text-sm cursor-default">
-                                        <span class="text-gray-800 font-bold sm:hover:text-gray-600">
+                                        <span class="text-[#73148B] font-bold">
                                             {{ $experience->title ?: 'Title' }}
                                         </span>
                                         <span class="block text-gray-500 line-clamp-2">

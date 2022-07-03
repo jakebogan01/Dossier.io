@@ -90,7 +90,7 @@
                             @if ($key >= 4)
                                 @break
                             @endif
-                                <li x-data="{ settings: false }" @click.away="settings = false" @close.stop="settings = false" class="pb-4 pt-2 px-6 bg-[#4FAE9D] text-center rounded-lg xl:text-left">
+                                <li x-data="{ settings: false }" @click.away="settings = false" @close.stop="settings = false" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#57168C]' }} col-span-1 shadow-md relative pb-4 pt-2 px-6 text-center rounded-lg xl:text-left">
                                     <div class="flex justify-end h-[36px]">
                                         <div class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-300' }} flex justify-end space-x-6"
                                              x-cloak x-show="settings"
@@ -100,14 +100,14 @@
                                              x-transition:leave="transition ease-in duration-150"
                                              x-transition:leave-start="opacity-100 translate-y-0"
                                              x-transition:leave-end="opacity-0 translate-y-1">
-                                            <button wire:click.prevent="show({{ $testimonial->id }})" @click="edit = true; settings = false" type="button" class="sm:hover:text-[#407780] py-2">
+                                            <button wire:click.prevent="show({{ $testimonial->id }})" @click="edit = true; settings = false" type="button" class="{{ (auth()->user()->dark_mode) ? 'sm:hover:text-[#407780]' : 'sm:hover:text-[#4FAE9D]' }} py-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>
                                             </button>
                                             <button wire:click.prevent="delete({{ $testimonial->id }})" @click="notify = true; settings = false" type="button" class="sm:hover:text-red-300 pr-4 py-1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
                                             </button>
                                         </div>
-                                        <button @click="settings = !settings" type="button" class="border-none outline-none w-8 inline-flex items-center justify-center text-white bg-transparent sm:hover:text-[#407780] focus:outline-none focus:ring-0 focus:ring-transparent border-transparent focus-within:ring-transparent focus-within:border-transparent">
+                                        <button @click="settings = !settings" type="button" class="{{ (auth()->user()->dark_mode) ? 'sm:hover:text-[#407780]' : 'sm:hover:text-[#993BCE]' }} border-none outline-none w-8 inline-flex items-center justify-center text-white bg-transparent focus:outline-none focus:ring-0 focus:ring-transparent border-transparent focus-within:ring-transparent focus-within:border-transparent">
                                             <span class="sr-only">
                                                 Open options
                                             </span>
@@ -127,13 +127,13 @@
                                             </div>
                                             <ul role="list" class="flex justify-center space-x-5">
                                                 <li>
-                                                    <a href="{{ $testimonial->links['facebook'] }}" class="text-white sm:hover:text-[#407780]">
+                                                    <a href="{{ $testimonial->links['facebook'] }}" class="{{ (auth()->user()->dark_mode) ? 'sm:hover:text-[#407780]' : 'sm:hover:text-[#993BCE]' }} text-white">
                                                         <span class="sr-only">Facebook</span>
                                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" /></svg>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ $testimonial->links['linkedin'] }}" class="text-white sm:hover:text-[#407780]">
+                                                    <a href="{{ $testimonial->links['linkedin'] }}" class="{{ (auth()->user()->dark_mode) ? 'sm:hover:text-[#407780]' : 'sm:hover:text-[#993BCE]' }} text-white">
                                                         <span class="sr-only">LinkedIn</span>
                                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" /></svg>
                                                     </a>
@@ -152,7 +152,7 @@
             <div aria-labelledby="profile form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div class="flex justify-between items-center">
                     <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                        My Experience
+                        My Testimonial
                     </h2>
                     <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
