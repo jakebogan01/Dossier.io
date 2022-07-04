@@ -102,7 +102,7 @@
                                          x-transition:leave-start="opacity-100 translate-y-0"
                                          x-transition:leave-end="opacity-0 translate-y-1">
                                         <div class="relative ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                            <div class="{{ (auth()->user()->dark_mode) ? 'bg-black text-white bg-opacity-30' : 'bg-white' }} flex justify-end space-x-4">
+                                            <div class="text-white bg-black bg-opacity-30 flex justify-end space-x-4">
                                                 <button wire:click.prevent="show({{ $project->id }})" @click="edit = true; settings = false" type="button" class="sm:hover:text-[#4FAE9D] py-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>
                                                 </button>
@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="flex bg-white">
                                         <div class="flex-1 px-4 py-2 text-sm cursor-default">
-                                            <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#73148B]' }} font-bold">
+                                            <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} font-bold">
                                                 {{ $project->title ?: 'Title Needed' }}
                                             </span>
                                             <span class=" block text-gray-500 pt-2 line-clamp-1">
@@ -144,7 +144,7 @@
                     <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                         My Project
                     </h2>
-                    <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                    <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                     </button>
                 </div>

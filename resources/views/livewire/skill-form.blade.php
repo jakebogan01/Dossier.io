@@ -10,7 +10,7 @@
                     <ul role="tablist" class="flex items-center">
                         <li @click="formOne = true; formTwo = false; formThree = false">
                             <button type="button"
-                                :class="(tab === 'introduction') ? 'bg-white text-[#73148B]' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                :class="(tab === 'introduction') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
                                 @click.prevent="tab = 'introduction';
                                 window.location.hash = 'introduction'"
                                 class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
@@ -20,7 +20,7 @@
                         </li>
                         <li @click="formOne = false; formTwo = true; formThree = false">
                             <button type="button"
-                                :class="(tab === 'facts') ? 'bg-white text-[#73148B]' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                :class="(tab === 'facts') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
                                 @click.prevent="tab = 'facts';
                                 window.location.hash = 'facts'"
                                 class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
@@ -30,7 +30,7 @@
                         </li>
                         <li @click="formOne = false; formTwo = false; formThree = true">
                             <button type="button"
-                                :class="(tab === 'skills') ? 'bg-white text-[#73148B]' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                :class="(tab === 'skills') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
                                 @click.prevent="tab = 'skills';
                                 window.location.hash = 'skills'"
                                 class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
@@ -172,7 +172,7 @@
                     <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                         My Intro
                     </h2>
-                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#57168C] sm:hover:bg-[#993BCE]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                     </button>
                 </div>
