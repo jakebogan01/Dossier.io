@@ -7,7 +7,38 @@
         <div class="col-span-2 space-y-10">
             <div aria-labelledby="skills with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'conclusion' }" id="tab_wrapper">
-                    <x-dashboard.components.live-preview-tab :currentUser="$currentUser" tabOne="Conclusion" tabTwo="Contact Info" tabThree="Social Media"></x-dashboard.components.live-preview-tab>
+                    <ul role="tablist" class="flex items-center">
+                        <li @click="formOne = true; formTwo = false; formThree = false">
+                            <button type="button"
+                                :class="(tab === 'conclusion') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'conclusion';
+                                window.location.hash = 'conclusion'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Conclusion
+                            </button>
+                        </li>
+                        <li @click="formOne = false; formTwo = true; formThree = false">
+                            <button type="button"
+                                :class="(tab === 'contact') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'contact';
+                                window.location.hash = 'contact'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Contact Info
+                            </button>
+                        </li>
+                        <li @click="formOne = false; formTwo = false; formThree = true">
+                            <button type="button"
+                                :class="(tab === 'social') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'social';
+                                window.location.hash = 'social'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Social Media
+                            </button>
+                        </li>
+                    </ul>
                     <div class="bg-[#434c56]">
                         <section x-show="tab === 'conclusion'" x-cloak>
                             <dl>
@@ -132,15 +163,7 @@
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-12">
-                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}">
-                        <div class="relative mt-1">
-                            <label for="conclusion" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Conclusion
-                            </label>
-                            <textarea wire:model="conclusion" id="conclusion" name="conclusion" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                        </div>
-                        @error('conclusion') <span class="text-danger error">{{ $message }}</span>@enderror
-                    </div>
+                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Conclusion" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="formTwo" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -150,13 +173,7 @@
                 <div class="flex-grow space-y-6 mt-12">
                     <div class="mt-8 grid grid-cols-12 gap-6">
                         <div class="col-span-12 sm:col-span-6">
-                            <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                <label for="phone" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                    Phone
-                                </label>
-                                <input wire:model="phone" type="tel" name="phone" id="phone" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                            </div>
-                            @error('phone') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                            <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Phone"></x-dashboard.components.form-fields.input-field>
                         </div>
                     </div>
                 </div>
@@ -167,76 +184,11 @@
                 </h2>
                 <div class="flex-grow space-y-6">
                     <div class="grid grid-cols-12 gap-6 mt-12">
-                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} pl-3 relative col-span-12 sm:col-span-6 border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="instagram" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Instagram
-                            </label>
-                            <div class="relative rounded-md shadow-sm">
-                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm">
-                                        https://
-                                    </span>
-                                </div>
-                                <input wire:model="instagram" type="text" name="instagram" id="instagram" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-transparent text-gray-900' }} block w-full border-0 pl-16 sm:pl-[48px] px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('instagram') <span class="text-danger error">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} pl-3 relative col-span-12 sm:col-span-6 border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="facebook" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Facebook
-                            </label>
-                            <div class="relative rounded-md shadow-sm">
-                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm">
-                                        https://
-                                    </span>
-                                </div>
-                                <input wire:model="facebook" type="text" name="facebook" id="facebook" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-transparent text-gray-900' }} block w-full border-0 pl-16 sm:pl-[48px] px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('facebook') <span class="text-danger error">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} pl-3 relative col-span-12 sm:col-span-6 border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="github" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                GitHub
-                            </label>
-                            <div class="relative rounded-md shadow-sm">
-                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm">
-                                        https://
-                                    </span>
-                                </div>
-                                <input wire:model="github" type="text" name="github" id="github" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-transparent text-gray-900' }} block w-full border-0 pl-16 sm:pl-[48px] px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('github') <span class="text-danger error">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} pl-3 relative col-span-12 sm:col-span-6 border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="linkedin" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Linkedin
-                            </label>
-                            <div class="relative rounded-md shadow-sm">
-                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm">
-                                        https://
-                                    </span>
-                                </div>
-                                <input wire:model="linkedin" type="text" name="linkedin" id="linkedin" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-transparent text-gray-900' }} block w-full border-0 pl-16 sm:pl-[48px] px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('linkedin') <span class="text-danger error">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} pl-3 relative col-span-12 sm:col-span-6 border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="dribbble" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Dribbble
-                            </label>
-                            <div class="relative rounded-md shadow-sm">
-                                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                                    <span class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} sm:text-sm">
-                                        https://
-                                    </span>
-                                </div>
-                                <input wire:model="dribbble" type="text" name="dribbble" id="dribbble" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-transparent text-gray-900' }} block w-full border-0 pl-16 sm:pl-[48px] px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('dribbble') <span class="text-danger error">{{ $message }}</span>@enderror
-                        </div>
+                        <x-dashboard.components.form-fields.url-field type="text" model="instagram" title="Instagram" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="facebook" title="Facebook" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="linkedin" title="Linkedin" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="dribbble" title="Dribbble" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
                     </div>
                 </div>
             </div>

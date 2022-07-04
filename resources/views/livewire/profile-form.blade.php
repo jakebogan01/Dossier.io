@@ -44,42 +44,13 @@
                     <div class="flex-grow space-y-6">
                         <div class="mt-8 grid grid-cols-12 gap-6 mt-12">
                             <div class="col-span-12 sm:col-span-6">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                    <label for="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Name
-                                    </label>
-                                    <input wire:model="portfolio_name" type="text" name="portfolio_name" id="portfolio_name" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                </div>
-                                @error('portfolio_name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Name"></x-dashboard.components.form-fields.input-field>
                             </div>
                             <div class="col-span-12 sm:col-span-6">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                    <label for="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Email
-                                    </label>
-                                    <input wire:model="portfolio_email" type="email" name="portfolio_email" id="portfolio_email" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm" required>
-                                </div>
-                                @error('portfolio_email') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                <x-dashboard.components.form-fields.input-field type="email" model="portfolio_email" title="Email"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
-                        <div>
-                            <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent' : 'bg-transparent border-gray-300' }} relative mt-1 flex justify-center px-6 {{ (auth()->user()->dark_mode) ? 'pt-8' : 'pt-5' }} pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                                <label for="profile_picture" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                    Photo
-                                </label>
-                                <div class="space-y-1 text-center">
-                                    <div class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }} flex text-sm">
-                                        <label for="profile_picture" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white sm:hover:text-[#4FAE9D]' : 'bg-white text-indigo-600 sm:hover:text-indigo-500' }} relative cursor-pointer rounded-md font-medium focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                                            <span>
-                                                Upload a file
-                                            </span>
-                                            <input wire:model="profile_picture" id="profile_picture" name="profile_picture" type="file" class="sr-only">
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <x-dashboard.components.form-fields.image-field model="profile_picture"></x-dashboard.components.form-fields.image-field>
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 lg:col-span-3">
                                 <div x-data="{ total: 0 }" class="w-full">

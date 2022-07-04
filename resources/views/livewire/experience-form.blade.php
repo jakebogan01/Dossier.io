@@ -6,33 +6,13 @@
     <x-dashboard.components.edit-form :item="$item" content="Experience">
         <div class="grid grid-cols-12 gap-6 mt-12">
             <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
-                <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                    <label for="updateDate" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                        Date
-                    </label>
-                    <input wire:model="updateDate" type="date" name="updateDate" id="updateDate" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 rounded-md px-3 py-2 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                </div>
-                @error('updateDate') <span class="text-danger error">{{ $message }}</span>@enderror
+                <x-dashboard.components.form-fields.input-field type="date" model="updateDate" title="Date"></x-dashboard.components.form-fields.input-field>
             </div>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}">
-            <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                <label for="updateTitle" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                    Title
-                </label>
-                <input wire:model="updateTitle" type="text" name="updateTitle" id="updateTitle" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-            </div>
-            @error('updateTitle') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Title"></x-dashboard.components.form-fields.input-field>
         </div>
-        <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}">
-            <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                <label for="updateDescription" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                    Description
-                </label>
-                <input wire:model="updateDescription" type="text" name="updateDescription" id="updateDescription" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 rounded-md px-3 py-2 placeholder-gray-500 focus:ring-0 sm:text-sm">
-            </div>
-            @error('updateDescription') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
-        </div>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
     </x-dashboard.components.edit-form>
 
     <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
@@ -68,33 +48,13 @@
                 <div class="flex-grow space-y-6">
                     <div class="grid grid-cols-12 gap-6 mt-12">
                         <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
-                            <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                <label for="date" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                    Date
-                                </label>
-                                <input wire:model="date" type="date" name="date" id="date" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 rounded-md px-3 py-2 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                            </div>
-                            @error('date') <span class="text-danger error">{{ $message }}</span>@enderror
+                            <x-dashboard.components.form-fields.input-field type="date" model="date" title="Date"></x-dashboard.components.form-fields.input-field>
                         </div>
                     </div>
                     <div class="mt-10">
-                        <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="title" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Title
-                            </label>
-                            <input wire:model="title" type="text" name="title" id="title" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-md placeholder-gray-500 focus:ring-0 sm:text-sm">
-                        </div>
-                        @error('title') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                        <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title"></x-dashboard.components.form-fields.input-field>
                     </div>
-                    <div class="mt-5">
-                        <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                            <label for="description" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Description
-                            </label>
-                            <input wire:model="description" type="text" name="description" id="description" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 rounded-md px-3 py-2 placeholder-gray-500 focus:ring-0 sm:text-sm">
-                        </div>
-                        @error('description') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
-                    </div>
+                    <x-dashboard.components.form-fields.textarea-field model="description" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
         </div>

@@ -7,7 +7,39 @@
         <div class="col-span-2 space-y-10">
             <div aria-labelledby="skills with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'introduction' }" id="tab_wrapper">
-                    <x-dashboard.components.live-preview-tab :currentUser="$currentUser" tabOne="Introduction" tabTwo="Facts" tabThree="Skills"></x-dashboard.components.live-preview-tab>
+                    <ul role="tablist" class="flex items-center">
+                        <li @click="formOne = true; formTwo = false; formThree = false">
+                            <button type="button"
+                                :class="(tab === 'introduction') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'introduction';
+                                window.location.hash = 'introduction'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Introduction
+                            </button>
+                        </li>
+                        <li @click="formOne = false; formTwo = true; formThree = false">
+                            <button type="button"
+                                :class="(tab === 'facts') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'facts';
+                                window.location.hash = 'facts'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Facts
+                            </button>
+                        </li>
+                        <li @click="formOne = false; formTwo = false; formThree = true">
+                            <button type="button"
+                                :class="(tab === 'skills') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
+                                @click.prevent="tab = 'skills';
+                                window.location.hash = 'skills'"
+                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
+                                role="tab">
+                                Skills
+                            </button>
+                        </li>
+                    </ul>
+
                     <div class="bg-[#434c56]">
                         <section x-show="tab === 'introduction'" x-cloak>
                             <dl>
@@ -146,15 +178,7 @@
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-12">
-                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}">
-                        <div class="relative mt-1">
-                            <label for="introduction" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                Description
-                            </label>
-                            <textarea wire:model.defer="introduction" id="introduction" name="introduction" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                        </div>
-                        @error('introduction') <span class="text-danger error">{{ $message }}</span>@enderror
-                    </div>
+                    <x-dashboard.components.form-fields.textarea-field model="introduction" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="formTwo" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -166,31 +190,13 @@
                         <div class="flex-grow space-y-6">
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <div class="col-span-12 sm:col-span-6">
-                                    <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                        <label for="fact_one" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                            One
-                                        </label>
-                                        <input wire:model.defer="fact_one" type="text" name="fact_one" id="fact_one" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" style="border-radius: 0.375rem !important;" required>
-                                    </div>
-                                    @error('fact_one') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="One"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                        <label for="fact_two" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                            Two
-                                        </label>
-                                        <input wire:model.defer="fact_two" type="text" name="fact_two" id="fact_two" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" style="border-radius: 0.375rem !important;" required>
-                                    </div>
-                                    @error('fact_two') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_two" title="Two"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <div class="{{ (auth()->user()->dark_mode) ? 'border-transparent focus-within:ring-transparent focus-within:border-transparent' : 'border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600' }} relative border rounded-md shadow-sm focus-within:ring-1">
-                                        <label for="fact_three" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                            Three
-                                        </label>
-                                        <input wire:model.defer="fact_three" type="text" name="fact_three" id="fact_three" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] text-white' : 'bg-white text-gray-900' }} block w-full border-0 px-3 py-2 rounded-full placeholder-gray-500 focus:ring-0 sm:text-sm" style="border-radius: 0.375rem !important;" required>
-                                    </div>
-                                    @error('fact_three') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_three" title="Three"></x-dashboard.components.form-fields.input-field>
                                 </div>
                             </div>
                         </div>
@@ -205,9 +211,9 @@
                     <div class="mt-6 flex flex-col lg:flex-row">
                         <div class="flex-grow space-y-6">
                             <div class="grid grid-cols-12 gap-6">
-                                <x-dashboard.components.skill-select num="skill_one" :skills="$skills" req="required">
+                                <x-dashboard.components.form-fields.skill-select num="skill_one" :skills="$skills" req="required">
                                     Skill One
-                                </x-dashboard.components.skill-select>
+                                </x-dashboard.components.form-fields.skill-select>
                             </div>
                             <div class="relative">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
@@ -219,9 +225,9 @@
                                 @error('description_one') <span class="text-danger error">{{ $message }}</span>@enderror
                             </div>
                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                <x-dashboard.components.skill-select num="skill_two" :skills="$skills" req="required">
+                                <x-dashboard.components.form-fields.skill-select num="skill_two" :skills="$skills" req="required">
                                     Skill Two
-                                </x-dashboard.components.skill-select>
+                                </x-dashboard.components.form-fields.skill-select>
                             </div>
                             <div class="relative">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
@@ -233,9 +239,9 @@
                                 @error('description_two') <span class="text-danger error">{{ $message }}</span>@enderror
                             </div>
                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                <x-dashboard.components.skill-select num="skill_three" :skills="$skills">
+                                <x-dashboard.components.form-fields.skill-select num="skill_three" :skills="$skills">
                                     Skill Three
-                                </x-dashboard.components.skill-select>
+                                </x-dashboard.components.form-fields.skill-select>
                             </div>
                             <div class="relative">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
@@ -247,9 +253,9 @@
                                 @error('description_three') <span class="text-danger error">{{ $message }}</span>@enderror
                             </div>
                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                <x-dashboard.components.skill-select num="skill_four" :skills="$skills">
+                                <x-dashboard.components.form-fields.skill-select num="skill_four" :skills="$skills">
                                     Skill Four
-                                </x-dashboard.components.skill-select>
+                                </x-dashboard.components.form-fields.skill-select>
                             </div>
                             <div class="relative">
                                 <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
