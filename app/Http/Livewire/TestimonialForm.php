@@ -59,7 +59,7 @@ class TestimonialForm extends Component
     public function render(): View|Factory|Application
     {
         return view('livewire.testimonial-form', [
-            'testimonials' => (auth()->user()->testimonials()->paginate(2)),
+            'testimonials' => (auth()->user()->testimonials()->paginate(3)),
         ]);
     }
 

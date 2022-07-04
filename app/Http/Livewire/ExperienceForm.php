@@ -56,7 +56,7 @@ class ExperienceForm extends Component
     public function render(): View|Factory|Application
     {
         return view('livewire.experience-form', [
-            'experiences' => (auth()->user()->experiences()->paginate(6)),
+            'experiences' => (auth()->user()->experiences()->paginate(3)),
         ]);
     }
 

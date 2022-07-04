@@ -92,7 +92,7 @@
                                 @break
                             @endif
                             <li x-data="{ settings: false }" @click.away="settings = false" @close.stop="settings = false" class="col-span-1 shadow-md rounded-md relative flex items-end bg-no-repeat bg-center bg-cover h-[250px] overflow-hidden group" role="option" style="background-image: url('{{ $project->profile_photo_path }}')">
-                                <div class="relative flex-1 transform translate-y-6 group-hover:translate-y-0 transition-transform">
+                                <div class="relative flex-1 transform translate-y-6 sm:group-hover:translate-y-0 transition-transform">
                                     <div class="px-2 sm:px-0"
                                          x-cloak x-show="settings"
                                          x-transition:enter="transition ease-out duration-200"
@@ -102,7 +102,7 @@
                                          x-transition:leave-start="opacity-100 translate-y-0"
                                          x-transition:leave-end="opacity-0 translate-y-1">
                                         <div class="relative ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                            <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#333333] text-white' : 'bg-white' }} flex justify-end space-x-4">
+                                            <div class="{{ (auth()->user()->dark_mode) ? 'bg-black text-white bg-opacity-30' : 'bg-white' }} flex justify-end space-x-4">
                                                 <button wire:click.prevent="show({{ $project->id }})" @click="edit = true; settings = false" type="button" class="sm:hover:text-[#4FAE9D] py-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>
                                                 </button>
