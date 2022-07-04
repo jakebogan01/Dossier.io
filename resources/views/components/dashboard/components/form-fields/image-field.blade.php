@@ -11,7 +11,7 @@
                 <span>
                     Upload a file
                 </span>
-                <input wire:model="{{ $model }}" id="{{ $model }}" name="{{ $model }}" type="file" class="sr-only">
+                <input wire:model="{{ $model }}" id="{{ $model }}" name="{{ $model }}" type="file" class="sr-only" accept="image/jpg, image/jpeg">
             </label>
         </div>
     </div>
