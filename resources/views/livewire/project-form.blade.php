@@ -4,14 +4,14 @@
     <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
 
     <x-dashboard.components.edit-form :item="$item" content="Project">
-        <div class="mt-10">
+        <div class="mt-14">
             <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Title"></x-dashboard.components.form-fields.input-field>
         </div>
-        <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}">
+        <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
             <x-dashboard.components.form-fields.image-field model="newProjectPicture"></x-dashboard.components.form-fields.image-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
-        <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} grid grid-cols-4 gap-6">
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
             <x-dashboard.components.form-fields.url-field type="text" model="updateCode" title="Project" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
             <x-dashboard.components.form-fields.url-field type="text" model="updateGithub" title="GitHub" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
         </div>
@@ -53,15 +53,15 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                     </button>
                 </div>
-                <div class="flex-grow space-y-6">
-                    <div class="mt-10">
+                <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
+                    <div class="mt-14">
                         <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title"></x-dashboard.components.form-fields.input-field>
                     </div>
-                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}">
+                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
                         <x-dashboard.components.form-fields.image-field model="project_picture"></x-dashboard.components.form-fields.image-field>
                     </div>
-                    <x-dashboard.components.form-fields.textarea-field model="description" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
-                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} grid grid-cols-4 gap-6">
+                    <x-dashboard.components.form-fields.textarea-field model="description" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                    <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
                         <x-dashboard.components.form-fields.url-field type="text" model="code" title="Project" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
                         <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
                     </div>

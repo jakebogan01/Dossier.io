@@ -41,8 +41,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                         </button>
                     </div>
-                    <div class="flex-grow space-y-6">
-                        <div class="mt-8 grid grid-cols-12 gap-6 mt-12">
+                    <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
+                        <div class="mt-8 grid grid-cols-12 gap-6 mt-14">
                             <div class="col-span-12 sm:col-span-6">
                                 <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Name"></x-dashboard.components.form-fields.input-field>
                             </div>
@@ -54,14 +54,13 @@
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 lg:col-span-3">
                                 <div x-data="{ total: 0 }" class="w-full">
-                                    <label for="total_clients" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Number of Clients: ${total}`"></label>
+                                    <label for="total_clients" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Clients: ${total}`"></label>
                                     <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
                                 </div>
                             </div>
-
                             <div class="col-span-6 lg:col-span-3">
                                 <div x-data="{ total: 0 }" class="w-full">
-                                    <label for="total_tools" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Number of Tools: ${total}`"></label>
+                                    <label for="total_tools" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Tools: ${total}`"></label>
                                     <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
                                 </div>
                             </div>

@@ -160,7 +160,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                     </button>
                 </div>
-                <div class="flex-grow space-y-6 mt-12">
+                <div class="flex-grow space-y-6 mt-14">
                     <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Conclusion" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                 <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                     My Contact Info
                 </h2>
-                <div class="flex-grow space-y-6 mt-12">
+                <div class="flex-grow mt-14">
                     <div class="mt-8 grid grid-cols-12 gap-6">
                         <div class="col-span-12 sm:col-span-6">
                             <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Phone"></x-dashboard.components.form-fields.input-field>
@@ -181,7 +181,7 @@
                     My Social Media
                 </h2>
                 <div class="flex-grow space-y-6">
-                    <div class="grid grid-cols-12 gap-6 mt-12">
+                    <div class="{{ (auth()->user()->dark_mode) ? 'gap-y-10' : 'gap-y-6' }} grid grid-cols-12 gap-x-6 mt-14">
                         <x-dashboard.components.form-fields.url-field type="text" model="instagram" title="Instagram" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
                         <x-dashboard.components.form-fields.url-field type="text" model="facebook" title="Facebook" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
                         <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>

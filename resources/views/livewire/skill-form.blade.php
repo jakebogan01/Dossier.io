@@ -174,7 +174,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
                     </button>
                 </div>
-                <div class="flex-grow space-y-6 mt-12">
+                <div class="flex-grow space-y-6 mt-14">
                     <x-dashboard.components.form-fields.textarea-field model="introduction" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
@@ -182,10 +182,10 @@
                 <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                     My Fun Facts
                 </h2>
-                <div class="flex-grow space-y-6">
-                    <div class="mt-4 flex flex-col lg:flex-row">
-                        <div class="flex-grow space-y-6">
-                            <div class="mt-8 grid grid-cols-12 gap-6">
+                <div class="flex-grow">
+                    <div class="mt-14 flex flex-col lg:flex-row">
+                        <div class="flex-grow">
+                            <div class="{{ (auth()->user()->dark_mode) ? 'gap-y-10' : 'gap-y-6' }} grid grid-cols-12 gap-x-6">
                                 <div class="col-span-12 sm:col-span-6">
                                     <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="One"></x-dashboard.components.form-fields.input-field>
                                 </div>
@@ -204,65 +204,33 @@
                 <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                     My Skill Sets
                 </h2>
-                <div class="flex-grow space-y-6">
-                    <div class="mt-6 flex flex-col lg:flex-row">
-                        <div class="flex-grow space-y-6">
+                <div class="flex-grow">
+                    <div class="mt-14 flex flex-col lg:flex-row">
+                        <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                             <div class="grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_one" :skills="$skills" req="required">
                                     Skill One
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <div class="relative">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
-                                    <label for="description_one" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Description
-                                    </label>
-                                    <textarea wire:model.defer="description_one" id="description_one" name="description_one" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                                </div>
-                                @error('description_one') <span class="text-danger error">{{ $message }}</span>@enderror
-                            </div>
+                            <x-dashboard.components.form-fields.textarea-field model="description_one" title="Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_two" :skills="$skills" req="required">
                                     Skill Two
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <div class="relative">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
-                                    <label for="description_two" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Description
-                                    </label>
-                                    <textarea wire:model.defer="description_two" id="description_two" name="description_two" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                                </div>
-                                @error('description_two') <span class="text-danger error">{{ $message }}</span>@enderror
-                            </div>
+                            <x-dashboard.components.form-fields.textarea-field model="description_two" title="Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_three" :skills="$skills">
                                     Skill Three
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <div class="relative">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
-                                    <label for="description_three" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Description
-                                    </label>
-                                    <textarea wire:model.defer="description_three" id="description_three" name="description_three" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                                </div>
-                                @error('description_three') <span class="text-danger error">{{ $message }}</span>@enderror
-                            </div>
+                            <x-dashboard.components.form-fields.textarea-field model="description_three" title="Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_four" :skills="$skills">
                                     Skill Four
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <div class="relative">
-                                <div class="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }} ">
-                                    <label for="description_four" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-[18px] left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-                                        Description
-                                    </label>
-                                    <textarea wire:model.defer="description_four" id="description_four" name="description_four" rows="5" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent focus-within:ring-transparent focus-within:border-transparent text-white' : 'bg-white border-gray-300 focus-within:ring-indigo-600 focus-within:border-indigo-600 text-gray-900' }} shadow-sm mt-1 block w-full sm:text-sm border rounded-md"></textarea>
-                                </div>
-                                @error('description_four') <span class="text-danger error">{{ $message }}</span>@enderror
-                            </div>
+                            <x-dashboard.components.form-fields.textarea-field model="description_four" title="Description"></x-dashboard.components.form-fields.textarea-field>
                         </div>
                     </div>
                 </div>
