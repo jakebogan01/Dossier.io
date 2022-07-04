@@ -70,7 +70,7 @@
                                         </div>
                                         <div class="flex bg-white">
                                             <div class="flex-1 px-4 py-2 text-sm cursor-default">
-                                            <span class="text-[#73148B] font-bold">
+                                            <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#73148B]' }} font-bold">
                                                 {{ $experience->title ?: 'Title Needed' }}
                                             </span>
                                                 <span class=" block text-gray-500 pt-2 line-clamp-1">
