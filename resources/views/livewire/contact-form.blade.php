@@ -7,38 +7,7 @@
         <div class="col-span-2 space-y-10">
             <div aria-labelledby="skills with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'conclusion' }" id="tab_wrapper">
-                    <ul role="tablist" class="flex items-center">
-                        <li @click="formOne = true; formTwo = false; formThree = false">
-                            <button type="button"
-                                :class="(tab === 'conclusion') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#73148B]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'conclusion';
-                                window.location.hash = 'conclusion'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Conclusion
-                            </button>
-                        </li>
-                        <li @click="formOne = false; formTwo = true; formThree = false">
-                            <button type="button"
-                                :class="(tab === 'contact') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#73148B]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'contact';
-                                window.location.hash = 'contact'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Contact Info
-                            </button>
-                        </li>
-                        <li @click="formOne = false; formTwo = false; formThree = true">
-                            <button type="button"
-                                :class="(tab === 'social') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#73148B]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'social';
-                                window.location.hash = 'social'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Social Media
-                            </button>
-                        </li>
-                    </ul>
+                    <x-dashboard.components.live-preview-tab :currentUser="$currentUser" tabOne="Conclusion" tabTwo="Contact Info" tabThree="Social Media"></x-dashboard.components.live-preview-tab>
                     <div class="bg-[#434c56]">
                         <section x-show="tab === 'conclusion'" x-cloak>
                             <dl>

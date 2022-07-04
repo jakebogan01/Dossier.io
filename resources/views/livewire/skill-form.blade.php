@@ -7,38 +7,7 @@
         <div class="col-span-2 space-y-10">
             <div aria-labelledby="skills with live preview" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-white' }} shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'introduction' }" id="tab_wrapper">
-                    <ul role="tablist" class="flex items-center">
-                        <li @click="formOne = true; formTwo = false; formThree = false">
-                            <button type="button"
-                                :class="(tab === 'introduction') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'introduction';
-                                window.location.hash = 'introduction'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Introduction
-                            </button>
-                        </li>
-                        <li @click="formOne = false; formTwo = true; formThree = false">
-                            <button type="button"
-                                :class="(tab === 'facts') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'facts';
-                                window.location.hash = 'facts'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Facts
-                            </button>
-                        </li>
-                        <li @click="formOne = false; formTwo = false; formThree = true">
-                            <button type="button"
-                                :class="(tab === 'skills') ? '{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} bg-white' : '{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-400' }} bg-transparent'"
-                                @click.prevent="tab = 'skills';
-                                window.location.hash = 'skills'"
-                                class="inline-flex font-semibold px-5 py-2.5 rounded-t-md"
-                                role="tab">
-                                Skills
-                            </button>
-                        </li>
-                    </ul>
+                    <x-dashboard.components.live-preview-tab :currentUser="$currentUser" tabOne="Introduction" tabTwo="Facts" tabThree="Skills"></x-dashboard.components.live-preview-tab>
                     <div class="bg-[#434c56]">
                         <section x-show="tab === 'introduction'" x-cloak>
                             <dl>
