@@ -9,7 +9,7 @@
                 @endif
                 <a href="{{ route(strtolower($activity->section)) }}">
                     <div class="{{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#59626e]' : 'sm:hover:bg-gray-100' }} relative flex space-x-3 cursor-pointer sm:transition-colors">
-                        <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#5EADD6] ring-[#434c56]' : 'bg-[#8936d6] ring-white' }} h-8 w-8 rounded-full flex items-center justify-center ring-8 sm:transition-all duration-300 ease-linear">
+                        <span class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] ring-[#434c56]' : 'bg-[#8936d6] ring-white' }} h-8 w-8 rounded-full flex items-center justify-center ring-8 sm:transition-all duration-300 ease-linear">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" /></svg>
                         </span>
                         <div class="min-w-0 flex-1 flex justify-between items-center space-x-4">
