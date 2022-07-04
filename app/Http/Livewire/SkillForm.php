@@ -77,8 +77,8 @@ class SkillForm extends Component
 
         $this->toggleWarning = true;
 
+        $this->mount($this->currentUser);
         $this->currentUser?->refresh();
-//        return redirect('skills');
     }
 
     public function updateSkills($action)

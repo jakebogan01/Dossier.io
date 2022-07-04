@@ -13,21 +13,21 @@ class ContactForm extends Component
 {
     public $currentUser;
     public bool $toggleWarning = false;
-    public string $conclusion = 'Conclusion test';
-    public string $phone = 'phone';
+    public string $conclusion = '';
+    public string $phone = '';
     public string $instagram = '';
     public string $facebook = '';
     public string $github = '';
     public string $linkedin = '';
     public string $dribbble = '';
     public int $numOfActivities = 5;
+    public string $message = 'Updated';
 
     /**
      * @var array|string[]
      */
     protected array $rules = [
         'conclusion' => 'required|max:16',
-        'phone' => 'required',
     ];
 
     public function updated($propertyName)
@@ -74,7 +74,7 @@ class ContactForm extends Component
         $this->toggleWarning = true;
 
         $this->mount($this->currentUser);
-        $this->currentUser->refresh();
+        $this->currentUser?->refresh();
     }
 
     public function updateContact($action)
