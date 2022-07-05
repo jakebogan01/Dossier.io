@@ -1,20 +1,11 @@
 @aware(['user'])
 
 @if(count($user->testimonials) !== 0)
-    <section
-        id="testimonials"
-        {{ $attributes->merge(['class' => 'testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
-        <img
-            class="absolute bottom-24 left-0 z-10"
-            src="/images/themes/svg/background-pattern.svg"
-            role="presentation"
-            alt="decoration"
-            loading="eager">
+    <section id="testimonials"{{ $attributes->merge(['class' => 'testimonials anchor flex flex-col relative py-28 bg-[#1C1F2D] group']) }}>
+        <img class="absolute bottom-24 left-0 z-10" src="/images/themes/svg/background-pattern.svg" role="presentation" alt="decoration" loading="eager">
         <div class="relative mx-auto py-12 px-[25px] max-w-7xl sm:px-[85px] lg:py-32 z-20">
             <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
-                <aside
-                    class="space-y-5 sm:space-y-4"
-                    data-aos="fade-right">
+                <aside data-aos="fade-right" class="space-y-5 sm:space-y-4">
                     <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white">
                         TRIBUTES
                     </h2>
@@ -23,9 +14,7 @@
                     </p>
                 </aside>
                 <div class="lg:col-span-2">
-                    <ul
-                        role="list"
-                        class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
+                    <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
                         @foreach($user->testimonials as $key => $testimonial)
                             @switch($key)
                                 @case(0)

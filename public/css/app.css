@@ -1177,6 +1177,9 @@ select {
 .m-3 {
   margin: 0.75rem;
 }
+.m-0 {
+  margin: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1657,6 +1660,9 @@ select {
 }
 .max-w-lg {
   max-width: 32rem;
+}
+.max-w-\[550px\] {
+  max-width: 550px;
 }
 .flex-1 {
   flex: 1 1 0%;

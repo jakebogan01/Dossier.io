@@ -22,49 +22,56 @@
             </button>
         </div>
         <div class="text-[36px] 570:text-[46px] xl:text-[3.375rem] font-black text-white sm:text-gray-400 mr-0 mt-[100px] transition-all" data-aos="fade-right" data-aos-delay="300">
-            <h1 class="leading-[1.1] tracking-wider whitespace-nowrap sm:group-hover:text-white transition-colors">
+            <h1 class="leading-[1.1] tracking-wider max-w-[550px] sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
                 {{ strtoupper($user->profile->portfolio_name) ?: 'YOUR NAME' }}<br>
-                AND THIS…<br>
-                IS MY LEGACY
+                WEB DEVELOPER
             </h1>
         </div>
         <div class="flex font-black my-[3.125rem]">
             <dl class="mt-5 grid grid-cols-3 gap-20">
-                <div data-aos="fade-right" data-aos-delay="300">
-                    <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
-                        {{ strtoupper($user->profile->total_clients) ?: 0 }}
-                    </dt>
-                    <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
-                        CLIENTS
-                    </dd>
-                </div>
-                <div data-aos="fade-right" data-aos-delay="200">
-                    <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
-                        {{ strtoupper($user->profile->total_tools) ?: 0 }}
-                    </dt>
-                    <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
-                        TOOLS
-                    </dd>
-                </div>
-                <div data-aos="fade-right" data-aos-delay="100">
-                    <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
-                        32
-                    </dt>
-                    <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
-                        PROJECTS
-                    </dd>
-                </div>
+                @if($user->profile->total_clients)
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
+                            {{ $user->profile->total_clients ?: 0 }}
+                        </dt>
+                        <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
+                            CLIENTS
+                        </dd>
+                    </div>
+                @endif
+                @if($user->profile->total_tools > 0)
+                    <div data-aos="fade-right" data-aos-delay="200">
+                        <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
+                            {{ $user->profile->total_tools ?: 0 }}
+                        </dt>
+                        <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
+                            TOOLS
+                        </dd>
+                    </div>
+                @endif
+                @if($user->projects->count() > 0)
+                    <div data-aos="fade-right" data-aos-delay="100">
+                        <dt class="text-[2.125rem] text-[#FFCF7B] tracking-widest">
+                            {{ $user->projects->count() ?: 0 }}
+                        </dt>
+                        <dd class="mt-1 text-[#B1B7D6] text-[0.8125rem]">
+                            PROJECTS
+                        </dd>
+                    </div>
+                @endif
             </dl>
         </div>
-        <div data-aos="zoom-in-right" data-aos-delay="400">
-            <a href="#contact">
-                <button type="button" aria-label="call out" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest transition-colors">
-                    LETS TALK
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                </button>
-            </a>
-        </div>
+        @if(!is_null($user->contact))
+            <div data-aos="zoom-in-right" data-aos-delay="400">
+                <a href="#contact">
+                    <button type="button" aria-label="call out" class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest transition-colors">
+                        LETS TALK
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </a>
+            </div>
+        @endif
     </div>
     <aside class="flex-1 flex justify-center 570:justify-start lg:justify-end mt-20 lg:mt-10" data-aos="zoom-in" data-aos-duration="700">
         <div class="flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">

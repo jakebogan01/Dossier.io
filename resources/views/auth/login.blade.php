@@ -27,15 +27,19 @@
                     <span class="ml-2 text-sm text-gray-300">{{ __('Remember me') }}</span>
                 </label>
                 <div class="text-sm">
+                    <a href="{{ route('register') }}" class="p-0 m-0 font-medium text-gray-200 sm:hover:text-gray-400 sm:transition-colors">
+                        {{ __('Register') }}
+                    </a>
+                    <span class="p-0 m-0 font-medium text-gray-200">or</span>
                     @if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}" class="font-medium text-gray-200 sm:hover:text-gray-400 sm:transition-colors">
-                            {{ __('Forgot your password?') }}
+                            {{ __('forgot password?') }}
                         </a>
                     @endif
                 </div>
             </div>
             <div>
-                <x-registration.button data-aos="fade-up" data-aos-delay="550">
+                <x-registration.button data-aos="fade-up" data-aos-delay="600">
                     {{ __('Log in') }}
                 </x-registration.button>
                 <a href="{{ route('home') }}" data-aos="fade-up" data-aos-delay="600" class="w-full flex justify-center mt-4 py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-700 sm:hover:bg-[#3273F6] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:transition-colors">
