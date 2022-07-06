@@ -27,9 +27,9 @@
         </div>
     </x-dashboard.components.edit-form>
 
-    @if(count($currentUser->projects) >= 1)
+    @if(count($currentUser) >= 1)
         <div class="mt-10 space-y-2">
-            @foreach($currentUser->projects as $project)
+            @foreach($currentUser as $project)
                 <div aria-roledescription="list of all projects" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] sm:hover:bg-[#2a2f36]' : 'bg-white' }} group shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                     <div class="px-4 py-4 sm:px-6">
                         <div class="flex items-center justify-between">
@@ -69,6 +69,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="rounded-lg overflow-hidden">
+                {!! $currentUser->links('custom-pagination-links-view') !!}
+            </div>
         </div>
     @endif
 </form>

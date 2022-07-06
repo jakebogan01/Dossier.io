@@ -5,21 +5,18 @@ namespace App\Http\Livewire;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class DashboardForm extends Component
 {
+    use WithPagination;
     use WithFileUploads;
 
-    public $currentUser, $item, $updateCode, $updateGithub, $updateTitle, $updateDescription, $updateProjectPicture, $newProjectPicture;
+    public $item, $updateCode, $updateGithub, $updateTitle, $updateDescription, $updateProjectPicture, $newProjectPicture;
     public bool $toggleWarning = false;
     public bool $make_public;
     public $project_picture;
     public string $message = "Updated";
-
-    public function mount($currentUser)
-    {
-        $this->currentUser = $currentUser;
-    }
 
     public function updateActivity($section, $action)
     {
@@ -33,7 +30,9 @@ class DashboardForm extends Component
 
     public function render()
     {
-        return view('livewire.dashboard-form');
+        return view('livewire.dashboard-form', [
+            'currentUser' => (auth()->user()->projects()->paginate(3)),
+        ]);
     }
 
     public function editProject($id)
