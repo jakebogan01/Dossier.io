@@ -26,7 +26,7 @@ class ContactFactory extends Factory
     {
         return [
             'user_id' => 1,
-            'conclusion' => (string) $this->faker->sentences(3, true),
+            'conclusion' => $this->faker->text(180),
             'phone' => $this->faker->phoneNumber(),
             'links' => [
                 'instagram' => $this->faker->url(),

@@ -6,7 +6,7 @@ use App\Models\Experience;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Experience>
+ * @extends Factory
  */
 class ExperienceFactory extends Factory
 {
@@ -26,8 +26,8 @@ class ExperienceFactory extends Factory
     {
         return [
             'date' => $this->faker->date(),
-            'title' => $this->faker->word(),
-            'description' => $this->faker->paragraph(),
+            'title' => $this->faker->text(25),
+            'description' => $this->faker->text(80),
         ];
     }
 }

@@ -26,28 +26,28 @@ class SkillFactory extends Factory
     {
         return [
             'user_id' => 1,
-            'introduction' => (string) $this->faker->sentences(3, true),
+            'introduction' => $this->faker->text(180),
             'facts' => [
-                1 => $this->faker->sentence(10),
-                2 => $this->faker->sentence(10),
-                3 => $this->faker->sentence(10),
+                1 => $this->faker->text(70),
+                2 => $this->faker->text(70),
+                3 => $this->faker->text(70),
             ],
             'skills' => [
                 1 => [
                     'skill' => $this->faker->word(),
-                    'description' => $this->faker->sentence(16),
+                    'description' => $this->faker->text(180),
                 ],
                 2 => [
                     'skill' => $this->faker->word(),
-                    'description' => $this->faker->sentence(16),
+                    'description' => $this->faker->text(180),
                 ],
                 3 => [
                     'skill' => $this->faker->word(),
-                    'description' => $this->faker->sentence(16),
+                    'description' => $this->faker->text(180),
                 ],
                 4 => [
                     'skill' => $this->faker->word(),
-                    'description' => $this->faker->sentence(16),
+                    'description' => $this->faker->text(180),
                 ],
             ]
         ];

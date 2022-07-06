@@ -25,9 +25,9 @@ class TestimonialFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word(),
-            'job_position' => $this->faker->word(),
-            'description' => $this->faker->paragraph(),
+            'title' => $this->faker->text(18),
+            'job_position' => $this->faker->text(20),
+            'description' => $this->faker->text(180),
             'links' => [
                 'facebook' => $this->faker->url(),
                 'linkedin' => $this->faker->url(),
