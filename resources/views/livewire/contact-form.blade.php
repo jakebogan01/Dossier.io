@@ -180,7 +180,7 @@
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-14">
-                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Brief Conclusion" max="180" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Brief Conclusion" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="tab === 'contact'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -203,7 +203,7 @@
                             <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Your Phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></x-dashboard.components.form-fields.input-field>
                         </div>
                         <div class="col-span-12 sm:col-span-6">
-                            <x-dashboard.components.form-fields.input-field type="email" model="portfolio_email" title="Your Email" required="required"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="email" model="portfolio_email" title="Your Email"></x-dashboard.components.form-fields.input-field>
                         </div>
                     </div>
                 </div>

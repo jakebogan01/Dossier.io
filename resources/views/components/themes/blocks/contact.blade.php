@@ -24,29 +24,31 @@
                             class="mt-3 leading-loose"
                             data-aos="fade-right"
                             data-aos-delay="100">
-                            {{ $user->contact->conclusion ?: 'Missing conclusion' }}
+                            {{ $user->contact->conclusion }}
                         </p>
                         <dl class="mt-8 text-base font-bold text-[#6F7490]">
-                            <div
-                                class="mt-6"
-                                data-aos="fade-right"
-                                data-aos-delay="150">
-                                <dt class="sr-only">
-                                    Phone number
-                                </dt>
-                                <dd class="flex">
-                                    <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                                    <span class="ml-3">
-                                        <a
-                                            href="tel:+442071234567"
-                                            target="_blank/"
-                                            class="sm:hover:text-gray-400">
-                                            {{ $user->contact->phone ?: 'Missing phone' }}
-                                        </a>
-                                    </span>
-                                </dd>
-                            </div>
-                            @if($user->profile->portfolio_email)
+                            @if($user->contact->phone)
+                                <div
+                                    class="mt-6"
+                                    data-aos="fade-right"
+                                    data-aos-delay="150">
+                                    <dt class="sr-only">
+                                        Phone number
+                                    </dt>
+                                    <dd class="flex">
+                                        <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                        <span class="ml-3">
+                                            <a
+                                                href="tel:+442071234567"
+                                                target="_blank/"
+                                                class="sm:hover:text-gray-400">
+                                                {{ $user->contact->phone }}
+                                            </a>
+                                        </span>
+                                    </dd>
+                                </div>
+                            @endif
+                            @if($user->contact->portfolio_email)
                                 <div
                                     class="mt-3"
                                     data-aos="fade-right"
@@ -58,10 +60,10 @@
                                         <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                         <span class="ml-3">
                                             <a
-                                                href="mailto:{{ $user->profile->portfolio_email }}"
+                                                href="mailto:{{ $user->contact->portfolio_email }}"
                                                 target="_blank/"
                                                 class="sm:hover:text-gray-400">
-                                                {{ $user->profile->portfolio_email ?: 'Missing email' }}
+                                                {{ $user->contact->portfolio_email ?: 'Missing email' }}
                                             </a>
                                         </span>
                                     </dd>

@@ -3,7 +3,7 @@
 <section id="home" {{ $attributes->merge(['class' => 'anchor relative flex flex-col-reverse lg:flex-row relative bg-[#1C1F2D] p-[25px] sm:px-[5.3125rem] sm:pt-[5.1875rem] sm:pb-[7.375rem] overflow-hidden bg-no-repeat bg-left-top lg:bg-right-top bg-auto transition-all group']) }} style="background-image: url('/images/themes/svg/background-pattern.svg');">
     <div class="flex-1">
         <div class="absolute top-16" role="menu">
-            <button type="button" aria-label="open menu" class="w-[2.8125rem] cursor-pointer" @click="menuStatus = !menuStatus">
+            <button @click="menuStatus = !menuStatus" type="button" aria-label="open menu" class="w-[2.8125rem] cursor-pointer">
                 <span class="sr-only">
                     Open main menu
                 </span>

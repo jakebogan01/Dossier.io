@@ -14,7 +14,7 @@
                     </p>
                 </aside>
                 <div class="lg:col-span-2">
-                    <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
+                    <ul role="list" class="sm:grid {{ ($user->testimonials->count() <= 1) ? 'w-1/2 mx-auto' : 'sm:grid-cols-2' }} sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
                         @foreach($user->testimonials as $key => $testimonial)
                             @switch($key)
                                 @case(0)

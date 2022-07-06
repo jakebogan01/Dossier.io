@@ -5,7 +5,7 @@
         <div class="{{ (count($user->experiences) >= 1) ? 'pb-0' : 'pb-36' }} relative mx-auto py-12 max-w-7xl sm:px-[85px] lg:pt-40 z-20">
             <div class="space-y-12 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                 <div class="lg:col-span-2 mt-10 sm:mt-24">
-                    <ul role="list" class="sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
+                    <ul role="list" class="sm:grid {{ (count($user->skill->skills) <= 1) ? 'w-1/2 mx-auto' : 'sm:grid-cols-2' }} sm:gap-x-6 sm:gap-y-12 lg:gap-x-8">
                         @foreach($user->skill->skills as $key => $skill)
                             @switch($key)
                                 @case(1)
@@ -33,12 +33,12 @@
                             TOP SKILLS
                         </h2>
                         <p class="text-[#B1B7D6] text-base font-bold leading-loose">
-                            {{ $user->skill->introduction ?: 'Description needed' }}
+                            {{ $user->skill->introduction }}
                         </p>
                     </div>
                     <ul role="list" class="pt-8 space-y-7">
                         @foreach($user->skill->facts as $key => $fact)
-                            <x-themes.blocks.components.fact-item :key="$key" :user="$fact"></x-themes.blocks.components.fact-item>
+                            <x-themes.blocks.components.fact-item :key="$key" :fact="$fact"></x-themes.blocks.components.fact-item>
                         @endforeach
                     </ul>
                 </aside>

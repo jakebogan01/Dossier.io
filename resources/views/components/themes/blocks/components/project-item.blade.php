@@ -3,11 +3,11 @@
 <li x-bind="disableNextAndPreviousButtons" class="relative snap-start w-full shrink-0 flex flex-col items-center justify-center bg-no-repeat bg-center bg-cover" role="option" style="background-image: url('{{ $project->profile_photo_path }}')">
     <div class="absolute top-0 left-0 right-0 bottom-0 text-white leading-loose pt-32 px-[25px] sm:pl-16" style="background-color: rgba(0,0,0,0.5)">
         <h3 class="flex items-center font-bold text-[23px] mb-6 opacity-70" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="50">
-            {{ $project->title ?: 'Need title' }}
+            {{ $project->title ?: 'Project title' }}
             <livewire:update-project-like :project="$project" />
         </h3>
         <p class="font-bold text-base sm:max-w-[300px] leading-loose mb-6" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">
-            {{ $project->description ?: 'Need description' }}
+            {{ $project->description ?: 'Project description' }}
         </p>
         @if($project->links['github'])
             <a href="{{ $project->links['github'] }}" class="block">

@@ -8,15 +8,15 @@
             </div>
             <div class="text-white text-base font-bold leading-loose space-y-1">
                 <h3 class="text-xl">
-                    {{ $user->title ?: 'Need title' }}
+                    {{ $user->title ?: 'Full Name' }}
                 </h3>
                 <p class="text-blue-500">
-                    {{ $user->job_position ?: 'Need job position' }}
+                    {{ $user->job_position ?: 'Job Position' }}
                 </p>
             </div>
             <div class="text-[#B1B7D6] text-base font-bold leading-loose">
                 <p>
-                    {{ $user->description ?: 'Need description of person' }}
+                    {{ $user->description ?: 'Quote' }}
                 </p>
             </div>
             <ul role="list" class="flex space-x-5">
