@@ -16,7 +16,7 @@
                                     {{ $currentUser->portfolio_name ?: 'Name' }}
                                 </div>
                                 <div class="{{ (auth()->user()->dark_mode) ? 'text-gray-600' : 'text-[#4E148B]' }} font-semibold text-sm italic dark">
-                                    Web Developer
+                                    {{ $currentUser->job_position ?: 'Position' }}
                                 </div>
                             </div>
                         </div>

@@ -22,7 +22,9 @@ class FeaturedUser extends Component
     {
         $this->users = User::whereRelation('profile', 'portfolio_name', '!=', null)
             ->whereRelation('profile', 'settings->public', 'true')
-            ->pluck('name');
+            ->whereRelation('profile', 'profile_photo_path', '!=', null)
+            ->whereRelation('profile', 'job_position', '!=', null)
+            ->get();
 
         if (!$this->users->isEmpty()) {
             $this->featuredUsers = $this->users->take(4);
