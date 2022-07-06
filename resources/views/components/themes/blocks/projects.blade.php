@@ -62,7 +62,7 @@
                 <h2 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="absolute pl-[25px] sm:pl-16 mb-8 mt-12 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider z-20 sm:group-hover:text-white sm:Ztransition-all">
                     MY WORK
                 </h2>
-                <ul x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="flex w-full overflow-x-hidden snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
+                <ul x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="project-carousel flex w-full overflow-x-scroll snap-x snap-mandatory max-h-[550px] min-h-[550px] h-full">
                     @foreach($user->projects as $project)
                         @if($project->public)
                             <x-themes.blocks.components.project-item :project="$project"></x-themes.blocks.components.project-item>

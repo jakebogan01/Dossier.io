@@ -47,6 +47,14 @@
             ::-webkit-scrollbar-thumb{
                 background: #000000;
             }
+            .project-carousel {
+                -ms-overflow-style: none; /* Edge, Internet Explorer */
+                scrollbar-width: none; /* Firefox */
+                overflow-y: scroll;
+            }
+            .project-carousel::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
         </style>
     </head>
     <body class="antialiased bg-[#0F1119] h-full">
