@@ -39,23 +39,28 @@
             @if(auth()->user()->experiences->count() < 10)
                 <div aria-labelledby="profile form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="flex justify-between items-center">
-                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                            My Experience
-                        </h2>
-                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                        <div>
+                            <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                                My Experience
+                            </h2>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                                Post up to 10 relevant experiences to be viewed as a timeline to your viewers.
+                            </p>
+                        </div>
+                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                            Save
                         </button>
                     </div>
                     <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                         <div class="grid grid-cols-12 gap-6 mt-14">
                             <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
-                                <x-dashboard.components.form-fields.input-field type="date" model="date" title="Date"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="date" model="date" title="Date" minDate="1970-01-01" required="required"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
                         <div class="mt-10">
-                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title" max="25" required="required"></x-dashboard.components.form-fields.input-field>
                         </div>
-                        <x-dashboard.components.form-fields.textarea-field model="description" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                        <x-dashboard.components.form-fields.textarea-field model="description" title="Description" max="80" required="required"></x-dashboard.components.form-fields.textarea-field>
                     </div>
                 </div>
             @endif
