@@ -25,12 +25,17 @@
                         {{ $slot }}
                     </div>
                 </div>
-                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#30363d]' : 'bg-gray-100' }} px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button @click="edit = false; notify = true" wire:click.prevent="updateData({{ $item }})" type="button" class="w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 bg-white {{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#DCDCDC]' : 'sm:hover:bg-gray-50' }} text-base font-medium text-gray-900 focus:outline-none focus-within:outline-none sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
-                        Submit
-                    </button>
-                    <button @click="edit = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 text-base font-medium text-white bg-red-600 sm:hover:bg-red-500 focus:outline-none outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
-                        Cancel
+                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#30363d]' : 'bg-gray-100' }} flex justify-between px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <div>
+                        <button @click="edit = false" type="button" class="bg-white {{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#DCDCDC]' : 'sm:hover:bg-gray-50' }} mt-3 w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 text-base font-medium text-gray-900 focus:outline-none outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
+                            Cancel
+                        </button>
+                        <button @click="edit = false; notify = true" wire:click.prevent="updateData({{ $item }})" type="button" class="bg-white {{ (auth()->user()->dark_mode) ? 'sm:hover:bg-[#DCDCDC]' : 'sm:hover:bg-gray-50' }} w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 text-base font-medium text-gray-900 focus:outline-none focus-within:outline-none sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
+                            Submit
+                        </button>
+                    </div>
+                    <button wire:click.prevent="delete({{ $item }})" @click="edit = false; notify = true;" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border-none shadow-sm px-4 py-2 text-base font-medium text-white bg-red-600 sm:hover:bg-red-500 focus:outline-none outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm sm:transition-colors">
+                        Delete
                     </button>
                 </div>
             </div>

@@ -25,10 +25,10 @@
         <div class="flex bg-white">
             <div class="flex-1 px-4 py-2 text-sm cursor-default">
                 <span class="{{ (auth()->user()->dark_mode) ? 'text-gray-800' : 'text-[#993BCE]' }} font-bold">
-                    {{ $data->title ?: 'Title Needed' }}
+                    {{ $data->title ?: 'Header' }}
                 </span>
                 <span class=" block text-gray-500 pt-2 line-clamp-1">
-                    {{ $data->description ?: 'Description Needed' }}
+                    {{ $data->description ?: 'Description' }}
                 </span>
             </div>
             <div class="relative flex-shrink-0 pr-2">

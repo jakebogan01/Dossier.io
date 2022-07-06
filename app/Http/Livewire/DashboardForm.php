@@ -16,7 +16,7 @@ class DashboardForm extends Component
     public bool $toggleWarning = false;
     public bool $make_public;
     public $project_picture;
-    public string $message = "Updated";
+    public string $message = "";
 
     public function updateActivity($section, $action)
     {
@@ -24,8 +24,6 @@ class DashboardForm extends Component
             'section' => $section,
             'action' => $action,
         ]);
-
-        $this->mount($this->currentUser);
     }
 
     public function render()
@@ -38,11 +36,11 @@ class DashboardForm extends Component
     public function editProject($id)
     {
         $this->item = $id;
-        $this->updateTitle = $this->currentUser->projects->find($id)->title;
-        $this->updateDescription = $this->currentUser->projects->find($id)->description;
-        $this->updateCode = $this->currentUser->projects->find($id)->links['code'];
-        $this->updateGithub = $this->currentUser->projects->find($id)->links['github'];
-        $this->make_public = $this->currentUser->projects->find($id)->public;
+        $this->updateTitle = auth()->user()->projects->find($id)->title;
+        $this->updateDescription = auth()->user()->projects->find($id)->description;
+        $this->updateCode = auth()->user()->projects->find($id)->links['code'];
+        $this->updateGithub = auth()->user()->projects->find($id)->links['github'];
+        $this->make_public = auth()->user()->projects->find($id)->public;
         $this->updateProjectPicture = auth()->user()->projects->find($id)->profile_photo_path;
     }
 
@@ -57,7 +55,7 @@ class DashboardForm extends Component
             $newImage = Storage::disk('public')->url($path . '/' . $file);
         }
 
-        $this->currentUser->projects->find($id)->update([
+        auth()->user()->projects->find($id)->update([
             'title' => $this->updateTitle,
             'description' => $this->updateDescription,
             'links' => [
@@ -69,11 +67,21 @@ class DashboardForm extends Component
         ]);
 
         $this->toggleWarning = true;
+        $this->message = "Updated";
 
         $this->updateActivity('Projects', 'updated');
 
         auth()->user()->projects->find($id)->refresh();
-        $this->mount($this->currentUser);
+        $this->render();
+    }
+
+    public function delete($id)
+    {
+        auth()->user()->projects->find($id)->delete();
+        $this->toggleWarning = true;
+        $this->message = 'Deleted';
+        $this->updateActivity('Projects', 'deleted');
+        auth()->user()->projects->find($id)->refresh();
         $this->render();
     }
 }
