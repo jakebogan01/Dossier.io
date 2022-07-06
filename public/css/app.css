@@ -2387,6 +2387,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(36 40 57 / var(--tw-bg-opacity));
 }
+.bg-\[\#353B42\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 59 66 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
