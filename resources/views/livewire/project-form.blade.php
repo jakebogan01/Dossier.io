@@ -5,15 +5,15 @@
 
     <x-dashboard.components.edit-form :item="$item" content="Project">
         <div class="mt-14">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Title"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Project Title" max="30"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-            <x-dashboard.components.form-fields.image-field model="newProjectPicture"></x-dashboard.components.form-fields.image-field>
+            <x-dashboard.components.form-fields.image-field title="Project Image" model="newProjectPicture"></x-dashboard.components.form-fields.image-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" title="Brief Description" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
-            <x-dashboard.components.form-fields.url-field type="text" model="updateCode" title="Project" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
-            <x-dashboard.components.form-fields.url-field type="text" model="updateGithub" title="GitHub" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
+            <x-dashboard.components.form-fields.url-field type="text" model="updateCode" title="Project Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
+            <x-dashboard.components.form-fields.url-field type="text" model="updateGithub" title="GitHub Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
         </div>
         <div class="pb-4 pt-8 flex items-center justify-between">
             <x-dashboard.components.toggle-switch>
@@ -47,24 +47,29 @@
             @if(auth()->user()->projects->count() < 6)
                 <div aria-labelledby="profile form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="flex justify-between items-center">
+                    <div>
                         <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
                             My Project
                         </h2>
-                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Post up to 6 projects to be viewed by your viewers.
+                        </p>
+                    </div>
+                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                            Save
                         </button>
                     </div>
                     <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                         <div class="mt-14">
-                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Project Title" max="30" required="required"></x-dashboard.components.form-fields.input-field>
                         </div>
                         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-                            <x-dashboard.components.form-fields.image-field model="project_picture"></x-dashboard.components.form-fields.image-field>
+                            <x-dashboard.components.form-fields.image-field title="Project Image" model="project_picture" required="required"></x-dashboard.components.form-fields.image-field>
                         </div>
-                        <x-dashboard.components.form-fields.textarea-field model="description" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                        <x-dashboard.components.form-fields.textarea-field model="description" title="Brief Description" max="180" required="required"></x-dashboard.components.form-fields.textarea-field>
                         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
-                            <x-dashboard.components.form-fields.url-field type="text" model="code" title="Project" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
-                            <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
+                            <x-dashboard.components.form-fields.url-field type="text" model="code" title="Project Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
+                            <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
                         </div>
                     </div>
                 </div>

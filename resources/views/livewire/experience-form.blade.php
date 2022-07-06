@@ -6,13 +6,13 @@
     <x-dashboard.components.edit-form :item="$item" content="Experience">
         <div class="grid grid-cols-12 gap-6 mt-14">
             <div class="flex items-center col-span-12 sm:col-span-3 min-w-[146px]">
-                <x-dashboard.components.form-fields.input-field type="date" model="updateDate" title="Date"></x-dashboard.components.form-fields.input-field>
+                <x-dashboard.components.form-fields.input-field type="date" model="updateDate" title="Date" minDate="1970-01-01"></x-dashboard.components.form-fields.input-field>
             </div>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Title"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Timeline Title" max="25"></x-dashboard.components.form-fields.input-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Brief Description" max="80" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
     </x-dashboard.components.edit-form>
 
     <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
@@ -44,7 +44,7 @@
                                 My Experience
                             </h2>
                             <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
-                                Post up to 10 relevant experiences to be viewed as a timeline to your viewers.
+                                Post up to 10 relevant experiences to be viewed as a timeline by your viewers.
                             </p>
                         </div>
                         <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
@@ -58,9 +58,9 @@
                             </div>
                         </div>
                         <div class="mt-10">
-                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Title" max="25" required="required"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Timeline Title" max="25" required="required"></x-dashboard.components.form-fields.input-field>
                         </div>
-                        <x-dashboard.components.form-fields.textarea-field model="description" title="Description" max="80" required="required"></x-dashboard.components.form-fields.textarea-field>
+                        <x-dashboard.components.form-fields.textarea-field model="description" title="Brief Description" max="80" required="required"></x-dashboard.components.form-fields.textarea-field>
                     </div>
                 </div>
             @endif
