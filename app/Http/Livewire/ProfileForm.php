@@ -37,9 +37,6 @@ class ProfileForm extends Component
      */
     protected array $rules = [
         'portfolio_name' => 'required|max:16',
-        'job_position' => 'required',
-        'total_clients' => 'required',
-        'total_tools' => 'required',
 //        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 

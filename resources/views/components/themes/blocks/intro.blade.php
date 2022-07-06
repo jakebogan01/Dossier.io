@@ -25,7 +25,7 @@
             <h1 class="leading-[1.1] tracking-wider max-w-[550px] sm:group-hover:text-white transition-colors">
                 HELLO, I’M<br>
                 {{ strtoupper($user->profile->portfolio_name) ?: 'YOUR NAME' }}<br>
-                WEB DEVELOPER
+                {{ strtoupper($user->profile->job_position) }}
             </h1>
         </div>
         <div class="flex font-black my-[3.125rem]">
