@@ -153,40 +153,68 @@
             </div>
             <div x-show="tab === 'conclusion'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div class="flex justify-between items-center">
-                    <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                        My Conclusion
-                    </h2>
-                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Conclusion
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Provide a detailed summary that invites viewers to contact you.
+                        </p>
+                    </div>
+                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Save
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-14">
-                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Conclusion" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Brief Conclusion" max="180" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="tab === 'contact'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                    My Contact Info
-                </h2>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Contact Info
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Provide your phone number and email to allow viewers to contact you.
+                        </p>
+                    </div>
+                    <button @click.prevent="tab = 'conclusion'; window.location.hash = 'conclusion'" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Ready to save
+                    </button>
+                </div>
                 <div class="flex-grow mt-14">
                     <div class="mt-8 grid grid-cols-12 gap-6">
                         <div class="col-span-12 sm:col-span-6">
-                            <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Phone"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Your Phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></x-dashboard.components.form-fields.input-field>
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <x-dashboard.components.form-fields.input-field type="email" model="phone" title="Your Email"></x-dashboard.components.form-fields.input-field>
                         </div>
                     </div>
                 </div>
             </div>
             <div x-show="tab === 'social'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                    My Social Media
-                </h2>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Social Media
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Provide your social media links to allow viewers to contact you.
+                        </p>
+                    </div>
+                    <button @click.prevent="tab = 'conclusion'; window.location.hash = 'conclusion'" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Ready to save
+                    </button>
+                </div>
                 <div class="flex-grow space-y-6">
                     <div class="{{ (auth()->user()->dark_mode) ? 'gap-y-10' : 'gap-y-6' }} grid grid-cols-12 gap-x-6 mt-14">
-                        <x-dashboard.components.form-fields.url-field type="text" model="instagram" title="Instagram" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
-                        <x-dashboard.components.form-fields.url-field type="text" model="facebook" title="Facebook" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
-                        <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
-                        <x-dashboard.components.form-fields.url-field type="text" model="linkedin" title="Linkedin" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
-                        <x-dashboard.components.form-fields.url-field type="text" model="dribbble" title="Dribbble" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="instagram" title="Instagram Link" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="facebook" title="Facebook Link" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="github" title="GitHub Link" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="linkedin" title="Linkedin Link" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
+                        <x-dashboard.components.form-fields.url-field type="text" model="dribbble" title="Dribbble Link" grid="col-span-12 sm:col-span-6"></x-dashboard.components.form-fields.url-field>
                     </div>
                 </div>
             </div>
