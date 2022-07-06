@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->date('date')
                 ->nullable();
-            $table->string('title')
+            $table->string('title', 25)
                 ->nullable();
-            $table->text('description')
+            $table->string('description', 80)
                 ->nullable();
             $table->timestamps();
             $table->softDeletes();

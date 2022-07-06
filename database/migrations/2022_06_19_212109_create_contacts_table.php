@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->text('conclusion')
+            $table->string('conclusion', 180)
                 ->nullable();
             $table->string('phone')
                 ->nullable();
