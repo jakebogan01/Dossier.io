@@ -22,9 +22,8 @@ return new class extends Migration
                 ->nullable();
             $table->string('slug')
                 ->nullable();
-            $table->string('portfolio_email')
-                ->nullable()
-                ->unique();
+            $table->string('job_position', 20)
+                ->nullable();
             $table->integer('total_clients')
                 ->nullable();
             $table->integer('total_tools')

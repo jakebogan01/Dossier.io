@@ -18,7 +18,7 @@
                                     <span class="px-3 py-0.5 whitespace-nowrap text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-[#50148C] sm:group-hover:bg-[#50148C] rounded-full">
                                         Click Here
                                     </span>
-                                    <span class="inline-flex animate-pulse">
+                                    <span class="inline-flex">
                                         <span class="ml-2 text-sm whitespace-nowrap font-bold">
                                             View Demo
                                         </span>

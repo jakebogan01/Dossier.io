@@ -19,7 +19,7 @@ class ProfileForm extends Component
     public $currentUser;
     public bool $toggleWarning = false;
     public string $portfolio_name = '';
-    public string $portfolio_email = '';
+    public string $job_position = '';
     public int $total_clients = 0;
     public int $total_tools = 0;
     public bool $make_public;
@@ -37,7 +37,7 @@ class ProfileForm extends Component
      */
     protected array $rules = [
         'portfolio_name' => 'required|max:16',
-        'portfolio_email' => 'required',
+        'job_position' => 'required',
         'total_clients' => 'required',
         'total_tools' => 'required',
 //        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
@@ -85,7 +85,7 @@ class ProfileForm extends Component
 
         auth()->user()->profile()->update([
             'portfolio_name' => $this->portfolio_name,
-            'portfolio_email' => strtolower($this->portfolio_email),
+            'job_position' => strtolower($this->job_position),
             'total_clients' => $this->total_clients,
             'total_tools' => $this->total_tools,
             'settings' => [

@@ -161,7 +161,7 @@ class User extends Authenticatable
                 'user_id' => $model->id,
                 'portfolio_name' => null,
                 'slug' => $slugName,
-                'portfolio_email' => null,
+                'job_position' => null,
                 'total_clients' => 0,
                 'total_tools' => 0,
                 'aware' => 0,

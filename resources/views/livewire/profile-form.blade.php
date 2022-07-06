@@ -52,7 +52,7 @@
                                 <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Your Name" max="18" required="required"></x-dashboard.components.form-fields.input-field>
                             </div>
                             <div class="col-span-12 sm:col-span-6">
-                                <x-dashboard.components.form-fields.input-field type="text" model="" title="Job Position" max="20"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="job_position" title="Job Position" max="20"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
                         <x-dashboard.components.form-fields.image-field title="Profile Picture" model="profile_picture"></x-dashboard.components.form-fields.image-field>

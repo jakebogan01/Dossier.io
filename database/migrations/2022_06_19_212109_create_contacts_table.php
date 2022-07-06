@@ -22,6 +22,9 @@ return new class extends Migration
                 ->nullable();
             $table->string('phone')
                 ->nullable();
+            $table->string('portfolio_email')
+                ->nullable()
+                ->unique();
             $table->json('links')
                 ->nullable();
             $table->timestamps();

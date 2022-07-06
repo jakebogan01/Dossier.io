@@ -73,6 +73,20 @@
                                     </dd>
                                 @endif
                             </div>
+                            <div class="{{ (auth()->user()->dark_mode) ? 'bg-white' : 'bg-gray-100' }} px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt class="flex items-center text-sm font-medium text-gray-500">
+                                    Email
+                                </dt>
+                                @if($currentUser)
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        {{ $currentUser->portfolio_email ?: 'Email' }}
+                                    </dd>
+                                @else
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Email number
+                                    </dd>
+                                @endif
+                            </div>
                         </dl>
                     </section>
                     <section x-show="tab === 'social'" x-cloak>
@@ -189,7 +203,7 @@
                             <x-dashboard.components.form-fields.input-field type="tel" model="phone" title="Your Phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></x-dashboard.components.form-fields.input-field>
                         </div>
                         <div class="col-span-12 sm:col-span-6">
-                            <x-dashboard.components.form-fields.input-field type="email" model="phone" title="Your Email"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="email" model="portfolio_email" title="Your Email" required="required"></x-dashboard.components.form-fields.input-field>
                         </div>
                     </div>
                 </div>

@@ -28,6 +28,7 @@ class ContactFactory extends Factory
             'user_id' => 1,
             'conclusion' => $this->faker->text(180),
             'phone' => $this->faker->phoneNumber(),
+            'portfolio_email' => $this->faker->unique()->safeEmail(),
             'links' => [
                 'instagram' => $this->faker->url(),
                 'facebook' => $this->faker->url(),

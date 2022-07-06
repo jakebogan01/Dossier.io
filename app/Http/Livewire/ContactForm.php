@@ -15,6 +15,7 @@ class ContactForm extends Component
     public bool $toggleWarning = false;
     public string $conclusion = '';
     public string $phone = '';
+    public string $portfolio_email = '';
     public string $instagram = '';
     public string $facebook = '';
     public string $github = '';
@@ -84,6 +85,7 @@ class ContactForm extends Component
         return auth()->user()->contact()->$action([
             'conclusion' => $this->conclusion,
             'phone' => $this->phone,
+            'portfolio_email' => $this->portfolio_email,
             'links' => [
                 'instagram' => $this->instagram,
                 'facebook' => $this->facebook,
