@@ -173,12 +173,7 @@
         </main>
         <footer class="bg-[#0F1119]">
             <div class="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide cursor-default">
-                    Trusted by over 26,000 amazing people
-                </h2>
-                <div class="mt-8 flex justify-center space-x-6">
-                    <x-home.featured-user></x-home.featured-user>
-                </div>
+                <x-home.featured-user></x-home.featured-user>
                 <p data-aos="fade-up" data-aos-delay="250" data-aos-anchor-placement="top-bottom" class="mt-8 text-center text-base text-gray-400 cursor-default">
                     Created By Jake Bogan
                 </p>

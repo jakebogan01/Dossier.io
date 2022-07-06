@@ -1634,6 +1634,9 @@ select {
 .min-w-\[152px\] {
   min-width: 152px;
 }
+.min-w-\[140px\] {
+  min-width: 140px;
+}
 .max-w-screen-xl {
   max-width: 1280px;
 }
