@@ -1,8 +1,8 @@
-@aware(['model', 'message'])
+@aware(['title', 'model', 'message'])
 
 <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33] border-transparent' : 'bg-transparent border-gray-300' }} relative mt-1 flex justify-center px-6 {{ (auth()->user()->dark_mode) ? 'pt-8' : 'pt-5' }} pb-6 border-2 border-gray-300 border-dashed rounded-md">
     <label for="{{ $model }}" class="{{ (auth()->user()->dark_mode) ? 'bg-transparent text-white -top-6 left-0' : 'bg-white text-gray-900 -top-2 left-2' }} absolute -mt-px inline-block px-1 text-xs font-medium">
-        Photo
+        {{ $title }}
     </label>
     <div class="space-y-1 text-center">
         <div class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-600' }} flex text-sm">

@@ -167,33 +167,48 @@
             </div>
             <div x-show="tab === 'introduction'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 <div class="flex justify-between items-center">
-                    <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                        My Intro
-                    </h2>
-                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Intro
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Feel free to introduce yourself to your viewers and impress them with your knowledge.
+                        </p>
+                    </div>
+                    <button wire:click.prevent="register()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Save
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-14">
-                    <x-dashboard.components.form-fields.textarea-field model="introduction" title="Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+                    <x-dashboard.components.form-fields.textarea-field model="introduction" title="Brief Introduction" max="180" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="tab === 'facts'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                    My Fun Facts
-                </h2>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Fun Facts
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Display at least one or more impressive fact about yourself.
+                        </p>
+                    </div>
+                    <button @click.prevent="tab = 'introduction'; window.location.hash = 'introduction'" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Ready to save
+                    </button>
+                </div>
                 <div class="flex-grow">
                     <div class="mt-14 flex flex-col lg:flex-row">
                         <div class="flex-grow">
                             <div class="{{ (auth()->user()->dark_mode) ? 'gap-y-10' : 'gap-y-6' }} grid grid-cols-12 gap-x-6">
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="One"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="Fact One" max="70"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_two" title="Two"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_two" title="Fact Two" max="70"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_three" title="Three"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_three" title="Fact Three" max="70"></x-dashboard.components.form-fields.input-field>
                                 </div>
                             </div>
                         </div>
@@ -201,36 +216,46 @@
                 </div>
             </div>
             <div x-show="tab === 'skills'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                    My Skill Sets
-                </h2>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                            My Skill Sets
+                        </h2>
+                        <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                            Describe at least tow or more of your top skills.
+                        </p>
+                    </div>
+                    <button @click.prevent="tab = 'introduction'; window.location.hash = 'introduction'" type="button" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        Ready to save
+                    </button>
+                </div>
                 <div class="flex-grow">
                     <div class="mt-14 flex flex-col lg:flex-row">
                         <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                             <div class="grid grid-cols-12 gap-6">
-                                <x-dashboard.components.form-fields.skill-select num="skill_one" :skills="$skills" req="required">
+                                <x-dashboard.components.form-fields.skill-select num="skill_one" :skills="$skills" required="required">
                                     Skill One
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_one" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_one" title="Skill Description" max="180" required="required"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
-                                <x-dashboard.components.form-fields.skill-select num="skill_two" :skills="$skills" req="required">
+                                <x-dashboard.components.form-fields.skill-select num="skill_two" :skills="$skills" required="required">
                                     Skill Two
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_two" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_two" title="Skill Description" max="180" required="required"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_three" :skills="$skills">
                                     Skill Three
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_three" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_three" title="Skill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_four" :skills="$skills">
                                     Skill Four
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_four" title="Description"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_four" title="SKill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
                         </div>
                     </div>
                 </div>

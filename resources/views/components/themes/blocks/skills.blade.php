@@ -9,19 +9,19 @@
                         @foreach($user->skill->skills as $key => $skill)
                             @switch($key)
                                 @case(1)
-                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="100" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all overflow-hidden" animateType="zoom-in-right" animateDelay="100" :user="$skill"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(2)
-                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all overflow-hidden" animateType="zoom-in-left" :user="$skill"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(3)
-                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="300" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all overflow-hidden" animateType="zoom-in-right" animateDelay="300" :user="$skill"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(4)
-                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" animateDelay="200" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all overflow-hidden" animateType="zoom-in-left" animateDelay="200" :user="$skill"></x-themes.blocks.components.skill-block>
                                 @break
                             @endswitch
                         @endforeach

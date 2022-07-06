@@ -34,34 +34,44 @@
                 </div>
                 <div aria-labelledby="profile form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                     <div class="flex justify-between items-center">
-                        <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
-                            My Profile
-                        </h2>
-                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>
+                        <div>
+                            <h2 class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-lg leading-6 font-medium">
+                                My Profile
+                            </h2>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mt-1 max-w-2xl text-sm">
+                                The information here will be displayed on your personal portfolio.
+                            </p>
+                        </div>
+                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                            Save
                         </button>
                     </div>
                     <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                         <div class="mt-8 grid grid-cols-12 gap-6 mt-14">
                             <div class="col-span-12 sm:col-span-6">
-                                <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Name"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Your Name" max="18" required="required"></x-dashboard.components.form-fields.input-field>
                             </div>
                             <div class="col-span-12 sm:col-span-6">
-                                <x-dashboard.components.form-fields.input-field type="email" model="portfolio_email" title="Email"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="" title="Job Position" max="20"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
-                        <x-dashboard.components.form-fields.image-field model="profile_picture"></x-dashboard.components.form-fields.image-field>
-                        <div class="grid grid-cols-6 gap-6">
-                            <div class="col-span-6 lg:col-span-3">
-                                <div x-data="{ total: 0 }" class="w-full">
-                                    <label for="total_clients" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Clients: ${total}`"></label>
-                                    <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
+                        <x-dashboard.components.form-fields.image-field title="Profile Picture" model="profile_picture"></x-dashboard.components.form-fields.image-field>
+                        <div>
+                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} mb-3 max-w-2xl text-sm">
+                                List the number of clients you have, or the number of tools that you use in your current position.
+                            </p>
+                            <div class="grid grid-cols-6 gap-6">
+                                <div class="col-span-6 lg:col-span-3">
+                                    <div x-data="{ total: 0 }" class="w-full">
+                                        <label for="total_clients" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Clients: ${total}`"></label>
+                                        <input wire:model="total_clients" type="range" min="0" max="100" id="total_clients" name="total_clients" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-span-6 lg:col-span-3">
-                                <div x-data="{ total: 0 }" class="w-full">
-                                    <label for="total_tools" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Tools: ${total}`"></label>
-                                    <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
+                                <div class="col-span-6 lg:col-span-3">
+                                    <div x-data="{ total: 0 }" class="w-full">
+                                        <label for="total_tools" class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-700' }} block text-sm font-medium" x-text="`Tools: ${total}`"></label>
+                                        <input wire:model="total_tools" type="range" min="0" max="100" id="total_tools" name="total_tools" x-model="total" class="{{ (auth()->user()->dark_mode) ? 'bg-[#262c33]' : 'bg-gray-200' }} w-full h-2 appearance-none rounded" step="1"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
