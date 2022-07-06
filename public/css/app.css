@@ -1493,6 +1493,9 @@ select {
 .h-7 {
   height: 1.75rem;
 }
+.h-\[18px\] {
+  height: 18px;
+}
 .max-h-\[550px\] {
   max-height: 550px;
 }
@@ -1618,6 +1621,9 @@ select {
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-\[18px\] {
+  width: 18px;
 }
 .min-w-0 {
   min-width: 0px;
