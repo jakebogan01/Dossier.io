@@ -5,10 +5,7 @@ namespace App\Http\Livewire;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Redirector;
 use Livewire\Component;
-use function PHPUnit\Framework\isEmpty;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,7 +33,7 @@ class ProfileForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'portfolio_name' => 'required|max:16',
+        'portfolio_name' => 'max:18',
 //        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
@@ -60,6 +57,14 @@ class ProfileForm extends Component
         }
     }
 
+    public function resetFields()
+    {
+        $this->portfolio_name = '';
+        $this->job_position = '';
+        $this->total_clients = 0;
+        $this->total_tools = 0;
+    }
+
     public function showMoreActivities($num)
     {
         $this->numOfActivities = $num;
@@ -76,9 +81,27 @@ class ProfileForm extends Component
         $this->mount($this->currentUser);
     }
 
+    public function checkIfEmpty()
+    {
+        if ($this->portfolio_name === "") {
+            $this->portfolio_name = $this->currentUser->portfolio_name;
+        }
+        if ($this->job_position === "") {
+            $this->job_position = $this->currentUser->job_position;
+        }
+        if ($this->total_clients === 0) {
+            $this->total_clients = $this->currentUser->total_clients;
+        }
+        if ($this->total_tools === 0) {
+            $this->total_tools = $this->currentUser->total_tools;
+        }
+    }
+
     public function register()
     {
         $this->validate();
+
+        $this->checkIfEmpty();
 
         auth()->user()->profile()->update([
             'portfolio_name' => $this->portfolio_name,
@@ -104,6 +127,8 @@ class ProfileForm extends Component
 
             $this->profileImage = Storage::disk('public')->url($path . '/' . $file);
         }
+
+        $this->resetFields();
 
         $this->toggleWarning = true;
 

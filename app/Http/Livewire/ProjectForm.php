@@ -31,7 +31,7 @@ class ProjectForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'title' => 'required',
+        'title' => 'required|max:30',
     ];
 
     public function mount()

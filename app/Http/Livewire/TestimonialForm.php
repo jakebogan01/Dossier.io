@@ -27,7 +27,7 @@ class TestimonialForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'title' => 'required',
+        'title' => 'required|max:18',
     ];
 
     public function mount()

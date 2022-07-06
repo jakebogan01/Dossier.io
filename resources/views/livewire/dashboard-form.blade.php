@@ -1,4 +1,4 @@
-<form action="#" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
+<form action="#" enctype="multipart/form-data" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
     @csrf
 
     <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>

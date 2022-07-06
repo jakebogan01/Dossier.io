@@ -21,7 +21,7 @@ class ExperienceForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'title' => 'required',
+        'title' => 'required|max:25',
     ];
 
     /**

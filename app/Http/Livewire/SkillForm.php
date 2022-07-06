@@ -15,7 +15,7 @@ class SkillForm extends Component
     public $skills;
     public $currentUser;
     public bool $toggleWarning = false;
-    public string $introduction = '';
+    public string $introduction;
     public string $fact_one = '';
     public string $fact_two = '';
     public string $fact_three = '';
@@ -35,7 +35,7 @@ class SkillForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'introduction' => 'required|max:16',
+        'introduction' => 'max:180',
     ];
 
     /**
@@ -65,15 +65,75 @@ class SkillForm extends Component
         $this->mount($this->currentUser);
     }
 
+    public function resetFields()
+    {
+        $this->introduction = '';
+        $this->fact_one = '';
+        $this->fact_two = '';
+        $this->fact_three = '';
+        $this->skill_one = '';
+        $this->description_one = '';
+        $this->skill_two = '';
+        $this->description_two = '';
+        $this->skill_three = '';
+        $this->description_three = '';
+        $this->skill_four = '';
+        $this->description_four = '';
+    }
+
+    public function checkIfEmpty()
+    {
+        if ($this->introduction === "") {
+            $this->introduction = $this->currentUser->introduction;
+        }
+        if ($this->fact_one === "") {
+            $this->fact_one = $this->currentUser->facts[1];
+        }
+        if ($this->fact_two === "") {
+            $this->fact_two = $this->currentUser->facts[2];
+        }
+        if ($this->fact_three === "") {
+            $this->fact_three = $this->currentUser->facts[3];
+        }
+        if ($this->skill_one === "") {
+            $this->skill_one = $this->currentUser->skills[1]['skill'];
+        }
+        if ($this->skill_two === "") {
+            $this->skill_two = $this->currentUser->skills[2]['skill'];
+        }
+        if ($this->skill_three === "") {
+            $this->skill_three = $this->currentUser->skills[3]['skill'];
+        }
+        if ($this->skill_four === "") {
+            $this->skill_four = $this->currentUser->skills[4]['skill'];
+        }
+        if ($this->description_one === "") {
+            $this->description_one = $this->currentUser->skills[1]['description'];
+        }
+        if ($this->description_two === "") {
+            $this->description_two = $this->currentUser->skills[2]['description'];
+        }
+        if ($this->description_three === "") {
+            $this->description_three = $this->currentUser->skills[3]['description'];
+        }
+        if ($this->description_four === "") {
+            $this->description_four = $this->currentUser->skills[4]['description'];
+        }
+    }
+
     public function register()
     {
         $this->validate();
+
+        $this->checkIfEmpty();
 
         if (is_null($this->currentUser)) {
             $this->updateSkills('create');
         } else {
             $this->updateSkills('update');
         }
+
+        $this->resetFields();
 
         $this->toggleWarning = true;
 

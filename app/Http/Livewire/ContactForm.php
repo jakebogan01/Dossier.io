@@ -28,7 +28,7 @@ class ContactForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
-        'conclusion' => 'required|max:16',
+        'conclusion' => 'max:180',
     ];
 
     public function updated($propertyName)
@@ -44,6 +44,46 @@ class ContactForm extends Component
     {
         $this->currentUser = $currentUser;
         $this->activities =  auth()->user()->activities->sortByDesc('id')->take($this->numOfActivities);
+    }
+
+    public function resetFields()
+    {
+        $this->conclusion = '';
+        $this->phone = '';
+        $this->portfolio_email = '';
+        $this->instagram = '';
+        $this->github = '';
+        $this->facebook = '';
+        $this->linkedin = '';
+        $this->dribbble = '';
+    }
+
+    public function checkIfEmpty()
+    {
+        if ($this->conclusion === "") {
+            $this->conclusion = $this->currentUser->conclusion;
+        }
+        if ($this->phone === "") {
+            $this->phone = $this->currentUser->phone;
+        }
+        if ($this->portfolio_email === "") {
+            $this->portfolio_email = $this->currentUser->portfolio_email;
+        }
+        if ($this->instagram === "") {
+            $this->instagram = $this->currentUser->links['instagram'];
+        }
+        if ($this->github === "") {
+            $this->github = $this->currentUser->links['github'];
+        }
+        if ($this->facebook === "") {
+            $this->facebook = $this->currentUser->links['facebook'];
+        }
+        if ($this->linkedin === "") {
+            $this->linkedin = $this->currentUser->links['linkedin'];
+        }
+        if ($this->dribbble === "") {
+            $this->dribbble = $this->currentUser->links['dribbble'];
+        }
     }
 
     public function showMoreActivities($num)
@@ -66,11 +106,15 @@ class ContactForm extends Component
     {
         $this->validate();
 
+        $this->checkIfEmpty();
+
         if ($this->currentUser) {
             $this->updateContact('update');
         } else {
             $this->updateContact('create');
         }
+
+        $this->resetFields();
 
         $this->toggleWarning = true;
 
