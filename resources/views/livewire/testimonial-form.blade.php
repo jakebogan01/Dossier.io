@@ -1,19 +1,19 @@
-<form action="#" enctype="multipart/form-data" x-data="{ edit: false, notify: @entangle($toggleWarning) }">
+<form action="#" enctype="multipart/form-data" x-data="{ edit: false, notify: @entangle('toggleWarning') }">
     @csrf
 
     <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
 
     <x-dashboard.components.edit-form :item="$item" content="Project">
         <div class="mt-14">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Full Name" max="18"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Full Name" max="18" required="required"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateJobPosition" title="Job Title" max="20"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateJobPosition" title="Job Title" max="20" required="required"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
             <x-dashboard.components.form-fields.image-field title="Testimonial Image" model="newTestimonialPicture"></x-dashboard.components.form-fields.image-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Quote" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Quote" max="180" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
             <x-dashboard.components.form-fields.url-field type="text" model="updateFacebook" title="Facebook Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
             <x-dashboard.components.form-fields.url-field type="text" model="updateLinkedin" title="Linkedin Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
@@ -61,7 +61,7 @@
                             Post up to 4 testimonials to be viewed by your viewers.
                         </p>
                     </div>
-                        <button wire:click.prevent="store()" @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        <button wire:click.prevent="store()" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                             Post
                         </button>
                     </div>

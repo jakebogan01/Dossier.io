@@ -29,6 +29,13 @@ class ContactForm extends Component
      */
     protected array $rules = [
         'conclusion' => 'max:180',
+        'phone' => 'regex:/^[0-9-]*$/',
+        'portfolio_email' => 'email',
+        'instagram' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
+        'facebook' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
+        'github' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
+        'linkedin' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
+        'dribbble' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
     ];
 
     public function updated($propertyName)
@@ -105,6 +112,10 @@ class ContactForm extends Component
     public function register()
     {
         $this->validate();
+
+        if(empty($this->conclusion) && empty($this->phone) && empty($this->portfolio_email) && empty($this->instagram) && empty($this->facebook) && empty($this->github) && empty($this->linkedin) && empty($this->dribbble)) {
+            return;
+        }
 
         $this->checkIfEmpty();
 

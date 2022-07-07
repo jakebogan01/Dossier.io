@@ -34,12 +34,8 @@ class ProjectForm extends Component
         'title' => 'required|max:30',
         'project_picture' => 'required',
         'description' => 'required|max:180',
-        'updateTitle' => 'required|max:30',
-        'updateDescription' => 'required|max:180',
         'code' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
         'github' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
-        'updateGithub' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
-        'updateCode' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
     ];
 
     public function updated($propertyName)

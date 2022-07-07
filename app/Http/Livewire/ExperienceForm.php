@@ -24,9 +24,6 @@ class ExperienceForm extends Component
         'date' => 'required',
         'title' => 'required|max:25',
         'description' => 'required|max:80',
-        'updateDate' => 'required',
-        'updateTitle' => 'required|max:25',
-        'updateDescription' => 'required|max:80',
     ];
 
     public function updated($propertyName)

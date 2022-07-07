@@ -28,7 +28,17 @@ class TestimonialForm extends Component
      */
     protected array $rules = [
         'title' => 'required|max:18',
+        'job_position' => 'required|max:20',
+        'testimonial_picture' => 'required',
+        'description' => 'required|max:180',
+        'facebook' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
+        'linkedin' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
     ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     public function mount()
     {
