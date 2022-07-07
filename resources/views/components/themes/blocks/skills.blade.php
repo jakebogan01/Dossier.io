@@ -1,7 +1,7 @@
 @aware(['user'])
 
 @if ($user->skill)
-    <section id="skills" {{ $attributes->merge(['class' => 'anchor flex flex-col relative bg-[#1C1F2D] pt-12 group']) }}>
+    <section id="skills" class="anchor flex flex-col relative bg-[#1C1F2D] pt-12 group">
         <div class="{{ (count($user->experiences) >= 1) ? 'pb-0' : 'pb-36' }} relative mx-auto py-12 max-w-7xl sm:px-[85px] lg:pt-40 z-20">
             <div class="space-y-12 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                 <div class="lg:col-span-2 mt-10 sm:mt-24">
@@ -9,19 +9,19 @@
                         @foreach($user->skill->skills as $key => $skill)
                             @switch($key)
                                 @case(1)
-                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="100" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="100" :user="$skill" :skillIcons="$skillIcons"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(2)
-                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" :user="$skill" :skillIcons="$skillIcons"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(3)
-                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="300" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#4046FF] sm:bg-[#555C7E] mt-0 sm:mt-12 card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-right" animateDelay="300" :user="$skill" :skillIcons="$skillIcons"></x-themes.blocks.components.skill-block>
                                 @break
 
                                 @case(4)
-                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" animateDelay="200" :user="$skill"></x-themes.blocks.components.skill-block>
+                                    <x-themes.blocks.components.skill-block class="bg-[#555C7E] card relative sm:hover:bg-[#4046FF] h-[300px] p-[30px] sm:transition-all" animateType="zoom-in-left" animateDelay="200" :user="$skill" :skillIcons="$skillIcons"></x-themes.blocks.components.skill-block>
                                 @break
                             @endswitch
                         @endforeach
