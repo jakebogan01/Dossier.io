@@ -38,6 +38,11 @@ class SkillForm extends Component
         'introduction' => 'max:180',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     /**
      * @param $currentUser
      * @return void
@@ -124,6 +129,10 @@ class SkillForm extends Component
     public function register()
     {
         $this->validate();
+
+        if(empty($this->introduction) && empty($this->fact_one) && empty($this->fact_two) && empty($this->fact_three) && empty($this->skill_one) && empty($this->description_one) && empty($this->skill_two) && empty($this->description_two) && empty($this->skill_three) && empty($this->description_three) && empty($this->skill_four) && empty($this->description_four) ) {
+            return;
+        }
 
         $this->checkIfEmpty();
 
