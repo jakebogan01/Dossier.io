@@ -1,5 +1,7 @@
 <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide cursor-default">
-    Trusted by over {{ $total }} amazing people
+    @unless($total < 1)
+        Trusted by over {{ $total }} amazing people
+    @endunless
 </h2>
 <div class="mt-8 flex justify-center space-x-6">
     @if($featuredUsers !== null)
