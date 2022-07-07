@@ -18,6 +18,18 @@ class DashboardForm extends Component
     public $project_picture;
     public string $message = "";
 
+    /**
+     * @var array|string[]
+     */
+    protected array $rules = [
+        'updateTitle' => 'required|max:30',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function updateActivity($section, $action)
     {
         auth()->user()->activities()->create([
@@ -46,6 +58,8 @@ class DashboardForm extends Component
 
     public function updateData($id)
     {
+        $this->validate();
+
         $newImage = $this->updateProjectPicture;
 
         if (!is_null($this->newProjectPicture)) {

@@ -37,6 +37,11 @@ class ProfileForm extends Component
 //        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     /**
      * @param $currentUser
      * @return void
@@ -100,6 +105,10 @@ class ProfileForm extends Component
     public function register()
     {
         $this->validate();
+
+        if(empty($this->portfolio_name) && empty($this->job_position) && empty($this->profile_picture) && $this->total_tools == 0 && $this->total_clients == 0) {
+            return;
+        }
 
         $this->checkIfEmpty();
 

@@ -1,5 +1,5 @@
 <div>
-    <form action="#" enctype="multipart/form-data" wire:submit.prevent="register" x-data="{ notify: @entangle($toggleWarning) }">
+    <form action="#" enctype="multipart/form-data" wire:submit.prevent="register" x-data="{ notify: @entangle('toggleWarning') }">
         @csrf
 
         <x-dashboard.components.notification :message="$message"></x-dashboard.components.notification>
@@ -42,7 +42,7 @@
                                 The information here will be displayed on your personal portfolio.
                             </p>
                         </div>
-                        <button @click="notify = true" type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
+                        <button type="submit" class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D] sm:hover:bg-[#407780]' : 'bg-[#993BCE] sm:hover:bg-[#57168C]' }} inline-flex justify-center items-center font-bold text-white h-10 px-4 border border-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md sm:hover:shadow-sm rounded-md sm:transition-colors">
                             Update
                         </button>
                     </div>
