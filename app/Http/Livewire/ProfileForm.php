@@ -106,7 +106,7 @@ class ProfileForm extends Component
     {
         $this->validate();
 
-        if(empty($this->portfolio_name) && empty($this->job_position) && empty($this->profile_picture) && $this->total_tools == 0 && $this->total_clients == 0) {
+        if(empty($this->portfolio_name) && empty($this->job_position) && empty($this->profile_picture) && $this->total_tools == 0 && $this->total_clients == 0 && ($this->make_public === $this->currentUser->settings['public']) && ($this->dark_mode === $this->currentUser->settings['dark_mode']) && ($this->track_views === $this->currentUser->settings['track_views']) && ($this->track_likes === $this->currentUser->settings['track_likes'])) {
             return;
         }
 
