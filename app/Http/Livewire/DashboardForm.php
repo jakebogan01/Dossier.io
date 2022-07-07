@@ -23,6 +23,7 @@ class DashboardForm extends Component
      */
     protected array $rules = [
         'updateTitle' => 'required|max:30',
+        'updateDescription' => 'required|max:180',
     ];
 
     public function updated($propertyName)

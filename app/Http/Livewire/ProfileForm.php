@@ -34,7 +34,7 @@ class ProfileForm extends Component
      */
     protected array $rules = [
         'portfolio_name' => 'max:18',
-//        'profile_picture' => 'mimes:jpeg,jpg,png|max:10000',
+        'job_position' => 'max:20',
     ];
 
     public function updated($propertyName)

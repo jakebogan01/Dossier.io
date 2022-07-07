@@ -36,6 +36,13 @@ class SkillForm extends Component
      */
     protected array $rules = [
         'introduction' => 'max:180',
+        'fact_one' => 'max:70',
+        'fact_two' => 'max:70',
+        'fact_three' => 'max:70',
+        'description_one' => 'max:180',
+        'description_two' => 'max:180',
+        'description_three' => 'max:180',
+        'description_four' => 'max:180',
     ];
 
     public function updated($propertyName)
