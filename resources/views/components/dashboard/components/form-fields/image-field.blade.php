@@ -16,3 +16,7 @@
         </div>
     </div>
 </div>
+
+<div>
+    @error($model) <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+</div>

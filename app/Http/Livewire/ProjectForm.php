@@ -32,7 +32,16 @@ class ProjectForm extends Component
      */
     protected array $rules = [
         'title' => 'required|max:30',
+        'project_picture' => 'required',
+        'description' => 'required|max:180',
+        'updateTitle' => 'required|max:30',
+        'updateDescription' => 'required|max:180',
     ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     public function mount()
     {
