@@ -90,14 +90,6 @@
                                 Allow your portfolio to be seen by the public.
                             </p>
                         </x-dashboard.components.settings-switch>
-                        <x-dashboard.components.settings-switch setting="dark_mode">
-                            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-2-label">
-                                Enable dark mode
-                            </p>
-                            <p class="{{ (auth()->user()->dark_mode) ? 'text-gray-300' : 'text-gray-500' }} text-sm" id="privacy-option-2-description">
-                                Switch between light and dark mode.
-                            </p>
-                        </x-dashboard.components.settings-switch>
                         <x-dashboard.components.settings-switch setting="track_views">
                             <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} text-sm font-medium" id="privacy-option-3-label">
                                 Allow tracking of views

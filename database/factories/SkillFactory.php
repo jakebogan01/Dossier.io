@@ -34,19 +34,19 @@ class SkillFactory extends Factory
             ],
             'skills' => [
                 1 => [
-                    'skill' => $this->faker->word(),
+                    'skill' => 'HTML',
                     'description' => $this->faker->text(180),
                 ],
                 2 => [
-                    'skill' => $this->faker->word(),
+                    'skill' => 'CSS',
                     'description' => $this->faker->text(180),
                 ],
                 3 => [
-                    'skill' => $this->faker->word(),
+                    'skill' => 'JavaScript',
                     'description' => $this->faker->text(180),
                 ],
                 4 => [
-                    'skill' => $this->faker->word(),
+                    'skill' => 'Computer Science',
                     'description' => $this->faker->text(180),
                 ],
             ]

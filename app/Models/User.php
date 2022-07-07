@@ -167,7 +167,6 @@ class User extends Authenticatable
                 'aware' => 0,
                 'settings' => [
                     'public' => false,
-                    'dark_mode' => true,
                     'track_views' => true,
                     'track_likes' => true,
                 ]

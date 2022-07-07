@@ -36,7 +36,6 @@ class ProfileFactory extends Factory
             'aware' => $this->faker->boolean(50),
             'settings' => [
                 'public' => (int) $this->faker->boolean(50),
-                'dark_mode' => (int) $this->faker->boolean(50),
                 'track_views' => (int) $this->faker->boolean(50),
                 'track_likes' => (int) $this->faker->boolean(50)
             ]
