@@ -1673,6 +1673,9 @@ select {
 .max-w-md {
   max-width: 28rem;
 }
+.max-w-\[110px\] {
+  max-width: 110px;
+}
 .max-w-lg {
   max-width: 32rem;
 }
@@ -2919,6 +2922,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(115 61 145 / var(--tw-text-opacity));
 }
+.text-\[\#4046FF\] {
+  --tw-text-opacity: 1;
+  color: rgb(64 70 255 / var(--tw-text-opacity));
+}
 .text-\[\#B1B7D6\] {
   --tw-text-opacity: 1;
   color: rgb(177 183 214 / var(--tw-text-opacity));
@@ -3005,10 +3012,6 @@ select {
 .text-\[\#19077C\] {
   --tw-text-opacity: 1;
   color: rgb(25 7 124 / var(--tw-text-opacity));
-}
-.text-\[\#4046FF\] {
-  --tw-text-opacity: 1;
-  color: rgb(64 70 255 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

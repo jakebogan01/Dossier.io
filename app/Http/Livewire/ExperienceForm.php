@@ -21,8 +21,18 @@ class ExperienceForm extends Component
      * @var array|string[]
      */
     protected array $rules = [
+        'date' => 'required',
         'title' => 'required|max:25',
+        'description' => 'required|max:80',
+        'updateDate' => 'required',
+        'updateTitle' => 'required|max:25',
+        'updateDescription' => 'required|max:80',
     ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     /**
      * @return void
