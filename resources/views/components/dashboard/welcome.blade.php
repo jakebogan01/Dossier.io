@@ -1,4 +1,4 @@
-@aware(['currentUser', 'areaChart', 'barChart'])
+@aware(['currentUser', 'areaChart', 'pieChart'])
 
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -61,7 +61,7 @@
 
         @if($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1)
             <div aria-roledescription="project chart" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                {!! $barChart->container() !!}
+                {!! $pieChart->container() !!}
             </div>
         @endif
 
@@ -74,10 +74,10 @@
 
     <livewire:dashboard-form :currentUser="$currentUser"/>
 
-    <script src="{{ $barChart->cdn() }}"></script>
+    <script src="{{ $pieChart->cdn() }}"></script>
     <script src="{{ $areaChart->cdn() }}"></script>
     {{ $areaChart->script() }}
-    {{ $barChart->script() }}
+    {{ $pieChart->script() }}
     <script>
         function copyText()
         {
