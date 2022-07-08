@@ -5,12 +5,12 @@
 
     <x-dashboard.components.edit-form :item="$item" content="Project">
         <div class="mt-14">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Project Title" max="30"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Project Title"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
             <x-dashboard.components.form-fields.image-field title="Project Image" model="newProjectPicture"></x-dashboard.components.form-fields.image-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" title="Brief Description" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Description" title="Brief Description" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
             <x-dashboard.components.form-fields.url-field type="text" model="updateCode" title="Project Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
             <x-dashboard.components.form-fields.url-field type="text" model="updateGithub" title="GitHub Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>

@@ -11,12 +11,12 @@
                     {{ $user->title ?: 'Full Name' }}
                 </h3>
                 <p class="text-blue-500">
-                    {{ $user->job_position ?: 'Job Position' }}
+                    {{ $user->job_position ?: 'Job Title' }}
                 </p>
             </div>
             <div class="text-[#B1B7D6] text-base font-bold leading-loose">
                 <p>
-                    {{ $user->description ?: 'Quote' }}
+                    {{ $user->description ?: '' }}
                 </p>
             </div>
             <ul role="list" class="flex items-center space-x-5">

@@ -10,9 +10,9 @@
             </div>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Timeline Title" max="25" required="required"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Timeline Title" required="required"></x-dashboard.components.form-fields.input-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Brief Description" max="80" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Brief Description" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
     </x-dashboard.components.edit-form>
 
     <section class="grid grid-cols-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 mt-8">
@@ -58,9 +58,9 @@
                             </div>
                         </div>
                         <div class="mt-10">
-                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Timeline Title" max="25" required="required"></x-dashboard.components.form-fields.input-field>
+                            <x-dashboard.components.form-fields.input-field type="text" model="title" title="Timeline Title" required="required"></x-dashboard.components.form-fields.input-field>
                         </div>
-                        <x-dashboard.components.form-fields.textarea-field model="description" title="Brief Description" max="80" required="required"></x-dashboard.components.form-fields.textarea-field>
+                        <x-dashboard.components.form-fields.textarea-field model="description" title="Brief Description" required="required"></x-dashboard.components.form-fields.textarea-field>
                     </div>
                 </div>
             @endif

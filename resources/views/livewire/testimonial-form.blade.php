@@ -5,15 +5,15 @@
 
     <x-dashboard.components.edit-form :item="$item" content="Project">
         <div class="mt-14">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Full Name" max="18" required="required"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateTitle" title="Full Name" required="required"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
-            <x-dashboard.components.form-fields.input-field type="text" model="updateJobPosition" title="Job Title" max="20" required="required"></x-dashboard.components.form-fields.input-field>
+            <x-dashboard.components.form-fields.input-field type="text" model="updateJobPosition" title="Job Title" required="required"></x-dashboard.components.form-fields.input-field>
         </div>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
             <x-dashboard.components.form-fields.image-field title="Testimonial Image" model="newTestimonialPicture"></x-dashboard.components.form-fields.image-field>
         </div>
-        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Quote" max="180" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+        <x-dashboard.components.form-fields.textarea-field model="updateDescription" title="Quote" required="required" styles="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
             <x-dashboard.components.form-fields.url-field type="text" model="updateFacebook" title="Facebook Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
             <x-dashboard.components.form-fields.url-field type="text" model="updateLinkedin" title="Linkedin Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
@@ -68,16 +68,16 @@
                     <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                         <div class="grid grid-cols-2 gap-6 mt-14">
                             <div>
-                                <x-dashboard.components.form-fields.input-field type="text" model="title" title="Full Name" max="18" required="required"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="title" title="Full Name" required="required"></x-dashboard.components.form-fields.input-field>
                             </div>
                             <div>
-                                <x-dashboard.components.form-fields.input-field type="text" model="job_position" title="Job Title" max="20" required="required"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="job_position" title="Job Title" required="required"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
                         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }}">
                             <x-dashboard.components.form-fields.image-field title="Testimonial Image" model="testimonial_picture" required="required"></x-dashboard.components.form-fields.image-field>
                         </div>
-                        <x-dashboard.components.form-fields.textarea-field model="description" title="Quote" max="180" required="required"></x-dashboard.components.form-fields.textarea-field>
+                        <x-dashboard.components.form-fields.textarea-field model="description" title="Quote" required="required"></x-dashboard.components.form-fields.textarea-field>
                         <div class="{{ (auth()->user()->dark_mode) ? 'mt-10' : 'mt-5' }} grid grid-cols-4 gap-6">
                             <x-dashboard.components.form-fields.url-field type="text" model="facebook" title="Facebook Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>
                             <x-dashboard.components.form-fields.url-field type="text" model="linkedin" title="Linkedin Link" grid="col-span-4 sm:col-span-2"></x-dashboard.components.form-fields.url-field>

@@ -180,7 +180,7 @@
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-14">
-                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Brief Conclusion" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+                    <x-dashboard.components.form-fields.textarea-field model="conclusion" title="Brief Conclusion" styles="{{ (auth()->user()->dark_mode) ? 'mt-8' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="tab === 'contact'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">

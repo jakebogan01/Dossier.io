@@ -146,7 +146,7 @@
                     </button>
                 </div>
                 <div class="flex-grow space-y-6 mt-14">
-                    <x-dashboard.components.form-fields.textarea-field model="introduction" title="Brief Introduction" max="180" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
+                    <x-dashboard.components.form-fields.textarea-field model="introduction" title="Brief Introduction" styles="{{ (auth()->user()->dark_mode) ? 'mt-12' : 'mt-5' }}"></x-dashboard.components.form-fields.textarea-field>
                 </div>
             </div>
             <div x-show="tab === 'facts'" x-cloak aria-labelledby="skill form" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
@@ -168,13 +168,13 @@
                         <div class="flex-grow">
                             <div class="{{ (auth()->user()->dark_mode) ? 'gap-y-10' : 'gap-y-6' }} grid grid-cols-12 gap-x-6">
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="Fact One" max="70"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_one" title="Fact One"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_two" title="Fact Two" max="70"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_two" title="Fact Two"></x-dashboard.components.form-fields.input-field>
                                 </div>
                                 <div class="col-span-12 sm:col-span-6">
-                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_three" title="Fact Three" max="70"></x-dashboard.components.form-fields.input-field>
+                                    <x-dashboard.components.form-fields.input-field type="text" model="fact_three" title="Fact Three"></x-dashboard.components.form-fields.input-field>
                                 </div>
                             </div>
                         </div>
@@ -203,25 +203,25 @@
                                     Skill One
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_one" title="Skill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_one" title="Skill Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_two" :skills="$skills">
                                     Skill Two
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_two" title="Skill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_two" title="Skill Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_three" :skills="$skills">
                                     Skill Three
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_three" title="Skill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_three" title="Skill Description"></x-dashboard.components.form-fields.textarea-field>
                             <div class="mt-8 grid grid-cols-12 gap-6">
                                 <x-dashboard.components.form-fields.skill-select num="skill_four" :skills="$skills">
                                     Skill Four
                                 </x-dashboard.components.form-fields.skill-select>
                             </div>
-                            <x-dashboard.components.form-fields.textarea-field model="description_four" title="SKill Description" max="180"></x-dashboard.components.form-fields.textarea-field>
+                            <x-dashboard.components.form-fields.textarea-field model="description_four" title="SKill Description"></x-dashboard.components.form-fields.textarea-field>
                         </div>
                     </div>
                 </div>

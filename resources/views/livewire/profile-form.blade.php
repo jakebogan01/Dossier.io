@@ -49,10 +49,10 @@
                     <div class="{{ (auth()->user()->dark_mode) ? 'space-y-10' : 'space-y-6' }} flex-grow">
                         <div class="mt-8 grid grid-cols-12 gap-6 mt-14">
                             <div class="col-span-12 sm:col-span-6">
-                                <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Your Name" max="18"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="portfolio_name" title="Your Name"></x-dashboard.components.form-fields.input-field>
                             </div>
                             <div class="col-span-12 sm:col-span-6">
-                                <x-dashboard.components.form-fields.input-field type="text" model="job_position" title="Job Title" max="20"></x-dashboard.components.form-fields.input-field>
+                                <x-dashboard.components.form-fields.input-field type="text" model="job_position" title="Job Title"></x-dashboard.components.form-fields.input-field>
                             </div>
                         </div>
                         <x-dashboard.components.form-fields.image-field title="Profile Picture" model="profile_picture"></x-dashboard.components.form-fields.image-field>
