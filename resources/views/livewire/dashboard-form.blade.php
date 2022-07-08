@@ -36,7 +36,7 @@
             <div>
                 <div class="mt-10">
                     @foreach($currentUser as $project)
-                        <div aria-roledescription="list of all projects" wire:click.prevent="editProject({{ $project->id }})" @click="edit = true" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] sm:hover:bg-[#2a2f36]' : 'bg-white' }} group cursor-pointer border-t border-[#565e69]">
+                        <div aria-roledescription="list of all projects" wire:click.prevent="editProject({{ $project->id }})" @click="edit = true" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] sm:hover:bg-[#2a2f36] border-t border-[#565e69]' : 'bg-white border-t border-[#eeeeee]' }} group cursor-pointer">
                             <div class="px-4 py-4 sm:px-6">
                                 <div class="flex items-center justify-between">
                                     <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-indigo-600' }} text-lg font-bold truncate">
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="overflow-hidden border-t border-[#565e69]">
+                    <div class="{{ (auth()->user()->dark_mode) ? 'border-t border-[#565e69]' : 'border-t border-[#eeeeee]' }} overflow-hidden">
                         {!! $currentUser->links('custom-pagination-links-view') !!}
                     </div>
                 </div>
