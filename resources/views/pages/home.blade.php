@@ -14,7 +14,7 @@
                         </div>
                         <div class="pt-32 pb-20 lg:py-0">
                             <div data-aos="fade-right" data-aos-delay="300">
-                                <a href="#" class="relative sm:w-[106px] overflow-hidden inline-flex items-center text-white bg-[#3273F6] sm:hover:w-[214px] rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base sm:hover:text-gray-200 sm:transition-all group" style="transition-duration: 400ms;">
+                                <a href="{{ route('theme-one', 'jake-bogan' ) }}" target="_blank" class="relative sm:w-[106px] overflow-hidden inline-flex items-center text-white bg-[#3273F6] sm:hover:w-[214px] rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base sm:hover:text-gray-200 sm:transition-all group" style="transition-duration: 400ms;">
                                     <span class="px-3 py-0.5 whitespace-nowrap text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-[#50148C] sm:group-hover:bg-[#50148C] rounded-full">
                                         Click Here
                                     </span>
