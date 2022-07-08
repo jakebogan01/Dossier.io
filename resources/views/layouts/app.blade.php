@@ -103,6 +103,7 @@
         </style>
     </head>
     <body class="{{ (auth()->user()->dark_mode) ? 'bg-[#202124]' : 'bg-gradient-to-r from-[#600F93] to-[#120185]' }} antialiased h-full">
+        <livewire:welcome-hint />
         <div x-data="{ showMenu: false }" class="flex h-full">
             <div role="dialog" aria-modal="true" aria-labelledby="slide-over-title" class="relative z-50" x-cloak x-show="showMenu"
                 x-transition:enter="transition ease-in-out duration-500"

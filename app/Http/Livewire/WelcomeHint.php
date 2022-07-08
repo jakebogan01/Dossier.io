@@ -4,14 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class ViewPortfolio extends Component
+class WelcomeHint extends Component
 {
-    public bool $test;
+    public bool $status;
     public string $profileImage;
 
     public function mount()
     {
-        $this->test = auth()->user()->profile->aware;
+        $this->status = auth()->user()->profile->aware;
 
         if (empty(auth()->user()->profile->profile_photo_path)) {
             $this->profileImage = auth()->user()->getAvatar();
@@ -22,7 +22,7 @@ class ViewPortfolio extends Component
 
     public function update()
     {
-        if ($this->test) {
+        if ($this->status) {
             return false;
         } else {
             auth()->user()->profile()->update([
@@ -35,6 +35,6 @@ class ViewPortfolio extends Component
 
     public function render()
     {
-        return view('livewire.view-portfolio');
+        return view('livewire.welcome-hint');
     }
 }
