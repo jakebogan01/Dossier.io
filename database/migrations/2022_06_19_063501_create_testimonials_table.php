@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 18)
                 ->nullable();
-            $table->string('job_position', 20)
+            $table->string('job_position', 28)
                 ->nullable();
             $table->string('description', 180)
                 ->nullable();

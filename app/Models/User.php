@@ -162,7 +162,7 @@ class User extends Authenticatable
                 'user_id' => $model->id,
                 'portfolio_name' => $model->name,
                 'slug' => $slugName,
-                'job_position' => '',
+                'job_position' => 'Software Ninjaneer',
                 'total_clients' => 0,
                 'total_tools' => 0,
                 'aware' => 0,

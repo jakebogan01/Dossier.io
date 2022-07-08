@@ -33,7 +33,7 @@ class ProfileForm extends Component
      */
     protected array $rules = [
         'portfolio_name' => 'max:18',
-        'job_position' => 'max:20',
+        'job_position' => 'max:28',
     ];
 
     public function updated($propertyName)

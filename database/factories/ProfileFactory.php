@@ -30,7 +30,7 @@ class ProfileFactory extends Factory
             'user_id' => 1,
             'portfolio_name' => $this->faker->name(),
             'slug' => $this->faker->slug(),
-            'job_position' => $this->faker->text(20),
+            'job_position' => $this->faker->text(28),
             'total_clients' => $this->faker->randomDigit(),
             'total_tools' => $this->faker->randomDigit(),
             'aware' => $this->faker->boolean(50),

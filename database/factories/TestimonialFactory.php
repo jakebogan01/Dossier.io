@@ -26,7 +26,7 @@ class TestimonialFactory extends Factory
     {
         return [
             'title' => $this->faker->text(18),
-            'job_position' => $this->faker->text(20),
+            'job_position' => $this->faker->text(28),
             'description' => $this->faker->text(180),
             'links' => [
                 'facebook' => $this->faker->url(),
