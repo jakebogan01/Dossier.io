@@ -95,17 +95,17 @@
                     <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
                         <div class="pt-12 sm:pt-16 lg:pt-20">
                             <h2 data-aos="fade-left" data-aos-delay="200" class="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">
-                                On a mission to empower teams
+                                An easier way to build
                             </h2>
                             <div class="mt-6 text-gray-300 space-y-6">
                                 <p data-aos="fade-left" data-aos-delay="250" class="text-lg">
-                                    Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
+                                    Building online portfolios can be brutal. Either there’s not enough time in the day or you don’t know where to start. Here at Dossier.io, we get it! We have all been there. We know what it’s like to try our best to develop something cool to show off our amazing skills and projects.
                                 </p>
                                 <p data-aos="fade-left" data-aos-delay="300" class="text-base leading-7">
-                                    Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
+                                    But look no further! We made that issue a thing of the past. We made it easier for anyone to simply log in, customize their own content and share their link with anyone! Sure, there are some added benefits; you get a handful of themes to choose from, along with some pleasant and simple analytics in a well-designed dashboard catered to you.
                                 </p>
                                 <p data-aos="fade-left" data-aos-delay="350" class="text-base leading-7">
-                                    Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+                                    Nervous? No need to be. It’s easy! The first step is to register for an account that brings you to your very own dashboard that you can customize yourself. Then of course, there are several sections that allow you to add your own content. What turns out afterward is a personal portfolio that is yours to simply share with employers, friends, and family! Cool right?
                                 </p>
                             </div>
                         </div>
@@ -116,17 +116,17 @@
                 <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
                     <div class="pt-12 sm:pt-16 lg:pt-20">
                         <h2 data-aos="fade-right" data-aos-delay="200" class="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">
-                            On a mission to empower teams
+                            Did somebody say themes?
                         </h2>
                         <div class="mt-6 text-gray-300 space-y-6">
                             <p data-aos="fade-right" data-aos-delay="250" class="text-lg">
-                                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
+                                That’s right, your portfolio will have its own theme. There is a handful to choose from in the meantime, but we will soon be delivering a lot more to our customers in the near future. You might wonder how do they work? Well, I’m glad you asked!
                             </p>
                             <p data-aos="fade-right" data-aos-delay="300" class="text-base leading-7">
-                                Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
+                                Themes are just the design, the look, and the feel of the portfolio. Some have different colors, others have multiple pages, and some only have one single page. But don’t worry, most if not all of your content that you added to your dashboard will work in every theme. We are looking to add a few more features soon that will be specific to each theme. For now, though, they all work the same.
                             </p>
                             <p data-aos="fade-right" data-aos-delay="350" class="text-base leading-7">
-                                Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+                                Let’s talk, sharing. Let’s say that you have completely decked out your online portfolio and it looks stunning, what now? Simply copy the URL of your portfolio and start sending them off to a close friend or employer! And that’s it, your done. And feel free to come back at any time to edit your content, whatever changes you made, will be seen by those you have sent your link to!
                             </p>
                         </div>
                     </div>
