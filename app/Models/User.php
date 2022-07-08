@@ -159,9 +159,9 @@ class User extends Authenticatable
 
             $model->profile()->create([
                 'user_id' => $model->id,
-                'portfolio_name' => null,
+                'portfolio_name' => '',
                 'slug' => $slugName,
-                'job_position' => null,
+                'job_position' => '',
                 'total_clients' => 0,
                 'total_tools' => 0,
                 'aware' => 0,

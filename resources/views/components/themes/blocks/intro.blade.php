@@ -73,13 +73,15 @@
             </div>
         @endif
     </div>
-    <aside class="flex-1 flex justify-center 570:justify-start lg:justify-end mt-20 lg:mt-10" data-aos="zoom-in" data-aos-duration="700">
-        <div class="flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
-            @if(is_null($user->profile->profile_photo_path))
-                <img class="inline-block w-[210px] h-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="/images/themes/jpg/default-background.jpg" alt="Default Avatar Image" loading="eager" data-aos="zoom-in" data-aos-delay="150">
-            @else
+    <aside class="flex-1 flex justify-center sm:justify-start lg:justify-end mt-28 lg:mt-10" data-aos="zoom-in" data-aos-duration="700">
+        @if(!is_null($user->profile->profile_photo_path))
+            <div class="flex items-center justify-center w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] rounded-full transition-all" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
                 <img class="inline-block w-[210px] h-[210px] 570:w-[293px] 570:h-[293px] lg:w-[360px] lg:h-[360px] xl:w-[402px] xl:h-[402px] rounded-full transition-all" src="{{ $user->profile->profile_photo_path }}" alt="Picture of {{ $user->profile->portfolio_name}}" loading="eager" data-aos="zoom-in" data-aos-delay="150">
-            @endif
-        </div>
+            </div>
+        @else
+            <div class="relative rounded-full  bg-red-300 w-[255px] h-[255px] 570:w-[351px] 570:h-[351px] lg:w-[440px] lg:h-[440px] xl:w-[481px] xl:h-[481px] transition-all" style="background-image: linear-gradient(to bottom right, #FFD279, #FFF659); box-shadow: 0 0 4.125rem #FFE26B;">
+                <img class="inline-block absolute -left-3 -top-5 570:-left-4 570:-top-7 lg:-top-8 lg:-left-5 xl:-top-9 xl:-left-6" src="/images/themes/png/default-profile-image.png" alt="Default Avatar Image" loading="eager" data-aos="zoom-in" data-aos-delay="150">
+            </div>
+        @endif
     </aside>
 </section>
