@@ -28,12 +28,12 @@
     </x-dashboard.components.edit-form>
 
 
-    <div aria-roledescription="recent activities" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-        <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#19077C]' }} font-black pl-4 text-sm mb-8" style="font-family: Lato, serif;">
-            My Projects
-        </p>
-        <div>
-            @if(count($currentUser) >= 1)
+    @if(count($currentUser) >= 1)
+        <div aria-roledescription="recent activities" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#19077C]' }} font-black pl-4 text-sm mb-8" style="font-family: Lato, serif;">
+                My Projects
+            </p>
+            <div>
                 <div class="mt-10">
                     @foreach($currentUser as $project)
                         <div aria-roledescription="list of all projects" wire:click.prevent="editProject({{ $project->id }})" @click="edit = true" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56] sm:hover:bg-[#2a2f36]' : 'bg-white' }} group cursor-pointer border-t border-[#565e69]">
@@ -75,7 +75,7 @@
                         {!! $currentUser->links('custom-pagination-links-view') !!}
                     </div>
                 </div>
-            @endif
+            </div>
         </div>
-    </div>
+    @endif
 </form>

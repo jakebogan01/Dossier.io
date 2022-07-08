@@ -160,7 +160,7 @@ class User extends Authenticatable
 
             $model->profile()->create([
                 'user_id' => $model->id,
-                'portfolio_name' => '',
+                'portfolio_name' => $model->name,
                 'slug' => $slugName,
                 'job_position' => '',
                 'total_clients' => 0,
