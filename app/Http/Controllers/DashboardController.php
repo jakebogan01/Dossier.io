@@ -8,12 +8,11 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function dashboard (MonthlyViewsChart $areaChart, TopProjectsChart $pieChart)
+    public function dashboard (TopProjectsChart $barChart)
     {
         $currentUser = auth()->user();
         return view('dashboard', compact('currentUser'), [
-            'areaChart' => $areaChart->build(),
-            'pieChart' => $pieChart->build(),
+            'barChart' => $barChart->build(),
             ]);
     }
 

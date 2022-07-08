@@ -1,4 +1,4 @@
-@aware(['currentUser', 'areaChart', 'pieChart'])
+@aware(['currentUser', 'barChart'])
 
 <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -49,7 +49,7 @@
         </div>
 
         <div aria-roledescription="recent activities" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#19077C]' }} font-bold text-sm mb-4" style="font-family: Lato, serif;">
+            <p class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-[#19077C]' }} font-black text-sm mb-4" style="font-family: Lato, serif;">
                 Recent Activity
             </p>
             <div class="flex items-center w-full">
@@ -58,26 +58,20 @@
                 </ul>
             </div>
         </div>
-
-        @if($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1)
-            <div aria-roledescription="project chart" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                {!! $pieChart->container() !!}
-            </div>
-        @endif
-
-        @if($currentUser->profile->settings['track_views'] && $currentUser->total_views >= 1)
-            <div aria-roledescription="like chart" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 px-1 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
-                {!! $areaChart->container() !!}
-            </div>
-        @endif
     </div>
 
-    <livewire:dashboard-form :currentUser="$currentUser"/>
+    <div class="grid grid-cols-1 gap-10 xl:grid-cols-2 mt-10">
+        @if($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1)
+            <div aria-roledescription="project chart" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 px-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
+                {!! $barChart->container() !!}
+            </div>
+        @endif
 
-    <script src="{{ $pieChart->cdn() }}"></script>
-    <script src="{{ $areaChart->cdn() }}"></script>
-    {{ $areaChart->script() }}
-    {{ $pieChart->script() }}
+        <livewire:dashboard-form :currentUser="$currentUser"/>
+    </div>
+
+    <script src="{{ $barChart->cdn() }}"></script>
+    {{ $barChart->script() }}
     <script>
         function copyText()
         {

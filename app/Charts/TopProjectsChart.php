@@ -2,8 +2,8 @@
 
 namespace App\Charts;
 
+use ArielMejiaDev\LarapexCharts\HorizontalBar;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
-use ArielMejiaDev\LarapexCharts\PieChart;
 use Carbon\Carbon;
 
 class TopProjectsChart
@@ -15,26 +15,37 @@ class TopProjectsChart
         $this->chart = $chart;
     }
 
-    public function build(): PieChart
+    public function build(): HorizontalBar
     {
         $topProjects = auth()->user()
             ->projects->where('public', 1)
             ->sortByDesc('total_likes')
             ->take(3);
 
-        if (auth()->user()->dark_mode) {
-            $color = '#ffffff';
-            $chartColor = ['#4FAE9E', '#5EADD6', '#333333'];
-        } else {
-            $color = '#1C0681';
-            $chartColor = ['#815ED7', '#a95ed7', '#6a5ed7'];
+        $totalLikes = [];
+        $projectTitles = [];
+
+        foreach($topProjects as $project) {
+            array_unshift($totalLikes, $project->total_likes);
         }
 
-        return $this->chart->pieChart()
+        foreach($topProjects as $project) {
+            array_unshift($projectTitles, $project->title);
+        }
+
+        if (auth()->user()->dark_mode) {
+            $color = '#ffffff';
+            $chartColor = ['#4FAE9E'];
+        } else {
+            $color = '#1C0681';
+            $chartColor = ['#815ED7'];
+        }
+
+        return $this->chart->horizontalBarChart()
             ->setTitle('Most Popular Projects')
             ->setSubtitle(Carbon::now()->format('F, Y'))
-            ->addData($topProjects->pluck('total_likes')->toArray())
-            ->setLabels($topProjects->pluck('title')->toArray())
+            ->addData('Total Likes', $totalLikes)
+            ->setXAxis($projectTitles)
             ->setColors($chartColor)
             ->setHeight('350')
             ->setFontFamily('Lato')
