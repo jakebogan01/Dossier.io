@@ -30,7 +30,7 @@ class TestimonialForm extends Component
         'title' => 'required|max:18',
         'job_position' => 'required|max:28',
         'testimonial_picture' => 'required',
-        'description' => 'required|max:180',
+        'description' => 'max:180',
         'facebook' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
         'linkedin' => 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/',
     ];

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Activity;
 use App\Models\Contact;
 use App\Models\Experience;
+use App\Models\Profile;
 use App\Models\Project;
 use App\Models\Skill;
 use App\Models\Testimonial;
@@ -30,8 +31,6 @@ class DatabaseSeeder extends Seeder
                 'email' => 'test@gmail.com',
                 'password' => bcrypt('12345678'),
             ]);
-
-        User::factory()->count(3)->create();
 
         Skill::factory()->count(1)->create();
         Contact::factory()->count(1)->create();
