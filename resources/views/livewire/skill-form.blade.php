@@ -105,28 +105,39 @@
                     </section>
                     <section x-show="tab === 'skills'" x-cloak>
                         <dl>
-                            @foreach($currentUser->skills as $key => $skill)
+                            @if($currentUser)
+                                @foreach($currentUser->skills as $key => $skill)
+                                    <div class="{{ (auth()->user()->dark_mode) ? 'bg-white' : 'bg-gray-100' }} px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                        @if($currentUser->skills[$key]['skill'] !== "")
+                                            <dt class="flex items-center text-sm font-medium text-gray-500">
+                                                {!! $skills[$currentUser->skills[$key]['skill']] ?: '-' !!}
+                                            </dt>
+                                        @else
+                                            <dt class="flex items-center text-sm font-medium text-gray-500">
+                                                -
+                                            </dt>
+                                        @endif
+                                        @if($currentUser)
+                                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                                {{ $currentUser->skills[$key]['description'] ?: 'Description of your skill' }}
+                                            </dd>
+                                        @else
+                                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                                Description of your skill
+                                            </dd>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @else
                                 <div class="{{ (auth()->user()->dark_mode) ? 'bg-white' : 'bg-gray-100' }} px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                    @if($currentUser->skills[$key]['skill'] !== "")
-                                        <dt class="flex items-center text-sm font-medium text-gray-500">
-                                            {!! $skills[$currentUser->skills[$key]['skill']] ?: '-' !!}
-                                        </dt>
-                                    @else
-                                        <dt class="flex items-center text-sm font-medium text-gray-500">
-                                            -
-                                        </dt>
-                                    @endif
-                                    @if($currentUser)
-                                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {{ $currentUser->skills[$key]['description'] ?: 'Description of your skill' }}
-                                        </dd>
-                                    @else
-                                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            Description of your skill
-                                        </dd>
-                                    @endif
+                                    <dt class="flex items-center text-sm font-medium text-gray-500">
+                                        -
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Description of your skills
+                                    </dd>
                                 </div>
-                            @endforeach
+                            @endif
                         </dl>
                     </section>
                 </div>

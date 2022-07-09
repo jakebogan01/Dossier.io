@@ -95,41 +95,43 @@ class SkillForm extends Component
 
     public function checkIfEmpty()
     {
-        if ($this->introduction === "") {
-            $this->introduction = $this->currentUser->introduction;
-        }
-        if ($this->fact_one === "") {
-            $this->fact_one = $this->currentUser->facts[1];
-        }
-        if ($this->fact_two === "") {
-            $this->fact_two = $this->currentUser->facts[2];
-        }
-        if ($this->fact_three === "") {
-            $this->fact_three = $this->currentUser->facts[3];
-        }
-        if ($this->skill_one === "") {
-            $this->skill_one = $this->currentUser->skills[1]['skill'];
-        }
-        if ($this->skill_two === "") {
-            $this->skill_two = $this->currentUser->skills[2]['skill'];
-        }
-        if ($this->skill_three === "") {
-            $this->skill_three = $this->currentUser->skills[3]['skill'];
-        }
-        if ($this->skill_four === "") {
-            $this->skill_four = $this->currentUser->skills[4]['skill'];
-        }
-        if ($this->description_one === "") {
-            $this->description_one = $this->currentUser->skills[1]['description'];
-        }
-        if ($this->description_two === "") {
-            $this->description_two = $this->currentUser->skills[2]['description'];
-        }
-        if ($this->description_three === "") {
-            $this->description_three = $this->currentUser->skills[3]['description'];
-        }
-        if ($this->description_four === "") {
-            $this->description_four = $this->currentUser->skills[4]['description'];
+        if ($this->currentUser) {
+            if ($this->introduction === "") {
+                $this->introduction = $this->currentUser->introduction;
+            }
+            if ($this->fact_one === "") {
+                $this->fact_one = $this->currentUser->facts[1];
+            }
+            if ($this->fact_two === "") {
+                $this->fact_two = $this->currentUser->facts[2];
+            }
+            if ($this->fact_three === "") {
+                $this->fact_three = $this->currentUser->facts[3];
+            }
+            if ($this->skill_one === "") {
+                $this->skill_one = $this->currentUser->skills[1]['skill'];
+            }
+            if ($this->skill_two === "") {
+                $this->skill_two = $this->currentUser->skills[2]['skill'];
+            }
+            if ($this->skill_three === "") {
+                $this->skill_three = $this->currentUser->skills[3]['skill'];
+            }
+            if ($this->skill_four === "") {
+                $this->skill_four = $this->currentUser->skills[4]['skill'];
+            }
+            if ($this->description_one === "") {
+                $this->description_one = $this->currentUser->skills[1]['description'];
+            }
+            if ($this->description_two === "") {
+                $this->description_two = $this->currentUser->skills[2]['description'];
+            }
+            if ($this->description_three === "") {
+                $this->description_three = $this->currentUser->skills[3]['description'];
+            }
+            if ($this->description_four === "") {
+                $this->description_four = $this->currentUser->skills[4]['description'];
+            }
         }
     }
 

@@ -67,29 +67,35 @@ class ContactForm extends Component
 
     public function checkIfEmpty()
     {
-        if ($this->conclusion === "") {
-            $this->conclusion = $this->currentUser->conclusion;
-        }
-        if ($this->phone === "") {
-            $this->phone = $this->currentUser->phone;
-        }
-        if ($this->portfolio_email === "") {
-            $this->portfolio_email = $this->currentUser->portfolio_email;
-        }
-        if ($this->instagram === "") {
-            $this->instagram = $this->currentUser->links['instagram'];
-        }
-        if ($this->github === "") {
-            $this->github = $this->currentUser->links['github'];
-        }
-        if ($this->facebook === "") {
-            $this->facebook = $this->currentUser->links['facebook'];
-        }
-        if ($this->linkedin === "") {
-            $this->linkedin = $this->currentUser->links['linkedin'];
-        }
-        if ($this->dribbble === "") {
-            $this->dribbble = $this->currentUser->links['dribbble'];
+        if ($this->currentUser) {
+            if ($this->conclusion === "") {
+                $this->conclusion = $this->currentUser->conclusion;
+            }
+            if ($this->phone === "") {
+                $this->phone = $this->currentUser->phone;
+            }
+            if ($this->portfolio_email === "") {
+                if (is_null($this->currentUser->portfolio_email)) {
+                    $this->portfolio_email = "";
+                } else {
+                    $this->portfolio_email = $this->currentUser->portfolio_email;
+                }
+            }
+            if ($this->instagram === "") {
+                $this->instagram = $this->currentUser->links['instagram'];
+            }
+            if ($this->github === "") {
+                $this->github = $this->currentUser->links['github'];
+            }
+            if ($this->facebook === "") {
+                $this->facebook = $this->currentUser->links['facebook'];
+            }
+            if ($this->linkedin === "") {
+                $this->linkedin = $this->currentUser->links['linkedin'];
+            }
+            if ($this->dribbble === "") {
+                $this->dribbble = $this->currentUser->links['dribbble'];
+            }
         }
     }
 
