@@ -1,47 +1,30 @@
 @aware(['user'])
 
 @if ($user->contact)
-    <section
-        id="contact"
-        {{ $attributes->merge(['class' => 'anchor flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
+    <section id="contact"{{ $attributes->merge(['class' => 'anchor flex relative bg-[#1C1F2D] overflow-hidden bg-no-repeat bg-left-bottom bg-auto group']) }}>
         <div class="relative w-full">
             <div class="absolute inset-0">
                 <div class="absolute inset-y-0 left-0 w-1/2"></div>
             </div>
             <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5 z-10">
-                <aside
-                    class="bg-[#242839] py-16 px-[25px] lg:col-span-2 lg:px-[85px] lg:py-24 xl:pr-12"
-                    data-aos="fade-right"
-                    data-aos-duration="700">
+                <aside class="bg-[#242839] py-16 px-[25px] lg:col-span-2 lg:px-[85px] lg:py-24 xl:pr-12" data-aos="fade-right" data-aos-duration="700">
                     <div class="max-w-lg mx-auto text-[#B1B7D6] font-bold text-base leading-loose">
-                        <h2
-                            class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white"
-                            data-aos="fade-right"
-                            data-aos-delay="50">
+                        <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white" data-aos="fade-right" data-aos-delay="50">
                             LET'S TALK
                         </h2>
-                        <p
-                            class="mt-3 leading-loose"
-                            data-aos="fade-right"
-                            data-aos-delay="100">
+                        <p class="mt-3 leading-loose" data-aos="fade-right" data-aos-delay="100">
                             {{ $user->contact->conclusion }}
                         </p>
                         <dl class="mt-8 text-base font-bold text-[#6F7490]">
                             @if($user->contact->phone)
-                                <div
-                                    class="mt-6"
-                                    data-aos="fade-right"
-                                    data-aos-delay="150">
+                                <div class="mt-6" data-aos="fade-right" data-aos-delay="150">
                                     <dt class="sr-only">
                                         Phone number
                                     </dt>
                                     <dd class="flex">
                                         <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                                         <span class="ml-3">
-                                            <a
-                                                href="tel:+442071234567"
-                                                target="_blank/"
-                                                class="sm:hover:text-gray-400">
+                                            <a href="tel:+442071234567" target="_blank/" class="sm:hover:text-gray-400">
                                                 {{ $user->contact->phone }}
                                             </a>
                                         </span>
@@ -49,20 +32,14 @@
                                 </div>
                             @endif
                             @if($user->contact->portfolio_email)
-                                <div
-                                    class="mt-3"
-                                    data-aos="fade-right"
-                                    data-aos-delay="200">
+                                <div class="mt-3" data-aos="fade-right" data-aos-delay="200">
                                     <dt class="sr-only">
                                         Email
                                     </dt>
                                     <dd class="flex">
                                         <svg class="flex-shrink-0 h-6 w-6 text-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                         <span class="ml-3">
-                                            <a
-                                                href="mailto:{{ $user->contact->portfolio_email }}"
-                                                target="_blank/"
-                                                class="sm:hover:text-gray-400">
+                                            <a href="mailto:{{ $user->contact->portfolio_email }}" target="_blank/" class="sm:hover:text-gray-400">
                                                 {{ $user->contact->portfolio_email ?: 'Missing email' }}
                                             </a>
                                         </span>
@@ -95,143 +72,7 @@
                 </aside>
                 <div class="py-16 px-[25px] lg:col-span-3 lg:py-24 lg:px-[85px] xl:pl-12">
                     <div class="max-w-lg mx-auto lg:max-w-none">
-                        <form
-                            action="#"
-                            method="POST"
-                            class="grid grid-cols-1 gap-y-6">
-                            @csrf
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="200">
-                                <div class="relative">
-                                    <input
-                                        id="name"
-                                        name="name"
-                                        type="text"
-                                        class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none"
-                                        placeholder="Full Name"
-                                        aria-invalid="true"
-                                        aria-describedby="name-error"
-                                        style="box-shadow: none;"
-                                        spellcheck="true"
-                                        required />
-                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <label
-                                        for="name"
-                                        class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
-                                        Full Name
-                                    </label>
-                                </div>
-                                <p
-                                    class="mt-2 text-sm text-red-600"
-                                    id="name-error">
-                                    Your password must be less than 4 characters.
-                                </p>
-                            </div>
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="250">
-                                <div class="relative">
-                                    <input
-                                        id="phone"
-                                        name="phone"
-                                        type="tel"
-                                        class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none"
-                                        placeholder="8008881234"
-                                        aria-invalid="true"
-                                        aria-describedby="phone-error"
-                                        style="box-shadow: none;"
-                                        required />
-                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <label
-                                        for="phone"
-                                        class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
-                                        Phone
-                                    </label>
-                                </div>
-                                <p
-                                    class="mt-2 text-sm text-red-600"
-                                    id="phone-error">
-                                    Your password must be less than 4 characters.
-                                </p>
-                            </div>
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="300">
-                                <div class="relative">
-                                    <input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        class="pt-3 pl-px peer h-10 w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none"
-                                        placeholder="john@doe.com"
-                                        aria-invalid="true"
-                                        aria-describedby="email-error"
-                                        style="box-shadow: none;"
-                                        required />
-                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <label
-                                        for="email"
-                                        class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
-                                        Email
-                                    </label>
-                                </div>
-                                <p
-                                    class="mt-2 text-sm text-red-600"
-                                   id="email-error">
-                                    Your password must be less than 4 characters.
-                                </p>
-                            </div>
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="350">
-                                <div class="relative">
-                                    <textarea
-                                        rows="4"
-                                        name="message"
-                                        id="message"
-                                        class="pt-3 pl-px peer w-full border-t-0 border-r-0 border-l-0 border-b-2 border-[#575B73] text-base font-bold text-white bg-[#1C1F2D] placeholder-transparent focus:outline-none focus:border-[#575B73] outline-none"
-                                        placeholder="Message"
-                                        aria-invalid="true"
-                                        aria-describedby="message-error"
-                                        style="box-shadow: none;"
-                                        spellcheck="true"
-                                        required></textarea>
-                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <label
-                                        for="message"
-                                        class="absolute left-0 -top-3.5 text-[#71758D] text-sm transition-all font-bold peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
-                                        Message
-                                    </label>
-                                </div>
-                                <p
-                                    class="mt-2 text-sm text-red-600"
-                                    id="message-error">
-                                    Your password must be less than 4 characters.
-                                </p>
-                            </div>
-                            <div
-                                class="pt-12"
-                                data-aos="fade-up"
-                                data-aos-delay="400"
-                                data-aos-anchor-placement="top-bottom">
-                                <button
-                                    aria-label="send email"
-                                    type="submit"
-                                    class="inline-flex justify-between items-center px-6 py-2 border border-transparent shadow-sm text-base font-black text-white bg-[#4046FF] sm:hover:bg-[#575cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-w-[200px] w-full tracking-widest transition-colors">
-                                    LETS TALK
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-                                </button>
-                            </div>
-                        </form>
+                        <livewire:theme-contact />
                     </div>
                 </div>
             </div>
