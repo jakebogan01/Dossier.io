@@ -1,6 +1,6 @@
 @aware(['item', 'content'])
 
-<div aria-labelledby="modal-title" role="dialog" aria-modal="true" x-cloak x-show="edit" class="relative"
+<div aria-labelledby="modal-title" role="dialog" aria-modal="true" x-cloak x-show="edit" class="relative" style="z-index: 1000;"
      x-transition:enter="ease-out duration-300"
      x-transition:enter-start="opacity-0"
      x-transition:enter-end="opacity-100"

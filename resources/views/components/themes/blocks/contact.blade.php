@@ -7,17 +7,17 @@
                 <div class="absolute inset-y-0 left-0 w-1/2"></div>
             </div>
             <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5 z-10">
-                <aside class="bg-[#242839] py-16 px-[25px] lg:col-span-2 lg:px-[85px] lg:py-24 xl:pr-12" data-aos="fade-right" data-aos-duration="700">
+                <aside data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="top-bottom" class="bg-[#242839] py-16 px-[25px] lg:col-span-2 lg:px-[85px] lg:py-24 xl:pr-12">
                     <div class="max-w-lg mx-auto text-[#B1B7D6] font-bold text-base leading-loose">
                         <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white" data-aos="fade-right" data-aos-delay="50">
                             LET'S TALK
                         </h2>
-                        <p class="mt-3 leading-loose" data-aos="fade-right" data-aos-delay="100">
+                        <p class="mt-3 leading-loose" data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
                             {{ $user->contact->conclusion }}
                         </p>
                         <dl class="mt-8 text-base font-bold text-[#6F7490]">
                             @if($user->contact->phone)
-                                <div class="mt-6" data-aos="fade-right" data-aos-delay="150">
+                                <div class="mt-6" data-aos="fade-right" data-aos-delay="150" data-aos-anchor-placement="top-bottom">
                                     <dt class="sr-only">
                                         Phone number
                                     </dt>
@@ -32,7 +32,7 @@
                                 </div>
                             @endif
                             @if($user->contact->portfolio_email)
-                                <div class="mt-3" data-aos="fade-right" data-aos-delay="200">
+                                <div class="mt-3" data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="top-bottom">
                                     <dt class="sr-only">
                                         Email
                                     </dt>
@@ -70,10 +70,14 @@
                         </dl>
                     </div>
                 </aside>
-                <div class="py-16 px-[25px] lg:col-span-3 lg:py-24 lg:px-[85px] xl:pl-12">
-                    <div class="max-w-lg mx-auto lg:max-w-none">
-                        <livewire:theme-contact />
-                    </div>
+                <div class="flex lg:col-span-3">
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-anchor-placement="top-bottom" class="relative bg-[#202331] h-full w-[55%]"></div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-aos-anchor-placement="top-bottom" class="relative bg-[#252735] h-full w-[45%]"></div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300" data-aos-anchor-placement="top-bottom" class="relative bg-[#272A39] h-full w-[35%]"></div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" data-aos-anchor-placement="top-bottom" class="relative bg-[#2C2E3E] h-full w-[25%]"></div>
+{{--                    <div class="max-w-lg mx-auto lg:max-w-none">--}}
+{{--                        <livewire:theme-contact />--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
