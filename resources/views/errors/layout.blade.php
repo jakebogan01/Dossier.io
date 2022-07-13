@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Dossier.io help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
-        <meta property="og:description" content="Dossier.io help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
-        <meta property="og:title" content="Dossier.io Dashboard">
+        <meta name="description" content="MyDossier help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
+        <meta property="og:description" content="MyDossier help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
+        <meta property="og:title" content="MyDossier Dashboard">
         <title>@yield('title')</title>
         <!-- Styles -->
         <link rel="shortcut icon" type="image/x-icon" href="/images/icons/light-icon.svg" id="faviconTag">
@@ -21,7 +21,7 @@
             isDark.addListener((e) => changeFavicon());
             changeFavicon();
         </script>
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier.io Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"MyDossier Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
         <style>
             *, *::before, *::after{
                 scrollbar-width: none;

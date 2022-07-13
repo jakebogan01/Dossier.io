@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## My Personal Portfolio: Dossier.io app
+## My Personal Portfolio: MyDossier app
 
 ## Project setup
 ```

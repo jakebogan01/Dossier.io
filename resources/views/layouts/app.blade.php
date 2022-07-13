@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="Dossier.io help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
-        <meta property="og:description" content="Dossier.io help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
-        <meta property="og:title" content="Dossier.io Dashboard">
+        <meta name="description" content="MyDossier help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
+        <meta property="og:description" content="MyDossier help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves.">
+        <meta property="og:title" content="MyDossier Dashboard">
         <title>{{ config('app.name', 'Laravel') }}</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
                 })
             })
         </script>
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier.io Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"MyDossier Dashboard","description":"Help those who wish to create a personal portfolio without the hassle of doing any of the design work themselves."}</script>
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="{{ @asset('vendor/larapex-charts/apexcharts.js') }}" defer></script>
         <style>
@@ -143,7 +143,7 @@
                                             Open panel
                                         </span>
                                         <span class="leading-none -ml-1 -mt-1 text-white font-bold tracking-wider text-xl">
-                                            DOSSIER.IO
+                                            MYDOSSIER
                                         </span>
                                     </a>
                                     <x-dashboard.components.nav class="pt-8"></x-dashboard.components.nav>

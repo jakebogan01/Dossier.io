@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-// const domain = 'dossier.test';
+// const domain = 'mydossier.test';
 // const homedir = require('os').homedir();
 
 mix.js('resources/js/app.js', 'public/js')

@@ -28,7 +28,7 @@
                             </div>
                             <div class="mt-6 sm:max-w-xl">
                                 <h1 data-aos="fade-right" data-aos-delay="400" class="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
-                                    DOSSIER.IO
+                                    <span class="text-[#4E80EE]">My</span>Dossier
                                 </h1>
                                 <p data-aos="fade-right" data-aos-delay="500" class="mt-3 text-xl text-gray-300 cursor-default">
                                     It’s your talent… own it.
@@ -99,7 +99,7 @@
                             </h2>
                             <div class="mt-6 text-gray-300 space-y-6">
                                 <p data-aos="fade-left" data-aos-delay="250" class="text-lg">
-                                    Building online portfolios can be brutal. Either there’s not enough time in the day or you don’t know where to start. Here at Dossier.io, we get it! We have all been there. We know what it’s like to try our best to develop something cool to show off our amazing skills and projects.
+                                    Building online portfolios can be brutal. Either there’s not enough time in the day or you don’t know where to start. Here at MyDossier, we get it! We have all been there. We know what it’s like to try our best to develop something cool to show off our amazing skills and projects.
                                 </p>
                                 <p data-aos="fade-left" data-aos-delay="300" class="text-base leading-7">
                                     But look no further! We made that issue a thing of the past. We made it easier for anyone to simply log in, customize their own content and share their link with anyone! Sure, there are some added benefits; you get a handful of themes to choose from, along with some pleasant and simple analytics in a well-designed dashboard catered to you.
