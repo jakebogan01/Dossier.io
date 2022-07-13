@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 gap-10 xl:grid-cols-2 mt-10">
+    <div class="grid {{ ($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1) ? 'xl:grid-cols-2' : 'xl:grid-cols-1' }} grid-cols-1 gap-10 xl:grid-cols-2 mt-10">
         @if($currentUser->profile->settings['track_likes'] && count($currentUser->projects) >= 1)
             <div aria-roledescription="project chart" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg pt-4 px-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
                 {!! $barChart->container() !!}

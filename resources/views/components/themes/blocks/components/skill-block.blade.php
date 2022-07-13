@@ -13,7 +13,7 @@
                     {{ $user['skill'] ?: 'Skill Title' }}
                 </h3>
             </div>
-            <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose">
+            <div class="max-w-[382px] sm:max-w-none mx-auto text-[#B1B7D6] text-base font-bold leading-loose overflow-hidden">
                 <p>
                     {{ $user['description'] ?: 'SkillDescription' }}
                 </p>

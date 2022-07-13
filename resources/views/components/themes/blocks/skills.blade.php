@@ -32,7 +32,7 @@
                         <h2 class="text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] pb-4 font-black tracking-wider leading-none sm:transition-all sm:group-hover:text-white">
                             TOP SKILLS
                         </h2>
-                        <p class="text-[#B1B7D6] text-base font-bold leading-loose">
+                        <p class="text-[#B1B7D6] text-base font-bold leading-loose overflow-hidden">
                             {{ $user->skill->introduction }}
                         </p>
                     </div>

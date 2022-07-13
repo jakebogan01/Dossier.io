@@ -1,7 +1,7 @@
 @aware(['user'])
 
 @if(count($user->experiences) >= 1)
-    <section id="experience" {{ $attributes->merge(['class' => 'anchor relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }} style="background-image: url('{{ (count($user->projects) >= 1) ? '/images/themes/svg/background-pattern-2.svg' : '' }}');">
+    <section id="experience" {{ $attributes->merge(['class' => 'anchor relative bg-[#1C1F2D] px-[25px] sm:px-[5.3125rem] pb-40 pt-12 sm:py-40 text-[#B1B7D6] text-base leading-loose overflow-hidden bg-no-repeat bg-bottom lg:bg-right-bottom bg-auto group']) }} style="background-image: url('{{ (count($user->projects) >= 1 && !$user->checkProjectStatuses()) ? '/images/themes/svg/background-pattern-2.svg' : '' }}');">
         <h2 class="mb-8 text-white sm:text-gray-400 text-[30px] sm:text-[2.8rem] font-black tracking-wider leading-none mb-16 sm:transition-all sm:group-hover:text-white" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
             EXPERIENCES
         </h2>

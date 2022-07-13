@@ -10,7 +10,7 @@
                     <div class="relative flex flex-col">
                         <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-transparent' }} max-h-20 h-full w-full opacity-80 absolute top-0 left-0"></div>
                         <div class="relative w-full flex m-3 ml-4 text-white cursor-default z-10">
-                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#993BCE]' }} w-28 h-28 p-1 rounded-full" src="{{ $profileImage }}" alt="Avatar"/>
+                            <img class="{{ (auth()->user()->dark_mode) ? 'bg-gray-100' : 'bg-[#993BCE]' }} w-28 h-28 p-1 rounded-full object-cover" src="{{ $profileImage }}" alt="Avatar"/>
                             <div class="title mt-11 ml-3 font-bold flex flex-col">
                                 <div class="{{ (auth()->user()->dark_mode) ?: 'text-[#993BCE]' }} break-words">
                                     {{ $currentUser->portfolio_name ?: 'Name' }}

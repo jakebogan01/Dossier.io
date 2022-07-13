@@ -90,7 +90,11 @@ class ProfileForm extends Component
             $this->portfolio_name = $this->currentUser->portfolio_name;
         }
         if ($this->job_position === "") {
-            $this->job_position = $this->currentUser->job_position;
+            if ($this->currentUser->job_position) {
+                $this->job_position = $this->currentUser->job_position;
+            } else {
+                $this->job_position = 'Position';
+            }
         }
         if ($this->total_clients === 0) {
             $this->total_clients = $this->currentUser->total_clients;

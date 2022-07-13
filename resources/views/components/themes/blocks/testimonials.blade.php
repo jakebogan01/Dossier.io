@@ -10,7 +10,7 @@
                         TRIBUTES
                     </h2>
                     <p class="text-[#B1B7D6] text-base font-bold leading-loose">
-                        Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
+                        Here is where you will read some people's opinion about the work I have accomplished and/or who I am as a professional in my field.
                     </p>
                 </aside>
                 <div class="lg:col-span-2">
