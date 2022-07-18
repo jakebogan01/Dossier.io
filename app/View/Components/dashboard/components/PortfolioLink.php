@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class PortfolioLink extends Component
 {
-    public $usersPrtfolio;
+    public $usersPortfolio;
     /**
      * Create a new component instance.
      *
@@ -16,7 +16,7 @@ class PortfolioLink extends Component
      */
     public function __construct()
     {
-        $this->usersPrtfolio = auth()->user()->profile->slug;
+        $this->usersPortfolio = auth()->user()->profile->slug;
     }
 
     /**
