@@ -24,7 +24,11 @@
                 </x-themes.blocks.components.left-experience-item>
             @else
                 {{--right timeline--}}
-                <x-themes.blocks.components.right-experience-item :experience="$experience"></x-themes.blocks.components.right-experience-item>
+                <x-themes.blocks.components.right-experience-item :experience="$experience">
+                    <div class="-ml-[13px] lg:mx-auto -translate-y-[65px] sm:-translate-y-[1px] lg:translate-x-[5px] sm:transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-[1.3125rem] h-[1.3125rem]" viewBox="0 0 21 21"><circle cx="10.5" cy="10.5" r="10.5" fill="#ffcf7b" /><circle cx="4.5" cy="4.5" r="4.5" fill="#1c1f2d" transform="translate(6 6)" /></svg>
+                    </div>
+                </x-themes.blocks.components.right-experience-item>
             @endif
         @endforeach
     </section>
