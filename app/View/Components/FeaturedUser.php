@@ -1,11 +1,11 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components;
 
-use App\Models\User;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\User;
 use function view;
 
 class FeaturedUser extends Component
@@ -44,7 +44,6 @@ class FeaturedUser extends Component
      */
     public function render(): View|string|Closure
     {
-        $a = 'test';
-        return view('components.home.featured-user', compact('a'));
+        return view('components.featured-user');
     }
 }
