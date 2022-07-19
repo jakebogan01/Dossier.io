@@ -44,6 +44,7 @@ class FeaturedUser extends Component
      */
     public function render(): View|string|Closure
     {
-        return view('components.home.featured-user');
+        $a = 'test';
+        return view('components.home.featured-user', compact('a'));
     }
 }

@@ -1,6 +1,7 @@
 {{--@if($featuredUsers !== null)--}}
+@dd($a)
     <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide cursor-default">
-        View some of our users portfolio's!
+        view some of our featured users
     </h2>
     <div class="mt-8 flex justify-center space-x-6">
 {{--        @foreach($featuredUsers as $key => $user)--}}
