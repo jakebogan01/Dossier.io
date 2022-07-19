@@ -2635,6 +2635,12 @@ select {
 .pr-10 {
   padding-right: 2.5rem;
 }
+.pr-16 {
+  padding-right: 4rem;
+}
+.pr-1 {
+  padding-right: 0.25rem;
+}
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2662,9 +2668,6 @@ select {
 .pb-8 {
   padding-bottom: 2rem;
 }
-.pr-1 {
-  padding-right: 0.25rem;
-}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2685,9 +2688,6 @@ select {
 }
 .pl-px {
   padding-left: 1px;
-}
-.pr-16 {
-  padding-right: 4rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -3710,10 +3710,6 @@ select {
     margin-top: 3rem;
   }
 
-  .sm\:ml-2 {
-    margin-left: 0.5rem;
-  }
-
   .sm\:mt-24 {
     margin-top: 6rem;
   }
@@ -3728,10 +3724,6 @@ select {
 
   .sm\:block {
     display: block;
-  }
-
-  .sm\:inline-block {
-    display: inline-block;
   }
 
   .sm\:flex {
@@ -3974,6 +3966,11 @@ select {
     padding-right: 5rem;
   }
 
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -3982,11 +3979,6 @@ select {
   .sm\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   .sm\:px-\[5\.3125rem\] {
@@ -4016,20 +4008,20 @@ select {
     padding-right: 1rem;
   }
 
-  .sm\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .sm\:pt-16 {
-    padding-top: 4rem;
-  }
-
   .sm\:pt-1 {
     padding-top: 0.25rem;
   }
 
   .sm\:pr-2 {
     padding-right: 0.5rem;
+  }
+
+  .sm\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 4rem;
   }
 
   .sm\:pt-\[5\.1875rem\] {
@@ -4372,16 +4364,8 @@ select {
     display: block;
   }
 
-  .md\:inline {
-    display: inline;
-  }
-
   .md\:grid {
     display: grid;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:grid-cols-3 {

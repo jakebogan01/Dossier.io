@@ -62,7 +62,7 @@
             <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
                 <div class="pr-16 sm:text-center sm:px-16">
                     <p class="font-medium text-white">
-                        <span> Warning: This site is currently in Beta! </span>
+                        Warning: This site is currently in Beta!
                     </p>
                 </div>
                 <div @click="showWarning = false" class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
