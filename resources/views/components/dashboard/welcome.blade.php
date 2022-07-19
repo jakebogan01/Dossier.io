@@ -18,22 +18,23 @@
                     </div>
                 </div>
             @endif
-            @dd(number_format(auth()->user()->projects->where('public', 1)->sum('total_likes')))
-{{--            @if($currentUser->profile->settings['track_likes'])--}}
-{{--                <div aria-roledescription="total likes stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">--}}
-{{--                    <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-4 mr-4">--}}
-{{--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" /></svg>--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <dt class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} text-sm font-medium truncate cursor-default">--}}
-{{--                            Total Likes--}}
-{{--                        </dt>--}}
-{{--                        <dd class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} mt-1 text-3xl font-semibold">--}}
-{{--                            <x-dashboard.components.total-like></x-dashboard.components.total-like>--}}
-{{--                        </dd>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            @endif--}}
+            @if($currentUser->profile->settings['track_likes'])
+                <div aria-roledescription="total likes stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
+                    <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-4 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" /></svg>
+                    </div>
+                    <div>
+                        <dt class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} text-sm font-medium truncate cursor-default">
+                            Total Likes
+                        </dt>
+                        <dd class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-900' }} mt-1 text-3xl font-semibold">
+                            <span>
+                                {{ number_format(auth()->user()->projects->where('public', 1)->sum('total_likes')) }}
+                            </span>
+                        </dd>
+                    </div>
+                </div>
+            @endif
             <div aria-roledescription="portfolio link stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
                 <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-3.5 mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" /></svg>
