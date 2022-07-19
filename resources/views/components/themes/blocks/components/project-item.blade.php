@@ -10,7 +10,7 @@
             {{ $project->description ?: 'Project description' }}
         </p>
         @if($project->links['github'])
-            <a href="{{ $project->links['github'] }}" class="block">
+            <a href="{{ $project->links['code'] }}" class="block">
                 <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="150">
                     VIEW PROJECT
                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
@@ -18,7 +18,7 @@
             </a>
         @endif
         @if($project->links['code'])
-            <a href="{{ $project->links['code'] }}" class="block">
+            <a href="{{ $project->links['github'] }}" class="block">
                 <button type="button" class="inline-flex justify-between items-center text-base font-bold text-white" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">
                     VIEW CODE
                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
