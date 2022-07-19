@@ -12,7 +12,6 @@ class FeaturedUser extends Component
 {
     public $users;
     public $featuredUsers;
-    public int $total;
 
     /**
      * Create a new component instance.
@@ -34,8 +33,6 @@ class FeaturedUser extends Component
         if ($this->users->count() >= 4) {
             $this->featuredUsers = $this->users->random(4);
         }
-
-        $this->total = User::all()->count();
     }
 
     /**
