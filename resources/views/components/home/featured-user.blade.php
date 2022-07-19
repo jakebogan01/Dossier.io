@@ -1,10 +1,8 @@
-<h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide cursor-default">
-    @unless($total < 1)
-        Trusted by over {{ $total }} amazing people
-    @endunless
-</h2>
-<div class="mt-8 flex justify-center space-x-6">
-    @if($featuredUsers !== null)
+@if($featuredUsers !== null)
+    <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide cursor-default">
+        View some of our users portfolio's!
+    </h2>
+    <div class="mt-8 flex justify-center space-x-6">
         @foreach($featuredUsers as $key => $user)
             <a href="{{ route('theme-one', str($user->profile->slug)->slug()->__toString()) }}" data-aos="fade-up" data-aos-delay="{{ $key }}00" data-aos-anchor-placement="top-bottom" class="min-w-[140px]" target="_blank">
                 <div class="relative space-y-4 text-center group">
@@ -22,5 +20,5 @@
                 </div>
             </a>
         @endforeach
-    @endif
-</div>
+    </div>
+@endif
