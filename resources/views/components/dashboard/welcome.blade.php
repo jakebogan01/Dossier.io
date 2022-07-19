@@ -18,6 +18,7 @@
                     </div>
                 </div>
             @endif
+            @dd(number_format(auth()->user()->projects->where('public', 1)->sum('total_likes')))
 {{--            @if($currentUser->profile->settings['track_likes'])--}}
 {{--                <div aria-roledescription="total likes stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">--}}
 {{--                    <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-4 mr-4">--}}
