@@ -26,8 +26,6 @@ class FeaturedUser extends Component
             ->whereRelation('profile', 'job_position', '!=', null)
             ->get();
 
-        dd($this->users);
-
         if (!$this->users->isEmpty()) {
             $this->featuredUsers = $this->users->take(4);
         }
