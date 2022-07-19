@@ -33,19 +33,20 @@
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--            @endif--}}
-{{--            <div aria-roledescription="portfolio link stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">--}}
-{{--                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-3.5 mr-4">--}}
-{{--                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" /></svg>--}}
-{{--                </div>--}}
-{{--                <div>--}}
-{{--                    <dt class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} text-sm font-medium truncate cursor-default">--}}
-{{--                        Portfolio Link--}}
-{{--                    </dt>--}}
-{{--                    <dd class="flex mt-1 text-3xl font-semibold">--}}
+            <div aria-roledescription="portfolio link stat" class="{{ (!$currentUser->profile->settings['track_likes'] || !$currentUser->profile->settings['track_views']) ? 'h-[108px]' : 'h-full' }} {{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} flex px-4 py-5 overflow-hidden sm:p-6 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear">
+                <div class="{{ (auth()->user()->dark_mode) ? 'bg-[#4FAE9D]' : 'bg-[#993BCE]' }} flex items-center h-[60px] rounded-md p-3.5 mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" /></svg>
+                </div>
+                <div>
+                    <dt class="{{ (auth()->user()->dark_mode) ? 'text-white' : 'text-gray-500' }} text-sm font-medium truncate cursor-default">
+                        Portfolio Link
+                    </dt>
+                    <dd class="flex mt-1 text-3xl font-semibold">
+                        @dd(auth()->user()->profile->slug)
 {{--                        <x-dashboard.components.portfolio-link></x-dashboard.components.portfolio-link>--}}
-{{--                    </dd>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+                    </dd>
+                </div>
+            </div>
         </div>
 
         <div aria-roledescription="recent activities" class="{{ (auth()->user()->dark_mode) ? 'bg-[#434c56]' : 'bg-white' }} rounded-lg p-4 shadow-md sm:hover:shadow-sm rounded-lg sm:transition-all duration-300 ease-linear overflow-hidden">
