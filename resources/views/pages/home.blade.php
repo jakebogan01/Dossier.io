@@ -173,7 +173,7 @@
         </main>
         <footer class="bg-[#0F1119]">
             <div class="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                <x-home.featured-user></x-home.featured-user>
+                <x-featured-user></x-featured-user>
                 <p data-aos="fade-up" data-aos-delay="250" data-aos-anchor-placement="top-bottom" class="mt-8 text-center text-base text-gray-400 cursor-default">
                     Created By Jake Bogan
                 </p>
