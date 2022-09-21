@@ -1,15 +1,10 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Custom CMS Dashboard
+<img src="https://raw.githubusercontent.com/jakebogan01/Portfolio/main/img/content/custom-cms.webp">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Details
+This is a site that allows users to register for an account, which leads users to a custom built CMS dashboard. Users will add their personal informatoin and this will produce a portfolio that contains their information. The CMS dashboard also contains basic analytics. This project uses the TALL stack, <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, <a href="https://alpinejs.dev" target="_blank">Alpine JS</a>, <a href="https://laravel-livewire.com" target="_blank">Laravel Livewire</a>, and <a href="https://laravel.com" target="_blank">Laravel</a>.
 
-## My Personal Portfolio: MyDossier app
-
-## Project setup
+## Installation
 ```
 npm install
 ```
@@ -43,3 +38,5 @@ php artisan migrate
 ```
 php artisan serve
 ```
+
+Enjoy :palm_tree:
